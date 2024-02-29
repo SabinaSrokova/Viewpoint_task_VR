@@ -1,0 +1,2 @@
+id,condition,sceneName,sceneNumber,task,block,trial,
+default,default,use for vr,1,TASK_ViewpointTask,1,1,

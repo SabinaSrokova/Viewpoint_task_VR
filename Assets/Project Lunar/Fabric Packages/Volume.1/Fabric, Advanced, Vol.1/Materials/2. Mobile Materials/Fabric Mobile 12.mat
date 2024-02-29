@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Fabric Mobile 12
+  m_Shader: {fileID: 4800000, guid: 67be11a2896399c40afe283fd3d2c1d0, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DirtTex:
+        m_Texture: {fileID: 2800000, guid: ff38550bc67e3534fa8fce8d0186e9bb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: f2b5c8be6c3d2e0419925fcb14fea51a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormTex:
+        m_Texture: {fileID: 2800000, guid: 6dffb4cf2e792434a96bf8eb67168fe4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormTex2:
+        m_Texture: {fileID: 2800000, guid: 5a561387e57b30744b046f61c8d8b2e3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OccTex:
+        m_Texture: {fileID: 2800000, guid: 056110361c8dd1141ac78cfcc539b378, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParaTex:
+        m_Texture: {fileID: 2800000, guid: cd446f2c12266064a9ccdf87cb9d0889, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RghTex:
+        m_Texture: {fileID: 2800000, guid: fb4137e9124051e498eae52750e2d944, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TransTex:
+        m_Texture: {fileID: 2800000, guid: 056110361c8dd1141ac78cfcc539b378, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _Dirt0: 0.646
+    - _Dirt1: 1
+    - _DirtGray: 1
+    - _DirtNorm: 0.1
+    - _DirtOcc: 0.5
+    - _DirtPara: 5
+    - _DirtPre: 28
+    - _DirtRgh: 0.1
+    - _DirtSpec: 0.1
+    - _DstBlend: 0
+    - _FarDec: 5
+    - _FarVan: 45
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _MainBgt: 1
+    - _MainCon: 1.1
+    - _Metallic: 0
+    - _Mode: 0
+    - _Norm: 1.05
+    - _Norm2: 0.41
+    - _NormBas: 0.15
+    - _NormRati: 0.292
+    - _OccCon: 0.45
+    - _OccMin: 0
+    - _OcclusionStrength: 1
+    - _ParaGray: 0.519
+    - _ParaHgt: 0.09
+    - _ParaMax: 0.35
+    - _ParaMin: 0.2
+    - _Parallax: 0.02
+    - _Rgh0: 0.45
+    - _Rgh1: 0.75
+    - _RghAmp: 1.28
+    - _RghGray: 1
+    - _Rotation: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpecBase: 0
+    - _SpecStr: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Trans0: 0.35
+    - _Trans1: 1
+    - _TransGray: 1.52
+    - _TransThre: 0.5
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DirtCol: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FarCol: {r: 1, g: 1, b: 1, a: 1}
