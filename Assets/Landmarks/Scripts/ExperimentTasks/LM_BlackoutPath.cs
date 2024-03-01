@@ -13,6 +13,7 @@
     Department of Psychology - University of Arizona   
 */
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,7 @@ public class LM_BlackoutPath : ExperimentTask
     private GameObject spawnObject;
     private GameObject spawnParent;
     private GameObject walkTarget;
+    private GameObject discLocation;
     private GameObject currentLocation;
     private GameObject disc;
     private float timer = 0;
@@ -92,9 +94,6 @@ public class LM_BlackoutPath : ExperimentTask
                 spawnObject = GetChildGameObject(spawnParent, "ObjectSpawnA");
                 GameObject movingObject = seenObject.transform.GetChild(0).gameObject;
                 movingObject.transform.position = spawnObject.transform.position;
-                //movingObject = movingObject.transform.GetChild(0).gameObject;
-                //Rigidbody movingBody = movingObject.GetComponent<Rigidbody>();
-                //movingBody.position = spawnObject.transform.position;
 
             }
             else
@@ -102,13 +101,6 @@ public class LM_BlackoutPath : ExperimentTask
                 spawnObject = GetChildGameObject(spawnParent, "ObjectSpawnB");
                 GameObject movingObject = seenObject.transform.GetChild(0).gameObject;
                 movingObject.transform.position = spawnObject.transform.position;
-                //try
-                //{
-                //    movingObject = movingObject.transform.GetChild(0).gameObject;
-                //}
-                //catch { }
-                //Rigidbody movingBody = movingObject.GetComponent<Rigidbody>();
-                //movingBody.position = spawnObject.transform.position;
             }
         }
 
@@ -138,24 +130,30 @@ public class LM_BlackoutPath : ExperimentTask
             {
                 currentLocation = GetChildGameObject(spawnParent, "PlayerSpawnA");
                 walkTarget = GetChildGameObject(spawnParent, "PlayerSpawnB");
+                discLocation = Instantiate(walkTarget);
 
                 //Calc the midpoint between the two vectors for the stay condition in order to place the marker inbetween
+                //New method of calculation that should be more accurate + this should no longer be replacing PlayerSpawnB
 
-                walkTarget.transform.position = ((currentLocation.transform.position + walkTarget.transform.position) / 2);
+                discLocation.transform.position = Vector3.Slerp(currentLocation.transform.position, walkTarget.transform.position, 0.5f);
+                Debug.Log(discLocation.transform.position);
 
-                disc = Instantiate(targetDisc, walkTarget.transform.position, Quaternion.identity);
+                disc = Instantiate(targetDisc, discLocation.transform.position, Quaternion.identity);
 
             }
             else
             {
                 currentLocation = GetChildGameObject(spawnParent, "PlayerSpawnB");
                 walkTarget = GetChildGameObject(spawnParent, "PlayerSpawnA");
+                discLocation = Instantiate(walkTarget);
 
                 //Calc the midpoint between the two vectors for the stay condition in order to place the marker inbetween
 
-                walkTarget.transform.position = ((currentLocation.transform.position + walkTarget.transform.position) / 2);
+  
+                discLocation.transform.position = Vector3.Slerp(currentLocation.transform.position, walkTarget.transform.position, 0.5f);
+                Debug.Log(discLocation.transform.position);
 
-                disc = Instantiate(targetDisc, walkTarget.transform.position, Quaternion.identity);
+                disc = Instantiate(targetDisc, discLocation.transform.position, Quaternion.identity);
             }
         }
 
