@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3564717683185333292}
   - component: {fileID: 3564717683185333293}
   - component: {fileID: 3564717683185333330}
-  - component: {fileID: 731036936256531239}
+  - component: {fileID: 2960059028858491470}
   m_Layer: 13
   m_Name: HalfwayDisc
   m_TagString: Untagged
@@ -95,7 +95,7 @@ CapsuleCollider:
   m_Height: 283.43973
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 91.71989, z: -0.00000011920929}
---- !u!114 &731036936256531239
+--- !u!114 &2960059028858491470
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,9 +104,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3564717683185333331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b7d81ac547cbe34a8eb7abab86472b7, type: 3}
+  m_Script: {fileID: 11500000, guid: de5a94cc6ee38d449a14b7b089a0ef3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalColor: {fileID: 2100000, guid: be3011b49d35b244a97553acbe3f8304, type: 2}
+  normalColor: {fileID: 328562782690079700, guid: bf22a8d023bb3f84cbd8cec194dfe174,
+    type: 3}
   collidedColor: {fileID: 4190227957183218588, guid: bf22a8d023bb3f84cbd8cec194dfe174,
     type: 3}

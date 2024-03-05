@@ -91,21 +91,18 @@ public class LM_BlackoutPath : ExperimentTask
 
         // If the condition involves the item moving, this should teleport the item to it's new position after blacking out the screen (and technically before the spawning of the position marker for movement but this should be functionally instant for the participant)
         spawnParent = GetChildGameObject(currentRoom, "SpawnPoints");
-
         if (moveItem[taskCounter] == "yes")
         {
             if (repeat[taskCounter] == "A")
             {
                 spawnObject = GetChildGameObject(spawnParent, "ObjectSpawnA");
-                GameObject movingObject = seenObject.transform.GetChild(0).gameObject;
-                movingObject.transform.position = spawnObject.transform.position;
             }
-            else
+            else if (repeat[taskCounter] == "B")
             {
                 spawnObject = GetChildGameObject(spawnParent, "ObjectSpawnB");
-                GameObject movingObject = seenObject.transform.GetChild(0).gameObject;
-                movingObject.transform.position = spawnObject.transform.position;
             }
+            GameObject movingObject = seenObject.transform.GetChild(0).gameObject;
+            movingObject.transform.position = spawnObject.transform.position;
         }
 
         // Determine whether we need to teleport the participant in this trial
@@ -185,6 +182,7 @@ public class LM_BlackoutPath : ExperimentTask
 
             DestroyImmediate(disc);
             DestroyImmediate(disc_half);
+            HalfwayCollisionColor.half_reached = false; /// For the halfway marker to turn back to false
 
             if (teleport == true)
             {
@@ -221,6 +219,8 @@ public class LM_BlackoutPath : ExperimentTask
         if (timerDelay == true && timer >= delayBeforeContinuing)
         {
             Debug.Log("Delay over - teleporting to new room");
+            GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
+            currentRoom.SetActive(false); // deactivate the current room
             return true;
         }
 

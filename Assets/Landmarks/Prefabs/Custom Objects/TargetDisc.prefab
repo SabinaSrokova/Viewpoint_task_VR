@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2476027844010084887}
   m_LocalRotation: {x: 0.15902421, y: 0.38147742, z: -0.033235326, w: 0.90998995}
-  m_LocalPosition: {x: 0, y: 0, z: 0.3}
-  m_LocalScale: {x: 0.06, y: 0.06, z: 0.06}
+  m_LocalPosition: {x: 0.016, y: -0.19, z: 0.356}
+  m_LocalScale: {x: 0.05, y: 0.06, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3564717683185333295}
   m_RootOrder: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 3564717683185333292}
   - component: {fileID: 3564717683185333293}
   - component: {fileID: 3564717683185333330}
-  - component: {fileID: 7291246864899539854}
+  - component: {fileID: 2879079285577914450}
   m_Layer: 13
   m_Name: TargetDisc
   m_TagString: Untagged
@@ -123,7 +123,7 @@ Transform:
   m_GameObject: {fileID: 3564717683185333331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.01, z: 0.3}
+  m_LocalScale: {x: 0.4, y: 0.01, z: 0.4}
   m_Children:
   - {fileID: 660688729491080799}
   m_Father: {fileID: 0}
@@ -190,7 +190,7 @@ CapsuleCollider:
   m_Height: 283.43973
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 91.71989, z: -0.00000011920929}
---- !u!114 &7291246864899539854
+--- !u!114 &2879079285577914450
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,9 +199,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3564717683185333331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b7d81ac547cbe34a8eb7abab86472b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9cd5a4f3ffa699442a770de7e6fda498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalColor: {fileID: 2100000, guid: e0bdc5b4366e6db4899877b62c432609, type: 2}
+  normalColor: {fileID: 328562782690079700, guid: bf22a8d023bb3f84cbd8cec194dfe174,
+    type: 3}
   collidedColor: {fileID: 4190227957183218588, guid: bf22a8d023bb3f84cbd8cec194dfe174,
     type: 3}
