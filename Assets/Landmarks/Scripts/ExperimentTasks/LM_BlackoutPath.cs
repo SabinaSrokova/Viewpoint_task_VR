@@ -246,6 +246,7 @@ public class LM_BlackoutPath : ExperimentTask
                 avatar.GetComponent<FirstPersonController>().ResetMouselook();
 
                 player.GetComponentInChildren<CharacterController>().enabled = true;
+                teleport = false;
             }
             hud.showEverything();
             timerSpawnReached = true;

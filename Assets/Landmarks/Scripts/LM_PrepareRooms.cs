@@ -43,6 +43,8 @@ public class LM_PrepareRooms : ExperimentTask
     public List<string> repeat = new List<string> { };
     public List<string> block = new List<string> { };
 
+    public int blockValue = 20;
+
     public override void startTask()
     {
         TASK_START();
