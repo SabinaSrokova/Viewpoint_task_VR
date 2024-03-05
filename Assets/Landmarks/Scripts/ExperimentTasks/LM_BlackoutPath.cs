@@ -24,7 +24,8 @@ public class LM_BlackoutPath : ExperimentTask
     [Header("Task-specific Properties")]
     public GameObject hudpanel;
     public GameObject preparedRooms;
-    public GameObject targetDisc;
+    public GameObject targetDisc; // To be used as the final destination target
+    public GameObject halfwayDisc; // To be used during "stay" trials, halfway point with no plane
     public bool teleport = false;
     public float blackoutWalk = 7;
     public float viewingObjects = 14;
@@ -39,10 +40,14 @@ public class LM_BlackoutPath : ExperimentTask
     private GameObject seenObject;
     private GameObject spawnObject;
     private GameObject spawnParent;
+
     private GameObject walkTarget;
+    private GameObject startLocation;
+    private GameObject otherLocation;
+
     private GameObject discLocation;
-    private GameObject currentLocation;
     private GameObject disc;
+    private GameObject disc_half;
     private float timer = 0;
     private bool timerSpawnReached = false;
     private bool timerDelay = false;
@@ -94,7 +99,6 @@ public class LM_BlackoutPath : ExperimentTask
                 spawnObject = GetChildGameObject(spawnParent, "ObjectSpawnA");
                 GameObject movingObject = seenObject.transform.GetChild(0).gameObject;
                 movingObject.transform.position = spawnObject.transform.position;
-
             }
             else
             {
@@ -104,60 +108,62 @@ public class LM_BlackoutPath : ExperimentTask
             }
         }
 
+        // Determine whether we need to teleport the participant in this trial
         if ((condition[taskCounter] == "walk" && start[taskCounter] == end[taskCounter]) || (condition[taskCounter] == "stay" && start[taskCounter] != end[taskCounter]))
         {
             teleport = true;
             Debug.Log("Participant will teleport to the second location");
         }
 
+        // If walk trial, place the disc in the non-starting location
         if (condition[taskCounter] == "walk")
         {
+            // Define location of walk target
             if (start[taskCounter] == "A")
             {
                 walkTarget = GetChildGameObject(spawnParent, "PlayerSpawnB");
-                disc = Instantiate(targetDisc, walkTarget.transform.position, Quaternion.identity);
-
             }
-            else
+            else if (start[taskCounter] == "B")
             {
                 walkTarget = GetChildGameObject(spawnParent, "PlayerSpawnA");
-                disc = Instantiate(targetDisc, walkTarget.transform.position, Quaternion.identity);
             }
+
+            // Summon target disc and set rotation according to the rotation of walk target (which is pre-set to point towards the middle of the room)
+            disc = Instantiate(targetDisc, walkTarget.transform.position, Quaternion.identity);
+            disc.transform.rotation = walkTarget.transform.rotation;
+
         }
-        else
+        
+        // If "stay", two discs should be placed (in between A and B and also in the "start" position) 
+        else if (condition[taskCounter] == "stay")
         {
+            // Define the Start and end locations
             if (start[taskCounter] == "A")
             {
-                currentLocation = GetChildGameObject(spawnParent, "PlayerSpawnA");
-                walkTarget = GetChildGameObject(spawnParent, "PlayerSpawnB");
-                discLocation = Instantiate(walkTarget);
-
-                //Calc the midpoint between the two vectors for the stay condition in order to place the marker inbetween
-                //New method of calculation that should be more accurate + this should no longer be replacing PlayerSpawnB
-
-                discLocation.transform.position = Vector3.Slerp(currentLocation.transform.position, walkTarget.transform.position, 0.5f);
-                Debug.Log(discLocation.transform.position);
-
-                disc = Instantiate(targetDisc, discLocation.transform.position, Quaternion.identity);
-
+                startLocation = GetChildGameObject(spawnParent, "PlayerSpawnA");
+                otherLocation = GetChildGameObject(spawnParent, "PlayerSpawnB");
+                discLocation = Instantiate(otherLocation);
             }
-            else
+            else if (start[taskCounter] == "B")
             {
-                currentLocation = GetChildGameObject(spawnParent, "PlayerSpawnB");
-                walkTarget = GetChildGameObject(spawnParent, "PlayerSpawnA");
-                discLocation = Instantiate(walkTarget);
-
-                //Calc the midpoint between the two vectors for the stay condition in order to place the marker inbetween
-
-  
-                discLocation.transform.position = Vector3.Slerp(currentLocation.transform.position, walkTarget.transform.position, 0.5f);
-                Debug.Log(discLocation.transform.position);
-
-                disc = Instantiate(targetDisc, discLocation.transform.position, Quaternion.identity);
+                startLocation = GetChildGameObject(spawnParent, "PlayerSpawnB");
+                otherLocation = GetChildGameObject(spawnParent, "PlayerSpawnA");
+                discLocation = Instantiate(otherLocation);
             }
-        }
 
-        // WRITE TASK STARTUP CODE HERE
+            //Calc the midpoint between the two vectors for the stay condition in order to place the marker inbetween
+            //New method of calculation that should be more accurate + this should no longer be replacing PlayerSpawnB
+            discLocation.transform.position = Vector3.Slerp(startLocation.transform.position, otherLocation.transform.position, 0.5f);
+            Debug.Log(discLocation.transform.position);
+
+            // Move the halfway disc to the location between A and B
+            disc_half = Instantiate(halfwayDisc, discLocation.transform.position, Quaternion.identity);
+
+            // Place the target disc to the location of start
+            disc = Instantiate(targetDisc, startLocation.transform.position, Quaternion.identity); // startLocation = start
+            disc.transform.rotation = startLocation.transform.rotation;
+
+        }
     }
 
 
@@ -178,6 +184,7 @@ public class LM_BlackoutPath : ExperimentTask
             Debug.Log("blackoutWalk time reached");
 
             DestroyImmediate(disc);
+            DestroyImmediate(disc_half);
 
             if (teleport == true)
             {
@@ -206,7 +213,6 @@ public class LM_BlackoutPath : ExperimentTask
         {
             Debug.Log("14 seconds elapsed: trial complete");
             seenObject.SetActive(false);
-            //currentRoom.SetActive(false); ///////////////////////////////////////////////
             timerDelay = true;
             timerComplete = true;
             //return true;
