@@ -18,6 +18,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class LM_BlackoutPath : ExperimentTask
 {
@@ -26,8 +27,11 @@ public class LM_BlackoutPath : ExperimentTask
     public GameObject preparedRooms;
     public GameObject targetDisc; // To be used as the final destination target
     public GameObject halfwayDisc; // To be used during "stay" trials, halfway point with no plane
+    public GameObject arrowPointer; // point left/right depending on the direction in which the participant should walk
+
     public bool teleport = false;
     public float blackoutWalk = 7;
+    public float arrowTime = 0.5f;
     public float viewingObjects = 14;
     public float delayBeforeContinuing = 17;
 
@@ -48,6 +52,8 @@ public class LM_BlackoutPath : ExperimentTask
     private GameObject discLocation;
     private GameObject disc;
     private GameObject disc_half;
+    private GameObject arrow;
+
     private float timer = 0;
     private bool timerSpawnReached = false;
     private bool timerDelay = false;
@@ -161,6 +167,28 @@ public class LM_BlackoutPath : ExperimentTask
             disc.transform.rotation = startLocation.transform.rotation;
 
         }
+
+        // Summon an arrow in front of the player which points in the direction of which they should walk
+        GameObject player = avatar;
+        Vector3 playerPos = player.transform.position;
+        Vector3 playerDir = player.transform.forward;
+        Quaternion playerRot = player.transform.rotation;
+        float dist = 1; // for now
+        float height = 1;
+
+        Vector3 spawnPos = playerPos + playerDir * dist + Vector3.up * height;
+
+        arrow = Instantiate(arrowPointer, spawnPos, playerRot);
+
+        // If starting position is in A, point to the right
+        if (start[taskCounter] == "A")
+        {
+            arrow.transform.rotation *= Quaternion.Euler(0, 180, 90); 
+        }
+        else if (start[taskCounter] == "B") // otherwise to the left
+        {
+            arrow.transform.rotation *= Quaternion.Euler(0, 0, 90); 
+        }
     }
 
 
@@ -172,8 +200,16 @@ public class LM_BlackoutPath : ExperimentTask
             return true;
         }
 
+
+
         timer += Time.deltaTime;
         //Debug.Log(timer);
+
+        // Destroy arrow after its time is up
+        if (timer >= arrowTime)
+        {
+            DestroyImmediate(arrow);
+        }
 
         // Here the room is relit after the blackout walking stage is complete. If the participant is intended to teleport, they sill do so before the blackout ends.
         if (timerSpawnReached == false && timer >= blackoutWalk)
@@ -201,6 +237,14 @@ public class LM_BlackoutPath : ExperimentTask
                 Debug.Log("Player now at: " + destination.name +
                         " (" + player.transform.position.x + ", " +
                         player.transform.position.z + ")");
+
+                // If teleported, make sure the room is centered
+                Vector3 tempRotate = player.transform.eulerAngles; ///////// SS 3/5/2024
+                tempRotate.y = destination.transform.eulerAngles.y;
+                player.transform.eulerAngles = tempRotate;
+
+                avatar.GetComponent<FirstPersonController>().ResetMouselook();
+
                 player.GetComponentInChildren<CharacterController>().enabled = true;
             }
             hud.showEverything();
