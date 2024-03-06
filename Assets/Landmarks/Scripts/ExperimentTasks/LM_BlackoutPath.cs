@@ -189,6 +189,16 @@ public class LM_BlackoutPath : ExperimentTask
         {
             arrow.transform.rotation *= Quaternion.Euler(0, 0, 90); 
         }
+
+        // // Arrow attempt #2
+        // GameObject arrow = Instantiate(arrowPointer, hudpanel.transform);
+        // RectTransform hudPanelRect = hudpanel.GetComponent<RectTransform>();
+
+        // RectTransform arrowRect = arrow.GetComponent<RectTransform>();
+        // arrowRect.anchorMin = new Vector2(1, 0); // bottom center
+        // arrowRect.anchorMax = new Vector2(1, 0); // bottom center
+        // arrowRect.anchoredPosition = new Vector2(0, arrowRect.sizeDelta.y / 2);
+        // arrowRect.localRotation = Quaternion.Euler(0, 0, 90);
     }
 
 

@@ -80,7 +80,7 @@ public class InstructionsTaskViewpoint : ExperimentTask {
         condition = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().condition;
         blockValue = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().blockValue;
 
-        if (((taskCounter + 1) % blockValue) == 0)
+        if (((taskCounter) % blockValue) == 0)
         {
             skip = false;
         }
