@@ -45,6 +45,7 @@ public class LM_ToggleObjects : ExperimentTask
     private float timer = 0;
     private bool timerSpawnReached = false;
     private bool timerDespawnItemsReached = false;
+    private bool participantReady = false;
     private bool timerRoomDespawnReached = false; /////////////////////////// SS
 
 
@@ -100,9 +101,10 @@ public class LM_ToggleObjects : ExperimentTask
         //avatar.transform.LookAt(groupCenter);
         //avatar.GetComponentInChildren<CharacterController>().enabled = true;
 
-        hud.showEverything();
+        //hud.showEverything();
         timer = 0;
         timerSpawnReached = false;
+        participantReady = false;
 
         seenObject = GetChildGameObject(currentRoom, "Objects " + repeat[taskCounter]);
         Debug.Log("Objects " + repeat[taskCounter]);
@@ -142,7 +144,28 @@ public class LM_ToggleObjects : ExperimentTask
             return true;
         }
 
-        timer += Time.deltaTime;
+        if (Input.GetButtonDown("Return"))
+        {
+            hud.showEverything();
+            participantReady = true;
+        }
+
+        if (vrEnabled)
+        {
+            if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand) | vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
+            {
+                hud.showEverything();
+                participantReady = true;
+            }
+        }
+
+
+        if (participantReady == true)
+        {
+            timer += Time.deltaTime;
+        }
+
+
         //Debug.Log(timer);
 
         // Objects to be viewed by the participant appear after 2 seconds pass of the participant standing in the empty room
