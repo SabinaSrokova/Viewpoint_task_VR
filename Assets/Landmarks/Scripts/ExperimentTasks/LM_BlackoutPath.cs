@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using Valve.VR.InteractionSystem;
 
 public class LM_BlackoutPath : ExperimentTask
 {
@@ -41,6 +42,9 @@ public class LM_BlackoutPath : ExperimentTask
     private List<string> start = new List<string> { };
     private List<string> end = new List<string> { };
     private int taskCounter = new int();
+    private LM_PrepareRooms.objectsMovedAssignment objectsMovedIs;
+
+
     private GameObject seenObject;
     private GameObject spawnObject;
     private GameObject spawnParent;
@@ -58,6 +62,7 @@ public class LM_BlackoutPath : ExperimentTask
     private bool timerSpawnReached = false;
     private bool timerDelay = false;
     private bool timerComplete = false;
+    private bool responseMade = false;
 
     public override void startTask()
     {
@@ -85,6 +90,7 @@ public class LM_BlackoutPath : ExperimentTask
         end = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().end;
         taskCounter = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
         seenObject = GameObject.Find("ViewObjects").GetComponent<LM_ToggleObjects>().seenObject;
+        objectsMovedIs = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().objectsMovedIs;
 
         GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
 
@@ -94,6 +100,7 @@ public class LM_BlackoutPath : ExperimentTask
         timerSpawnReached = false;
         timerDelay = false;
         timerComplete = false;
+        responseMade = false;
 
         // If the condition involves the item moving, this should teleport the item to it's new position after blacking out the screen (and technically before the spawning of the position marker for movement but this should be functionally instant for the participant)
         spawnParent = GetChildGameObject(currentRoom, "SpawnPoints");
@@ -259,7 +266,55 @@ public class LM_BlackoutPath : ExperimentTask
                 teleport = false;
             }
             hud.showEverything();
+
+
+            if (objectsMovedIs == LM_PrepareRooms.objectsMovedAssignment.left)
+            {
+                hud.setLeftMessage("D");
+                hud.setRightMessage("S");
+            }
+            else if (objectsMovedIs == LM_PrepareRooms.objectsMovedAssignment.right)
+            {
+                hud.setLeftMessage("S");
+                hud.setRightMessage("D");
+            }
+
+
+            hud.leftButtonMessage.SetActive(true);
+            hud.rightButtonMessage.SetActive(true);
+
+
             timerSpawnReached = true;
+        }
+
+        if (timerSpawnReached == true && responseMade == false)
+        {
+            if (vrEnabled)
+            {
+                if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand))
+                {
+                    log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" +"Response Time: " + timer, 1);
+                    responseMade = true;
+                }
+                else if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
+                {
+                    log.log("TASK_RESPONSE\t" + "Right Button Pressed\t" + "Response Time: " + timer, 1);
+                    responseMade = true;
+                }
+            }
+
+            if (Input.GetButtonDown("Respond Left"))
+            {
+                    log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" + "Response Time: " + timer, 1);
+                    responseMade = true;
+            }
+
+            if (Input.GetButtonDown("Respond Right"))
+            {
+                    log.log("TASK_RESPONSE\t" + "Right Button Pressed\t" + "Response Time: " + timer, 1);
+                    responseMade = true;
+            }
+
         }
 
         if (timerSpawnReached == true && timer >= viewingObjects && timerComplete == false)
@@ -268,6 +323,8 @@ public class LM_BlackoutPath : ExperimentTask
             seenObject.SetActive(false);
             timerDelay = true;
             timerComplete = true;
+            hud.leftButtonMessage.SetActive(false);
+            hud.rightButtonMessage.SetActive(false);
             //return true;
         }
 

@@ -35,6 +35,9 @@ public class HUD : MonoBehaviour
 	public float hudPanelOFF = 0f; // set the opacity when off
 	private string canvasName;
     public GameObject actionButton; // button that subjects use to interact with the game (if necessary);
+	public GameObject leftButtonMessage; // icon that displays on the left side of the screen hinting what the left trigger does
+	public GameObject rightButtonMessage; // icon that displays on the right side of the screen hinting what the right trigger does
+	public GameObject statusMessage; // extra message box for the top of the screen that can be used for additional hints/potential arrow direction display
     [HideInInspector] public bool actionButtonClicked = false;
     public GameObject debugButton; // button that can be used to force continue in debug mode;
     public GameObject confidenceSlider; // slider that can be used by any task for confidence judements
@@ -49,10 +52,14 @@ public class HUD : MonoBehaviour
 	public bool showTimestamp = false;
 	public bool showStatus;
 	public bool showScore;
+	public bool showLeftButton;
+	public bool showRightButton;
+	public bool showStatusMessage;
 	private float intensity =  0.0f;
 
 	private string message = "";
 	private string compassmessage = "";
+	private string uiTargetMessage = "";
 
 	private string status = "";
 	private int score = 0;
@@ -143,6 +150,27 @@ public class HUD : MonoBehaviour
 	public void setMessage(string newMessage)
 	{
 		message = newMessage;
+	}
+
+	public void setLeftMessage(string newMessage)
+	{
+		uiTargetMessage = newMessage;
+        var temp = leftButtonMessage.GetComponentInChildren<Text>();
+        temp.text = uiTargetMessage;
+    }
+
+	public void setRightMessage(string newMessage)
+	{
+		uiTargetMessage = newMessage;
+		var temp = rightButtonMessage.GetComponentInChildren<Text>();
+		temp.text = uiTargetMessage;
+	}
+
+	public void setStatusMessage(string newMessage)
+	{
+		uiTargetMessage = newMessage;
+		var temp = statusMessage.GetComponentInChildren<Text>();
+		temp.text = uiTargetMessage;
 	}
 
 	public void setMessageCompass(string newMessage)
@@ -280,6 +308,12 @@ public class HUD : MonoBehaviour
 			DestroyImmediate (messageGuiBack.gameObject);
 		if (timeGui)
 			DestroyImmediate (timeGui.gameObject);
+		if (showLeftButton)
+			DestroyImmediate(leftButtonMessage.gameObject);
+		if (showRightButton)
+			DestroyImmediate(rightButtonMessage.gameObject);
+		if (showStatusMessage)
+			DestroyImmediate(statusMessage.gameObject);
 		setMessage("");
 	}
 
