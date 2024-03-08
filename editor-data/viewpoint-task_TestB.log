@@ -17315,3 +17315,1247 @@ InitializeExperiment1False
 63845510173782	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
 63845510173804	TASK_END	MovePlayerToSpawn	MoveSpawn	26
 63845510173807	TASK_START	ViewObjects	LM_ToggleObjects
+63845511088588	EXPERIMENT:		SUBJECT:	TestB	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63845511100573	TASK_START	LM_Timeline	TaskList
+63845511100575	TASK_START	InitializeExperiment	TaskList
+63845511100577	TASK_START	PrepareRooms	LM_PrepareRooms
+63845511100678	TASK_END	PrepareRooms	LM_PrepareRooms	101
+63845511100680	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63845511100682	TASK_END	InitializeExperiment	TaskList	107
+63845511100684	TASK_START	BeginMessage	InstructionsTask
+63845511120188	INPUT_EVENT    PlayerPressedActionButton    1
+63845511120190	TASK_END	BeginMessage	InstructionsTask	19505
+63845511120191	TASK_START	Tasks	TaskList
+63845511120193	TASK_START	TASK_ViewpointTask	TaskList
+63845511120199	TASK_START	ListViewpointSpawns	ObjectList
+63845511120200	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120201	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120202	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120203	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120204	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120204	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120205	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120206	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120207	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120207	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120208	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120208	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120210	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120212	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120213	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120213	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120214	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120215	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120216	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120217	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120218	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120219	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120219	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120220	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120220	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120221	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120222	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120223	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120224	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120225	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120225	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120226	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120227	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120228	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120228	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120230	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120231	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120232	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120233	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120234	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120235	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120236	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120237	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120238	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120238	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120239	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120240	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120240	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120241	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120242	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120243	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120244	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120244	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120245	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120246	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120247	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120248	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120249	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120250	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120250	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120251	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120252	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120252	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120253	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120254	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120255	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120256	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120257	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120257	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120258	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120265	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120266	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120267	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120268	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120269	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120270	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120271	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120271	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120272	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120273	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120273	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120274	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120275	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120276	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120276	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120278	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120279	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120279	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120280	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120281	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120281	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120282	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120283	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120283	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120284	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511120285	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511120314	TASK_END	ListViewpointSpawns	ObjectList	115
+63845511120319	TASK_START	ListViewpointTransfers	ObjectList
+63845511120320	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120322	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120323	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120323	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120324	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120325	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120326	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120326	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120327	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120328	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120329	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120329	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120329	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120330	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120331	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120332	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120333	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120334	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120334	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120335	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120336	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120337	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120337	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120338	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120339	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120339	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120341	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120342	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120343	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120343	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120344	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120345	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120346	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120346	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120347	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120348	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120349	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120349	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120349	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120350	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120351	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120352	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120353	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120353	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120354	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120355	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120356	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120357	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120357	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120358	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120359	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120360	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120361	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120361	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120362	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120362	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120363	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120364	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120365	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120365	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120366	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120367	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120367	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120368	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120369	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120370	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120371	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120372	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120372	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120373	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120374	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120375	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120375	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120376	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120376	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120377	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120379	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120379	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120380	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120381	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120381	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120382	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120383	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120383	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120384	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120385	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120386	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120386	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120387	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120388	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120389	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120390	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120391	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120392	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511120392	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120393	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511120435	TASK_END	ListViewpointTransfers	ObjectList	116
+63845511120436	TASK_START	ViewpointTrials	TaskList
+63845511120439	TASK_START	Counter	LM_DummyCounter
+63845511120458	TASK_END	Counter	LM_DummyCounter	19
+63845511120460	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511129188	INPUT_EVENT    PlayerPressedActionButton    1
+63845511129189	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8730
+63845511129192	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511129195	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(49.6, 0.1, 44.8)
+63845511129196	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511129226	TASK_END	MovePlayerToSpawn	MoveSpawn	34
+63845511129229	TASK_START	ViewObjects	LM_ToggleObjects
+63845511332351	EXPERIMENT:		SUBJECT:	TestB	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63845511335138	TASK_START	LM_Timeline	TaskList
+63845511335142	TASK_START	InitializeExperiment	TaskList
+63845511335147	TASK_START	PrepareRooms	LM_PrepareRooms
+63845511335283	TASK_END	PrepareRooms	LM_PrepareRooms	137
+63845511335284	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63845511335286	TASK_END	InitializeExperiment	TaskList	145
+63845511335291	TASK_START	BeginMessage	InstructionsTask
+63845511341377	INPUT_EVENT    PlayerPressedActionButton    1
+63845511341379	TASK_END	BeginMessage	InstructionsTask	6090
+63845511341381	TASK_START	Tasks	TaskList
+63845511341383	TASK_START	TASK_ViewpointTask	TaskList
+63845511341389	TASK_START	ListViewpointSpawns	ObjectList
+63845511341391	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341392	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341393	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341394	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341395	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341396	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341397	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341398	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341399	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341400	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341401	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341402	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341402	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341404	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341405	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341406	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341407	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341408	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341409	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341410	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341412	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341412	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341413	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341415	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341416	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341417	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341418	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341419	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341420	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341421	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341423	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341423	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341425	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341426	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341428	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341429	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341430	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341431	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341432	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341433	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341434	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341437	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341439	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341440	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341443	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341444	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341446	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341447	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341449	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341450	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341451	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341452	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341453	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341455	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341456	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341457	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341458	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341459	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341461	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341462	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341463	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341464	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341465	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341465	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341466	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341467	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341468	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341469	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341469	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341471	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341471	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341472	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341473	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341474	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341475	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341476	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341477	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341478	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341479	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341480	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341480	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341481	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341482	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341483	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341483	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341485	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341486	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341487	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341488	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341489	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341489	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341492	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341493	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341494	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341495	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnA	null
+63845511341497	TASK_ADD	ListViewpointSpawns	ObjectList	PlayerSpawnB	null
+63845511341528	TASK_END	ListViewpointSpawns	ObjectList	138
+63845511341535	TASK_START	ListViewpointTransfers	ObjectList
+63845511341536	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341538	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341539	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341541	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341543	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341544	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341545	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341546	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341548	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341549	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341551	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341552	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341553	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341554	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341555	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341556	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341557	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341558	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341558	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341559	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341559	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341561	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341562	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341562	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341563	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341564	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341565	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341566	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341567	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341567	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341568	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341569	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341570	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341570	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341571	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341573	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341574	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341575	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341576	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341577	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341578	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341579	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341580	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341580	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341581	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341583	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341584	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341586	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341587	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341588	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341589	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341590	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341590	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341591	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341592	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341593	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341594	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341595	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341596	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341597	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341597	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341598	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341599	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341601	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341602	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341603	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341604	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341605	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341607	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341608	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341609	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341610	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341611	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341611	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341612	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341613	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341615	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341616	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341617	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341618	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341619	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341619	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341621	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341622	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341623	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341623	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341625	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341626	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341627	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341628	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341629	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341630	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341631	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341632	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnB	null
+63845511341633	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341633	TASK_ADD	ListViewpointTransfers	ObjectList	PlayerSpawnA	null
+63845511341685	TASK_END	ListViewpointTransfers	ObjectList	152
+63845511341686	TASK_START	ViewpointTrials	TaskList
+63845511341689	TASK_START	Counter	LM_DummyCounter
+63845511341719	TASK_END	Counter	LM_DummyCounter	29
+63845511341721	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511343928	INPUT_EVENT    PlayerPressedActionButton    1
+63845511343930	TASK_END	BlockInstruction	InstructionsTaskViewpoint	2208
+63845511343933	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511343936	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(49.6, 0.1, 44.8)
+63845511343936	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511343964	TASK_END	MovePlayerToSpawn	MoveSpawn	30
+63845511343966	TASK_START	ViewObjects	LM_ToggleObjects
+63845511354849	TASK_END	ViewObjects	LM_ToggleObjects	10883
+63845511354853	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511366276	TASK_RESPONSE	Left Button Pressed	Response Time: 11.42787
+63845511371882	TASK_END	BlackoutWalking	LM_BlackoutPath	17029
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	1	
+--------------------
+
+63845511371888	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials2False
+63845511371890	TASK_START	Counter	LM_DummyCounter
+63845511371916	TASK_END	Counter	LM_DummyCounter	26
+63845511371918	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511371918	INFO    skip task    BlockInstruction
+63845511371944	TASK_END	BlockInstruction	InstructionsTaskViewpoint	25
+63845511371946	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511371948	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(81.5, 0.1, 18.7)
+63845511371950	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511371973	TASK_END	MovePlayerToSpawn	MoveSpawn	27
+63845511371975	TASK_START	ViewObjects	LM_ToggleObjects
+63845511386322	TASK_END	ViewObjects	LM_ToggleObjects	14347
+63845511386323	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511393827	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(82.3, 0.1, 17.0)
+63845511400171	TASK_RESPONSE	Left Button Pressed	Response Time: 13.84805
+63845511403325	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	2	
+--------------------
+
+63845511403329	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials3False
+63845511403330	TASK_START	Counter	LM_DummyCounter
+63845511403357	TASK_END	Counter	LM_DummyCounter	27
+63845511403358	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511403359	INFO    skip task    BlockInstruction
+63845511403388	TASK_END	BlockInstruction	InstructionsTaskViewpoint	29
+63845511403389	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511403390	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(59.6, 0.1, 39.2)
+63845511403392	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511403423	TASK_END	MovePlayerToSpawn	MoveSpawn	34
+63845511403425	TASK_START	ViewObjects	LM_ToggleObjects
+63845511418566	TASK_END	ViewObjects	LM_ToggleObjects	15141
+63845511418567	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511426081	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(58.0, 0.1, 38.1)
+63845511427768	TASK_RESPONSE	Left Button Pressed	Response Time: 9.197607
+63845511435578	TASK_END	BlackoutWalking	LM_BlackoutPath	17009
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	3	
+--------------------
+
+63845511435582	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials4False
+63845511435584	TASK_START	Counter	LM_DummyCounter
+63845511435602	TASK_END	Counter	LM_DummyCounter	18
+63845511435603	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511435604	INFO    skip task    BlockInstruction
+63845511435622	TASK_END	BlockInstruction	InstructionsTaskViewpoint	19
+63845511435623	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511435625	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(31.4, 0.1, 5.3)
+63845511435626	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511435643	TASK_END	MovePlayerToSpawn	MoveSpawn	20
+63845511435644	TASK_START	ViewObjects	LM_ToggleObjects
+63845511446471	TASK_END	ViewObjects	LM_ToggleObjects	10826
+63845511446473	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511456413	TASK_RESPONSE	Right Button Pressed	Response Time: 9.945786
+63845511463477	TASK_END	BlackoutWalking	LM_BlackoutPath	17004
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	4	
+--------------------
+
+63845511463480	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials5False
+63845511463482	TASK_START	Counter	LM_DummyCounter
+63845511463507	TASK_END	Counter	LM_DummyCounter	25
+63845511463508	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511463509	INFO    skip task    BlockInstruction
+63845511463531	TASK_END	BlockInstruction	InstructionsTaskViewpoint	24
+63845511463534	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511463535	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(91.1, 0.1, 38.9)
+63845511463536	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511463554	TASK_END	MovePlayerToSpawn	MoveSpawn	20
+63845511463555	TASK_START	ViewObjects	LM_ToggleObjects
+63845511474233	TASK_END	ViewObjects	LM_ToggleObjects	10678
+63845511474235	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511484288	TASK_RESPONSE	Right Button Pressed	Response Time: 10.05621
+63845511491266	TASK_END	BlackoutWalking	LM_BlackoutPath	17032
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	5	
+--------------------
+
+63845511491269	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials6False
+63845511491271	TASK_START	Counter	LM_DummyCounter
+63845511491299	TASK_END	Counter	LM_DummyCounter	26
+63845511491301	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511491301	INFO    skip task    BlockInstruction
+63845511491331	TASK_END	BlockInstruction	InstructionsTaskViewpoint	30
+63845511491332	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511491334	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(39.2, 0.1, 44.9)
+63845511491335	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511491364	TASK_END	MovePlayerToSpawn	MoveSpawn	31
+63845511491365	TASK_START	ViewObjects	LM_ToggleObjects
+63845511501012	TASK_END	ViewObjects	LM_ToggleObjects	9647
+63845511501014	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511508510	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(41.1, 0.1, 45.0)
+63845511512141	TASK_RESPONSE	Left Button Pressed	Response Time: 11.14142
+63845511518019	TASK_END	BlackoutWalking	LM_BlackoutPath	17005
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	6	
+--------------------
+
+63845511518022	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials7False
+63845511518024	TASK_START	Counter	LM_DummyCounter
+63845511518042	TASK_END	Counter	LM_DummyCounter	17
+63845511518043	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511518044	INFO    skip task    BlockInstruction
+63845511518072	TASK_END	BlockInstruction	InstructionsTaskViewpoint	29
+63845511518074	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511518075	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(51.1, 0.1, 15.1)
+63845511518076	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511518106	TASK_END	MovePlayerToSpawn	MoveSpawn	32
+63845511518107	TASK_START	ViewObjects	LM_ToggleObjects
+63845511528400	TASK_END	ViewObjects	LM_ToggleObjects	10292
+63845511528401	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511535898	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(52.2, 0.1, 16.6)
+63845511535923	TASK_RESPONSE	Right Button Pressed	Response Time: 7.527512
+63845511545414	TASK_END	BlackoutWalking	LM_BlackoutPath	17012
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	7	
+--------------------
+
+63845511545418	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials8False
+63845511545420	TASK_START	Counter	LM_DummyCounter
+63845511545439	TASK_END	Counter	LM_DummyCounter	19
+63845511545440	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511545441	INFO    skip task    BlockInstruction
+63845511545461	TASK_END	BlockInstruction	InstructionsTaskViewpoint	20
+63845511545462	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511545463	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(89.6, 0.1, 4.8)
+63845511545464	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511545481	TASK_END	MovePlayerToSpawn	MoveSpawn	19
+63845511545482	TASK_START	ViewObjects	LM_ToggleObjects
+63845511556904	TASK_END	ViewObjects	LM_ToggleObjects	11422
+63845511556905	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511564421	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(88.1, 0.1, 5.9)
+63845511571615	TASK_RESPONSE	Left Button Pressed	Response Time: 14.70258
+63845511573924	TASK_END	BlackoutWalking	LM_BlackoutPath	17018
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	8	
+--------------------
+
+63845511573927	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials9False
+63845511573929	TASK_START	Counter	LM_DummyCounter
+63845511573951	TASK_END	Counter	LM_DummyCounter	21
+63845511573952	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511573953	INFO    skip task    BlockInstruction
+63845511573975	TASK_END	BlockInstruction	InstructionsTaskViewpoint	23
+63845511573978	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511573980	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(80.8, 0.1, 29.1)
+63845511573981	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511574011	TASK_END	MovePlayerToSpawn	MoveSpawn	33
+63845511574013	TASK_START	ViewObjects	LM_ToggleObjects
+63845511589927	TASK_END	ViewObjects	LM_ToggleObjects	15914
+63845511589929	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511597546	TASK_RESPONSE	Right Button Pressed	Response Time: 7.618345
+63845511606941	TASK_END	BlackoutWalking	LM_BlackoutPath	17013
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	9	
+--------------------
+
+63845511606944	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials10False
+63845511606946	TASK_START	Counter	LM_DummyCounter
+63845511606967	TASK_END	Counter	LM_DummyCounter	20
+63845511606968	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511606969	INFO    skip task    BlockInstruction
+63845511606989	TASK_END	BlockInstruction	InstructionsTaskViewpoint	21
+63845511606991	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511606992	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(39.2, 0.1, 4.9)
+63845511606994	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511607019	TASK_END	MovePlayerToSpawn	MoveSpawn	28
+63845511607020	TASK_START	ViewObjects	LM_ToggleObjects
+63845511617924	TASK_END	ViewObjects	LM_ToggleObjects	10904
+63845511617925	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511625428	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(41.1, 0.1, 5.0)
+63845511633677	TASK_RESPONSE	Right Button Pressed	Response Time: 15.7567
+63845511634928	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	10	
+--------------------
+
+63845511634932	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials11False
+63845511634934	TASK_START	Counter	LM_DummyCounter
+63845511634956	TASK_END	Counter	LM_DummyCounter	22
+63845511634957	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511634959	INFO    skip task    BlockInstruction
+63845511634981	TASK_END	BlockInstruction	InstructionsTaskViewpoint	23
+63845511634983	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511634984	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(18.9, 0.1, 35.0)
+63845511634986	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511635007	TASK_END	MovePlayerToSpawn	MoveSpawn	24
+63845511635008	TASK_START	ViewObjects	LM_ToggleObjects
+63845511658109	TASK_END	ViewObjects	LM_ToggleObjects	23100
+63845511658111	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511665627	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(17.8, 0.1, 36.6)
+63845511672124	TASK_RESPONSE	Right Button Pressed	Response Time: 14.01015
+63845511675125	TASK_END	BlackoutWalking	LM_BlackoutPath	17015
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	11	
+--------------------
+
+63845511675129	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials12False
+63845511675131	TASK_START	Counter	LM_DummyCounter
+63845511675151	TASK_END	Counter	LM_DummyCounter	20
+63845511675152	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511675153	INFO    skip task    BlockInstruction
+63845511675175	TASK_END	BlockInstruction	InstructionsTaskViewpoint	22
+63845511675176	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511675178	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(59.6, 0.1, 19.2)
+63845511675179	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511675200	TASK_END	MovePlayerToSpawn	MoveSpawn	24
+63845511675201	TASK_START	ViewObjects	LM_ToggleObjects
+63845511688324	TASK_END	ViewObjects	LM_ToggleObjects	13123
+63845511688326	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511697971	TASK_RESPONSE	Left Button Pressed	Response Time: 9.645626
+63845511705335	TASK_END	BlackoutWalking	LM_BlackoutPath	17009
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	12	
+--------------------
+
+63845511705339	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials13False
+63845511705341	TASK_START	Counter	LM_DummyCounter
+63845511705364	TASK_END	Counter	LM_DummyCounter	22
+63845511705364	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511705365	INFO    skip task    BlockInstruction
+63845511705384	TASK_END	BlockInstruction	InstructionsTaskViewpoint	19
+63845511705384	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511705387	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(98.6, 0.1, 35.3)
+63845511705388	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511705409	TASK_END	MovePlayerToSpawn	MoveSpawn	24
+63845511705410	TASK_START	ViewObjects	LM_ToggleObjects
+63845511715931	TASK_END	ViewObjects	LM_ToggleObjects	10520
+63845511715933	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511726222	TASK_RESPONSE	Right Button Pressed	Response Time: 10.29076
+63845511732953	TASK_END	BlackoutWalking	LM_BlackoutPath	17020
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	13	
+--------------------
+
+63845511732956	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials14False
+63845511732958	TASK_START	Counter	LM_DummyCounter
+63845511732986	TASK_END	Counter	LM_DummyCounter	28
+63845511732987	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511732989	INFO    skip task    BlockInstruction
+63845511733021	TASK_END	BlockInstruction	InstructionsTaskViewpoint	33
+63845511733022	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511733023	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(97.8, 0.1, 16.6)
+63845511733024	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511733052	TASK_END	MovePlayerToSpawn	MoveSpawn	30
+63845511733053	TASK_START	ViewObjects	LM_ToggleObjects
+63845511743401	TASK_END	ViewObjects	LM_ToggleObjects	10347
+63845511743402	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511752643	TASK_RESPONSE	Left Button Pressed	Response Time: 9.254935
+63845511760419	TASK_END	BlackoutWalking	LM_BlackoutPath	17016
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	14	
+--------------------
+
+63845511760422	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials15False
+63845511760424	TASK_START	Counter	LM_DummyCounter
+63845511760449	TASK_END	Counter	LM_DummyCounter	25
+63845511760450	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511760451	INFO    skip task    BlockInstruction
+63845511760473	TASK_END	BlockInstruction	InstructionsTaskViewpoint	23
+63845511760474	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511760475	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(68.9, 0.1, 8.9)
+63845511760476	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511760505	TASK_END	MovePlayerToSpawn	MoveSpawn	31
+63845511760506	TASK_START	ViewObjects	LM_ToggleObjects
+63845511770078	TASK_END	ViewObjects	LM_ToggleObjects	9571
+63845511770080	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511781950	TASK_RESPONSE	Right Button Pressed	Response Time: 11.8731
+63845511787104	TASK_END	BlackoutWalking	LM_BlackoutPath	17024
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	15	
+--------------------
+
+63845511787108	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials16False
+63845511787110	TASK_START	Counter	LM_DummyCounter
+63845511787127	TASK_END	Counter	LM_DummyCounter	17
+63845511787128	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511787129	INFO    skip task    BlockInstruction
+63845511787149	TASK_END	BlockInstruction	InstructionsTaskViewpoint	19
+63845511787151	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511787153	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(69.2, 0.1, 49.1)
+63845511787155	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511787183	TASK_END	MovePlayerToSpawn	MoveSpawn	32
+63845511787184	TASK_START	ViewObjects	LM_ToggleObjects
+63845511796977	TASK_END	ViewObjects	LM_ToggleObjects	9792
+63845511796978	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511804487	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(71.1, 0.1, 48.9)
+63845511807256	TASK_RESPONSE	Left Button Pressed	Response Time: 10.28264
+63845511814005	TASK_END	BlackoutWalking	LM_BlackoutPath	17027
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	16	
+--------------------
+
+63845511814008	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials17False
+63845511814010	TASK_START	Counter	LM_DummyCounter
+63845511814039	TASK_END	Counter	LM_DummyCounter	30
+63845511814040	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511814041	INFO    skip task    BlockInstruction
+63845511814073	TASK_END	BlockInstruction	InstructionsTaskViewpoint	33
+63845511814074	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511814075	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(20.8, 0.1, 44.9)
+63845511814077	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511814100	TASK_END	MovePlayerToSpawn	MoveSpawn	25
+63845511814101	TASK_START	ViewObjects	LM_ToggleObjects
+63845511824454	TASK_END	ViewObjects	LM_ToggleObjects	10353
+63845511824456	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511841471	TASK_END	BlackoutWalking	LM_BlackoutPath	17015
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	17	
+--------------------
+
+63845511841475	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials18False
+63845511841477	TASK_START	Counter	LM_DummyCounter
+63845511841496	TASK_END	Counter	LM_DummyCounter	20
+63845511841499	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511841499	INFO    skip task    BlockInstruction
+63845511841523	TASK_END	BlockInstruction	InstructionsTaskViewpoint	24
+63845511841525	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511841526	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(30.8, 0.1, 39.1)
+63845511841528	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511841546	TASK_END	MovePlayerToSpawn	MoveSpawn	21
+63845511841547	TASK_START	ViewObjects	LM_ToggleObjects
+63845511857405	TASK_END	ViewObjects	LM_ToggleObjects	15858
+63845511857406	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511864926	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(30.8, 0.1, 39.1)
+63845511874403	TASK_END	BlackoutWalking	LM_BlackoutPath	16995
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	18	
+--------------------
+
+63845511874406	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials19False
+63845511874407	TASK_START	Counter	LM_DummyCounter
+63845511874428	TASK_END	Counter	LM_DummyCounter	20
+63845511874429	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511874430	INFO    skip task    BlockInstruction
+63845511874448	TASK_END	BlockInstruction	InstructionsTaskViewpoint	20
+63845511874449	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511874451	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(82.0, 0.1, 48.1)
+63845511874452	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511874474	TASK_END	MovePlayerToSpawn	MoveSpawn	24
+63845511874475	TASK_START	ViewObjects	LM_ToggleObjects
+63845511888113	TASK_END	ViewObjects	LM_ToggleObjects	13637
+63845511888114	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511899989	TASK_RESPONSE	Left Button Pressed	Response Time: 11.8833
+63845511905128	TASK_END	BlackoutWalking	LM_BlackoutPath	17014
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	19	
+--------------------
+
+63845511905131	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials20False
+63845511905133	TASK_START	Counter	LM_DummyCounter
+63845511905158	TASK_END	Counter	LM_DummyCounter	25
+63845511905161	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511905162	INFO    skip task    BlockInstruction
+63845511905181	TASK_END	BlockInstruction	InstructionsTaskViewpoint	20
+63845511905183	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511905184	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(112.2, 0.1, 6.6)
+63845511905186	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511905206	TASK_END	MovePlayerToSpawn	MoveSpawn	23
+63845511905208	TASK_START	ViewObjects	LM_ToggleObjects
+63845511917786	TASK_END	ViewObjects	LM_ToggleObjects	12578
+63845511917787	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511927042	TASK_RESPONSE	Right Button Pressed	Response Time: 9.264075
+63845511934805	TASK_END	BlackoutWalking	LM_BlackoutPath	17017
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	20	
+--------------------
+
+63845511934808	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials21False
+63845511934810	TASK_START	Counter	LM_DummyCounter
+63845511934835	TASK_END	Counter	LM_DummyCounter	26
+63845511934837	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511941334	INPUT_EVENT    PlayerPressedActionButton    1
+63845511941335	TASK_END	BlockInstruction	InstructionsTaskViewpoint	6498
+63845511941336	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511941337	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(18.9, 0.1, 18.9)
+63845511941338	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511941367	TASK_END	MovePlayerToSpawn	MoveSpawn	31
+63845511941368	TASK_START	ViewObjects	LM_ToggleObjects
+63845511955962	TASK_END	ViewObjects	LM_ToggleObjects	14593
+63845511955963	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845511966755	TASK_RESPONSE	Left Button Pressed	Response Time: 10.78317
+63845511972985	TASK_END	BlackoutWalking	LM_BlackoutPath	17022
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	21	
+--------------------
+
+63845511972988	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials22False
+63845511972990	TASK_START	Counter	LM_DummyCounter
+63845511973015	TASK_END	Counter	LM_DummyCounter	24
+63845511973017	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845511973017	INFO    skip task    BlockInstruction
+63845511973051	TASK_END	BlockInstruction	InstructionsTaskViewpoint	34
+63845511973053	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845511973054	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(92.3, 0.1, 17.0)
+63845511973055	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845511973086	TASK_END	MovePlayerToSpawn	MoveSpawn	33
+63845511973087	TASK_START	ViewObjects	LM_ToggleObjects
+63845511998018	TASK_END	ViewObjects	LM_ToggleObjects	24930
+63845511998020	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845512015024	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	22	
+--------------------
+
+63845512015027	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials23False
+63845512015030	TASK_START	Counter	LM_DummyCounter
+63845512015054	TASK_END	Counter	LM_DummyCounter	24
+63845512015056	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845512015056	INFO    skip task    BlockInstruction
+63845512015078	TASK_END	BlockInstruction	InstructionsTaskViewpoint	22
+63845512015079	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845512015081	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(40.8, 0.1, 14.9)
+63845512015082	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845512015101	TASK_END	MovePlayerToSpawn	MoveSpawn	21
+63845512015102	TASK_START	ViewObjects	LM_ToggleObjects
+63845512042287	TASK_END	ViewObjects	LM_ToggleObjects	27184
+63845512042288	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845512055005	TASK_RESPONSE	Right Button Pressed	Response Time: 12.722
+63845512059311	TASK_END	BlackoutWalking	LM_BlackoutPath	17022
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	23	
+--------------------
+
+63845512059315	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials24False
+63845512059317	TASK_START	Counter	LM_DummyCounter
+63845512059346	TASK_END	Counter	LM_DummyCounter	29
+63845512059347	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845512059348	INFO    skip task    BlockInstruction
+63845512059377	TASK_END	BlockInstruction	InstructionsTaskViewpoint	29
+63845512059379	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845512059381	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(31.9, 0.1, 25.9)
+63845512059382	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845512059410	TASK_END	MovePlayerToSpawn	MoveSpawn	31
+63845512059412	TASK_START	ViewObjects	LM_ToggleObjects
+63845512072688	TASK_END	ViewObjects	LM_ToggleObjects	13277
+63845512072690	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845512080205	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(31.9, 0.1, 25.9)
+63845512085026	TASK_RESPONSE	Right Button Pressed	Response Time: 12.33888
+63845512089704	TASK_END	BlackoutWalking	LM_BlackoutPath	17014
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	24	
+--------------------
+
+63845512089707	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials25False
+63845512089709	TASK_START	Counter	LM_DummyCounter
+63845512089732	TASK_END	Counter	LM_DummyCounter	22
+63845512089733	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845512089734	INFO    skip task    BlockInstruction
+63845512089751	TASK_END	BlockInstruction	InstructionsTaskViewpoint	18
+63845512089753	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845512089755	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(108.9, 0.1, 25.1)
+63845512089756	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845512089775	TASK_END	MovePlayerToSpawn	MoveSpawn	21
+63845512089777	TASK_START	ViewObjects	LM_ToggleObjects
+63845512102768	TASK_END	ViewObjects	LM_ToggleObjects	12991
+63845512102769	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845512110268	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(108.9, 0.1, 25.1)
+63845512119775	TASK_END	BlackoutWalking	LM_BlackoutPath	17006
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	25	
+--------------------
+
+63845512119778	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials26False
+63845512119780	TASK_START	Counter	LM_DummyCounter
+63845512119797	TASK_END	Counter	LM_DummyCounter	17
+63845512119798	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845512119799	INFO    skip task    BlockInstruction
+63845512119818	TASK_END	BlockInstruction	InstructionsTaskViewpoint	20
+63845512119819	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845512119821	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(17.8, 0.1, 7.4)
+63845512119822	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845512119840	TASK_END	MovePlayerToSpawn	MoveSpawn	20
+63845512119841	TASK_START	ViewObjects	LM_ToggleObjects
+63845512184087	TASK_END	ViewObjects	LM_ToggleObjects	64245
+63845512184089	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845512193801	TASK_RESPONSE	Right Button Pressed	Response Time: 9.71897
+63845512201091	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	26	
+--------------------
+
+63845512201095	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials27False
+63845512201096	TASK_START	Counter	LM_DummyCounter
+63845512201113	TASK_END	Counter	LM_DummyCounter	17
+63845512201116	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845512201117	INFO    skip task    BlockInstruction
+63845512201142	TASK_END	BlockInstruction	InstructionsTaskViewpoint	26
+63845512201143	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845512201145	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(17.8, 0.1, 26.6)
+63845512201146	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845512201168	TASK_END	MovePlayerToSpawn	MoveSpawn	24
+63845512201169	TASK_START	ViewObjects	LM_ToggleObjects
+63845512216004	TASK_END	ViewObjects	LM_ToggleObjects	14835
+63845512216006	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845512223512	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(17.8, 0.1, 26.6)
+63845512233007	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	27	
+--------------------
+
+63845512233011	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials28False
+63845512233012	TASK_START	Counter	LM_DummyCounter
+63845512233042	TASK_END	Counter	LM_DummyCounter	28
+63845512233043	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845512233044	INFO    skip task    BlockInstruction
+63845512233064	TASK_END	BlockInstruction	InstructionsTaskViewpoint	21
+63845512233065	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845512233066	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(99.6, 0.1, 4.8)
+63845512233068	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845512233087	TASK_END	MovePlayerToSpawn	MoveSpawn	22
+63845512233088	TASK_START	ViewObjects	LM_ToggleObjects
+63845512247346	TASK_END	ViewObjects	LM_ToggleObjects	14257
+63845512247347	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845512254876	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(99.6, 0.1, 4.8)
+63845512264371	TASK_END	BlackoutWalking	LM_BlackoutPath	17024
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	28	
+--------------------
+
+63845512264374	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials29False
+63845512264376	TASK_START	Counter	LM_DummyCounter
+63845512264405	TASK_END	Counter	LM_DummyCounter	29
+63845512264406	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845512264407	INFO    skip task    BlockInstruction
+63845512264436	TASK_END	BlockInstruction	InstructionsTaskViewpoint	30
+63845512264438	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845512264439	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(69.2, 0.1, 19.1)
+63845512264440	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845512264471	TASK_END	MovePlayerToSpawn	MoveSpawn	33
+63845512264472	TASK_START	ViewObjects	LM_ToggleObjects
+63845512280553	TASK_END	ViewObjects	LM_ToggleObjects	16081
+63845512280554	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845512288070	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(69.2, 0.1, 19.1)
+63845512288094	TASK_RESPONSE	Right Button Pressed	Response Time: 7.53966
+63845512297578	TASK_END	BlackoutWalking	LM_BlackoutPath	17024
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	29	
+--------------------
+
+63845512297582	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials30False
+63845512297584	TASK_START	Counter	LM_DummyCounter
+63845512297611	TASK_END	Counter	LM_DummyCounter	27
+63845512297613	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845512297613	INFO    skip task    BlockInstruction
+63845512297642	TASK_END	BlockInstruction	InstructionsTaskViewpoint	29
+63845512297643	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845512297645	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(89.2, 0.1, 49.1)
+63845512297646	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845512297668	TASK_END	MovePlayerToSpawn	MoveSpawn	24
+63845512297669	TASK_START	ViewObjects	LM_ToggleObjects
+63845512309483	TASK_END	ViewObjects	LM_ToggleObjects	11814
+63845512309484	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845512317012	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(89.2, 0.1, 49.1)
+63845512323055	TASK_RESPONSE	Left Button Pressed	Response Time: 13.57316
+63845512326496	TASK_END	BlackoutWalking	LM_BlackoutPath	17012
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	30	
+--------------------
+
+63845512326499	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials31False
+63845512326501	TASK_START	Counter	LM_DummyCounter
+63845512326532	TASK_END	Counter	LM_DummyCounter	30
+63845512326533	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845512326534	INFO    skip task    BlockInstruction
+63845512326556	TASK_END	BlockInstruction	InstructionsTaskViewpoint	23
+63845512326557	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845512326558	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(79.6, 0.1, 4.8)
+63845512326559	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845512326595	TASK_END	MovePlayerToSpawn	MoveSpawn	38
+63845512326597	TASK_START	ViewObjects	LM_ToggleObjects
+63845512340675	TASK_END	ViewObjects	LM_ToggleObjects	14078
+63845512340676	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845512350197	TASK_RESPONSE	Right Button Pressed	Response Time: 9.522519
+63845512357684	TASK_END	BlackoutWalking	LM_BlackoutPath	17008
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	31	
+--------------------
+
+63845512357688	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials32False
+63845512357690	TASK_START	Counter	LM_DummyCounter
+63845512357709	TASK_END	Counter	LM_DummyCounter	19
+63845512357710	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845512357711	INFO    skip task    BlockInstruction
+63845512357727	TASK_END	BlockInstruction	InstructionsTaskViewpoint	16
+63845512357729	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845512357730	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(31.5, 0.1, 48.7)
+63845512357731	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845512357753	TASK_END	MovePlayerToSpawn	MoveSpawn	24
+63845512357754	TASK_START	ViewObjects	LM_ToggleObjects
+63845512373620	TASK_END	ViewObjects	LM_ToggleObjects	15866
+63845512373621	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845512381127	TASK_POSITION	ViveRoomspaceController	LM_BlackoutPath	(31.5, 0.1, 48.7)
+63845512384196	TASK_RESPONSE	Right Button Pressed	Response Time: 10.58043
+63845512390646	TASK_END	BlackoutWalking	LM_BlackoutPath	17023
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	32	
+--------------------
+
+63845512390649	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials33False
+63845512390651	TASK_START	Counter	LM_DummyCounter
+63845512390679	TASK_END	Counter	LM_DummyCounter	27
+63845512390680	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845512390681	INFO    skip task    BlockInstruction
+63845512390708	TASK_END	BlockInstruction	InstructionsTaskViewpoint	27
+63845512390709	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845512390711	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(109.6, 0.1, 34.8)
+63845512390712	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845512390737	TASK_END	MovePlayerToSpawn	MoveSpawn	28
+63845512390738	TASK_START	ViewObjects	LM_ToggleObjects
+63845512410612	TASK_END	ViewObjects	LM_ToggleObjects	19873
+63845512410613	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845512427629	TASK_END	BlackoutWalking	LM_BlackoutPath	17015
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	33	
+--------------------
+
+63845512427632	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials34False
+63845512427634	TASK_START	Counter	LM_DummyCounter
+63845512427651	TASK_END	Counter	LM_DummyCounter	17
+63845512427652	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845512427653	INFO    skip task    BlockInstruction
+63845512427674	TASK_END	BlockInstruction	InstructionsTaskViewpoint	21
+63845512427676	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845512427677	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(42.3, 0.1, 37.0)
+63845512427679	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845512427697	TASK_END	MovePlayerToSpawn	MoveSpawn	21
+63845512427698	TASK_START	ViewObjects	LM_ToggleObjects
+63845512438301	TASK_END	ViewObjects	LM_ToggleObjects	10603
+63845512438303	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845513054683	EXPERIMENT:		SUBJECT:	TestB	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63845513057189	TASK_START	LM_Timeline	TaskList
+63845513057191	TASK_START	InitializeExperiment	TaskList
+63845513057194	TASK_START	PrepareRooms	LM_PrepareRooms
+63845513057262	TASK_END	PrepareRooms	LM_PrepareRooms	68
+63845513057264	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63845513057265	TASK_END	InitializeExperiment	TaskList	74
+63845513057268	TASK_START	BeginMessage	InstructionsTask
+63845513065623	INPUT_EVENT    PlayerPressedActionButton    1
+63845513065624	TASK_END	BeginMessage	InstructionsTask	8356
+63845513065626	TASK_START	Tasks	TaskList
+63845513065628	TASK_START	TASK_ViewpointTask	TaskList
+63845513065632	TASK_START	ListViewpointSpawns	ObjectList
+63845513065654	TASK_END	ListViewpointSpawns	ObjectList	22
+63845513065657	TASK_START	ListViewpointTransfers	ObjectList
+63845513065678	TASK_END	ListViewpointTransfers	ObjectList	21
+63845513065679	TASK_START	ViewpointTrials	TaskList
+63845513065682	TASK_START	Counter	LM_DummyCounter
+63845513065703	TASK_END	Counter	LM_DummyCounter	21
+63845513065705	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845513238678	EXPERIMENT:		SUBJECT:	TestB	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63845513241253	TASK_START	LM_Timeline	TaskList
+63845513241255	TASK_START	InitializeExperiment	TaskList
+63845513241259	TASK_START	PrepareRooms	LM_PrepareRooms
+63845513241365	TASK_END	PrepareRooms	LM_PrepareRooms	106
+63845513241367	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63845513241368	TASK_END	InitializeExperiment	TaskList	114
+63845513241372	TASK_START	BeginMessage	InstructionsTask
