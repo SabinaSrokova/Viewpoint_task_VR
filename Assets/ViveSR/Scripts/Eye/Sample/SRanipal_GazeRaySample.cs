@@ -38,8 +38,8 @@ namespace ViveSR
                 GameObject prevObj;
                 Vector3 og_scale;
                 public bool debug = true;
-                [SerializeField] private Material highlightMaterial;
-                [SerializeField] private Material defaultMaterial;
+                //[SerializeField] private Material highlightMaterial;
+                //[SerializeField] private Material defaultMaterial;
                 List<String> strings;
                 //
 
@@ -75,6 +75,7 @@ namespace ViveSR
                     strings.Add("w3");
                     strings.Add("w4");
                     strings.Add("Ceiling 1");
+                    strings.Add("Main_floor");
                 }
 
 
@@ -107,31 +108,38 @@ namespace ViveSR
                         {
                             //var see = hitObject.transform;
                             //var seeRenderer = see.GetComponent<Renderer>();
-                            if (prevObj == null && !strings.Contains(hitObject.name))
+                            if (!strings.Contains(hitObject.name))
                             {
-                                prevObj = hitObject;
-                                og_scale = hitObject.transform.localScale;
-                                hitObject.transform.localScale = og_scale * 8 / 9;
-                                //defaultMaterial = seeRenderer.material;
-                                //seeRenderer.material = highlightMaterial;
+                                if (prevObj == null)
+                                {
+                                    prevObj = hitObject;
+                                    og_scale = hitObject.transform.localScale;
+                                    hitObject.transform.localScale = og_scale * 8 / 7;
+                                    //defaultMaterial = seeRenderer.material;
+                                    //seeRenderer.material = highlightMaterial;
+                                }
+                                else if (prevObj != hitObject)
+                                {
+                                    prevObj.transform.localScale = og_scale;
+                                    prevObj = hitObject;
+                                    og_scale = hitObject.transform.localScale;
+                                    hitObject.transform.localScale = og_scale * 8 / 7;
+
+                                    //prevObj.transform.GetComponent<Renderer>().material = defaultMaterial;
+                                    //prevObj = hitObject;
+                                    //defaultMaterial = seeRenderer.material;
+                                    //seeRenderer.material = highlightMaterial;
+
+
+                                }
                             }
-                            else if (prevObj != hitObject && !strings.Contains(hitObject.name))
+                            else
                             {
-                                prevObj.transform.localScale = og_scale;
-                                og_scale = hitObject.transform.localScale;
-                                hitObject.transform.localScale = og_scale * 8 / 9;
-
-                                //prevObj.transform.GetComponent<Renderer>().material = defaultMaterial;
-                                //prevObj = hitObject;
-                                //defaultMaterial = seeRenderer.material;
-                                //seeRenderer.material = highlightMaterial;
-
-
-                            }
-                            else if (prevObj != null && strings.Contains(hitObject.name))
-                            {
-                                prevObj.transform.localScale = og_scale;
-                                prevObj = null;
+                                if (prevObj != null)
+                                {
+                                    prevObj.transform.localScale = og_scale;
+                                    prevObj = null;
+                                }
                             }
                         }
                     }
