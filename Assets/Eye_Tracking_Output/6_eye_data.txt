@@ -1,0 +1,38 @@
+Starting Experiment now at 3/8/2024 1:07:06 PM
+
+Time: 3/8/2024 1:07:27 PM   |     Distance: 15.83456    |   Participant Coords: (101.9, 1.6, -10.7)   |   Item Coord: (116.6, 0.1, -4.9)   |  Item: Main_floor  |   Pupil Size (Left, right): 4.303085 3.821075
+Time: 3/8/2024 1:07:27 PM   |     Distance: 25.98229    |   Participant Coords: (101.9, 1.6, -10.6)   |   Item Coord: (124.2, 0.1, 2.6)   |  Item: Main_floor  |   Pupil Size (Left, right): 4.266159 3.845596
+Time: 3/8/2024 1:07:27 PM   |     Distance: 22.14534    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (120.8, 0.1, 0.8)   |  Item: Main_floor  |   Pupil Size (Left, right): 4.256851 3.8414
+Time: 3/8/2024 1:07:27 PM   |     Distance: 21.36857    |   Participant Coords: (101.9, 1.6, -10.6)   |   Item Coord: (120.3, 0.1, 0.0)   |  Item: Main_floor  |   Pupil Size (Left, right): 4.182602 3.843658
+Time: 3/8/2024 1:07:27 PM   |     Distance: 22.23812    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (120.4, 0.1, 1.5)   |  Item: Main_floor  |   Pupil Size (Left, right): 4.165283 3.848251
+Time: 3/8/2024 1:07:27 PM   |     Distance: 27.23632    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (124.3, 0.1, 4.7)   |  Item: Main_floor  |   Pupil Size (Left, right): 4.14035 3.819168
+Time: 3/8/2024 1:07:27 PM   |     Distance: 26.62696    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (123.5, 0.1, 4.8)   |  Item: Main_floor  |   Pupil Size (Left, right): 4.180161 3.881897
+Time: 3/8/2024 1:07:27 PM   |     Distance: 31.97456    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (127.2, 0.1, 8.7)   |  Item: Main_floor  |   Pupil Size (Left, right): 4.166412 3.90181
+Time: 3/8/2024 1:07:27 PM   |     Distance: 20.05373    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (118.0, 0.1, 1.2)   |  Item: Main_floor  |   Pupil Size (Left, right): 4.106354 3.824203
+Time: 3/8/2024 1:07:27 PM   |     Distance: 15.30636    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (114.0, 0.1, -1.4)   |  Item: Main_floor  |   Pupil Size (Left, right): 4.148819 3.833572
+Time: 3/8/2024 1:07:27 PM   |     Distance: 16.2511    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (114.0, 0.1, 0.0)   |  Item: Main_floor  |   Pupil Size (Left, right): 4.179718 3.745163
+Time: 3/8/2024 1:07:27 PM   |     Distance: 30.94027    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (120.5, 0.1, 14.0)   |  Item: Main_floor  |   Pupil Size (Left, right): 4.197388 3.943359
+Time: 3/8/2024 1:07:27 PM   |     Distance: 15.97186    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (107.9, 1.8, 4.2)   |  Item: w4  |   Pupil Size (Left, right): 4.17392 3.947266
+Time: 3/8/2024 1:07:27 PM   |     Distance: 14.79801    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (100.8, 1.9, 4.2)   |  Item: w4  |   Pupil Size (Left, right): 4.219177 3.903671
+Time: 3/8/2024 1:07:27 PM   |     Distance: 14.78973    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (101.1, 2.0, 4.2)   |  Item: w4  |   Pupil Size (Left, right): 4.169174 4.099762
+Time: 3/8/2024 1:07:27 PM   |     Distance: 14.78368    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (101.2, 1.8, 4.2)   |  Item: w4  |   Pupil Size (Left, right): 4.438278 3.954575
+Time: 3/8/2024 1:07:27 PM   |     Distance: 14.77838    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (101.8, 1.8, 4.2)   |  Item: w4  |   Pupil Size (Left, right): 4.270813 4.042297
+Time: 3/8/2024 1:07:27 PM   |     Distance: 14.78889    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (102.2, 1.7, 4.2)   |  Item: w4  |   Pupil Size (Left, right): 4.171219 4.011444
+Time: 3/8/2024 1:07:27 PM   |     Distance: 14.813    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (102.7, 1.7, 4.2)   |  Item: w4  |   Pupil Size (Left, right): 4.177811 3.936356
+Time: 3/8/2024 1:07:27 PM   |     Distance: 14.81883    |   Participant Coords: (101.8, 1.6, -10.6)   |   Item Coord: (102.6, 1.9, 4.2)   |  Item: w4  |   Pupil Size (Left, right): 4.16983 3.896027
+Time: 3/8/2024 1:07:27 PM   |     Distance: 14.81632    |   Participant Coords: (101.8, 1.6, -10.7)   |   Item Coord: (102.4, 1.8, 4.2)   |  Item: w4  |   Pupil Size (Left, right): 4.187576 3.890244
+Time: 3/8/2024 1:07:27 PM   |     Distance: 14.83546    |   Participant Coords: (101.8, 1.6, -10.7)   |   Item Coord: (102.7, 1.7, 4.2)   |  Item: w4  |   Pupil Size (Left, right): 4.101685 3.834869
+Time: 3/8/2024 1:07:27 PM   |     Distance: 14.8436    |   Participant Coords: (101.8, 1.6, -10.7)   |   Item Coord: (102.7, 1.8, 4.2)   |  Item: w4  |   Pupil Size (Left, right): 4.32312 3.815826
+Time: 3/8/2024 1:07:27 PM   |     Distance: 47.02732    |   Participant Coords: (101.8, 1.6, -10.7)   |   Item Coord: (107.2, 2.1, 36.0)   |  Item: w1  |   Pupil Size (Left, right): 4.246994 3.881744
+Time: 3/8/2024 1:07:27 PM   |     Distance: 39.1443    |   Participant Coords: (101.8, 1.6, -10.7)   |   Item Coord: (107.2, 1.7, 28.1)   |  Item: w1  |   Pupil Size (Left, right): 4.20369 3.932434
+Time: 3/8/2024 1:07:27 PM   |     Distance: 35.30378    |   Participant Coords: (101.8, 1.6, -10.7)   |   Item Coord: (107.5, 2.1, 24.2)   |  Item: w4  |   Pupil Size (Left, right): 4.270065 3.758667
+Time: 3/8/2024 1:07:27 PM   |     Distance: 25.48265    |   Participant Coords: (101.8, 1.6, -10.7)   |   Item Coord: (107.2, 1.9, 14.2)   |  Item: w4  |   Pupil Size (Left, right): 4.241989 3.808441
+Time: 3/8/2024 1:07:27 PM   |     Distance: 25.67371    |   Participant Coords: (101.8, 1.6, -10.7)   |   Item Coord: (108.2, 1.9, 14.2)   |  Item: w4  |   Pupil Size (Left, right): 4.210632 4.031448
+Time: 3/8/2024 1:07:27 PM   |     Distance: 21.16266    |   Participant Coords: (101.8, 1.6, -10.7)   |   Item Coord: (107.2, 1.8, 9.7)   |  Item: w1  |   Pupil Size (Left, right): 4.194321 3.927292
+Time: 3/8/2024 1:07:27 PM   |     Distance: 20.57227    |   Participant Coords: (101.8, 1.6, -10.7)   |   Item Coord: (107.2, 1.8, 9.1)   |  Item: w1  |   Pupil Size (Left, right): 4.167496 3.972061
+Time: 3/8/2024 1:07:28 PM   |     Distance: 17.92214    |   Participant Coords: (101.8, 1.6, -10.7)   |   Item Coord: (107.2, 1.9, 6.4)   |  Item: w1  |   Pupil Size (Left, right): 4.214676 3.933731
+Time: 3/8/2024 1:07:28 PM   |     Distance: 16.99442    |   Participant Coords: (101.8, 1.6, -10.7)   |   Item Coord: (107.2, 1.9, 5.4)   |  Item: w1  |   Pupil Size (Left, right): 4.184784 3.882919
+Time: 3/8/2024 1:07:28 PM   |     Distance: 19.81416    |   Participant Coords: (101.8, 1.6, -10.7)   |   Item Coord: (107.2, 2.0, 8.3)   |  Item: w1  |   Pupil Size (Left, right): 4.147995 3.844696
+Time: 3/8/2024 1:07:28 PM   |     Distance: 19.46857    |   Participant Coords: (101.8, 1.6, -10.8)   |   Item Coord: (107.2, 1.8, 8.0)   |  Item: w1  |   Pupil Size (Left, right): 4.17984 3.817871
+Time: 3/8/2024 1:07:28 PM   |     Distance: 19.98244    |   Participant Coords: (101.8, 1.6, -10.8)   |   Item Coord: (107.2, 2.0, 8.5)   |  Item: w1  |   Pupil Size (Left, right): 4.143661 3.80896
+Time: 3/8/2024 1:07:28 PM   |

@@ -15,6 +15,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using ViveSR.anipal.Eye;
 using Valve.VR;
+using System.Drawing;
 
 namespace ViveSR
 {
@@ -36,6 +37,8 @@ namespace ViveSR
                 GameObject prevObj;
                 Vector3 og_scale;
                 public bool debug = true;
+                [SerializeField] private Material highlightMaterial;
+                [SerializeField] private Material defaultMaterial;
                 //
 
                 private new void Start()
@@ -94,18 +97,27 @@ namespace ViveSR
                         // DEBUGGING SEGMENT TO SHOW WHERE THE PARTICIPANT IS LOOKING AT AND CHECKING THAT EYE TRACKING WORKS. OBJECTS WILL RESCALE/RESIZE WHEN YOU LOOK AT IT
                         if (debug)
                         {
-                            if (prevObj == null)
+                            var see = hitObject.transform;
+                            var seeRenderer = see.GetComponent<Renderer>();
+                            if (prevObj == null && seeRenderer != null)
                             {
                                 prevObj = hitObject;
-                                og_scale = hitObject.transform.localScale;
-                                hitObject.transform.localScale = og_scale * 8/9;
+                                //og_scale = hitObject.transform.localScale;
+                                //hitObject.transform.localScale = og_scale * 8/9;
+                                defaultMaterial = seeRenderer.material;
+                                seeRenderer.material = highlightMaterial;
                             }
-                            else if (prevObj != hitObject)
+                            else if (prevObj != hitObject && seeRenderer != null)
                             {
-                                prevObj.transform.localScale = og_scale;
-                                og_scale = hitObject.transform.localScale;
-                                hitObject.transform.localScale = og_scale * 8/9;
+                                //prevObj.transform.localScale = og_scale;
+                                //og_scale = hitObject.transform.localScale;
+                                //hitObject.transform.localScale = og_scale * 8/9;
                                 prevObj = hitObject;
+                                prevObj.transform.GetComponent<Renderer>().material = defaultMaterial;
+                                defaultMaterial = seeRenderer.material;
+                                seeRenderer.material = highlightMaterial;
+
+                                
                             }
                         }
                     }

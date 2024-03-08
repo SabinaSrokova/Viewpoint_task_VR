@@ -8965,4 +8965,9 @@ Time: 3/8/2024 12:24:17 PM   |     Distance: 5.383605    |   Participant Coords:
 Time: 3/8/2024 12:24:17 PM   |     Distance: 5.343762    |   Participant Coords: (87.8, 1.7, 6.0)   |   Item Coord: (92.8, 1.6, 8.0)   |  Item: w2  |   Pupil Size (Left, right): 5.376038 5.540421
 Time: 3/8/2024 12:24:17 PM   |     Distance: 5.293983    |   Participant Coords: (87.8, 1.7, 6.0)   |   Item Coord: (92.8, 1.6, 7.9)   |  Item: w2  |   Pupil Size (Left, right): 5.368866 5.726776
 Time: 3/8/2024 12:24:17 PM   |     Distance: 5.291777    |   Participant Coords: (87.8, 1.7, 6.0)   |   Item Coord: (92.8, 1.5, 7.9)   |  Item: w2  |   Pupil Size (Left, right): 5.276077 5.652756
-Time: 3/8/2024 12:24:17 PM   |     Distance: 5.265448    |   Participant Coords: (87.8, 1.7, 6.0)   |   Item Coord: 
+Time: 3/8/2024 12:24:17 PM   |     Distance: 5.265448    |   Participant Coords: (87.8, 1.7, 6.0)   |   Item Coord: (92.8, 1.5, 7.8)   |  Item: w2  |   Pupil Size (Left, right): 5.376709 5.653519
+Time: 3/8/2024 12:24:17 PM   |     Distance: 5.228668    |   Participant Coords: (87.8, 1.7, 6.0)   |   Item Coord: (92.8, 1.4, 7.7)   |  Item: w2  |   Pupil Size (Left, right): 5.408386 5.681595
+Time: 3/8/2024 12:24:17 PM   |     Distance: 5.209259    |   Participant Coords: (87.8, 1.7, 6.0)   |   Item Coord: (92.8, 1.4, 7.6)   |  Item: w2  |   Pupil Size (Left, right): 5.441437 5.604218
+Time: 3/8/2024 12:24:17 PM   |     Distance: 5.185252    |   Participant Coords: (87.8, 1.7, 6.0)   |   Item Coord: (92.8, 1.4, 7.6)   |  Item: w2  |   Pupil Size (Left, right): 5.363724 5.622375
+Time: 3/8/2024 12:24:17 PM   |     Distance: 5.16365    |   Participant Coords: (87.8, 1.7, 6.0)   |   Item Coord: (92.8, 1.4, 7.5)   |  Item: w2  |   Pupil Size (Left, right): 5.409683 5.596603
+Time: 3/8/2024 12:24:17 PM   |     Distance: 5.170526    |   Participant Coords: (87.8, 1.7, 6.0)   |   Item Coord: (92.8, 1.4, 7.5)   |  Item: w2  |   Pupil Size (Left, right): 5.328415
