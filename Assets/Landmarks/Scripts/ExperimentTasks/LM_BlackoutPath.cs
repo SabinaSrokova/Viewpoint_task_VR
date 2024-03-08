@@ -52,6 +52,7 @@ public class LM_BlackoutPath : ExperimentTask
     private GameObject walkTarget;
     private GameObject startLocation;
     private GameObject otherLocation;
+    private GameObject endLocation;
 
     private GameObject discLocation;
     private GameObject disc;
@@ -140,7 +141,7 @@ public class LM_BlackoutPath : ExperimentTask
 
             // Summon target disc and set rotation according to the rotation of walk target (which is pre-set to point towards the middle of the room)
             disc = Instantiate(targetDisc, walkTarget.transform.position, Quaternion.identity);
-            disc.transform.rotation = walkTarget.transform.rotation;
+            //disc.transform.rotation = walkTarget.transform.rotation;
 
         }
         
@@ -171,9 +172,12 @@ public class LM_BlackoutPath : ExperimentTask
 
             // Place the target disc to the location of start
             disc = Instantiate(targetDisc, startLocation.transform.position, Quaternion.identity); // startLocation = start
-            disc.transform.rotation = startLocation.transform.rotation;
-
+            //disc.transform.rotation = startLocation.transform.rotation;
         }
+
+        // In all cases, rotate the disc according to the end position.
+        endLocation = GetChildGameObject(spawnParent, "PlayerSpawn" + end[taskCounter]);
+        disc.transform.rotation = endLocation.transform.rotation;
 
         // Summon an arrow in front of the player which points in the direction of which they should walk
         GameObject player = avatar;
@@ -256,11 +260,12 @@ public class LM_BlackoutPath : ExperimentTask
                         player.transform.position.z + ")");
 
                 // If teleported, make sure the room is centered
-                Vector3 tempRotate = player.transform.eulerAngles; ///////// SS 3/5/2024
-                tempRotate.y = destination.transform.eulerAngles.y;
-                player.transform.eulerAngles = tempRotate;
+                // Vector3 tempRotate = player.transform.eulerAngles; ///////// taken out for immersive VR
+                // tempRotate.y = destination.transform.eulerAngles.y;
+                // player.transform.eulerAngles = tempRotate;
+                // avatar.GetComponent<FirstPersonController>().ResetMouselook();
 
-                avatar.GetComponent<FirstPersonController>().ResetMouselook();
+
 
                 player.GetComponentInChildren<CharacterController>().enabled = true;
                 teleport = false;
