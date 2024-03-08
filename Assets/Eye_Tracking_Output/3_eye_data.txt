@@ -1,0 +1,7 @@
+Starting Experiment now at 3/8/2024 12:18:16 PM
+
+Time: 3/8/2024 12:19:10 PM   |     Distance: 12.66347    |   Participant Coords: (101.4, 1.7, -10.7)   |   Item Coord: (113.3, 0.1, -6.5)   |  Item: Main_floor  |   Pupil Size (Left, right): 5.133224 5.699768
+Time: 3/8/2024 12:19:16 PM   |     Distance: 68.73025    |   Participant Coords: (99.8, 1.7, -10.5)   |   Item Coord: (32.9, 1.1, 5.0)   |  Item: w2  |   Pupil Size (Left, right): -1 6.032242
+Time: 3/8/2024 12:19:16 PM   |     Distance: 88.38144    |   Participant Coords: (99.8, 1.7, -10.4)   |   Item Coord: (11.7, 0.1, -3.1)   |  Item: Main_floor  |   Pupil Size (Left, right): 5.863907 6.544876
+Time: 3/8/2024 12:19:18 PM   |     Distance: 58.98689    |   Participant Coords: (99.7, 1.7, -10.5)   |   Item Coord: (42.9, 1.8, 5.1)   |  Item: w2  |   Pupil Size (Left, right): 5.480591 6.160355
+Time: 3/8/2024 12:19:18 PM   |     Distance: 17.0555    |   Participant Coords: (99.7, 1.7, -10.5)   |   Item Coord: (83.1, 0.1, -7.2)   |  Item: Main_floor  |   P
