@@ -16,6 +16,7 @@ using UnityEngine.Assertions;
 using ViveSR.anipal.Eye;
 using Valve.VR;
 using System.Drawing;
+using System.Collections.Generic;
 
 namespace ViveSR
 {
@@ -39,6 +40,7 @@ namespace ViveSR
                 public bool debug = true;
                 [SerializeField] private Material highlightMaterial;
                 [SerializeField] private Material defaultMaterial;
+                List<String> strings;
                 //
 
                 private new void Start()
@@ -66,7 +68,13 @@ namespace ViveSR
                     sw.WriteLine("Starting Experiment now at " + DateTime.Now.ToString(culture));
                     sw.WriteLine();
 
-
+                    strings = new List<String>();
+                    strings.Add("Floor 1");
+                    strings.Add("w1");
+                    strings.Add("w2");
+                    strings.Add("w3");
+                    strings.Add("w4");
+                    strings.Add("Ceiling 1");
                 }
 
 
@@ -97,27 +105,33 @@ namespace ViveSR
                         // DEBUGGING SEGMENT TO SHOW WHERE THE PARTICIPANT IS LOOKING AT AND CHECKING THAT EYE TRACKING WORKS. OBJECTS WILL RESCALE/RESIZE WHEN YOU LOOK AT IT
                         if (debug)
                         {
-                            var see = hitObject.transform;
-                            var seeRenderer = see.GetComponent<Renderer>();
-                            if (prevObj == null && seeRenderer != null)
+                            //var see = hitObject.transform;
+                            //var seeRenderer = see.GetComponent<Renderer>();
+                            if (prevObj == null && !strings.Contains(hitObject.name))
                             {
                                 prevObj = hitObject;
-                                //og_scale = hitObject.transform.localScale;
-                                //hitObject.transform.localScale = og_scale * 8/9;
-                                defaultMaterial = seeRenderer.material;
-                                seeRenderer.material = highlightMaterial;
+                                og_scale = hitObject.transform.localScale;
+                                hitObject.transform.localScale = og_scale * 8 / 9;
+                                //defaultMaterial = seeRenderer.material;
+                                //seeRenderer.material = highlightMaterial;
                             }
-                            else if (prevObj != hitObject && seeRenderer != null)
+                            else if (prevObj != hitObject && !strings.Contains(hitObject.name))
                             {
-                                //prevObj.transform.localScale = og_scale;
-                                //og_scale = hitObject.transform.localScale;
-                                //hitObject.transform.localScale = og_scale * 8/9;
-                                prevObj = hitObject;
-                                prevObj.transform.GetComponent<Renderer>().material = defaultMaterial;
-                                defaultMaterial = seeRenderer.material;
-                                seeRenderer.material = highlightMaterial;
+                                prevObj.transform.localScale = og_scale;
+                                og_scale = hitObject.transform.localScale;
+                                hitObject.transform.localScale = og_scale * 8 / 9;
 
-                                
+                                //prevObj.transform.GetComponent<Renderer>().material = defaultMaterial;
+                                //prevObj = hitObject;
+                                //defaultMaterial = seeRenderer.material;
+                                //seeRenderer.material = highlightMaterial;
+
+
+                            }
+                            else if (prevObj != null && strings.Contains(hitObject.name))
+                            {
+                                prevObj.transform.localScale = og_scale;
+                                prevObj = null;
                             }
                         }
                     }
