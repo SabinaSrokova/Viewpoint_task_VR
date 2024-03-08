@@ -31,6 +31,7 @@ public class LM_BlackoutPath : ExperimentTask
     public GameObject arrowPointer; // point left/right depending on the direction in which the participant should walk
 
     public bool teleport = false;
+    public bool reorientCamera = false;
     public float blackoutWalk = 7;
     public float arrowTime = 0.5f;
     public float viewingObjects = 14;
@@ -175,9 +176,24 @@ public class LM_BlackoutPath : ExperimentTask
             //disc.transform.rotation = startLocation.transform.rotation;
         }
 
-        // In all cases, rotate the disc according to the end position.
-        endLocation = GetChildGameObject(spawnParent, "PlayerSpawn" + end[taskCounter]);
-        disc.transform.rotation = endLocation.transform.rotation;
+        // In all cases, rotate the disc according to the end position,
+        if (reorientCamera)
+        {
+            if (condition[taskCounter] == "walk")
+            {
+                disc.transform.rotation = walkTarget.transform.rotation;
+            } 
+            else if (condition[taskCounter] == "stay")
+            {
+                disc.transform.rotation = startLocation.transform.rotation;
+            }
+        } 
+        else
+        {
+            endLocation = GetChildGameObject(spawnParent, "PlayerSpawn" + end[taskCounter]);
+            disc.transform.rotation = endLocation.transform.rotation;
+        }
+
 
         // Summon an arrow in front of the player which points in the direction of which they should walk
         GameObject player = avatar;
@@ -260,11 +276,13 @@ public class LM_BlackoutPath : ExperimentTask
                         player.transform.position.z + ")");
 
                 // If teleported, make sure the room is centered
-                // Vector3 tempRotate = player.transform.eulerAngles; ///////// taken out for immersive VR
-                // tempRotate.y = destination.transform.eulerAngles.y;
-                // player.transform.eulerAngles = tempRotate;
-                // avatar.GetComponent<FirstPersonController>().ResetMouselook();
-
+                if (reorientCamera)
+                {
+                    Vector3 tempRotate = player.transform.eulerAngles; ///////// taken out for immersive VR
+                    tempRotate.y = destination.transform.eulerAngles.y;
+                    player.transform.eulerAngles = tempRotate;
+                    avatar.GetComponent<FirstPersonController>().ResetMouselook();
+                }
 
 
                 player.GetComponentInChildren<CharacterController>().enabled = true;
