@@ -37,6 +37,8 @@ public class HUD : MonoBehaviour
     public GameObject actionButton; // button that subjects use to interact with the game (if necessary);
 	public GameObject leftButtonMessage; // icon that displays on the left side of the screen hinting what the left trigger does
 	public GameObject rightButtonMessage; // icon that displays on the right side of the screen hinting what the right trigger does
+	public GameObject leftVRMessage;
+	public GameObject rightVRMessage;
 	public GameObject statusMessage; // extra message box for the top of the screen that can be used for additional hints/potential arrow direction display
     [HideInInspector] public bool actionButtonClicked = false;
     public GameObject debugButton; // button that can be used to force continue in debug mode;
@@ -55,6 +57,8 @@ public class HUD : MonoBehaviour
 	public bool showLeftButton;
 	public bool showRightButton;
 	public bool showStatusMessage;
+	public bool showLeftButtonVR;
+	public bool showRightButtonVR;
 	private float intensity =  0.0f;
 
 	private string message = "";
@@ -173,7 +177,21 @@ public class HUD : MonoBehaviour
 		temp.text = uiTargetMessage;
 	}
 
-	public void setMessageCompass(string newMessage)
+	public void setLeftVRMessage (string newMessage)
+	{
+		uiTargetMessage = newMessage;
+		var temp = leftVRMessage.GetComponent<Text>();
+		temp.text = uiTargetMessage;
+	}
+
+    public void setRightVRMessage(string newMessage)
+    {
+        uiTargetMessage = newMessage;
+        var temp = rightVRMessage.GetComponent<Text>();
+        temp.text = uiTargetMessage;
+    }
+
+    public void setMessageCompass(string newMessage)
 	{
 	print ("setMessageCompass called!!!!");
 		if (newMessage==""){

@@ -295,16 +295,32 @@ public class LM_BlackoutPath : ExperimentTask
             {
                 hud.setLeftMessage("D");
                 hud.setRightMessage("S");
+                if (vrEnabled)
+                {
+                    hud.setLeftVRMessage("D");
+                    hud.setRightVRMessage("S");
+                }
             }
             else if (objectsMovedIs == LM_PrepareRooms.objectsMovedAssignment.right)
             {
                 hud.setLeftMessage("S");
                 hud.setRightMessage("D");
             }
+            if (vrEnabled)
+            {
+                hud.setLeftVRMessage("S");
+                hud.setRightVRMessage("D");
+            }
 
 
             hud.leftButtonMessage.SetActive(true);
             hud.rightButtonMessage.SetActive(true);
+
+            if (vrEnabled)
+            {
+                hud.leftVRMessage.SetActive(true);
+                hud.rightVRMessage.SetActive(true);
+            }
 
 
             timerSpawnReached = true;
@@ -348,7 +364,12 @@ public class LM_BlackoutPath : ExperimentTask
             timerComplete = true;
             hud.leftButtonMessage.SetActive(false);
             hud.rightButtonMessage.SetActive(false);
-            //return true;
+
+            if (vrEnabled)
+            {
+                hud.leftVRMessage.SetActive(false);
+                hud.rightVRMessage.SetActive(false);
+            }
         }
 
         if (timerDelay == true && timer >= delayBeforeContinuing)
