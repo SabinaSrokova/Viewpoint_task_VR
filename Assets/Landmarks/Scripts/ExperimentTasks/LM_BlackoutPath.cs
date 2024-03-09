@@ -320,8 +320,8 @@ public class LM_BlackoutPath : ExperimentTask
             if (vrEnabled)
             {
                 hud.hudPanel.SetActive(true);
-                tempHudPos = hud.hudPanel.GetComponent<RectTransform>().localPosition;
-                hud.hudPanel.GetComponent<RectTransform>().localPosition = new Vector3(0, -0.5f, 1.3f);
+                //tempHudPos = hud.hudPanel.GetComponent<RectTransform>().localPosition;
+                //hud.hudPanel.GetComponent<RectTransform>().localPosition = new Vector3(0, -0.5f, 1.3f);
                 hud.leftVRMessage.SetActive(true);
                 hud.rightVRMessage.SetActive(true);
             }
