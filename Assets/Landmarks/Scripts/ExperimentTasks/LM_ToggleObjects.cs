@@ -75,6 +75,11 @@ public class LM_ToggleObjects : ExperimentTask
         }
         // WRITE TASK STARTUP CODE HERE
 
+        if (vrEnabled) {
+            hud.hudPanel.SetActive(false);
+        }
+
+
         moveItem = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().moveItem;
         repeat = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().repeat;
         taskCounter = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;

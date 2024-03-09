@@ -44,6 +44,7 @@ public class LM_BlackoutPath : ExperimentTask
     private List<string> end = new List<string> { };
     private int taskCounter = new int();
     private LM_PrepareRooms.objectsMovedAssignment objectsMovedIs;
+    private Vector3 tempHudPos;
 
 
     private GameObject seenObject;
@@ -318,6 +319,9 @@ public class LM_BlackoutPath : ExperimentTask
 
             if (vrEnabled)
             {
+                hud.hudPanel.SetActive(true);
+                tempHudPos = hud.hudPanel.GetComponent<RectTransform>().localPosition;
+                hud.hudPanel.GetComponent<RectTransform>().localPosition = new Vector3(0, -0.5f, 1.3f);
                 hud.leftVRMessage.SetActive(true);
                 hud.rightVRMessage.SetActive(true);
             }
@@ -367,6 +371,7 @@ public class LM_BlackoutPath : ExperimentTask
 
             if (vrEnabled)
             {
+                hud.hudPanel.SetActive(false);
                 hud.leftVRMessage.SetActive(false);
                 hud.rightVRMessage.SetActive(false);
             }
