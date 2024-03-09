@@ -289,17 +289,20 @@ public class LM_BlackoutPath : ExperimentTask
                 player.GetComponentInChildren<CharacterController>().enabled = true;
                 teleport = false;
             }
-            hud.showEverything();
+
 
 
             if (objectsMovedIs == LM_PrepareRooms.objectsMovedAssignment.left)
             {
                 hud.setLeftMessage("D");
                 hud.setRightMessage("S");
+
                 if (vrEnabled)
                 {
                     hud.setLeftVRMessage("D");
                     hud.setRightVRMessage("S");
+                    hud.setLeftVRScreenMessage("D");
+                    hud.setRightVRScreenMessage("S");
                 }
             }
             else if (objectsMovedIs == LM_PrepareRooms.objectsMovedAssignment.right)
@@ -311,6 +314,8 @@ public class LM_BlackoutPath : ExperimentTask
             {
                 hud.setLeftVRMessage("S");
                 hud.setRightVRMessage("D");
+                hud.setLeftVRScreenMessage("S");
+                hud.setRightVRScreenMessage("D");
             }
 
 
@@ -319,15 +324,17 @@ public class LM_BlackoutPath : ExperimentTask
 
             if (vrEnabled)
             {
-                hud.hudPanel.SetActive(true);
-                //tempHudPos = hud.hudPanel.GetComponent<RectTransform>().localPosition;
-                //hud.hudPanel.GetComponent<RectTransform>().localPosition = new Vector3(0, -0.5f, 1.3f);
-                hud.leftVRMessage.SetActive(true);
-                hud.rightVRMessage.SetActive(true);
+                //hud.hudPanel.SetActive(true);
+                //tempHudPos = hud.hudPanel.transform.position;
+                //hud.hudPanel.transform.position = avatar.transform.position;
+                //hud.leftVRMessage.SetActive(true);
+                //hud.rightVRMessage.SetActive(true);
+                hud.cameraScreen.SetActive(true);
             }
 
 
             timerSpawnReached = true;
+            hud.showEverything();
         }
 
         if (timerSpawnReached == true && responseMade == false)
@@ -371,9 +378,10 @@ public class LM_BlackoutPath : ExperimentTask
 
             if (vrEnabled)
             {
-                hud.hudPanel.SetActive(false);
-                hud.leftVRMessage.SetActive(false);
-                hud.rightVRMessage.SetActive(false);
+                //hud.hudPanel.SetActive(false);
+                //hud.leftVRMessage.SetActive(false);
+                //hud.rightVRMessage.SetActive(false);
+                hud.cameraScreen.SetActive(false);
             }
         }
 

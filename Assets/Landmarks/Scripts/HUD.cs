@@ -39,7 +39,10 @@ public class HUD : MonoBehaviour
 	public GameObject rightButtonMessage; // icon that displays on the right side of the screen hinting what the right trigger does
 	public GameObject leftVRMessage;
 	public GameObject rightVRMessage;
-	public GameObject statusMessage; // extra message box for the top of the screen that can be used for additional hints/potential arrow direction display
+	public GameObject cameraScreen;
+    public GameObject leftVRMessageScreen;
+    public GameObject rightVRMessageScreen;
+    public GameObject statusMessage; // extra message box for the top of the screen that can be used for additional hints/potential arrow direction display
     [HideInInspector] public bool actionButtonClicked = false;
     public GameObject debugButton; // button that can be used to force continue in debug mode;
     public GameObject confidenceSlider; // slider that can be used by any task for confidence judements
@@ -188,6 +191,20 @@ public class HUD : MonoBehaviour
     {
         uiTargetMessage = newMessage;
         var temp = rightVRMessage.GetComponent<Text>();
+        temp.text = uiTargetMessage;
+    }
+
+    public void setRightVRScreenMessage(string newMessage)
+    {
+        uiTargetMessage = newMessage;
+        var temp = rightVRMessageScreen.GetComponent<Text>();
+        temp.text = uiTargetMessage;
+    }
+
+    public void setLeftVRScreenMessage(string newMessage)
+    {
+        uiTargetMessage = newMessage;
+        var temp = leftVRMessageScreen.GetComponent<Text>();
         temp.text = uiTargetMessage;
     }
 
