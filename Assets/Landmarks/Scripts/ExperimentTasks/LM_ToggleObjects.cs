@@ -52,8 +52,11 @@ public class LM_ToggleObjects : ExperimentTask
 
     private GameObject spawnParent;
     public GameObject targetDisc;
+    public GameObject blackoutFloor; // cylinder floor during blackout
     private GameObject discLocation;
     private GameObject disc;
+    private GameObject origFloor;
+    private GameObject blackFloor;
 
 
     public override void startTask()
@@ -92,6 +95,7 @@ public class LM_ToggleObjects : ExperimentTask
         catch { }
 
         GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
+
         spawnParent = GetChildGameObject(currentRoom, "SpawnPoints");
         GameObject destination = GetChildGameObject(spawnParent, "PlayerSpawn" + start[taskCounter]);
 
@@ -111,7 +115,6 @@ public class LM_ToggleObjects : ExperimentTask
 
         hud.showOnlyHUD();
 
-
         timer = 0;
         timerSpawnReached = false;
         participantReady = false;
@@ -121,6 +124,10 @@ public class LM_ToggleObjects : ExperimentTask
         Debug.Log(repeat[taskCounter]);
         seenObject.SetActive(false);
         currentRoom.SetActive(true); 
+
+        // Draw a floor
+        origFloor = GetChildGameObject(currentRoom, "Floor 1");
+        blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
 
         // Orientation marker
         disc = Instantiate(targetDisc, destination.transform.position, Quaternion.identity);
@@ -159,6 +166,7 @@ public class LM_ToggleObjects : ExperimentTask
             hud.showEverything();
             participantReady = true;
             DestroyImmediate(disc);
+            DestroyImmediate(blackFloor);
         }
 
         if (vrEnabled)
@@ -168,6 +176,7 @@ public class LM_ToggleObjects : ExperimentTask
                 hud.showEverything();
                 participantReady = true;
                 DestroyImmediate(disc);
+                DestroyImmediate(blackFloor);
             }
         }
 

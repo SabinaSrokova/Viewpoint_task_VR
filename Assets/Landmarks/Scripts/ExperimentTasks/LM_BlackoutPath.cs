@@ -29,9 +29,11 @@ public class LM_BlackoutPath : ExperimentTask
     public GameObject targetDisc; // To be used as the final destination target
     public GameObject halfwayDisc; // To be used during "stay" trials, halfway point with no plane
     public GameObject arrowPointer; // point left/right depending on the direction in which the participant should walk
+    public GameObject blackoutFloor; // cylinder floor during blackout
 
     public bool teleport = false;
     public bool reorientCamera = false;
+    public bool showArrow = false;
     public float blackoutWalk = 7;
     public float arrowTime = 0.5f;
     public float viewingObjects = 14;
@@ -60,6 +62,9 @@ public class LM_BlackoutPath : ExperimentTask
     private GameObject disc;
     private GameObject disc_half;
     private GameObject arrow;
+    private GameObject origFloor;
+    private GameObject blackFloor;
+    
 
     private float timer = 0;
     private bool timerSpawnReached = false;
@@ -105,6 +110,10 @@ public class LM_BlackoutPath : ExperimentTask
         timerComplete = false;
         responseMade = false;
 
+        // SUmmon a circular floor during blackout
+        origFloor = GetChildGameObject(currentRoom, "Floor 1");
+        blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
+
         // If the condition involves the item moving, this should teleport the item to it's new position after blacking out the screen (and technically before the spawning of the position marker for movement but this should be functionally instant for the participant)
         spawnParent = GetChildGameObject(currentRoom, "SpawnPoints");
         if (moveItem[taskCounter] == "yes")
@@ -118,7 +127,12 @@ public class LM_BlackoutPath : ExperimentTask
                 spawnObject = GetChildGameObject(spawnParent, "ObjectSpawnB");
             }
             GameObject movingObject = seenObject.transform.GetChild(0).gameObject;
-            movingObject.transform.position = spawnObject.transform.position;
+
+            // Move object, but keep Y coordinate of original position so that this silly thing doesn't spawn in the ground
+            Vector3 tempLoc = movingObject.transform.position;
+            tempLoc.x = spawnObject.transform.position.x;
+            tempLoc.z = spawnObject.transform.position.z;
+            movingObject.transform.position = tempLoc;
         }
 
         // Determine whether we need to teleport the participant in this trial
@@ -197,25 +211,28 @@ public class LM_BlackoutPath : ExperimentTask
 
 
         // Summon an arrow in front of the player which points in the direction of which they should walk
-        GameObject player = avatar;
-        Vector3 playerPos = player.transform.position;
-        Vector3 playerDir = player.transform.forward;
-        Quaternion playerRot = player.transform.rotation;
-        float dist = 1; // for now
-        float height = 1;
-
-        Vector3 spawnPos = playerPos + playerDir * dist + Vector3.up * height;
-
-        arrow = Instantiate(arrowPointer, spawnPos, playerRot);
-
-        // If starting position is in A, point to the right
-        if (start[taskCounter] == "A")
+        if (showArrow)
         {
-            arrow.transform.rotation *= Quaternion.Euler(0, 180, 90); 
-        }
-        else if (start[taskCounter] == "B") // otherwise to the left
-        {
-            arrow.transform.rotation *= Quaternion.Euler(0, 0, 90); 
+            GameObject player = avatar;
+            Vector3 playerPos = player.transform.position;
+            Vector3 playerDir = player.transform.forward;
+            Quaternion playerRot = player.transform.rotation;
+            float dist = 1; // for now
+            float height = 0.5f;
+
+            Vector3 spawnPos = playerPos + playerDir * dist + Vector3.up * height;
+
+            arrow = Instantiate(arrowPointer, spawnPos, playerRot);
+
+            // If starting position is in A, point to the right
+            if (start[taskCounter] == "A")
+            {
+                arrow.transform.rotation *= Quaternion.Euler(0, 180, 90); 
+            }
+            else if (start[taskCounter] == "B") // otherwise to the left
+            {
+               arrow.transform.rotation *= Quaternion.Euler(0, 0, 90); 
+            }
         }
 
         // // Arrow attempt #2
@@ -256,6 +273,7 @@ public class LM_BlackoutPath : ExperimentTask
 
             DestroyImmediate(disc);
             DestroyImmediate(disc_half);
+            DestroyImmediate(blackFloor);
             HalfwayCollisionColor.half_reached = false; /// For the halfway marker to turn back to false
 
             if (teleport == true)
@@ -277,13 +295,13 @@ public class LM_BlackoutPath : ExperimentTask
                         player.transform.position.z + ")");
 
                 // If teleported, make sure the room is centered
-                if (reorientCamera)
-                {
-                    Vector3 tempRotate = player.transform.eulerAngles; ///////// taken out for immersive VR
-                    tempRotate.y = destination.transform.eulerAngles.y;
-                    player.transform.eulerAngles = tempRotate;
-                    avatar.GetComponent<FirstPersonController>().ResetMouselook();
-                }
+                //if (reorientCamera)
+                //{
+                 //   Vector3 tempRotate = player.transform.eulerAngles; ///////// taken out for immersive VR
+                //    tempRotate.y = destination.transform.eulerAngles.y;
+                //    player.transform.eulerAngles = tempRotate;
+                //    avatar.GetComponent<FirstPersonController>().ResetMouselook();
+               // }
 
 
                 player.GetComponentInChildren<CharacterController>().enabled = true;
