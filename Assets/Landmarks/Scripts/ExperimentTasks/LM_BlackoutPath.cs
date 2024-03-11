@@ -284,6 +284,15 @@ public class LM_BlackoutPath : ExperimentTask
                 Debug.Log("Player identified: " + player.gameObject.name);
 
                 player.GetComponentInChildren<CharacterController>().enabled = false;
+
+                if (vrEnabled)
+                {
+                    GameObject dtest = GetChildGameObject(player, "ForwardDirection");
+                    dtest.GetComponentInChildren<CharacterController>().enabled = false;
+                }
+
+
+
                 Vector3 tempPos = player.transform.position;
                 tempPos.x = destination.transform.position.x;
                 tempPos.z = destination.transform.position.z;
@@ -305,6 +314,16 @@ public class LM_BlackoutPath : ExperimentTask
 
 
                 player.GetComponentInChildren<CharacterController>().enabled = true;
+
+                if (vrEnabled)
+                {
+                    if (vrEnabled)
+                    {
+                        GameObject dtest = GetChildGameObject(player, "ForwardDirection");
+                        dtest.GetComponentInChildren<CharacterController>().enabled = true;
+                    }
+                }
+
                 teleport = false;
             }
 
