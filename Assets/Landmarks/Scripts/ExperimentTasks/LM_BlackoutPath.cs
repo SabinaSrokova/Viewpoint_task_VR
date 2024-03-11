@@ -285,11 +285,8 @@ public class LM_BlackoutPath : ExperimentTask
 
                 player.GetComponentInChildren<CharacterController>().enabled = false;
 
-                if (vrEnabled)
-                {
-                    GameObject dtest = GetChildGameObject(player, "ForwardDirection");
-                    dtest.GetComponentInChildren<CharacterController>().enabled = false;
-                }
+
+
 
 
 
@@ -315,14 +312,8 @@ public class LM_BlackoutPath : ExperimentTask
 
                 player.GetComponentInChildren<CharacterController>().enabled = true;
 
-                if (vrEnabled)
-                {
-                    if (vrEnabled)
-                    {
-                        GameObject dtest = GetChildGameObject(player, "ForwardDirection");
-                        dtest.GetComponentInChildren<CharacterController>().enabled = true;
-                    }
-                }
+
+
 
                 teleport = false;
             }
