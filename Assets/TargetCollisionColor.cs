@@ -30,8 +30,6 @@ public class TargetCollisionColor : MonoBehaviour
                     GetComponent<Renderer>().material = collidedColor;
                 }
             }
-
-            //log.log("MARKER_REACHED\t" + "Final target point");
         }
         else
         {

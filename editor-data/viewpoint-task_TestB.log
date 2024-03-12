@@ -25893,3 +25893,486 @@ ViewpointTrials2False
 63845759495445	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
 63845759495454	TASK_END	MovePlayerToSpawn	MoveSpawn	12
 63845759495456	TASK_START	ViewObjects	LM_ToggleObjects
+63845770636827	EXPERIMENT:		SUBJECT:	TestB	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63845770637013	TASK_START	LM_Timeline	TaskList
+63845770637013	TASK_START	InitializeExperiment	TaskList
+63845770637017	TASK_START	PrepareRooms	LM_PrepareRooms
+63845770637028	TASK_END	PrepareRooms	LM_PrepareRooms	11
+63845770637028	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63845770637028	TASK_END	InitializeExperiment	TaskList	15
+63845770637028	TASK_START	BeginMessage	InstructionsTask
+63845770655103	EXPERIMENT:		SUBJECT:	TestB	START_SCENE	use for vr	START_CONDITION:	default	UI:	KeyboardMouse
+63845770655206	TASK_START	LM_Timeline	TaskList
+63845770655206	TASK_START	InitializeExperiment	TaskList
+63845770655206	TASK_START	PrepareRooms	LM_PrepareRooms
+63845770655254	TASK_END	PrepareRooms	LM_PrepareRooms	48
+63845770655256	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63845770655256	TASK_END	InitializeExperiment	TaskList	50
+63845770655256	TASK_START	BeginMessage	InstructionsTask
+63845770663929	INPUT_EVENT    PlayerPressedActionButton    1
+63845770663930	TASK_END	BeginMessage	InstructionsTask	8673
+63845770663931	TASK_START	Tasks	TaskList
+63845770663933	TASK_START	TASK_ViewpointTask	TaskList
+63845770663938	TASK_START	ListViewpointSpawns	ObjectList
+63845770663944	TASK_END	ListViewpointSpawns	ObjectList	6
+63845770663948	TASK_START	ListViewpointTransfers	ObjectList
+63845770663952	TASK_END	ListViewpointTransfers	ObjectList	5
+63845770663954	TASK_START	ViewpointTrials	TaskList
+63845770663956	TASK_START	Counter	LM_DummyCounter
+63845770663960	TASK_END	Counter	LM_DummyCounter	5
+63845770663962	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845770664719	INPUT_EVENT    PlayerPressedActionButton    1
+63845770664720	TASK_END	BlockInstruction	InstructionsTaskViewpoint	757
+63845770664721	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845770664723	TASK_POSITION	KeyboardMouseController	MoveSpawn	(68.9, 0.1, 8.9)
+63845770664724	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 29.1, 0.0)
+63845770664729	TASK_END	MovePlayerToSpawn	MoveSpawn	7
+63845770664730	TASK_START	ViewObjects	LM_ToggleObjects
+63845770675941	TASK_END	ViewObjects	LM_ToggleObjects	11210
+63845770675942	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845770692943	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	1	
+--------------------
+
+63845770692946	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials2False
+63845770692948	TASK_START	Counter	LM_DummyCounter
+63845770692953	TASK_END	Counter	LM_DummyCounter	5
+63845770692954	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845770692955	INFO    skip task    BlockInstruction
+63845770692971	TASK_END	BlockInstruction	InstructionsTaskViewpoint	17
+63845770692972	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845770692973	TASK_POSITION	KeyboardMouseController	MoveSpawn	(32.1, 0.1, 37.8)
+63845770692974	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 49.9, 0.0)
+63845770692984	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845770692986	TASK_START	ViewObjects	LM_ToggleObjects
+63845770894885	EXPERIMENT:		SUBJECT:	TestB	START_SCENE	use for vr	START_CONDITION:	default	UI:	KeyboardMouse
+63845770894977	TASK_START	LM_Timeline	TaskList
+63845770894980	TASK_START	InitializeExperiment	TaskList
+63845770894980	TASK_START	PrepareRooms	LM_PrepareRooms
+63845770895021	TASK_END	PrepareRooms	LM_PrepareRooms	41
+63845770895026	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63845770895026	TASK_END	InitializeExperiment	TaskList	46
+63845770895026	TASK_START	BeginMessage	InstructionsTask
+63845770896851	INPUT_EVENT    PlayerPressedActionButton    1
+63845770896852	TASK_END	BeginMessage	InstructionsTask	1826
+63845770896854	TASK_START	Tasks	TaskList
+63845770896855	TASK_START	TASK_ViewpointTask	TaskList
+63845770896865	TASK_START	ListViewpointSpawns	ObjectList
+63845770896872	TASK_END	ListViewpointSpawns	ObjectList	7
+63845770896875	TASK_START	ListViewpointTransfers	ObjectList
+63845770896880	TASK_END	ListViewpointTransfers	ObjectList	4
+63845770896881	TASK_START	ViewpointTrials	TaskList
+63845770896883	TASK_START	Counter	LM_DummyCounter
+63845770896888	TASK_END	Counter	LM_DummyCounter	5
+63845770896890	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845770898210	INPUT_EVENT    PlayerPressedActionButton    1
+63845770898211	TASK_END	BlockInstruction	InstructionsTaskViewpoint	1322
+63845770898213	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845770898215	TASK_POSITION	KeyboardMouseController	MoveSpawn	(68.9, 0.1, 8.9)
+63845770898216	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 34.8, 0.0)
+63845770898221	TASK_END	MovePlayerToSpawn	MoveSpawn	7
+63845770898222	TASK_START	ViewObjects	LM_ToggleObjects
+63845770915094	TASK_END	ViewObjects	LM_ToggleObjects	16871
+63845770915096	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845770932096	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	1	
+--------------------
+
+63845770932100	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials2False
+63845770932101	TASK_START	Counter	LM_DummyCounter
+63845770932106	TASK_END	Counter	LM_DummyCounter	5
+63845770932107	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845770932107	INFO    skip task    BlockInstruction
+63845770932116	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845770932117	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845770932118	TASK_POSITION	KeyboardMouseController	MoveSpawn	(32.1, 0.1, 37.8)
+63845770932119	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 335.3, 0.0)
+63845770932124	TASK_END	MovePlayerToSpawn	MoveSpawn	7
+63845770932125	TASK_START	ViewObjects	LM_ToggleObjects
+63845771061813	EXPERIMENT:		SUBJECT:	TestB	START_SCENE	use for vr	START_CONDITION:	default	UI:	KeyboardMouse
+63845771061926	TASK_START	LM_Timeline	TaskList
+63845771061926	TASK_START	InitializeExperiment	TaskList
+63845771061927	TASK_START	PrepareRooms	LM_PrepareRooms
+63845771061968	TASK_END	PrepareRooms	LM_PrepareRooms	41
+63845771061968	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63845771061968	TASK_END	InitializeExperiment	TaskList	42
+63845771061968	TASK_START	BeginMessage	InstructionsTask
+63845771064309	INPUT_EVENT    PlayerPressedActionButton    1
+63845771064310	TASK_END	BeginMessage	InstructionsTask	2341
+63845771064311	TASK_START	Tasks	TaskList
+63845771064313	TASK_START	TASK_ViewpointTask	TaskList
+63845771064318	TASK_START	ListViewpointSpawns	ObjectList
+63845771064324	TASK_END	ListViewpointSpawns	ObjectList	5
+63845771064327	TASK_START	ListViewpointTransfers	ObjectList
+63845771064332	TASK_END	ListViewpointTransfers	ObjectList	4
+63845771064333	TASK_START	ViewpointTrials	TaskList
+63845771064335	TASK_START	Counter	LM_DummyCounter
+63845771064339	TASK_END	Counter	LM_DummyCounter	5
+63845771064341	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845771065940	INPUT_EVENT    PlayerPressedActionButton    1
+63845771065941	TASK_END	BlockInstruction	InstructionsTaskViewpoint	1600
+63845771065943	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845771065944	TASK_POSITION	KeyboardMouseController	MoveSpawn	(68.9, 0.1, 8.9)
+63845771065945	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 10.0, 0.0)
+63845771065951	TASK_END	MovePlayerToSpawn	MoveSpawn	8
+63845771065952	TASK_START	ViewObjects	LM_ToggleObjects
+63845771075002	TASK_END	ViewObjects	LM_ToggleObjects	9049
+63845771075004	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845771111405	EXPERIMENT:		SUBJECT:	TestB	START_SCENE	use for vr	START_CONDITION:	default	UI:	KeyboardMouse
+63845771111478	TASK_START	LM_Timeline	TaskList
+63845771111478	TASK_START	InitializeExperiment	TaskList
+63845771111478	TASK_START	PrepareRooms	LM_PrepareRooms
+63845771111528	TASK_END	PrepareRooms	LM_PrepareRooms	50
+63845771111528	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63845771111528	TASK_END	InitializeExperiment	TaskList	50
+63845771111528	TASK_START	BeginMessage	InstructionsTask
+63845771115429	INPUT_EVENT    PlayerPressedActionButton    1
+63845771115431	TASK_END	BeginMessage	InstructionsTask	3902
+63845771115432	TASK_START	Tasks	TaskList
+63845771115434	TASK_START	TASK_ViewpointTask	TaskList
+63845771115439	TASK_START	ListViewpointSpawns	ObjectList
+63845771115444	TASK_END	ListViewpointSpawns	ObjectList	6
+63845771115448	TASK_START	ListViewpointTransfers	ObjectList
+63845771115452	TASK_END	ListViewpointTransfers	ObjectList	5
+63845771115453	TASK_START	ViewpointTrials	TaskList
+63845771115455	TASK_START	Counter	LM_DummyCounter
+63845771115460	TASK_END	Counter	LM_DummyCounter	4
+63845771115461	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845771116093	INPUT_EVENT    PlayerPressedActionButton    1
+63845771116094	TASK_END	BlockInstruction	InstructionsTaskViewpoint	632
+63845771116096	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845771116097	TASK_POSITION	KeyboardMouseController	MoveSpawn	(68.9, 0.1, 8.9)
+63845771116098	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 29.9, 0.0)
+63845771116103	TASK_END	MovePlayerToSpawn	MoveSpawn	7
+63845771116105	TASK_START	ViewObjects	LM_ToggleObjects
+63845771129255	TASK_END	ViewObjects	LM_ToggleObjects	13149
+63845771129257	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845771146258	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	1	
+--------------------
+
+63845771146261	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials2False
+63845771146262	TASK_START	Counter	LM_DummyCounter
+63845771146267	TASK_END	Counter	LM_DummyCounter	4
+63845771146268	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845771146269	INFO    skip task    BlockInstruction
+63845771146273	TASK_END	BlockInstruction	InstructionsTaskViewpoint	5
+63845771146274	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845771146275	TASK_POSITION	KeyboardMouseController	MoveSpawn	(32.1, 0.1, 37.8)
+63845771146275	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 205.5, 0.0)
+63845771146279	TASK_END	MovePlayerToSpawn	MoveSpawn	6
+63845771146280	TASK_START	ViewObjects	LM_ToggleObjects
+63845771224901	TASK_END	ViewObjects	LM_ToggleObjects	78620
+63845771224902	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845771241902	TASK_END	BlackoutWalking	LM_BlackoutPath	16999
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	2	
+--------------------
+
+63845771241905	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials3False
+63845771241906	TASK_START	Counter	LM_DummyCounter
+63845771241911	TASK_END	Counter	LM_DummyCounter	4
+63845771241912	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845771241912	INFO    skip task    BlockInstruction
+63845771241921	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845771241922	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845771241923	TASK_POSITION	KeyboardMouseController	MoveSpawn	(112.2, 0.1, 6.6)
+63845771241924	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 150.0, 0.0)
+63845771241928	TASK_END	MovePlayerToSpawn	MoveSpawn	7
+63845771241929	TASK_START	ViewObjects	LM_ToggleObjects
+63845771252345	TASK_END	ViewObjects	LM_ToggleObjects	10416
+63845771252347	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845771269348	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	3	
+--------------------
+
+63845771269351	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials4False
+63845771269352	TASK_START	Counter	LM_DummyCounter
+63845771269357	TASK_END	Counter	LM_DummyCounter	4
+63845771269358	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845771269359	INFO    skip task    BlockInstruction
+63845771269367	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845771269369	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845771269370	TASK_POSITION	KeyboardMouseController	MoveSpawn	(18.9, 0.1, 18.9)
+63845771269371	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 210.0, 0.0)
+63845771269375	TASK_END	MovePlayerToSpawn	MoveSpawn	7
+63845771269377	TASK_START	ViewObjects	LM_ToggleObjects
+63845771283634	TASK_END	ViewObjects	LM_ToggleObjects	14257
+63845771283635	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845771316957	EXPERIMENT:		SUBJECT:	TestB	START_SCENE	use for vr	START_CONDITION:	default	UI:	KeyboardMouse
+63845771317061	TASK_START	LM_Timeline	TaskList
+63845771317061	TASK_START	InitializeExperiment	TaskList
+63845771317061	TASK_START	PrepareRooms	LM_PrepareRooms
+63845771317108	TASK_END	PrepareRooms	LM_PrepareRooms	45
+63845771317108	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63845771317108	TASK_END	InitializeExperiment	TaskList	47
+63845771317111	TASK_START	BeginMessage	InstructionsTask
+63845771323841	INPUT_EVENT    PlayerPressedActionButton    1
+63845771323843	TASK_END	BeginMessage	InstructionsTask	6731
+63845771323844	TASK_START	Tasks	TaskList
+63845771323845	TASK_START	TASK_ViewpointTask	TaskList
+63845771323850	TASK_START	ListViewpointSpawns	ObjectList
+63845771323856	TASK_END	ListViewpointSpawns	ObjectList	5
+63845771323860	TASK_START	ListViewpointTransfers	ObjectList
+63845771323865	TASK_END	ListViewpointTransfers	ObjectList	5
+63845771323866	TASK_START	ViewpointTrials	TaskList
+63845771323868	TASK_START	Counter	LM_DummyCounter
+63845771323872	TASK_END	Counter	LM_DummyCounter	5
+63845771323874	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845771324713	INPUT_EVENT    PlayerPressedActionButton    1
+63845771324715	TASK_END	BlockInstruction	InstructionsTaskViewpoint	841
+63845771324717	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845771324718	TASK_POSITION	KeyboardMouseController	MoveSpawn	(68.9, 0.1, 8.9)
+63845771324720	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 23.6, 0.0)
+63845771324725	TASK_END	MovePlayerToSpawn	MoveSpawn	8
+63845771324727	TASK_START	ViewObjects	LM_ToggleObjects
+63845771334428	TASK_END	ViewObjects	LM_ToggleObjects	9700
+63845771334430	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845771370161	EXPERIMENT:		SUBJECT:	TestB	START_SCENE	use for vr	START_CONDITION:	default	UI:	KeyboardMouse
+63845771370254	TASK_START	LM_Timeline	TaskList
+63845771370256	TASK_START	InitializeExperiment	TaskList
+63845771370256	TASK_START	PrepareRooms	LM_PrepareRooms
+63845771370299	TASK_END	PrepareRooms	LM_PrepareRooms	43
+63845771370299	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63845771370299	TASK_END	InitializeExperiment	TaskList	43
+63845771370299	TASK_START	BeginMessage	InstructionsTask
+63845771377848	INPUT_EVENT    PlayerPressedActionButton    1
+63845771377849	TASK_END	BeginMessage	InstructionsTask	7549
+63845771377850	TASK_START	Tasks	TaskList
+63845771377852	TASK_START	TASK_ViewpointTask	TaskList
+63845771377857	TASK_START	ListViewpointSpawns	ObjectList
+63845771377862	TASK_END	ListViewpointSpawns	ObjectList	6
+63845771377866	TASK_START	ListViewpointTransfers	ObjectList
+63845771377871	TASK_END	ListViewpointTransfers	ObjectList	5
+63845771377872	TASK_START	ViewpointTrials	TaskList
+63845771377874	TASK_START	Counter	LM_DummyCounter
+63845771377878	TASK_END	Counter	LM_DummyCounter	4
+63845771377880	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845771379112	INPUT_EVENT    PlayerPressedActionButton    1
+63845771379114	TASK_END	BlockInstruction	InstructionsTaskViewpoint	1234
+63845771379116	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845771379117	TASK_POSITION	KeyboardMouseController	MoveSpawn	(68.9, 0.1, 8.9)
+63845771379118	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 21.5, 0.0)
+63845771379123	TASK_END	MovePlayerToSpawn	MoveSpawn	7
+63845771379125	TASK_START	ViewObjects	LM_ToggleObjects
+63845771404223	TASK_END	ViewObjects	LM_ToggleObjects	25098
+63845771404225	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845771421223	TASK_END	BlackoutWalking	LM_BlackoutPath	16998
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	1	
+--------------------
+
+63845771421227	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials2False
+63845771421228	TASK_START	Counter	LM_DummyCounter
+63845771421233	TASK_END	Counter	LM_DummyCounter	5
+63845771421234	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845771421235	INFO    skip task    BlockInstruction
+63845771421243	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845771421244	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845771421245	TASK_POSITION	KeyboardMouseController	MoveSpawn	(32.1, 0.1, 37.8)
+63845771421246	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 192.8, 0.0)
+63845771421251	TASK_END	MovePlayerToSpawn	MoveSpawn	6
+63845771421252	TASK_START	ViewObjects	LM_ToggleObjects
+63845773285469	EXPERIMENT:		SUBJECT:	TestB	START_SCENE	use for vr	START_CONDITION:	default	UI:	KeyboardMouse
+63845773285579	TASK_START	LM_Timeline	TaskList
+63845773285583	TASK_START	InitializeExperiment	TaskList
+63845773285583	TASK_START	PrepareRooms	LM_PrepareRooms
+63845773285629	TASK_END	PrepareRooms	LM_PrepareRooms	46
+63845773285631	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63845773285631	TASK_END	InitializeExperiment	TaskList	48
+63845773285631	TASK_START	BeginMessage	InstructionsTask
+63845773291449	INPUT_EVENT    PlayerPressedActionButton    1
+63845773291450	TASK_END	BeginMessage	InstructionsTask	5819
+63845773291451	TASK_START	Tasks	TaskList
+63845773291453	TASK_START	TASK_ViewpointTask	TaskList
+63845773291459	TASK_START	ListViewpointSpawns	ObjectList
+63845773291464	TASK_END	ListViewpointSpawns	ObjectList	5
+63845773291467	TASK_START	ListViewpointTransfers	ObjectList
+63845773291472	TASK_END	ListViewpointTransfers	ObjectList	4
+63845773291473	TASK_START	ViewpointTrials	TaskList
+63845773291475	TASK_START	Counter	LM_DummyCounter
+63845773291480	TASK_END	Counter	LM_DummyCounter	5
+63845773291481	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845773292456	INPUT_EVENT    PlayerPressedActionButton    1
+63845773292457	TASK_END	BlockInstruction	InstructionsTaskViewpoint	976
+63845773292459	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845773292460	TASK_POSITION	KeyboardMouseController	MoveSpawn	(18.9, 0.1, 8.9)
+63845773292461	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 12.4, 0.0)
+63845773292466	TASK_END	MovePlayerToSpawn	MoveSpawn	7
+63845773292468	TASK_START	ViewObjects	LM_ToggleObjects
+63845773304588	TASK_END	ViewObjects	LM_ToggleObjects	12121
+63845773304590	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845773321590	TASK_END	BlackoutWalking	LM_BlackoutPath	16999
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	1	
+--------------------
+
+63845773321593	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials2False
+63845773321594	TASK_START	Counter	LM_DummyCounter
+63845773321599	TASK_END	Counter	LM_DummyCounter	4
+63845773321600	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845773321601	INFO    skip task    BlockInstruction
+63845773321609	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845773321610	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845773321611	TASK_POSITION	KeyboardMouseController	MoveSpawn	(79.6, 0.1, 4.8)
+63845773321612	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 70.3, 0.0)
+63845773321616	TASK_END	MovePlayerToSpawn	MoveSpawn	6
+63845773321617	TASK_START	ViewObjects	LM_ToggleObjects
+63845773340997	TASK_END	ViewObjects	LM_ToggleObjects	19379
+63845773340998	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845773374778	TASK_END	BlackoutWalking	LM_BlackoutPath	33779
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	2	
+--------------------
+
+63845773374780	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials3False
+63845773374782	TASK_START	Counter	LM_DummyCounter
+63845773374785	TASK_END	Counter	LM_DummyCounter	4
+63845773374786	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845773374787	INFO    skip task    BlockInstruction
+63845773374791	TASK_END	BlockInstruction	InstructionsTaskViewpoint	4
+63845773374792	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845773374793	TASK_POSITION	KeyboardMouseController	MoveSpawn	(50.4, 0.1, 9.2)
+63845773374794	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 10.3, 0.0)
+63845773374798	TASK_END	MovePlayerToSpawn	MoveSpawn	5
+63845773374799	TASK_START	ViewObjects	LM_ToggleObjects
+63845773390029	TASK_END	ViewObjects	LM_ToggleObjects	15230
+63845773390030	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845773407031	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	3	
+--------------------
+
+63845773407033	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials4False
+63845773407035	TASK_START	Counter	LM_DummyCounter
+63845773407039	TASK_END	Counter	LM_DummyCounter	4
+63845773407040	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845773407041	INFO    skip task    BlockInstruction
+63845773407050	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845773407051	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845773407052	TASK_POSITION	KeyboardMouseController	MoveSpawn	(29.6, 0.1, 4.8)
+63845773407053	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 189.1, 0.0)
+63845773407061	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845773407062	TASK_START	ViewObjects	LM_ToggleObjects
+63845773427901	TASK_END	ViewObjects	LM_ToggleObjects	20839
+63845773427902	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845773444903	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	4	
+--------------------
+
+63845773444905	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials5False
+63845773444907	TASK_START	Counter	LM_DummyCounter
+63845773444912	TASK_END	Counter	LM_DummyCounter	5
+63845773444913	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845773444913	INFO    skip task    BlockInstruction
+63845773444921	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845773444922	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845773444923	TASK_POSITION	KeyboardMouseController	MoveSpawn	(58.6, 0.1, 8.7)
+63845773444924	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 10.0, 0.0)
+63845773444929	TASK_END	MovePlayerToSpawn	MoveSpawn	6
+63845773444930	TASK_START	ViewObjects	LM_ToggleObjects
+63845773460142	TASK_END	ViewObjects	LM_ToggleObjects	15211
+63845773460143	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845773477143	TASK_END	BlackoutWalking	LM_BlackoutPath	16999
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	5	
+--------------------
+
+63845773477145	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials6False
+63845773477146	TASK_START	Counter	LM_DummyCounter
+63845773477155	TASK_END	Counter	LM_DummyCounter	4
+63845773477157	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845773477157	INFO    skip task    BlockInstruction
+63845773477166	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845773477167	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845773477168	TASK_POSITION	KeyboardMouseController	MoveSpawn	(89.6, 0.1, 4.8)
+63845773477169	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 39.6, 0.0)
+63845773477174	TASK_END	MovePlayerToSpawn	MoveSpawn	7
+63845773477175	TASK_START	ViewObjects	LM_ToggleObjects
+63845773520933	TASK_END	ViewObjects	LM_ToggleObjects	43758
+63845773520934	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845773537934	TASK_END	BlackoutWalking	LM_BlackoutPath	16999
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+TestB	default	use for vr	1	TASK_ViewpointTask	1	6	
+--------------------
+
+63845773537936	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials7False
+63845773537938	TASK_START	Counter	LM_DummyCounter
+63845773537942	TASK_END	Counter	LM_DummyCounter	5
+63845773537943	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845773537944	INFO    skip task    BlockInstruction
+63845773537952	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845773537953	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845773537954	TASK_POSITION	KeyboardMouseController	MoveSpawn	(41.1, 0.1, 5.0)
+63845773537955	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 45.7, 0.0)
+63845773537960	TASK_END	MovePlayerToSpawn	MoveSpawn	6
+63845773537961	TASK_START	ViewObjects	LM_ToggleObjects

@@ -1,8 +1,16 @@
 Room,Start,End,Condition,MoveItem,Repeat,Block
+Room_1,A,B,stay,yes,A,1
+Room_7,A,B,stay,no,A,1
+Room_4,A,B,stay,no,A,1
+Room_2,A,B,stay,yes,A,1
+Room_5,B,A,stay,yes,A,1
+Room_8,B,A,stay,no,A,1
+Room_3,B,A,stay,no,A,1
+Room_15,B,A,stay,yes,A,1
 Room_6,A,A,walk,no,A,2
 Room_32,A,A,walk,yes,A,2
 Room_10,A,A,walk,yes,A,2
-Room_11,A,B,walk,no,A,2
+Room_11,A,A,walk,no,A,2
 Room_18,B,A,walk,yes,A,2
 Room_13,B,A,walk,no,A,2
 Room_30,B,A,walk,no,A,2

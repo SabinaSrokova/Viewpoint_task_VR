@@ -11,7 +11,6 @@ public class HalfwayCollisionColor : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GetComponent<Renderer>().material = collidedColor;
-        //log.log("MARKER_REACHED\t" + "Halfway point");
         half_reached = true;
     }
 
