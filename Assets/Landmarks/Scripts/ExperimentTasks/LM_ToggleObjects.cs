@@ -78,10 +78,6 @@ public class LM_ToggleObjects : ExperimentTask
         }
         // WRITE TASK STARTUP CODE HERE
 
-        if (vrEnabled) {
-            hud.hudPanel.SetActive(false);
-        }
-
 
         moveItem = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().moveItem;
         repeat = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().repeat;
@@ -93,6 +89,7 @@ public class LM_ToggleObjects : ExperimentTask
             GameObject.Find("ALL_ROOMS").SetActive(false);
         }
         catch { }
+
 
         GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
 
@@ -114,6 +111,20 @@ public class LM_ToggleObjects : ExperimentTask
 
 
         hud.showOnlyHUD();
+
+        if (vrEnabled)
+        {
+            hud.setStatusScreenMessage("Position youself on the marker, press a trigger to continue");
+            hud.cameraScreen.SetActive(true);
+            hud.statusMessageScreen.SetActive(true);
+        }
+        else
+        {
+            hud.setStatusMessage("Position youself on the marker, press the Enter key to continue");
+            hud.statusMessage.SetActive(true);
+        }
+
+
 
         timer = 0;
         timerSpawnReached = false;
@@ -161,8 +172,10 @@ public class LM_ToggleObjects : ExperimentTask
             return true;
         }
 
+
         if (Input.GetButtonDown("Return"))
         {
+            hud.statusMessage.SetActive(false);
             hud.showEverything();
             participantReady = true;
             DestroyImmediate(disc);
@@ -173,6 +186,8 @@ public class LM_ToggleObjects : ExperimentTask
         {
             if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand) | vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
             {
+                hud.statusMessageScreen.SetActive(false);
+                hud.cameraScreen.SetActive(false);
                 hud.showEverything();
                 participantReady = true;
                 DestroyImmediate(disc);

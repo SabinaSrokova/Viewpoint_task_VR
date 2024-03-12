@@ -37,12 +37,14 @@ public class HUD : MonoBehaviour
     public GameObject actionButton; // button that subjects use to interact with the game (if necessary);
 	public GameObject leftButtonMessage; // icon that displays on the left side of the screen hinting what the left trigger does
 	public GameObject rightButtonMessage; // icon that displays on the right side of the screen hinting what the right trigger does
-	public GameObject leftVRMessage;
-	public GameObject rightVRMessage;
-	public GameObject cameraScreen;
-    public GameObject leftVRMessageScreen;
-    public GameObject rightVRMessageScreen;
+	public GameObject leftVRMessage; // Currently vestigial
+	public GameObject rightVRMessage; // Currently vestigial
     public GameObject statusMessage; // extra message box for the top of the screen that can be used for additional hints/potential arrow direction display
+    public GameObject cameraScreen; // UI Element that sticks to the player's vision during VR - the canvas (all variables with "screen" function this way)
+    public GameObject leftVRMessageScreen; // Prompt which appears on the left side of the player's vision
+    public GameObject rightVRMessageScreen; // Prompt which appears on the right side of the player's vision
+	public GameObject statusMessageScreen; // Prompt which appears on the top of the player's vision intended for hint text/potential arrow direction display
+
     [HideInInspector] public bool actionButtonClicked = false;
     public GameObject debugButton; // button that can be used to force continue in debug mode;
     public GameObject confidenceSlider; // slider that can be used by any task for confidence judements
@@ -205,6 +207,13 @@ public class HUD : MonoBehaviour
     {
         uiTargetMessage = newMessage;
         var temp = leftVRMessageScreen.GetComponent<Text>();
+        temp.text = uiTargetMessage;
+    }
+
+    public void setStatusScreenMessage(string newMessage)
+    {
+        uiTargetMessage = newMessage;
+        var temp = statusMessageScreen.GetComponent<Text>();
         temp.text = uiTargetMessage;
     }
 

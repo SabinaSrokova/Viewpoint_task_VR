@@ -111,7 +111,7 @@ public class LM_BlackoutPath : ExperimentTask
         timerComplete = false;
         responseMade = false;
 
-        // SUmmon a circular floor during blackout
+        // Summon a circular floor during blackout
         origFloor = GetChildGameObject(currentRoom, "Floor 1");
         blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
 
@@ -393,6 +393,8 @@ public class LM_BlackoutPath : ExperimentTask
                 //hud.leftVRMessage.SetActive(true);
                 //hud.rightVRMessage.SetActive(true);
                 hud.cameraScreen.SetActive(true);
+                hud.leftVRMessageScreen.SetActive(true);
+                hud.rightVRMessageScreen.SetActive(true);
             }
 
 
@@ -444,6 +446,8 @@ public class LM_BlackoutPath : ExperimentTask
                 //hud.hudPanel.SetActive(false);
                 //hud.leftVRMessage.SetActive(false);
                 //hud.rightVRMessage.SetActive(false);
+                hud.leftVRMessageScreen.SetActive(false);
+                hud.rightVRMessageScreen.SetActive(false);
                 hud.cameraScreen.SetActive(false);
             }
         }
