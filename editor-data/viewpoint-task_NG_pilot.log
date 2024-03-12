@@ -1,0 +1,3713 @@
+63845841804859	EXPERIMENT:		SUBJECT:	NG_pilot	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63845841840000	TASK_START	LM_Timeline	TaskList
+63845841840001	TASK_START	InitializeExperiment	TaskList
+63845841840003	TASK_START	PrepareRooms	LM_PrepareRooms
+63845841840159	TASK_END	PrepareRooms	LM_PrepareRooms	156
+63845841840160	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63845841840162	TASK_END	InitializeExperiment	TaskList	160
+63845841840164	TASK_START	BeginMessage	InstructionsTask
+63845841844716	INPUT_EVENT    PlayerPressedActionButton    1
+63845841844718	TASK_END	BeginMessage	InstructionsTask	4554
+63845841844720	TASK_START	Tasks	TaskList
+63845841844722	TASK_START	TASK_ViewpointTask	TaskList
+63845841844731	TASK_START	ListViewpointSpawns	ObjectList
+63845841844740	TASK_END	ListViewpointSpawns	ObjectList	10
+63845841844746	TASK_START	ListViewpointTransfers	ObjectList
+63845841844754	TASK_END	ListViewpointTransfers	ObjectList	8
+63845841844756	TASK_START	ViewpointTrials	TaskList
+63845841844758	TASK_START	Counter	LM_DummyCounter
+63845841844767	TASK_END	Counter	LM_DummyCounter	8
+63845841844769	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845841847535	INPUT_EVENT    PlayerPressedActionButton    1
+63845841847536	TASK_END	BlockInstruction	InstructionsTaskViewpoint	2767
+63845841847539	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845841847542	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(60.8, 0.1, 59.1)
+63845841847544	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845841847555	TASK_END	MovePlayerToSpawn	MoveSpawn	16
+63845841847557	TASK_START	ViewObjects	LM_ToggleObjects
+63845841860218	TASK_END	ViewObjects	LM_ToggleObjects	12661
+63845841860220	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845841872244	TASK_RESPONSE	Right Button Pressed	Response Time: 12.02584
+63845841877220	TASK_END	BlackoutWalking	LM_BlackoutPath	16999
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	1	
+--------------------
+
+63845841877225	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials2False
+63845841877227	TASK_START	Counter	LM_DummyCounter
+63845841877235	TASK_END	Counter	LM_DummyCounter	8
+63845841877236	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845841877237	INFO    skip task    BlockInstruction
+63845841877246	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845841877247	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845841877249	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(70.4, 0.1, 59.2)
+63845841877250	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845841877260	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845841877261	TASK_START	ViewObjects	LM_ToggleObjects
+63845841886838	TASK_END	ViewObjects	LM_ToggleObjects	9576
+63845841886839	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845841895511	TASK_RESPONSE	Left Button Pressed	Response Time: 8.673588
+63845841903840	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	2	
+--------------------
+
+63845841903843	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials3False
+63845841903845	TASK_START	Counter	LM_DummyCounter
+63845841903852	TASK_END	Counter	LM_DummyCounter	7
+63845841903854	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845841903855	INFO    skip task    BlockInstruction
+63845841903864	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845841903866	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845841903868	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(61.1, 0.1, 98.9)
+63845841903869	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845841903877	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845841903879	TASK_START	ViewObjects	LM_ToggleObjects
+63845841913413	TASK_END	ViewObjects	LM_ToggleObjects	9533
+63845841913414	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845841922519	TASK_RESPONSE	Left Button Pressed	Response Time: 9.106684
+63845841930416	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	3	
+--------------------
+
+63845841930420	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials4False
+63845841930422	TASK_START	Counter	LM_DummyCounter
+63845841930429	TASK_END	Counter	LM_DummyCounter	7
+63845841930430	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845841930432	INFO    skip task    BlockInstruction
+63845841930441	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845841930442	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845841930444	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(37.8, 0.1, 117.4)
+63845841930445	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845841930453	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845841930455	TASK_START	ViewObjects	LM_ToggleObjects
+63845841938545	TASK_END	ViewObjects	LM_ToggleObjects	8090
+63845841938547	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845841950484	TASK_RESPONSE	Right Button Pressed	Response Time: 11.93909
+63845841955549	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	4	
+--------------------
+
+63845841955554	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials5False
+63845841955555	TASK_START	Counter	LM_DummyCounter
+63845841955562	TASK_END	Counter	LM_DummyCounter	6
+63845841955564	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845841955565	INFO    skip task    BlockInstruction
+63845841955572	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845841955574	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845841955575	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(89.2, 0.1, 49.1)
+63845841955576	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845841955583	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845841955585	TASK_START	ViewObjects	LM_ToggleObjects
+63845841965866	TASK_END	ViewObjects	LM_ToggleObjects	10281
+63845841965867	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845841975262	TASK_RESPONSE	Right Button Pressed	Response Time: 9.396412
+63845841982869	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	5	
+--------------------
+
+63845841982873	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials6False
+63845841982874	TASK_START	Counter	LM_DummyCounter
+63845841982882	TASK_END	Counter	LM_DummyCounter	7
+63845841982883	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845841982884	INFO    skip task    BlockInstruction
+63845841982893	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845841982894	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845841982896	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(100.4, 0.1, 54.8)
+63845841982897	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845841982906	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845841982907	TASK_START	ViewObjects	LM_ToggleObjects
+63845841993108	TASK_END	ViewObjects	LM_ToggleObjects	10201
+63845841993109	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842001726	TASK_RESPONSE	Left Button Pressed	Response Time: 8.61853
+63845842010112	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	6	
+--------------------
+
+63845842010115	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials7False
+63845842010116	TASK_START	Counter	LM_DummyCounter
+63845842010123	TASK_END	Counter	LM_DummyCounter	7
+63845842010126	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842010127	INFO    skip task    BlockInstruction
+63845842010136	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845842010137	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842010139	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(82.0, 0.1, 48.1)
+63845842010140	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842010148	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842010150	TASK_START	ViewObjects	LM_ToggleObjects
+63845842020040	TASK_END	ViewObjects	LM_ToggleObjects	9890
+63845842020041	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842028991	TASK_RESPONSE	Right Button Pressed	Response Time: 8.951377
+63845842037043	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	7	
+--------------------
+
+63845842037046	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials8False
+63845842037048	TASK_START	Counter	LM_DummyCounter
+63845842037058	TASK_END	Counter	LM_DummyCounter	11
+63845842037060	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842037061	INFO    skip task    BlockInstruction
+63845842037073	TASK_END	BlockInstruction	InstructionsTaskViewpoint	13
+63845842037075	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842037076	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(18.3, 0.1, 28.4)
+63845842037077	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842037085	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842037087	TASK_START	ViewObjects	LM_ToggleObjects
+63845842047594	TASK_END	ViewObjects	LM_ToggleObjects	10506
+63845842047596	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842056944	TASK_RESPONSE	Left Button Pressed	Response Time: 9.35091
+63845842064596	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	8	
+--------------------
+
+63845842064600	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials9False
+63845842064601	TASK_START	Counter	LM_DummyCounter
+63845842064608	TASK_END	Counter	LM_DummyCounter	6
+63845842064610	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842064611	INFO    skip task    BlockInstruction
+63845842064618	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845842064619	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842064622	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(37.8, 0.1, 27.4)
+63845842064624	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842064632	TASK_END	MovePlayerToSpawn	MoveSpawn	13
+63845842064633	TASK_START	ViewObjects	LM_ToggleObjects
+63845842073737	TASK_END	ViewObjects	LM_ToggleObjects	9103
+63845842073738	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842082166	TASK_RESPONSE	Left Button Pressed	Response Time: 8.429801
+63845842090740	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	9	
+--------------------
+
+63845842090743	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials10False
+63845842090745	TASK_START	Counter	LM_DummyCounter
+63845842090758	TASK_END	Counter	LM_DummyCounter	7
+63845842090759	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842090760	INFO    skip task    BlockInstruction
+63845842090767	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845842090769	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842090770	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(51.9, 0.1, 98.1)
+63845842090772	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842090779	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842090780	TASK_START	ViewObjects	LM_ToggleObjects
+63845842101434	TASK_END	ViewObjects	LM_ToggleObjects	10653
+63845842101435	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842110764	TASK_RESPONSE	Right Button Pressed	Response Time: 9.328885
+63845842118438	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	10	
+--------------------
+
+63845842118441	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials11False
+63845842118443	TASK_START	Counter	LM_DummyCounter
+63845842118450	TASK_END	Counter	LM_DummyCounter	7
+63845842118451	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842118452	INFO    skip task    BlockInstruction
+63845842118464	TASK_END	BlockInstruction	InstructionsTaskViewpoint	13
+63845842118465	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842118466	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(41.9, 0.1, 88.1)
+63845842118468	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842118475	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845842118477	TASK_START	ViewObjects	LM_ToggleObjects
+63845842127355	TASK_END	ViewObjects	LM_ToggleObjects	8878
+63845842127356	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842136139	TASK_RESPONSE	Left Button Pressed	Response Time: 8.784948
+63845842144359	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	11	
+--------------------
+
+63845842144362	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials12False
+63845842144365	TASK_START	Counter	LM_DummyCounter
+63845842144374	TASK_END	Counter	LM_DummyCounter	9
+63845842144375	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842144376	INFO    skip task    BlockInstruction
+63845842144386	TASK_END	BlockInstruction	InstructionsTaskViewpoint	11
+63845842144387	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842144388	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(48.9, 0.1, 105.0)
+63845842144389	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842144397	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842144398	TASK_START	ViewObjects	LM_ToggleObjects
+63845842154930	TASK_END	ViewObjects	LM_ToggleObjects	10532
+63845842154931	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842164239	TASK_RESPONSE	Left Button Pressed	Response Time: 9.309134
+63845842171935	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	12	
+--------------------
+
+63845842171938	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials13False
+63845842171940	TASK_START	Counter	LM_DummyCounter
+63845842171947	TASK_END	Counter	LM_DummyCounter	7
+63845842171949	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842171950	INFO    skip task    BlockInstruction
+63845842171958	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845842171959	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842171961	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(90.4, 0.1, 29.2)
+63845842171962	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842171970	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845842171971	TASK_START	ViewObjects	LM_ToggleObjects
+63845842183563	TASK_END	ViewObjects	LM_ToggleObjects	11590
+63845842183564	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842192446	TASK_RESPONSE	Left Button Pressed	Response Time: 8.884134
+63845842200565	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	13	
+--------------------
+
+63845842200569	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials14False
+63845842200570	TASK_START	Counter	LM_DummyCounter
+63845842200578	TASK_END	Counter	LM_DummyCounter	7
+63845842200579	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842200580	INFO    skip task    BlockInstruction
+63845842200588	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845842200589	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842200590	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(32.3, 0.1, 77.0)
+63845842200592	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842200599	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842200600	TASK_START	ViewObjects	LM_ToggleObjects
+63845842210593	TASK_END	ViewObjects	LM_ToggleObjects	9992
+63845842210595	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842219256	TASK_RESPONSE	Left Button Pressed	Response Time: 8.662793
+63845842227596	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	14	
+--------------------
+
+63845842227600	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials15False
+63845842227601	TASK_START	Counter	LM_DummyCounter
+63845842227610	TASK_END	Counter	LM_DummyCounter	8
+63845842227611	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842227613	INFO    skip task    BlockInstruction
+63845842227622	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845842227624	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842227624	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(20.4, 0.1, 84.8)
+63845842227626	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842227634	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842227635	TASK_START	ViewObjects	LM_ToggleObjects
+63845842238469	TASK_END	ViewObjects	LM_ToggleObjects	10833
+63845842238470	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842248486	TASK_RESPONSE	Left Button Pressed	Response Time: 10.01832
+63845842255471	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	15	
+--------------------
+
+63845842255474	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials16False
+63845842255476	TASK_START	Counter	LM_DummyCounter
+63845842255484	TASK_END	Counter	LM_DummyCounter	7
+63845842255485	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842255486	INFO    skip task    BlockInstruction
+63845842255496	TASK_END	BlockInstruction	InstructionsTaskViewpoint	11
+63845842255497	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842255498	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(29.2, 0.1, 104.9)
+63845842255499	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842255507	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842255508	TASK_START	ViewObjects	LM_ToggleObjects
+63845842264658	TASK_END	ViewObjects	LM_ToggleObjects	9150
+63845842264660	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842273564	TASK_RESPONSE	Right Button Pressed	Response Time: 8.906953
+63845842281660	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	16	
+--------------------
+
+63845842281663	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials17False
+63845842281665	TASK_START	Counter	LM_DummyCounter
+63845842281672	TASK_END	Counter	LM_DummyCounter	7
+63845842281674	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842304384	INPUT_EVENT    PlayerPressedActionButton    1
+63845842304385	TASK_END	BlockInstruction	InstructionsTaskViewpoint	22711
+63845842304386	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842304387	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(38.0, 0.1, 65.9)
+63845842304388	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842304396	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842304398	TASK_START	ViewObjects	LM_ToggleObjects
+63845842314447	TASK_END	ViewObjects	LM_ToggleObjects	10050
+63845842314449	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842323263	TASK_RESPONSE	Left Button Pressed	Response Time: 8.816511
+63845842331448	TASK_END	BlackoutWalking	LM_BlackoutPath	16999
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	17	
+--------------------
+
+63845842331452	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials18False
+63845842331453	TASK_START	Counter	LM_DummyCounter
+63845842331461	TASK_END	Counter	LM_DummyCounter	7
+63845842331462	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842331463	INFO    skip task    BlockInstruction
+63845842331472	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845842331473	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842331474	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(31.5, 0.1, 118.7)
+63845842331476	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842331487	TASK_END	MovePlayerToSpawn	MoveSpawn	13
+63845842331489	TASK_START	ViewObjects	LM_ToggleObjects
+63845842343341	TASK_END	ViewObjects	LM_ToggleObjects	11852
+63845842343343	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842351917	TASK_RESPONSE	Left Button Pressed	Response Time: 8.574796
+63845842360345	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	18	
+--------------------
+
+63845842360348	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials19False
+63845842360350	TASK_START	Counter	LM_DummyCounter
+63845842360357	TASK_END	Counter	LM_DummyCounter	7
+63845842360358	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842360359	INFO    skip task    BlockInstruction
+63845842360366	TASK_END	BlockInstruction	InstructionsTaskViewpoint	7
+63845842360368	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842360370	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(111.4, 0.1, 35.3)
+63845842360371	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842360378	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842360379	TASK_START	ViewObjects	LM_ToggleObjects
+63845842371517	TASK_END	ViewObjects	LM_ToggleObjects	11137
+63845842371519	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842380025	TASK_RESPONSE	Left Button Pressed	Response Time: 8.50765
+63845842388521	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	19	
+--------------------
+
+63845842388524	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials20False
+63845842388526	TASK_START	Counter	LM_DummyCounter
+63845842388533	TASK_END	Counter	LM_DummyCounter	7
+63845842388535	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842388536	INFO    skip task    BlockInstruction
+63845842388543	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845842388545	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842388546	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(101.9, 0.1, 25.9)
+63845842388548	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842388557	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845842388558	TASK_START	ViewObjects	LM_ToggleObjects
+63845842400570	TASK_END	ViewObjects	LM_ToggleObjects	12012
+63845842400571	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842409211	TASK_RESPONSE	Right Button Pressed	Response Time: 8.641076
+63845842417574	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	20	
+--------------------
+
+63845842417577	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials21False
+63845842417579	TASK_START	Counter	LM_DummyCounter
+63845842417587	TASK_END	Counter	LM_DummyCounter	7
+63845842417588	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842417589	INFO    skip task    BlockInstruction
+63845842417596	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845842417598	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842417600	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(111.1, 0.1, 58.9)
+63845842417601	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842417607	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845842417609	TASK_START	ViewObjects	LM_ToggleObjects
+63845842429180	TASK_END	ViewObjects	LM_ToggleObjects	11570
+63845842429182	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842438498	TASK_RESPONSE	Left Button Pressed	Response Time: 9.318301
+63845842446182	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	21	
+--------------------
+
+63845842446186	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials22False
+63845842446187	TASK_START	Counter	LM_DummyCounter
+63845842446194	TASK_END	Counter	LM_DummyCounter	7
+63845842446195	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842446196	INFO    skip task    BlockInstruction
+63845842446204	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845842446205	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842446207	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(110.4, 0.1, 99.2)
+63845842446207	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842446215	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842446217	TASK_START	ViewObjects	LM_ToggleObjects
+63845842459643	TASK_END	ViewObjects	LM_ToggleObjects	13426
+63845842459644	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842468949	TASK_RESPONSE	Left Button Pressed	Response Time: 9.306703
+63845842476645	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	22	
+--------------------
+
+63845842476649	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials23False
+63845842476651	TASK_START	Counter	LM_DummyCounter
+63845842476658	TASK_END	Counter	LM_DummyCounter	8
+63845842476660	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842476661	INFO    skip task    BlockInstruction
+63845842476670	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845842476671	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842476672	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(30.8, 0.1, 84.9)
+63845842476674	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842476680	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845842476682	TASK_START	ViewObjects	LM_ToggleObjects
+63845842494181	TASK_END	ViewObjects	LM_ToggleObjects	17498
+63845842494182	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842503455	TASK_RESPONSE	Left Button Pressed	Response Time: 9.275084
+63845842511185	TASK_END	BlackoutWalking	LM_BlackoutPath	17004
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	23	
+--------------------
+
+63845842511189	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials24False
+63845842511191	TASK_START	Counter	LM_DummyCounter
+63845842511199	TASK_END	Counter	LM_DummyCounter	7
+63845842511200	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842511201	INFO    skip task    BlockInstruction
+63845842511208	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845842511210	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842511212	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(38.9, 0.1, 105.1)
+63845842511213	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842511220	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842511221	TASK_START	ViewObjects	LM_ToggleObjects
+63845842523823	TASK_END	ViewObjects	LM_ToggleObjects	12601
+63845842523825	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842532619	TASK_RESPONSE	Left Button Pressed	Response Time: 8.796419
+63845842540826	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	24	
+--------------------
+
+63845842540830	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials25False
+63845842540832	TASK_START	Counter	LM_DummyCounter
+63845842540840	TASK_END	Counter	LM_DummyCounter	8
+63845842540841	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842540843	INFO    skip task    BlockInstruction
+63845842540851	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845842540853	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842540855	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(21.4, 0.1, 68.7)
+63845842540856	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842540863	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845842540864	TASK_START	ViewObjects	LM_ToggleObjects
+63845842552766	TASK_END	ViewObjects	LM_ToggleObjects	11901
+63845842552767	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842561560	TASK_RESPONSE	Right Button Pressed	Response Time: 8.794589
+63845842569767	TASK_END	BlackoutWalking	LM_BlackoutPath	16999
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	25	
+--------------------
+
+63845842569771	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials26False
+63845842569772	TASK_START	Counter	LM_DummyCounter
+63845842569780	TASK_END	Counter	LM_DummyCounter	7
+63845842569781	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842569782	INFO    skip task    BlockInstruction
+63845842569791	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845842569793	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842569794	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(88.1, 0.1, 5.9)
+63845842569795	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842569803	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842569804	TASK_START	ViewObjects	LM_ToggleObjects
+63845842581340	TASK_END	ViewObjects	LM_ToggleObjects	11536
+63845842581341	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842589881	TASK_RESPONSE	Left Button Pressed	Response Time: 8.541305
+63845842598344	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	26	
+--------------------
+
+63845842598348	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials27False
+63845842598349	TASK_START	Counter	LM_DummyCounter
+63845842598357	TASK_END	Counter	LM_DummyCounter	7
+63845842598358	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842598358	INFO    skip task    BlockInstruction
+63845842598367	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845842598368	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842598369	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(58.9, 0.1, 59.0)
+63845842598371	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842598378	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842598379	TASK_START	ViewObjects	LM_ToggleObjects
+63845842611471	TASK_END	ViewObjects	LM_ToggleObjects	13092
+63845842611472	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842620408	TASK_RESPONSE	Right Button Pressed	Response Time: 8.938403
+63845842628474	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	27	
+--------------------
+
+63845842628478	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials28False
+63845842628480	TASK_START	Counter	LM_DummyCounter
+63845842628488	TASK_END	Counter	LM_DummyCounter	8
+63845842628489	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842628490	INFO    skip task    BlockInstruction
+63845842628501	TASK_END	BlockInstruction	InstructionsTaskViewpoint	11
+63845842628502	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842628504	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(111.1, 0.1, 58.9)
+63845842628505	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842628512	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845842628514	TASK_START	ViewObjects	LM_ToggleObjects
+63845842640179	TASK_END	ViewObjects	LM_ToggleObjects	11665
+63845842640180	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842649109	TASK_RESPONSE	Right Button Pressed	Response Time: 8.930343
+63845842657183	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	28	
+--------------------
+
+63845842657187	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials29False
+63845842657189	TASK_START	Counter	LM_DummyCounter
+63845842657195	TASK_END	Counter	LM_DummyCounter	6
+63845842657197	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842657197	INFO    skip task    BlockInstruction
+63845842657206	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845842657207	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842657209	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(37.8, 0.1, 97.4)
+63845842657210	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842657217	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842657219	TASK_START	ViewObjects	LM_ToggleObjects
+63845842669023	TASK_END	ViewObjects	LM_ToggleObjects	11805
+63845842669025	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842677561	TASK_RESPONSE	Left Button Pressed	Response Time: 8.539768
+63845842686025	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	29	
+--------------------
+
+63845842686028	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials30False
+63845842686030	TASK_START	Counter	LM_DummyCounter
+63845842686038	TASK_END	Counter	LM_DummyCounter	8
+63845842686039	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842686040	INFO    skip task    BlockInstruction
+63845842686047	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845842686049	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842686050	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(107.8, 0.1, 76.6)
+63845842686051	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842686059	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842686060	TASK_START	ViewObjects	LM_ToggleObjects
+63845842698120	TASK_END	ViewObjects	LM_ToggleObjects	12060
+63845842698122	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842706749	TASK_RESPONSE	Right Button Pressed	Response Time: 8.629269
+63845842715123	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	30	
+--------------------
+
+63845842715126	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials31False
+63845842715128	TASK_START	Counter	LM_DummyCounter
+63845842715136	TASK_END	Counter	LM_DummyCounter	7
+63845842715137	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842715138	INFO    skip task    BlockInstruction
+63845842715146	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845842715148	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842715149	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(62.1, 0.1, 117.8)
+63845842715150	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842715158	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842715159	TASK_START	ViewObjects	LM_ToggleObjects
+63845842728862	TASK_END	ViewObjects	LM_ToggleObjects	13703
+63845842728863	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842738588	TASK_RESPONSE	Right Button Pressed	Response Time: 9.72719
+63845842745863	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	31	
+--------------------
+
+63845842745867	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials32False
+63845842745868	TASK_START	Counter	LM_DummyCounter
+63845842745878	TASK_END	Counter	LM_DummyCounter	9
+63845842745879	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842745881	INFO    skip task    BlockInstruction
+63845842745890	TASK_END	BlockInstruction	InstructionsTaskViewpoint	12
+63845842745891	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842745893	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(57.9, 0.1, 76.2)
+63845842745894	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842745902	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842745903	TASK_START	ViewObjects	LM_ToggleObjects
+63845842759614	TASK_END	ViewObjects	LM_ToggleObjects	13710
+63845842759615	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842768231	TASK_RESPONSE	Left Button Pressed	Response Time: 8.619291
+63845842776616	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	32	
+--------------------
+
+63845842776620	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials33False
+63845842776621	TASK_START	Counter	LM_DummyCounter
+63845842776629	TASK_END	Counter	LM_DummyCounter	7
+63845842776630	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842784889	INPUT_EVENT    PlayerPressedActionButton    1
+63845842784890	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8261
+63845842784892	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842784893	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(32.3, 0.1, 47.0)
+63845842784895	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842784903	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845842784905	TASK_START	ViewObjects	LM_ToggleObjects
+63845842797385	TASK_END	ViewObjects	LM_ToggleObjects	12480
+63845842797386	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842805858	TASK_RESPONSE	Left Button Pressed	Response Time: 8.473402
+63845842814386	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	33	
+--------------------
+
+63845842814390	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials34False
+63845842814391	TASK_START	Counter	LM_DummyCounter
+63845842814399	TASK_END	Counter	LM_DummyCounter	7
+63845842814401	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842814401	INFO    skip task    BlockInstruction
+63845842814409	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845842814410	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842814412	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(72.1, 0.1, 67.8)
+63845842814413	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842814420	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845842814421	TASK_START	ViewObjects	LM_ToggleObjects
+63845842823372	TASK_END	ViewObjects	LM_ToggleObjects	8950
+63845842823373	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842832179	TASK_RESPONSE	Right Button Pressed	Response Time: 8.806638
+63845842840373	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	34	
+--------------------
+
+63845842840377	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials35False
+63845842840379	TASK_START	Counter	LM_DummyCounter
+63845842840386	TASK_END	Counter	LM_DummyCounter	8
+63845842840388	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842840389	INFO    skip task    BlockInstruction
+63845842840396	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845842840398	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842840400	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(22.1, 0.1, 116.2)
+63845842840401	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842840409	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845842840410	TASK_START	ViewObjects	LM_ToggleObjects
+63845842850160	TASK_END	ViewObjects	LM_ToggleObjects	9749
+63845842850161	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842858578	TASK_RESPONSE	Left Button Pressed	Response Time: 8.418886
+63845842867163	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	35	
+--------------------
+
+63845842867166	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials36False
+63845842867167	TASK_START	Counter	LM_DummyCounter
+63845842867177	TASK_END	Counter	LM_DummyCounter	9
+63845842867178	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842867179	INFO    skip task    BlockInstruction
+63845842867188	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845842867190	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842867192	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(38.9, 0.1, 15.1)
+63845842867193	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842867201	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845842867202	TASK_START	ViewObjects	LM_ToggleObjects
+63845842877189	TASK_END	ViewObjects	LM_ToggleObjects	9986
+63845842877191	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842885988	TASK_RESPONSE	Left Button Pressed	Response Time: 8.797744
+63845842894194	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	36	
+--------------------
+
+63845842894198	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials37False
+63845842894200	TASK_START	Counter	LM_DummyCounter
+63845842894207	TASK_END	Counter	LM_DummyCounter	7
+63845842894208	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842894210	INFO    skip task    BlockInstruction
+63845842894217	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845842894219	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842894220	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(60.8, 0.1, 84.9)
+63845842894221	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842894230	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845842894231	TASK_START	ViewObjects	LM_ToggleObjects
+63845842903445	TASK_END	ViewObjects	LM_ToggleObjects	9213
+63845842903446	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842913474	TASK_RESPONSE	Right Button Pressed	Response Time: 10.0291
+63845842920449	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	37	
+--------------------
+
+63845842920453	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials38False
+63845842920455	TASK_START	Counter	LM_DummyCounter
+63845842920462	TASK_END	Counter	LM_DummyCounter	8
+63845842920465	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842920466	INFO    skip task    BlockInstruction
+63845842920474	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845842920475	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842920477	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(99.6, 0.1, 49.2)
+63845842920477	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842920485	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842920486	TASK_START	ViewObjects	LM_ToggleObjects
+63845842931388	TASK_END	ViewObjects	LM_ToggleObjects	10902
+63845842931390	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842940436	TASK_RESPONSE	Right Button Pressed	Response Time: 9.048095
+63845842948391	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	38	
+--------------------
+
+63845842948395	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials39False
+63845842948397	TASK_START	Counter	LM_DummyCounter
+63845842948404	TASK_END	Counter	LM_DummyCounter	7
+63845842948406	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842948407	INFO    skip task    BlockInstruction
+63845842948415	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845842948417	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842948418	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(67.8, 0.1, 37.4)
+63845842948419	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842948426	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845842948428	TASK_START	ViewObjects	LM_ToggleObjects
+63845842957842	TASK_END	ViewObjects	LM_ToggleObjects	9414
+63845842957843	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842967327	TASK_RESPONSE	Left Button Pressed	Response Time: 9.484941
+63845842974846	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	39	
+--------------------
+
+63845842974849	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials40False
+63845842974851	TASK_START	Counter	LM_DummyCounter
+63845842974858	TASK_END	Counter	LM_DummyCounter	7
+63845842974859	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845842974860	INFO    skip task    BlockInstruction
+63845842974872	TASK_END	BlockInstruction	InstructionsTaskViewpoint	12
+63845842974873	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845842974875	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(52.0, 0.1, 75.9)
+63845842974876	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845842974884	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845842974885	TASK_START	ViewObjects	LM_ToggleObjects
+63845842985895	TASK_END	ViewObjects	LM_ToggleObjects	11011
+63845842985896	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845842996058	TASK_RESPONSE	Right Button Pressed	Response Time: 10.16292
+63845843002900	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	40	
+--------------------
+
+63845843002903	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials41False
+63845843002906	TASK_START	Counter	LM_DummyCounter
+63845843002914	TASK_END	Counter	LM_DummyCounter	9
+63845843002915	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843002916	INFO    skip task    BlockInstruction
+63845843002925	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845843002926	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843002928	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(110.8, 0.1, 119.1)
+63845843002929	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843002940	TASK_END	MovePlayerToSpawn	MoveSpawn	14
+63845843002942	TASK_START	ViewObjects	LM_ToggleObjects
+63845843012682	TASK_END	ViewObjects	LM_ToggleObjects	9741
+63845843012685	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843022645	TASK_RESPONSE	Right Button Pressed	Response Time: 9.962846
+63845843029687	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	41	
+--------------------
+
+63845843029691	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials42False
+63845843029692	TASK_START	Counter	LM_DummyCounter
+63845843029703	TASK_END	Counter	LM_DummyCounter	10
+63845843029705	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843029706	INFO    skip task    BlockInstruction
+63845843029715	TASK_END	BlockInstruction	InstructionsTaskViewpoint	11
+63845843029717	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843029718	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(19.2, 0.1, 74.9)
+63845843029719	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843029727	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845843029728	TASK_START	ViewObjects	LM_ToggleObjects
+63845843040026	TASK_END	ViewObjects	LM_ToggleObjects	10298
+63845843040028	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843048711	TASK_RESPONSE	Left Button Pressed	Response Time: 8.685171
+63845843057028	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	42	
+--------------------
+
+63845843057032	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials43False
+63845843057034	TASK_START	Counter	LM_DummyCounter
+63845843057041	TASK_END	Counter	LM_DummyCounter	7
+63845843057042	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843057043	INFO    skip task    BlockInstruction
+63845843057051	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845843057052	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843057054	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(50.4, 0.1, 9.2)
+63845843057056	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843057064	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845843057065	TASK_START	ViewObjects	LM_ToggleObjects
+63845843067292	TASK_END	ViewObjects	LM_ToggleObjects	10227
+63845843067294	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843076154	TASK_RESPONSE	Left Button Pressed	Response Time: 8.862206
+63845843084295	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	43	
+--------------------
+
+63845843084299	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials44False
+63845843084301	TASK_START	Counter	LM_DummyCounter
+63845843084310	TASK_END	Counter	LM_DummyCounter	9
+63845843084311	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843084313	INFO    skip task    BlockInstruction
+63845843084325	TASK_END	BlockInstruction	InstructionsTaskViewpoint	14
+63845843084328	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843084329	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(38.0, 0.1, 58.1)
+63845843084331	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843084339	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845843084341	TASK_START	ViewObjects	LM_ToggleObjects
+63845843093157	TASK_END	ViewObjects	LM_ToggleObjects	8816
+63845843093158	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843102152	TASK_RESPONSE	Right Button Pressed	Response Time: 8.996325
+63845843110161	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	44	
+--------------------
+
+63845843110164	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials45False
+63845843110166	TASK_START	Counter	LM_DummyCounter
+63845843110173	TASK_END	Counter	LM_DummyCounter	7
+63845843110175	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843110176	INFO    skip task    BlockInstruction
+63845843110184	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843110186	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843110193	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(42.3, 0.1, 37.0)
+63845843110195	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843110203	TASK_END	MovePlayerToSpawn	MoveSpawn	18
+63845843110204	TASK_START	ViewObjects	LM_ToggleObjects
+63845843120498	TASK_END	ViewObjects	LM_ToggleObjects	10294
+63845843120500	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843129196	TASK_RESPONSE	Right Button Pressed	Response Time: 8.697653
+63845843137503	TASK_END	BlackoutWalking	LM_BlackoutPath	17004
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	45	
+--------------------
+
+63845843137508	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials46False
+63845843137509	TASK_START	Counter	LM_DummyCounter
+63845843137518	TASK_END	Counter	LM_DummyCounter	8
+63845843137519	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843137521	INFO    skip task    BlockInstruction
+63845843137528	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845843137530	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843137532	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(48.3, 0.1, 55.6)
+63845843137533	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843137540	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845843137542	TASK_START	ViewObjects	LM_ToggleObjects
+63845843147976	TASK_END	ViewObjects	LM_ToggleObjects	10434
+63845843147977	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843156528	TASK_RESPONSE	Left Button Pressed	Response Time: 8.55287
+63845843164978	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	46	
+--------------------
+
+63845843164981	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials47False
+63845843164983	TASK_START	Counter	LM_DummyCounter
+63845843164992	TASK_END	Counter	LM_DummyCounter	8
+63845843164994	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843164995	INFO    skip task    BlockInstruction
+63845843165003	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843165005	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843165006	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(81.4, 0.1, 58.7)
+63845843165007	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843165014	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845843165016	TASK_START	ViewObjects	LM_ToggleObjects
+63845843176096	TASK_END	ViewObjects	LM_ToggleObjects	11080
+63845843176098	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843185569	TASK_RESPONSE	Right Button Pressed	Response Time: 9.47391
+63845843193099	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	47	
+--------------------
+
+63845843193103	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials48False
+63845843193104	TASK_START	Counter	LM_DummyCounter
+63845843193112	TASK_END	Counter	LM_DummyCounter	7
+63845843193114	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843193114	INFO    skip task    BlockInstruction
+63845843193123	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843193124	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843193126	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(107.9, 0.1, 47.8)
+63845843193127	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843193135	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845843193137	TASK_START	ViewObjects	LM_ToggleObjects
+63845843203107	TASK_END	ViewObjects	LM_ToggleObjects	9970
+63845843203108	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843211713	TASK_RESPONSE	Left Button Pressed	Response Time: 8.606176
+63845843220110	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	48	
+--------------------
+
+63845843220113	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials49False
+63845843220115	TASK_START	Counter	LM_DummyCounter
+63845843220122	TASK_END	Counter	LM_DummyCounter	8
+63845843220124	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843309889	INPUT_EVENT    PlayerPressedActionButton    1
+63845843309890	TASK_END	BlockInstruction	InstructionsTaskViewpoint	89766
+63845843309891	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843309892	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(70.4, 0.1, 24.8)
+63845843309894	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843309902	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845843309903	TASK_START	ViewObjects	LM_ToggleObjects
+63845843332821	TASK_END	ViewObjects	LM_ToggleObjects	22918
+63845843332824	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843342519	TASK_RESPONSE	Left Button Pressed	Response Time: 9.697514
+63845843349826	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	49	
+--------------------
+
+63845843349829	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials50False
+63845843349832	TASK_START	Counter	LM_DummyCounter
+63845843349839	TASK_END	Counter	LM_DummyCounter	7
+63845843349840	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843349842	INFO    skip task    BlockInstruction
+63845843349850	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843349851	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843349853	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(68.1, 0.1, 78.1)
+63845843349854	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843349861	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845843349862	TASK_START	ViewObjects	LM_ToggleObjects
+63845843362476	TASK_END	ViewObjects	LM_ToggleObjects	12614
+63845843362477	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843371494	TASK_RESPONSE	Left Button Pressed	Response Time: 9.018466
+63845843379480	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	50	
+--------------------
+
+63845843379482	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials51False
+63845843379485	TASK_START	Counter	LM_DummyCounter
+63845843379493	TASK_END	Counter	LM_DummyCounter	7
+63845843379495	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843379496	INFO    skip task    BlockInstruction
+63845843379509	TASK_END	BlockInstruction	InstructionsTaskViewpoint	14
+63845843379510	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843379512	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(92.3, 0.1, 57.0)
+63845843379514	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843379520	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845843379522	TASK_START	ViewObjects	LM_ToggleObjects
+63845843391062	TASK_END	ViewObjects	LM_ToggleObjects	11540
+63845843391063	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843399825	TASK_RESPONSE	Right Button Pressed	Response Time: 8.762962
+63845843408066	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	51	
+--------------------
+
+63845843408070	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials52False
+63845843408073	TASK_START	Counter	LM_DummyCounter
+63845843408081	TASK_END	Counter	LM_DummyCounter	8
+63845843408082	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843408083	INFO    skip task    BlockInstruction
+63845843408091	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843408098	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843408100	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(37.8, 0.1, 97.4)
+63845843408101	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843408110	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845843408111	TASK_START	ViewObjects	LM_ToggleObjects
+63845843420338	TASK_END	ViewObjects	LM_ToggleObjects	12227
+63845843420339	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843429257	TASK_RESPONSE	Right Button Pressed	Response Time: 8.919201
+63845843437342	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	52	
+--------------------
+
+63845843437344	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials53False
+63845843437347	TASK_START	Counter	LM_DummyCounter
+63845843437357	TASK_END	Counter	LM_DummyCounter	10
+63845843437358	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843437359	INFO    skip task    BlockInstruction
+63845843437367	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843437368	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843437370	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(48.9, 0.1, 105.0)
+63845843437371	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843437379	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845843437380	TASK_START	ViewObjects	LM_ToggleObjects
+63845843450558	TASK_END	ViewObjects	LM_ToggleObjects	13177
+63845843450560	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843459431	TASK_RESPONSE	Left Button Pressed	Response Time: 8.87331
+63845843467561	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	53	
+--------------------
+
+63845843467564	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials54False
+63845843467566	TASK_START	Counter	LM_DummyCounter
+63845843467574	TASK_END	Counter	LM_DummyCounter	8
+63845843467575	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843467576	INFO    skip task    BlockInstruction
+63845843467584	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843467585	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843467587	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(80.8, 0.1, 29.1)
+63845843467588	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843467599	TASK_END	MovePlayerToSpawn	MoveSpawn	13
+63845843467600	TASK_START	ViewObjects	LM_ToggleObjects
+63845843479632	TASK_END	ViewObjects	LM_ToggleObjects	12031
+63845843479633	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843488084	TASK_RESPONSE	Left Button Pressed	Response Time: 8.451717
+63845843496635	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	54	
+--------------------
+
+63845843496639	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials55False
+63845843496641	TASK_START	Counter	LM_DummyCounter
+63845843496649	TASK_END	Counter	LM_DummyCounter	7
+63845843496650	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843496651	INFO    skip task    BlockInstruction
+63845843496659	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843496660	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843496661	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(32.3, 0.1, 97.0)
+63845843496662	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843496671	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845843496672	TASK_START	ViewObjects	LM_ToggleObjects
+63845843510096	TASK_END	ViewObjects	LM_ToggleObjects	13423
+63845843510098	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843520005	TASK_RESPONSE	Right Button Pressed	Response Time: 9.908251
+63845843527101	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	55	
+--------------------
+
+63845843527104	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials56False
+63845843527106	TASK_START	Counter	LM_DummyCounter
+63845843527113	TASK_END	Counter	LM_DummyCounter	7
+63845843527115	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843527116	INFO    skip task    BlockInstruction
+63845843527124	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845843527125	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843527127	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(78.1, 0.1, 108.1)
+63845843527128	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843527135	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845843527137	TASK_START	ViewObjects	LM_ToggleObjects
+63845843539526	TASK_END	ViewObjects	LM_ToggleObjects	12390
+63845843539528	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843548422	TASK_RESPONSE	Left Button Pressed	Response Time: 8.895858
+63845843556532	TASK_END	BlackoutWalking	LM_BlackoutPath	17004
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	56	
+--------------------
+
+63845843556535	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials57False
+63845843556537	TASK_START	Counter	LM_DummyCounter
+63845843556544	TASK_END	Counter	LM_DummyCounter	7
+63845843556546	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843556547	INFO    skip task    BlockInstruction
+63845843556555	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843556556	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843556557	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(102.1, 0.1, 27.8)
+63845843556559	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843556566	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845843556568	TASK_START	ViewObjects	LM_ToggleObjects
+63845843568936	TASK_END	ViewObjects	LM_ToggleObjects	12368
+63845843568937	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843578331	TASK_RESPONSE	Right Button Pressed	Response Time: 9.395218
+63845843585938	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	57	
+--------------------
+
+63845843585941	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials58False
+63845843585943	TASK_START	Counter	LM_DummyCounter
+63845843585951	TASK_END	Counter	LM_DummyCounter	8
+63845843585952	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843585954	INFO    skip task    BlockInstruction
+63845843585962	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843585964	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843585965	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(52.2, 0.1, 66.6)
+63845843585967	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843585974	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845843585977	TASK_START	ViewObjects	LM_ToggleObjects
+63845843605230	TASK_END	ViewObjects	LM_ToggleObjects	19253
+63845843605231	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843614682	TASK_RESPONSE	Right Button Pressed	Response Time: 9.452155
+63845843622234	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	58	
+--------------------
+
+63845843622238	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials59False
+63845843622240	TASK_START	Counter	LM_DummyCounter
+63845843622248	TASK_END	Counter	LM_DummyCounter	9
+63845843622250	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843622251	INFO    skip task    BlockInstruction
+63845843622262	TASK_END	BlockInstruction	InstructionsTaskViewpoint	12
+63845843622264	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843622265	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(78.0, 0.1, 65.9)
+63845843622266	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843622276	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845843622278	TASK_START	ViewObjects	LM_ToggleObjects
+63845843634061	TASK_END	ViewObjects	LM_ToggleObjects	11784
+63845843634063	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843642535	TASK_RESPONSE	Left Button Pressed	Response Time: 8.474212
+63845843651064	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	59	
+--------------------
+
+63845843651067	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials60False
+63845843651070	TASK_START	Counter	LM_DummyCounter
+63845843651077	TASK_END	Counter	LM_DummyCounter	7
+63845843651079	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843651080	INFO    skip task    BlockInstruction
+63845843651088	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843651089	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843651090	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(59.2, 0.1, 109.1)
+63845843651092	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843651102	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845843651103	TASK_START	ViewObjects	LM_ToggleObjects
+63845843662448	TASK_END	ViewObjects	LM_ToggleObjects	11345
+63845843662451	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843671443	TASK_RESPONSE	Left Button Pressed	Response Time: 8.994802
+63845843679451	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	60	
+--------------------
+
+63845843679454	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials61False
+63845843679456	TASK_START	Counter	LM_DummyCounter
+63845843679464	TASK_END	Counter	LM_DummyCounter	8
+63845843679466	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843679467	INFO    skip task    BlockInstruction
+63845843679476	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845843679477	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843679479	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(88.1, 0.1, 5.9)
+63845843679480	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843679489	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845843679490	TASK_START	ViewObjects	LM_ToggleObjects
+63845843691367	TASK_END	ViewObjects	LM_ToggleObjects	11876
+63845843691368	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843700427	TASK_RESPONSE	Right Button Pressed	Response Time: 9.060767
+63845843708371	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	61	
+--------------------
+
+63845843708374	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials62False
+63845843708375	TASK_START	Counter	LM_DummyCounter
+63845843708382	TASK_END	Counter	LM_DummyCounter	6
+63845843708384	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843708385	INFO    skip task    BlockInstruction
+63845843708393	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843708395	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843708397	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(49.2, 0.1, 114.9)
+63845843708399	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843708412	TASK_END	MovePlayerToSpawn	MoveSpawn	16
+63845843708414	TASK_START	ViewObjects	LM_ToggleObjects
+63845843720155	TASK_END	ViewObjects	LM_ToggleObjects	11741
+63845843720156	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843729784	TASK_RESPONSE	Left Button Pressed	Response Time: 9.628985
+63845843737158	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	62	
+--------------------
+
+63845843737161	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials63False
+63845843737163	TASK_START	Counter	LM_DummyCounter
+63845843737172	TASK_END	Counter	LM_DummyCounter	9
+63845843737173	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843737174	INFO    skip task    BlockInstruction
+63845843737184	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845843737185	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843737186	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(99.6, 0.1, 84.8)
+63845843737188	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843737196	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845843737198	TASK_START	ViewObjects	LM_ToggleObjects
+63845843748975	TASK_END	ViewObjects	LM_ToggleObjects	11777
+63845843748976	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843757482	TASK_RESPONSE	Left Button Pressed	Response Time: 8.506657
+63845843765979	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	63	
+--------------------
+
+63845843765981	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials64False
+63845843765984	TASK_START	Counter	LM_DummyCounter
+63845843765992	TASK_END	Counter	LM_DummyCounter	8
+63845843765994	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843765995	INFO    skip task    BlockInstruction
+63845843766003	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843766004	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843766006	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(81.5, 0.1, 18.7)
+63845843766008	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843766018	TASK_END	MovePlayerToSpawn	MoveSpawn	13
+63845843766021	TASK_START	ViewObjects	LM_ToggleObjects
+63845843777916	TASK_END	ViewObjects	LM_ToggleObjects	11895
+63845843777918	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843786779	TASK_RESPONSE	Left Button Pressed	Response Time: 8.863727
+63845843794920	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	64	
+--------------------
+
+63845843794924	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials65False
+63845843794926	TASK_START	Counter	LM_DummyCounter
+63845843794932	TASK_END	Counter	LM_DummyCounter	7
+63845843794934	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843800340	INPUT_EVENT    PlayerPressedActionButton    1
+63845843800340	TASK_END	BlockInstruction	InstructionsTaskViewpoint	5407
+63845843800342	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843800343	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(52.2, 0.1, 66.6)
+63845843800344	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843800352	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845843800354	TASK_START	ViewObjects	LM_ToggleObjects
+63845843812633	TASK_END	ViewObjects	LM_ToggleObjects	12279
+63845843812635	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843821051	TASK_RESPONSE	Left Button Pressed	Response Time: 8.41832
+63845843829637	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	65	
+--------------------
+
+63845843829641	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials66False
+63845843829643	TASK_START	Counter	LM_DummyCounter
+63845843829650	TASK_END	Counter	LM_DummyCounter	7
+63845843829652	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843829653	INFO    skip task    BlockInstruction
+63845843829660	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845843829662	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843829664	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(22.1, 0.1, 116.2)
+63845843829665	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843829673	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845843829674	TASK_START	ViewObjects	LM_ToggleObjects
+63845843841597	TASK_END	ViewObjects	LM_ToggleObjects	11923
+63845843841598	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843850348	TASK_RESPONSE	Left Button Pressed	Response Time: 8.752089
+63845843858600	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	66	
+--------------------
+
+63845843858604	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials67False
+63845843858606	TASK_START	Counter	LM_DummyCounter
+63845843858613	TASK_END	Counter	LM_DummyCounter	7
+63845843858614	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843858615	INFO    skip task    BlockInstruction
+63845843858623	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845843858625	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843858627	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(78.9, 1.6, 79.0)
+63845843858628	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843858637	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845843858639	TASK_START	ViewObjects	LM_ToggleObjects
+63845843869028	TASK_END	ViewObjects	LM_ToggleObjects	10390
+63845843869030	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843878280	TASK_RESPONSE	Left Button Pressed	Response Time: 9.252029
+63845843886029	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	67	
+--------------------
+
+63845843886034	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials68False
+63845843886037	TASK_START	Counter	LM_DummyCounter
+63845843886046	TASK_END	Counter	LM_DummyCounter	9
+63845843886047	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843886049	INFO    skip task    BlockInstruction
+63845843886062	TASK_END	BlockInstruction	InstructionsTaskViewpoint	14
+63845843886064	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843886066	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(80.8, 0.1, 79.1)
+63845843886067	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843886077	TASK_END	MovePlayerToSpawn	MoveSpawn	13
+63845843886080	TASK_START	ViewObjects	LM_ToggleObjects
+63845843896259	TASK_END	ViewObjects	LM_ToggleObjects	10180
+63845843896261	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843906410	TASK_RESPONSE	Left Button Pressed	Response Time: 10.15147
+63845843913263	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	68	
+--------------------
+
+63845843913266	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials69False
+63845843913268	TASK_START	Counter	LM_DummyCounter
+63845843913275	TASK_END	Counter	LM_DummyCounter	7
+63845843913276	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843913278	INFO    skip task    BlockInstruction
+63845843913286	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843913287	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843913288	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(81.4, 0.1, 58.7)
+63845843913289	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843913296	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845843913298	TASK_START	ViewObjects	LM_ToggleObjects
+63845843922569	TASK_END	ViewObjects	LM_ToggleObjects	9271
+63845843922570	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843931232	TASK_RESPONSE	Left Button Pressed	Response Time: 8.664151
+63845843939571	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	69	
+--------------------
+
+63845843939574	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials70False
+63845843939577	TASK_START	Counter	LM_DummyCounter
+63845843939584	TASK_END	Counter	LM_DummyCounter	7
+63845843939585	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843939586	INFO    skip task    BlockInstruction
+63845843939594	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845843939596	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843939597	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(62.2, 0.1, 26.6)
+63845843939598	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843939606	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845843939607	TASK_START	ViewObjects	LM_ToggleObjects
+63845843949179	TASK_END	ViewObjects	LM_ToggleObjects	9571
+63845843949181	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843958097	TASK_RESPONSE	Left Button Pressed	Response Time: 8.917808
+63845843966181	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	70	
+--------------------
+
+63845843966185	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials71False
+63845843966186	TASK_START	Counter	LM_DummyCounter
+63845843966194	TASK_END	Counter	LM_DummyCounter	7
+63845843966195	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843966195	INFO    skip task    BlockInstruction
+63845843966203	TASK_END	BlockInstruction	InstructionsTaskViewpoint	7
+63845843966204	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843966206	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(58.6, 0.1, 8.7)
+63845843966207	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843966214	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845843966215	TASK_START	ViewObjects	LM_ToggleObjects
+63845843975966	TASK_END	ViewObjects	LM_ToggleObjects	9750
+63845843975967	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845843984316	TASK_RESPONSE	Left Button Pressed	Response Time: 8.35044
+63845843992969	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	71	
+--------------------
+
+63845843992972	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials72False
+63845843992974	TASK_START	Counter	LM_DummyCounter
+63845843992981	TASK_END	Counter	LM_DummyCounter	7
+63845843992982	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845843992983	INFO    skip task    BlockInstruction
+63845843992991	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845843992993	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845843992994	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(40.8, 0.1, 14.9)
+63845843992996	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845843993004	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845843993006	TASK_START	ViewObjects	LM_ToggleObjects
+63845844004063	TASK_END	ViewObjects	LM_ToggleObjects	11057
+63845844004065	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844012982	TASK_RESPONSE	Left Button Pressed	Response Time: 8.918264
+63845844021066	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	72	
+--------------------
+
+63845844021069	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials73False
+63845844021071	TASK_START	Counter	LM_DummyCounter
+63845844021078	TASK_END	Counter	LM_DummyCounter	7
+63845844021080	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844021080	INFO    skip task    BlockInstruction
+63845844021088	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845844021090	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844021091	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(52.2, 0.1, 16.6)
+63845844021092	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844021099	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845844021101	TASK_START	ViewObjects	LM_ToggleObjects
+63845844030939	TASK_END	ViewObjects	LM_ToggleObjects	9837
+63845844030940	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844040846	TASK_RESPONSE	Left Button Pressed	Response Time: 9.906671
+63845844047941	TASK_END	BlackoutWalking	LM_BlackoutPath	16999
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	73	
+--------------------
+
+63845844047944	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials74False
+63845844047946	TASK_START	Counter	LM_DummyCounter
+63845844047953	TASK_END	Counter	LM_DummyCounter	8
+63845844047955	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844047956	INFO    skip task    BlockInstruction
+63845844047963	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845844047965	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844047966	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(79.6, 0.1, 4.8)
+63845844047967	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844047975	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845844047977	TASK_START	ViewObjects	LM_ToggleObjects
+63845844058192	TASK_END	ViewObjects	LM_ToggleObjects	10215
+63845844058193	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844066631	TASK_RESPONSE	Right Button Pressed	Response Time: 8.440338
+63845844075196	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	74	
+--------------------
+
+63845844075200	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials75False
+63845844075202	TASK_START	Counter	LM_DummyCounter
+63845844075211	TASK_END	Counter	LM_DummyCounter	9
+63845844075212	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844075213	INFO    skip task    BlockInstruction
+63845844075221	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845844075223	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844075225	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(31.9, 0.1, 25.9)
+63845844075226	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844075234	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845844075235	TASK_START	ViewObjects	LM_ToggleObjects
+63845844084689	TASK_END	ViewObjects	LM_ToggleObjects	9454
+63845844084693	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844093294	TASK_RESPONSE	Left Button Pressed	Response Time: 8.604488
+63845844101695	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	75	
+--------------------
+
+63845844101698	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials76False
+63845844101700	TASK_START	Counter	LM_DummyCounter
+63845844101710	TASK_END	Counter	LM_DummyCounter	10
+63845844101711	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844101713	INFO    skip task    BlockInstruction
+63845844101724	TASK_END	BlockInstruction	InstructionsTaskViewpoint	13
+63845844101726	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844101727	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(88.6, 0.1, 75.3)
+63845844101729	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844101736	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845844101737	TASK_START	ViewObjects	LM_ToggleObjects
+63845844111433	TASK_END	ViewObjects	LM_ToggleObjects	9696
+63845844111435	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844120284	TASK_RESPONSE	Right Button Pressed	Response Time: 8.851079
+63845844128436	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	76	
+--------------------
+
+63845844128440	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials77False
+63845844128442	TASK_START	Counter	LM_DummyCounter
+63845844128449	TASK_END	Counter	LM_DummyCounter	7
+63845844128450	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844128452	INFO    skip task    BlockInstruction
+63845844128459	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845844128461	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844128462	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(57.8, 0.1, 66.6)
+63845844128464	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844128472	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845844128473	TASK_START	ViewObjects	LM_ToggleObjects
+63845844137897	TASK_END	ViewObjects	LM_ToggleObjects	9424
+63845844137898	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844148137	TASK_RESPONSE	Right Button Pressed	Response Time: 10.23996
+63845844154901	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	77	
+--------------------
+
+63845844154904	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials78False
+63845844154906	TASK_START	Counter	LM_DummyCounter
+63845844154914	TASK_END	Counter	LM_DummyCounter	8
+63845844154916	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844154917	INFO    skip task    BlockInstruction
+63845844154926	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845844154927	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844154930	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(41.1, 0.1, 45.0)
+63845844154931	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844154938	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845844154940	TASK_START	ViewObjects	LM_ToggleObjects
+63845844164743	TASK_END	ViewObjects	LM_ToggleObjects	9804
+63845844164745	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844173586	TASK_RESPONSE	Left Button Pressed	Response Time: 8.843328
+63845844181745	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	78	
+--------------------
+
+63845844181748	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials79False
+63845844181750	TASK_START	Counter	LM_DummyCounter
+63845844181757	TASK_END	Counter	LM_DummyCounter	7
+63845844181758	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844181759	INFO    skip task    BlockInstruction
+63845844181767	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845844181768	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844181769	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(108.9, 0.1, 75.0)
+63845844181771	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844181779	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845844181780	TASK_START	ViewObjects	LM_ToggleObjects
+63845844191718	TASK_END	ViewObjects	LM_ToggleObjects	9938
+63845844191720	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844200147	TASK_RESPONSE	Left Button Pressed	Response Time: 8.429909
+63845844208722	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	79	
+--------------------
+
+63845844208725	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials80False
+63845844208727	TASK_START	Counter	LM_DummyCounter
+63845844208734	TASK_END	Counter	LM_DummyCounter	7
+63845844208735	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844208737	INFO    skip task    BlockInstruction
+63845844208745	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845844208747	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844208748	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(18.9, 0.1, 18.9)
+63845844208749	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844208762	TASK_END	MovePlayerToSpawn	MoveSpawn	15
+63845844208764	TASK_START	ViewObjects	LM_ToggleObjects
+63845844219804	TASK_END	ViewObjects	LM_ToggleObjects	11041
+63845844219806	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844228189	TASK_RESPONSE	Left Button Pressed	Response Time: 8.385986
+63845844236808	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	80	
+--------------------
+
+63845844236812	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials81False
+63845844236814	TASK_START	Counter	LM_DummyCounter
+63845844236821	TASK_END	Counter	LM_DummyCounter	7
+63845844236822	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844245712	INPUT_EVENT    PlayerPressedActionButton    1
+63845844245713	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8891
+63845844245715	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844245716	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(52.0, 0.1, 75.9)
+63845844245717	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844245726	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845844245727	TASK_START	ViewObjects	LM_ToggleObjects
+63845844256263	TASK_END	ViewObjects	LM_ToggleObjects	10535
+63845844256265	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844266215	TASK_RESPONSE	Left Button Pressed	Response Time: 9.952436
+63845844273268	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	81	
+--------------------
+
+63845844273271	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials82False
+63845844273273	TASK_START	Counter	LM_DummyCounter
+63845844273280	TASK_END	Counter	LM_DummyCounter	7
+63845844273282	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844273283	INFO    skip task    BlockInstruction
+63845844273290	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845844273291	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844273293	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(59.6, 0.1, 19.2)
+63845844273294	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844273302	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845844273303	TASK_START	ViewObjects	LM_ToggleObjects
+63845844285473	TASK_END	ViewObjects	LM_ToggleObjects	12170
+63845844285474	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844295069	TASK_RESPONSE	Right Button Pressed	Response Time: 9.595782
+63845844302476	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	82	
+--------------------
+
+63845844302480	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials83False
+63845844302482	TASK_START	Counter	LM_DummyCounter
+63845844302491	TASK_END	Counter	LM_DummyCounter	9
+63845844302493	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844302494	INFO    skip task    BlockInstruction
+63845844302502	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845844302504	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844302505	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(67.8, 0.1, 96.6)
+63845844302506	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844302514	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845844302515	TASK_START	ViewObjects	LM_ToggleObjects
+63845844315379	TASK_END	ViewObjects	LM_ToggleObjects	12863
+63845844315381	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844323988	TASK_RESPONSE	Left Button Pressed	Response Time: 8.608665
+63845844332383	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	83	
+--------------------
+
+63845844332387	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials84False
+63845844332388	TASK_START	Counter	LM_DummyCounter
+63845844332396	TASK_END	Counter	LM_DummyCounter	7
+63845844332398	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844332399	INFO    skip task    BlockInstruction
+63845844332407	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845844332408	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844332410	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(90.4, 0.1, 74.8)
+63845844332411	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844332422	TASK_END	MovePlayerToSpawn	MoveSpawn	14
+63845844332423	TASK_START	ViewObjects	LM_ToggleObjects
+63845844345655	TASK_END	ViewObjects	LM_ToggleObjects	13231
+63845844345657	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844354084	TASK_RESPONSE	Left Button Pressed	Response Time: 8.429794
+63845844362658	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	84	
+--------------------
+
+63845844362661	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials85False
+63845844362663	TASK_START	Counter	LM_DummyCounter
+63845844362671	TASK_END	Counter	LM_DummyCounter	7
+63845844362673	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844362674	INFO    skip task    BlockInstruction
+63845844362683	TASK_END	BlockInstruction	InstructionsTaskViewpoint	11
+63845844362684	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844362685	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(27.9, 0.1, 67.8)
+63845844362686	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844362696	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845844362698	TASK_START	ViewObjects	LM_ToggleObjects
+63845844374230	TASK_END	ViewObjects	LM_ToggleObjects	11532
+63845844374231	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844382970	TASK_RESPONSE	Left Button Pressed	Response Time: 8.740776
+63845844391235	TASK_END	BlackoutWalking	LM_BlackoutPath	17004
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	85	
+--------------------
+
+63845844391238	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials86False
+63845844391240	TASK_START	Counter	LM_DummyCounter
+63845844391247	TASK_END	Counter	LM_DummyCounter	7
+63845844391248	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844391249	INFO    skip task    BlockInstruction
+63845844391261	TASK_END	BlockInstruction	InstructionsTaskViewpoint	12
+63845844391262	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844391264	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(109.2, 0.1, 49.1)
+63845844391265	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844391273	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845844391274	TASK_START	ViewObjects	LM_ToggleObjects
+63845844403961	TASK_END	ViewObjects	LM_ToggleObjects	12687
+63845844403963	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844413545	TASK_RESPONSE	Right Button Pressed	Response Time: 9.583974
+63845844420964	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	86	
+--------------------
+
+63845844420968	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials87False
+63845844420970	TASK_START	Counter	LM_DummyCounter
+63845844420977	TASK_END	Counter	LM_DummyCounter	7
+63845844420979	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844420980	INFO    skip task    BlockInstruction
+63845844420987	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845844420989	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844420990	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(71.9, 0.1, 58.1)
+63845844420991	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844420999	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845844421006	TASK_START	ViewObjects	LM_ToggleObjects
+63845844434303	TASK_END	ViewObjects	LM_ToggleObjects	13296
+63845844434304	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844443209	TASK_RESPONSE	Left Button Pressed	Response Time: 8.907433
+63845844451306	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	87	
+--------------------
+
+63845844451309	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials88False
+63845844451310	TASK_START	Counter	LM_DummyCounter
+63845844451318	TASK_END	Counter	LM_DummyCounter	6
+63845844451319	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844451320	INFO    skip task    BlockInstruction
+63845844451329	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845844451330	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844451332	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(92.1, 0.1, 116.2)
+63845844451333	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844451343	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845844451345	TASK_START	ViewObjects	LM_ToggleObjects
+63845844464499	TASK_END	ViewObjects	LM_ToggleObjects	13154
+63845844464501	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844484910	TASK_END	BlackoutWalking	LM_BlackoutPath	20410
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	88	
+--------------------
+
+63845844484913	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials89False
+63845844484915	TASK_START	Counter	LM_DummyCounter
+63845844484921	TASK_END	Counter	LM_DummyCounter	6
+63845844484922	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844484923	INFO    skip task    BlockInstruction
+63845844484931	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845844484933	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844484934	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(92.3, 0.1, 17.0)
+63845844484935	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844484942	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845844484944	TASK_START	ViewObjects	LM_ToggleObjects
+63845844589182	TASK_END	ViewObjects	LM_ToggleObjects	104238
+63845844589183	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844599054	TASK_RESPONSE	Left Button Pressed	Response Time: 9.872621
+63845844606186	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	89	
+--------------------
+
+63845844606190	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials90False
+63845844606192	TASK_START	Counter	LM_DummyCounter
+63845844606199	TASK_END	Counter	LM_DummyCounter	7
+63845844606200	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844606201	INFO    skip task    BlockInstruction
+63845844606211	TASK_END	BlockInstruction	InstructionsTaskViewpoint	11
+63845844606212	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844606213	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(48.6, 0.1, 8.7)
+63845844606214	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844606226	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845844606228	TASK_START	ViewObjects	LM_ToggleObjects
+63845844618847	TASK_END	ViewObjects	LM_ToggleObjects	12619
+63845844618849	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844630596	TASK_RESPONSE	Right Button Pressed	Response Time: 11.75072
+63845844635849	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	90	
+--------------------
+
+63845844635853	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials91False
+63845844635855	TASK_START	Counter	LM_DummyCounter
+63845844635862	TASK_END	Counter	LM_DummyCounter	7
+63845844635863	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844635864	INFO    skip task    BlockInstruction
+63845844635871	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845844635872	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844635873	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(32.1, 0.1, 37.8)
+63845844635875	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844635882	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845844635883	TASK_START	ViewObjects	LM_ToggleObjects
+63845844657017	TASK_END	ViewObjects	LM_ToggleObjects	21133
+63845844657018	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844666579	TASK_RESPONSE	Right Button Pressed	Response Time: 9.562245
+63845844674022	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	91	
+--------------------
+
+63845844674025	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials92False
+63845844674027	TASK_START	Counter	LM_DummyCounter
+63845844674036	TASK_END	Counter	LM_DummyCounter	9
+63845844674038	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844674039	INFO    skip task    BlockInstruction
+63845844674046	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845844674048	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844674049	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(108.9, 0.1, 19.0)
+63845844674050	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844674058	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845844674059	TASK_START	ViewObjects	LM_ToggleObjects
+63845844685560	TASK_END	ViewObjects	LM_ToggleObjects	11501
+63845844685562	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844694299	TASK_RESPONSE	Left Button Pressed	Response Time: 8.740195
+63845844702563	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	92	
+--------------------
+
+63845844702566	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials93False
+63845844702568	TASK_START	Counter	LM_DummyCounter
+63845844702575	TASK_END	Counter	LM_DummyCounter	7
+63845844702577	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844702578	INFO    skip task    BlockInstruction
+63845844702585	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845844702586	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844702588	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(99.2, 0.1, 74.9)
+63845844702589	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844702596	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845844702598	TASK_START	ViewObjects	LM_ToggleObjects
+63845844715379	TASK_END	ViewObjects	LM_ToggleObjects	12781
+63845844715380	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844724052	TASK_RESPONSE	Right Button Pressed	Response Time: 8.672633
+63845844732382	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	93	
+--------------------
+
+63845844732385	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials94False
+63845844732387	TASK_START	Counter	LM_DummyCounter
+63845844732394	TASK_END	Counter	LM_DummyCounter	7
+63845844732396	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844732397	INFO    skip task    BlockInstruction
+63845844732404	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845844732405	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844732407	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(100.8, 0.1, 99.1)
+63845844732408	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844732416	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845844732416	TASK_START	ViewObjects	LM_ToggleObjects
+63845844744044	TASK_END	ViewObjects	LM_ToggleObjects	11627
+63845844744045	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844752728	TASK_RESPONSE	Left Button Pressed	Response Time: 8.68503
+63845844761046	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	94	
+--------------------
+
+63845844761050	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials95False
+63845844761051	TASK_START	Counter	LM_DummyCounter
+63845844761059	TASK_END	Counter	LM_DummyCounter	7
+63845844761060	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844761061	INFO    skip task    BlockInstruction
+63845844761067	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845844761069	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844761070	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(59.6, 0.1, 39.2)
+63845844761071	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844761079	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845844761080	TASK_START	ViewObjects	LM_ToggleObjects
+63845844773485	TASK_END	ViewObjects	LM_ToggleObjects	12405
+63845844773486	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844782048	TASK_RESPONSE	Left Button Pressed	Response Time: 8.563066
+63845844790489	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	95	
+--------------------
+
+63845844790492	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials96False
+63845844790494	TASK_START	Counter	LM_DummyCounter
+63845844790503	TASK_END	Counter	LM_DummyCounter	9
+63845844790504	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845844790505	INFO    skip task    BlockInstruction
+63845844790512	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845844790514	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845844790515	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(98.1, 0.1, 85.9)
+63845844790517	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845844790523	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845844790525	TASK_START	ViewObjects	LM_ToggleObjects
+63845844802195	TASK_END	ViewObjects	LM_ToggleObjects	11669
+63845844802195	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845844813178	TASK_RESPONSE	Right Button Pressed	Response Time: 10.98379
+63845844819198	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	96	
+--------------------
+
+63845844819201	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials97False
+63845844819203	TASK_START	Counter	LM_DummyCounter
+63845844819217	TASK_END	Counter	LM_DummyCounter	7
+63845844819218	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845040716	INPUT_EVENT    PlayerPressedActionButton    1
+63845845040717	TASK_END	BlockInstruction	InstructionsTaskViewpoint	221498
+63845845040719	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845040720	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(62.3, 0.1, 47.0)
+63845845040721	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845040729	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845845040730	TASK_START	ViewObjects	LM_ToggleObjects
+63845845053166	TASK_END	ViewObjects	LM_ToggleObjects	12436
+63845845053168	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845061641	TASK_RESPONSE	Left Button Pressed	Response Time: 8.474244
+63845845070170	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	97	
+--------------------
+
+63845845070174	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials98False
+63845845070175	TASK_START	Counter	LM_DummyCounter
+63845845070181	TASK_END	Counter	LM_DummyCounter	7
+63845845070184	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845070184	INFO    skip task    BlockInstruction
+63845845070193	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845845070194	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845070195	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(81.9, 0.1, 35.9)
+63845845070196	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845070203	TASK_END	MovePlayerToSpawn	MoveSpawn	8
+63845845070205	TASK_START	ViewObjects	LM_ToggleObjects
+63845845080022	TASK_END	ViewObjects	LM_ToggleObjects	9817
+63845845080023	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845089004	TASK_RESPONSE	Right Button Pressed	Response Time: 8.98343
+63845845097024	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	98	
+--------------------
+
+63845845097027	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials99False
+63845845097029	TASK_START	Counter	LM_DummyCounter
+63845845097035	TASK_END	Counter	LM_DummyCounter	6
+63845845097037	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845097038	INFO    skip task    BlockInstruction
+63845845097046	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845845097048	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845097049	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(110.4, 0.1, 99.2)
+63845845097050	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845097057	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845845097059	TASK_START	ViewObjects	LM_ToggleObjects
+63845845107541	TASK_END	ViewObjects	LM_ToggleObjects	10482
+63845845107543	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845117770	TASK_RESPONSE	Left Button Pressed	Response Time: 10.22873
+63845845124544	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	99	
+--------------------
+
+63845845124547	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials100False
+63845845124548	TASK_START	Counter	LM_DummyCounter
+63845845124556	TASK_END	Counter	LM_DummyCounter	7
+63845845124557	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845124558	INFO    skip task    BlockInstruction
+63845845124566	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845845124568	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845124569	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(79.6, 0.1, 4.8)
+63845845124571	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845124578	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845845124579	TASK_START	ViewObjects	LM_ToggleObjects
+63845845135662	TASK_END	ViewObjects	LM_ToggleObjects	11083
+63845845135663	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845144224	TASK_RESPONSE	Left Button Pressed	Response Time: 8.563107
+63845845152665	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	100	
+--------------------
+
+63845845152668	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials101False
+63845845152670	TASK_START	Counter	LM_DummyCounter
+63845845152678	TASK_END	Counter	LM_DummyCounter	8
+63845845152679	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845152680	INFO    skip task    BlockInstruction
+63845845152686	TASK_END	BlockInstruction	InstructionsTaskViewpoint	7
+63845845152689	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845152690	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(31.5, 0.1, 98.7)
+63845845152692	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845152698	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845845152699	TASK_START	ViewObjects	LM_ToggleObjects
+63845845163770	TASK_END	ViewObjects	LM_ToggleObjects	11070
+63845845163771	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845172121	TASK_RESPONSE	Left Button Pressed	Response Time: 8.352011
+63845845180773	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	101	
+--------------------
+
+63845845180777	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials102False
+63845845180780	TASK_START	Counter	LM_DummyCounter
+63845845180786	TASK_END	Counter	LM_DummyCounter	7
+63845845180788	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845180789	INFO    skip task    BlockInstruction
+63845845180798	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845845180800	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845180801	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(98.6, 0.1, 68.7)
+63845845180802	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845180810	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845845180811	TASK_START	ViewObjects	LM_ToggleObjects
+63845845190680	TASK_END	ViewObjects	LM_ToggleObjects	9868
+63845845190681	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845199965	TASK_RESPONSE	Right Button Pressed	Response Time: 9.285712
+63845845207684	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	102	
+--------------------
+
+63845845207687	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials103False
+63845845207689	TASK_START	Counter	LM_DummyCounter
+63845845207697	TASK_END	Counter	LM_DummyCounter	8
+63845845207698	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845207699	INFO    skip task    BlockInstruction
+63845845207708	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845845207709	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845207711	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(67.9, 0.1, 17.8)
+63845845207712	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845207722	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845845207723	TASK_START	ViewObjects	LM_ToggleObjects
+63845845217568	TASK_END	ViewObjects	LM_ToggleObjects	9843
+63845845217569	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845226474	TASK_RESPONSE	Left Button Pressed	Response Time: 8.90711
+63845845234570	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	103	
+--------------------
+
+63845845234574	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials104False
+63845845234575	TASK_START	Counter	LM_DummyCounter
+63845845234582	TASK_END	Counter	LM_DummyCounter	6
+63845845234584	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845234584	INFO    skip task    BlockInstruction
+63845845234594	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845845234596	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845234597	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(57.9, 0.1, 76.2)
+63845845234598	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845234607	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845845234608	TASK_START	ViewObjects	LM_ToggleObjects
+63845845243923	TASK_END	ViewObjects	LM_ToggleObjects	9313
+63845845243924	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845252374	TASK_RESPONSE	Left Button Pressed	Response Time: 8.451441
+63845845260926	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	104	
+--------------------
+
+63845845260930	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials105False
+63845845260932	TASK_START	Counter	LM_DummyCounter
+63845845260939	TASK_END	Counter	LM_DummyCounter	7
+63845845260940	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845260941	INFO    skip task    BlockInstruction
+63845845260950	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845845260951	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845260952	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(18.9, 0.1, 8.9)
+63845845260953	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845260960	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845845260962	TASK_START	ViewObjects	LM_ToggleObjects
+63845845271142	TASK_END	ViewObjects	LM_ToggleObjects	10180
+63845845271144	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845281049	TASK_RESPONSE	Left Button Pressed	Response Time: 9.906536
+63845845288146	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	105	
+--------------------
+
+63845845288149	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials106False
+63845845288150	TASK_START	Counter	LM_DummyCounter
+63845845288157	TASK_END	Counter	LM_DummyCounter	6
+63845845288159	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845288159	INFO    skip task    BlockInstruction
+63845845288168	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845845288169	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845288170	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(62.3, 0.1, 47.0)
+63845845288171	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845288179	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845845288180	TASK_START	ViewObjects	LM_ToggleObjects
+63845845298853	TASK_END	ViewObjects	LM_ToggleObjects	10673
+63845845298854	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845307238	TASK_RESPONSE	Left Button Pressed	Response Time: 8.385689
+63845845315856	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	106	
+--------------------
+
+63845845315860	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials107False
+63845845315862	TASK_START	Counter	LM_DummyCounter
+63845845315868	TASK_END	Counter	LM_DummyCounter	6
+63845845315870	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845315871	INFO    skip task    BlockInstruction
+63845845315878	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845845315878	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845315881	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(91.1, 0.1, 38.9)
+63845845315882	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845315889	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845845315890	TASK_START	ViewObjects	LM_ToggleObjects
+63845845326151	TASK_END	ViewObjects	LM_ToggleObjects	10261
+63845845326152	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845337578	TASK_RESPONSE	Left Button Pressed	Response Time: 11.42719
+63845845343153	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	107	
+--------------------
+
+63845845343157	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials108False
+63845845343159	TASK_START	Counter	LM_DummyCounter
+63845845343169	TASK_END	Counter	LM_DummyCounter	8
+63845845343170	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845343171	INFO    skip task    BlockInstruction
+63845845343180	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845845343182	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845343183	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(112.2, 0.1, 6.6)
+63845845343185	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845343193	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845845343194	TASK_START	ViewObjects	LM_ToggleObjects
+63845845353472	TASK_END	ViewObjects	LM_ToggleObjects	10278
+63845845353473	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845361680	TASK_RESPONSE	Left Button Pressed	Response Time: 8.207704
+63845845370476	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	108	
+--------------------
+
+63845845370479	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials109False
+63845845370483	TASK_START	Counter	LM_DummyCounter
+63845845370490	TASK_END	Counter	LM_DummyCounter	7
+63845845370491	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845370493	INFO    skip task    BlockInstruction
+63845845370501	TASK_END	BlockInstruction	InstructionsTaskViewpoint	11
+63845845370503	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845370505	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(79.2, 0.1, 114.9)
+63845845370506	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845370513	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845845370515	TASK_START	ViewObjects	LM_ToggleObjects
+63845845380416	TASK_END	ViewObjects	LM_ToggleObjects	9901
+63845845380417	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845389654	TASK_RESPONSE	Right Button Pressed	Response Time: 9.238277
+63845845397418	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	109	
+--------------------
+
+63845845397422	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials110False
+63845845397425	TASK_START	Counter	LM_DummyCounter
+63845845397433	TASK_END	Counter	LM_DummyCounter	8
+63845845397434	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845397435	INFO    skip task    BlockInstruction
+63845845397444	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845845397446	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845397447	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(18.9, 0.1, 55.0)
+63845845397448	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845397457	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845845397458	TASK_START	ViewObjects	LM_ToggleObjects
+63845845406092	TASK_END	ViewObjects	LM_ToggleObjects	8633
+63845845406093	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845414810	TASK_RESPONSE	Right Button Pressed	Response Time: 8.719017
+63845845423096	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	110	
+--------------------
+
+63845845423099	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials111False
+63845845423100	TASK_START	Counter	LM_DummyCounter
+63845845423110	TASK_END	Counter	LM_DummyCounter	9
+63845845423112	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845423113	INFO    skip task    BlockInstruction
+63845845423121	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845845423123	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845423124	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(50.4, 0.1, 99.2)
+63845845423125	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845423132	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845845423133	TASK_START	ViewObjects	LM_ToggleObjects
+63845845433766	TASK_END	ViewObjects	LM_ToggleObjects	10634
+63845845433768	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845442486	TASK_RESPONSE	Right Button Pressed	Response Time: 8.719256
+63845845450771	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	111	
+--------------------
+
+63845845450776	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials112False
+63845845450778	TASK_START	Counter	LM_DummyCounter
+63845845450786	TASK_END	Counter	LM_DummyCounter	8
+63845845450787	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845450789	INFO    skip task    BlockInstruction
+63845845450797	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845845450799	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845450801	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(90.4, 0.1, 109.2)
+63845845450802	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845450809	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845845450811	TASK_START	ViewObjects	LM_ToggleObjects
+63845845459856	TASK_END	ViewObjects	LM_ToggleObjects	9045
+63845845459858	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845468774	TASK_RESPONSE	Right Button Pressed	Response Time: 8.917236
+63845845476858	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	112	
+--------------------
+
+63845845476863	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials113False
+63845845476864	TASK_START	Counter	LM_DummyCounter
+63845845476871	TASK_END	Counter	LM_DummyCounter	6
+63845845476873	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845480279	INPUT_EVENT    PlayerPressedActionButton    1
+63845845480280	TASK_END	BlockInstruction	InstructionsTaskViewpoint	3407
+63845845480281	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845480282	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(32.3, 0.1, 77.0)
+63845845480283	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845480291	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845845480292	TASK_START	ViewObjects	LM_ToggleObjects
+63845845490775	TASK_END	ViewObjects	LM_ToggleObjects	10482
+63845845490777	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845500381	TASK_RESPONSE	Left Button Pressed	Response Time: 9.606985
+63845845507779	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	113	
+--------------------
+
+63845845507781	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials114False
+63845845507783	TASK_START	Counter	LM_DummyCounter
+63845845507790	TASK_END	Counter	LM_DummyCounter	7
+63845845507791	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845507793	INFO    skip task    BlockInstruction
+63845845507800	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845845507801	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845507803	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(20.8, 0.1, 44.9)
+63845845507804	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845507811	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845845507812	TASK_START	ViewObjects	LM_ToggleObjects
+63845845519384	TASK_END	ViewObjects	LM_ToggleObjects	11571
+63845845519385	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845528059	TASK_RESPONSE	Left Button Pressed	Response Time: 8.674517
+63845845536388	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	114	
+--------------------
+
+63845845536391	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials115False
+63845845536393	TASK_START	Counter	LM_DummyCounter
+63845845536399	TASK_END	Counter	LM_DummyCounter	6
+63845845536400	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845536402	INFO    skip task    BlockInstruction
+63845845536409	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845845536411	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845536413	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(68.1, 0.1, 78.1)
+63845845536413	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845536420	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845845536422	TASK_START	ViewObjects	LM_ToggleObjects
+63845845548748	TASK_END	ViewObjects	LM_ToggleObjects	12327
+63845845548749	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845557177	TASK_RESPONSE	Right Button Pressed	Response Time: 8.429311
+63845845565751	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	115	
+--------------------
+
+63845845565754	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials116False
+63845845565756	TASK_START	Counter	LM_DummyCounter
+63845845565763	TASK_END	Counter	LM_DummyCounter	7
+63845845565764	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845565765	INFO    skip task    BlockInstruction
+63845845565773	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845845565774	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845565775	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(47.9, 0.1, 86.2)
+63845845565776	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845565783	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845845565785	TASK_START	ViewObjects	LM_ToggleObjects
+63845845578611	TASK_END	ViewObjects	LM_ToggleObjects	12826
+63845845578612	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845587886	TASK_RESPONSE	Right Button Pressed	Response Time: 9.274487
+63845845595615	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	116	
+--------------------
+
+63845845595618	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials117False
+63845845595620	TASK_START	Counter	LM_DummyCounter
+63845845595628	TASK_END	Counter	LM_DummyCounter	7
+63845845595629	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845595630	INFO    skip task    BlockInstruction
+63845845595640	TASK_END	BlockInstruction	InstructionsTaskViewpoint	11
+63845845595641	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845595643	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(99.6, 0.1, 4.8)
+63845845595644	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845595651	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845845595653	TASK_START	ViewObjects	LM_ToggleObjects
+63845845608210	TASK_END	ViewObjects	LM_ToggleObjects	12556
+63845845608212	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845617417	TASK_RESPONSE	Left Button Pressed	Response Time: 9.207088
+63845845625214	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	117	
+--------------------
+
+63845845625217	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials118False
+63845845625218	TASK_START	Counter	LM_DummyCounter
+63845845625226	TASK_END	Counter	LM_DummyCounter	7
+63845845625227	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845625228	INFO    skip task    BlockInstruction
+63845845625235	TASK_END	BlockInstruction	InstructionsTaskViewpoint	7
+63845845625236	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845625238	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(39.2, 0.1, 4.9)
+63845845625239	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845625248	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845845625249	TASK_START	ViewObjects	LM_ToggleObjects
+63845845640328	TASK_END	ViewObjects	LM_ToggleObjects	15078
+63845845640329	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845650079	TASK_RESPONSE	Right Button Pressed	Response Time: 9.752038
+63845845657332	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	118	
+--------------------
+
+63845845657335	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials119False
+63845845657337	TASK_START	Counter	LM_DummyCounter
+63845845657344	TASK_END	Counter	LM_DummyCounter	7
+63845845657345	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845657346	INFO    skip task    BlockInstruction
+63845845657357	TASK_END	BlockInstruction	InstructionsTaskViewpoint	12
+63845845657358	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845657360	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(92.3, 0.1, 17.0)
+63845845657361	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845657368	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845845657370	TASK_START	ViewObjects	LM_ToggleObjects
+63845845668938	TASK_END	ViewObjects	LM_ToggleObjects	11568
+63845845668940	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845677545	TASK_RESPONSE	Left Button Pressed	Response Time: 8.606833
+63845845685940	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	119	
+--------------------
+
+63845845685944	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials120False
+63845845685945	TASK_START	Counter	LM_DummyCounter
+63845845685952	TASK_END	Counter	LM_DummyCounter	6
+63845845685954	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845685955	INFO    skip task    BlockInstruction
+63845845685962	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845845685963	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845685965	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(67.8, 0.1, 96.6)
+63845845685966	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845685974	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845845685975	TASK_START	ViewObjects	LM_ToggleObjects
+63845845698079	TASK_END	ViewObjects	LM_ToggleObjects	12104
+63845845698081	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845708541	TASK_RESPONSE	Right Button Pressed	Response Time: 10.46227
+63845845715083	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	120	
+--------------------
+
+63845845715086	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials121False
+63845845715088	TASK_START	Counter	LM_DummyCounter
+63845845715097	TASK_END	Counter	LM_DummyCounter	8
+63845845715098	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845715099	INFO    skip task    BlockInstruction
+63845845715107	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845845715108	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845715109	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(112.1, 0.1, 66.2)
+63845845715111	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845715118	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845845715119	TASK_START	ViewObjects	LM_ToggleObjects
+63845845728487	TASK_END	ViewObjects	LM_ToggleObjects	13367
+63845845728488	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845737116	TASK_RESPONSE	Left Button Pressed	Response Time: 8.6304
+63845845745490	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	121	
+--------------------
+
+63845845745493	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials122False
+63845845745495	TASK_START	Counter	LM_DummyCounter
+63845845745502	TASK_END	Counter	LM_DummyCounter	6
+63845845745503	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845745504	INFO    skip task    BlockInstruction
+63845845745511	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845845745512	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845745514	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(38.0, 0.1, 78.1)
+63845845745515	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845745524	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845845745525	TASK_START	ViewObjects	LM_ToggleObjects
+63845845757641	TASK_END	ViewObjects	LM_ToggleObjects	12116
+63845845757643	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845767658	TASK_RESPONSE	Left Button Pressed	Response Time: 10.01673
+63845845774643	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	122	
+--------------------
+
+63845845774647	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials123False
+63845845774648	TASK_START	Counter	LM_DummyCounter
+63845845774656	TASK_END	Counter	LM_DummyCounter	7
+63845845774658	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845774659	INFO    skip task    BlockInstruction
+63845845774666	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845845774667	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845774669	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(38.9, 0.1, 105.1)
+63845845774670	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845774677	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845845774678	TASK_START	ViewObjects	LM_ToggleObjects
+63845845787072	TASK_END	ViewObjects	LM_ToggleObjects	12393
+63845845787073	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845795889	TASK_RESPONSE	Right Button Pressed	Response Time: 8.817623
+63845845804074	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	123	
+--------------------
+
+63845845804077	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials124False
+63845845804079	TASK_START	Counter	LM_DummyCounter
+63845845804087	TASK_END	Counter	LM_DummyCounter	8
+63845845804089	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845804090	INFO    skip task    BlockInstruction
+63845845804097	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845845804098	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845804099	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(108.9, 0.1, 25.1)
+63845845804101	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845804108	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845845804109	TASK_START	ViewObjects	LM_ToggleObjects
+63845845815890	TASK_END	ViewObjects	LM_ToggleObjects	11781
+63845845815892	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845824496	TASK_RESPONSE	Left Button Pressed	Response Time: 8.606236
+63845845832893	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	124	
+--------------------
+
+63845845832896	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials125False
+63845845832898	TASK_START	Counter	LM_DummyCounter
+63845845832905	TASK_END	Counter	LM_DummyCounter	7
+63845845832907	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845832908	INFO    skip task    BlockInstruction
+63845845832915	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845845832916	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845832918	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(68.1, 0.1, 85.9)
+63845845832919	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845832926	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845845832928	TASK_START	ViewObjects	LM_ToggleObjects
+63845845845953	TASK_END	ViewObjects	LM_ToggleObjects	13026
+63845845845955	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845855760	TASK_RESPONSE	Right Button Pressed	Response Time: 9.806831
+63845845862956	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	125	
+--------------------
+
+63845845862960	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials126False
+63845845862962	TASK_START	Counter	LM_DummyCounter
+63845845862971	TASK_END	Counter	LM_DummyCounter	8
+63845845862972	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845862973	INFO    skip task    BlockInstruction
+63845845862982	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845845862984	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845862985	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(30.8, 0.1, 84.9)
+63845845862986	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845862993	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845845862995	TASK_START	ViewObjects	LM_ToggleObjects
+63845845874295	TASK_END	ViewObjects	LM_ToggleObjects	11300
+63845845874296	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845883025	TASK_RESPONSE	Left Button Pressed	Response Time: 8.730106
+63845845891297	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	126	
+--------------------
+
+63845845891300	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials127False
+63845845891302	TASK_START	Counter	LM_DummyCounter
+63845845891309	TASK_END	Counter	LM_DummyCounter	7
+63845845891310	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845891311	INFO    skip task    BlockInstruction
+63845845891318	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845845891319	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845891321	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(89.2, 0.1, 89.1)
+63845845891322	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845891329	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845845891331	TASK_START	ViewObjects	LM_ToggleObjects
+63845845902727	TASK_END	ViewObjects	LM_ToggleObjects	11396
+63845845902729	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845913022	TASK_RESPONSE	Right Button Pressed	Response Time: 10.29532
+63845845919729	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	127	
+--------------------
+
+63845845919733	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials128False
+63845845919735	TASK_START	Counter	LM_DummyCounter
+63845845919741	TASK_END	Counter	LM_DummyCounter	7
+63845845919743	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845919743	INFO    skip task    BlockInstruction
+63845845919752	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845845919753	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845919754	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(68.9, 0.1, 8.9)
+63845845919755	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845919762	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845845919763	TASK_START	ViewObjects	LM_ToggleObjects
+63845845931569	TASK_END	ViewObjects	LM_ToggleObjects	11805
+63845845931570	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845940264	TASK_RESPONSE	Left Button Pressed	Response Time: 8.696018
+63845845948572	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	128	
+--------------------
+
+63845845948576	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials129False
+63845845948577	TASK_START	Counter	LM_DummyCounter
+63845845948583	TASK_END	Counter	LM_DummyCounter	6
+63845845948585	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845952859	INPUT_EVENT    PlayerPressedActionButton    1
+63845845952860	TASK_END	BlockInstruction	InstructionsTaskViewpoint	4275
+63845845952861	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845952862	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(48.1, 0.1, 45.9)
+63845845952863	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845952870	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845845952871	TASK_START	ViewObjects	LM_ToggleObjects
+63845845964985	TASK_END	ViewObjects	LM_ToggleObjects	12113
+63845845964987	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845845973638	TASK_RESPONSE	Left Button Pressed	Response Time: 8.652298
+63845845981988	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	129	
+--------------------
+
+63845845981992	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials130False
+63845845981994	TASK_START	Counter	LM_DummyCounter
+63845845982000	TASK_END	Counter	LM_DummyCounter	6
+63845845982001	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845845982003	INFO    skip task    BlockInstruction
+63845845982011	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845845982012	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845845982014	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(17.8, 0.1, 36.6)
+63845845982014	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845845982022	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845845982024	TASK_START	ViewObjects	LM_ToggleObjects
+63845845991895	TASK_END	ViewObjects	LM_ToggleObjects	9871
+63845845991897	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846000347	TASK_RESPONSE	Left Button Pressed	Response Time: 8.452303
+63845846008898	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	130	
+--------------------
+
+63845846008902	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials131False
+63845846008903	TASK_START	Counter	LM_DummyCounter
+63845846008910	TASK_END	Counter	LM_DummyCounter	6
+63845846008912	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846008913	INFO    skip task    BlockInstruction
+63845846008920	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845846008921	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846008922	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(69.2, 0.1, 49.1)
+63845846008923	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846008930	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845846008932	TASK_START	ViewObjects	LM_ToggleObjects
+63845846018294	TASK_END	ViewObjects	LM_ToggleObjects	9362
+63845846018295	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846028734	TASK_RESPONSE	Left Button Pressed	Response Time: 10.44034
+63845846035296	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	131	
+--------------------
+
+63845846035300	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials132False
+63845846035301	TASK_START	Counter	LM_DummyCounter
+63845846035308	TASK_END	Counter	LM_DummyCounter	6
+63845846035310	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846035311	INFO    skip task    BlockInstruction
+63845846035321	TASK_END	BlockInstruction	InstructionsTaskViewpoint	11
+63845846035323	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846035324	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(111.7, 0.1, 8.4)
+63845846035325	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846035333	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845846035334	TASK_START	ViewObjects	LM_ToggleObjects
+63845846044881	TASK_END	ViewObjects	LM_ToggleObjects	9547
+63845846044882	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846054209	TASK_RESPONSE	Right Button Pressed	Response Time: 9.328058
+63845846061885	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	132	
+--------------------
+
+63845846061887	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials133False
+63845846061889	TASK_START	Counter	LM_DummyCounter
+63845846061896	TASK_END	Counter	LM_DummyCounter	8
+63845846061898	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846061899	INFO    skip task    BlockInstruction
+63845846061905	TASK_END	BlockInstruction	InstructionsTaskViewpoint	7
+63845846061907	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846061908	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(27.9, 0.1, 106.2)
+63845846061909	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846061917	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845846061918	TASK_START	ViewObjects	LM_ToggleObjects
+63845846072390	TASK_END	ViewObjects	LM_ToggleObjects	10472
+63845846072392	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846082575	TASK_RESPONSE	Right Button Pressed	Response Time: 10.18508
+63845846089393	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	133	
+--------------------
+
+63845846089396	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials134False
+63845846089398	TASK_START	Counter	LM_DummyCounter
+63845846089405	TASK_END	Counter	LM_DummyCounter	7
+63845846089406	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846089408	INFO    skip task    BlockInstruction
+63845846089415	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845846089416	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846089417	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(38.0, 0.1, 65.9)
+63845846089419	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846089426	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845846089427	TASK_START	ViewObjects	LM_ToggleObjects
+63845846098265	TASK_END	ViewObjects	LM_ToggleObjects	8838
+63845846098267	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846106617	TASK_RESPONSE	Left Button Pressed	Response Time: 8.352018
+63845846115269	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	134	
+--------------------
+
+63845846115272	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials135False
+63845846115274	TASK_START	Counter	LM_DummyCounter
+63845846115282	TASK_END	Counter	LM_DummyCounter	8
+63845846115283	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846115284	INFO    skip task    BlockInstruction
+63845846115293	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845846115294	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846115295	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(69.2, 0.1, 19.1)
+63845846115297	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846115305	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845846115306	TASK_START	ViewObjects	LM_ToggleObjects
+63845846124964	TASK_END	ViewObjects	LM_ToggleObjects	9658
+63845846124965	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846136548	TASK_RESPONSE	Right Button Pressed	Response Time: 11.58351
+63845846141967	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	135	
+--------------------
+
+63845846141972	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials136False
+63845846141974	TASK_START	Counter	LM_DummyCounter
+63845846141981	TASK_END	Counter	LM_DummyCounter	7
+63845846141983	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846141984	INFO    skip task    BlockInstruction
+63845846141991	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845846141992	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846141993	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(21.1, 0.1, 95.0)
+63845846141994	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846142001	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845846142003	TASK_START	ViewObjects	LM_ToggleObjects
+63845846152117	TASK_END	ViewObjects	LM_ToggleObjects	10114
+63845846152119	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846160481	TASK_RESPONSE	Left Button Pressed	Response Time: 8.363936
+63845846169120	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	136	
+--------------------
+
+63845846169124	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials137False
+63845846169126	TASK_START	Counter	LM_DummyCounter
+63845846169133	TASK_END	Counter	LM_DummyCounter	8
+63845846169136	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846169137	INFO    skip task    BlockInstruction
+63845846169145	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845846169147	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846169148	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(59.6, 0.1, 39.2)
+63845846169149	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846169157	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845846169158	TASK_START	ViewObjects	LM_ToggleObjects
+63845846179317	TASK_END	ViewObjects	LM_ToggleObjects	10159
+63845846179318	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846190800	TASK_RESPONSE	Right Button Pressed	Response Time: 11.48275
+63845846196319	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	137	
+--------------------
+
+63845846196322	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials138False
+63845846196325	TASK_START	Counter	LM_DummyCounter
+63845846196332	TASK_END	Counter	LM_DummyCounter	7
+63845846196333	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846196334	INFO    skip task    BlockInstruction
+63845846196343	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845846196344	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846196346	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(70.4, 0.1, 24.8)
+63845846196347	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846196355	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845846196356	TASK_START	ViewObjects	LM_ToggleObjects
+63845846206471	TASK_END	ViewObjects	LM_ToggleObjects	10115
+63845846206472	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846215565	TASK_RESPONSE	Left Button Pressed	Response Time: 9.094854
+63845846223473	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	138	
+--------------------
+
+63845846223476	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials139False
+63845846223478	TASK_START	Counter	LM_DummyCounter
+63845846223485	TASK_END	Counter	LM_DummyCounter	7
+63845846223487	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846223488	INFO    skip task    BlockInstruction
+63845846223495	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845846223497	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846223498	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(31.1, 0.1, 55.1)
+63845846223499	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846223509	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845846223510	TASK_START	ViewObjects	LM_ToggleObjects
+63845846232113	TASK_END	ViewObjects	LM_ToggleObjects	8603
+63845846232114	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846244496	TASK_RESPONSE	Left Button Pressed	Response Time: 12.38339
+63845846249117	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	139	
+--------------------
+
+63845846249120	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials140False
+63845846249123	TASK_START	Counter	LM_DummyCounter
+63845846249129	TASK_END	Counter	LM_DummyCounter	7
+63845846249131	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846249132	INFO    skip task    BlockInstruction
+63845846249139	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845846249141	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846249142	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(21.1, 0.1, 95.0)
+63845846249143	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846249150	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845846249151	TASK_START	ViewObjects	LM_ToggleObjects
+63845846257478	TASK_END	ViewObjects	LM_ToggleObjects	8326
+63845846257480	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846269140	TASK_RESPONSE	Left Button Pressed	Response Time: 11.66254
+63845846274482	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	140	
+--------------------
+
+63845846274485	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials141False
+63845846274487	TASK_START	Counter	LM_DummyCounter
+63845846274494	TASK_END	Counter	LM_DummyCounter	7
+63845846274496	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846274497	INFO    skip task    BlockInstruction
+63845846274504	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845846274505	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846274508	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(17.8, 0.1, 7.4)
+63845846274509	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846274516	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845846274517	TASK_START	ViewObjects	LM_ToggleObjects
+63845846284810	TASK_END	ViewObjects	LM_ToggleObjects	10293
+63845846284811	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846293741	TASK_RESPONSE	Left Button Pressed	Response Time: 8.930725
+63845846301813	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	141	
+--------------------
+
+63845846301816	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials142False
+63845846301818	TASK_START	Counter	LM_DummyCounter
+63845846301824	TASK_END	Counter	LM_DummyCounter	6
+63845846301825	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846301827	INFO    skip task    BlockInstruction
+63845846301837	TASK_END	BlockInstruction	InstructionsTaskViewpoint	12
+63845846301839	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846301840	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(62.2, 0.1, 26.6)
+63845846301841	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846301850	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845846301852	TASK_START	ViewObjects	LM_ToggleObjects
+63845846312110	TASK_END	ViewObjects	LM_ToggleObjects	10258
+63845846312112	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846321159	TASK_RESPONSE	Left Button Pressed	Response Time: 9.050243
+63845846329113	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	142	
+--------------------
+
+63845846329116	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials143False
+63845846329118	TASK_START	Counter	LM_DummyCounter
+63845846329127	TASK_END	Counter	LM_DummyCounter	8
+63845846329128	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846329129	INFO    skip task    BlockInstruction
+63845846329137	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845846329138	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846329141	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(110.8, 0.1, 24.9)
+63845846329142	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846329149	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845846329151	TASK_START	ViewObjects	LM_ToggleObjects
+63845846338530	TASK_END	ViewObjects	LM_ToggleObjects	9379
+63845846338531	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846347088	TASK_RESPONSE	Left Button Pressed	Response Time: 8.557716
+63845846355532	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	143	
+--------------------
+
+63845846355536	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials144False
+63845846355537	TASK_START	Counter	LM_DummyCounter
+63845846355544	TASK_END	Counter	LM_DummyCounter	6
+63845846355546	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846355546	INFO    skip task    BlockInstruction
+63845846355557	TASK_END	BlockInstruction	InstructionsTaskViewpoint	11
+63845846355558	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846355560	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(100.4, 0.1, 104.8)
+63845846355560	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846355568	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845846355570	TASK_START	ViewObjects	LM_ToggleObjects
+63845846364896	TASK_END	ViewObjects	LM_ToggleObjects	9325
+63845846364897	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846375967	TASK_RESPONSE	Right Button Pressed	Response Time: 11.07184
+63845846381898	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	144	
+--------------------
+
+63845846381901	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials145False
+63845846381904	TASK_START	Counter	LM_DummyCounter
+63845846381912	TASK_END	Counter	LM_DummyCounter	8
+63845846381913	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846490936	INPUT_EVENT    PlayerPressedActionButton    1
+63845846490936	TASK_END	BlockInstruction	InstructionsTaskViewpoint	109024
+63845846490938	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846490940	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(100.4, 0.1, 104.8)
+63845846490941	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846490948	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845846490949	TASK_START	ViewObjects	LM_ToggleObjects
+63845846500044	TASK_END	ViewObjects	LM_ToggleObjects	9094
+63845846500045	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846508561	TASK_RESPONSE	Left Button Pressed	Response Time: 8.517597
+63845846517046	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	145	
+--------------------
+
+63845846517049	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials146False
+63845846517050	TASK_START	Counter	LM_DummyCounter
+63845846517058	TASK_END	Counter	LM_DummyCounter	8
+63845846517058	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846517060	INFO    skip task    BlockInstruction
+63845846517067	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845846517069	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846517070	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(80.8, 0.1, 84.9)
+63845846517072	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846517079	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63845846517081	TASK_START	ViewObjects	LM_ToggleObjects
+63845846528840	TASK_END	ViewObjects	LM_ToggleObjects	11759
+63845846528841	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846539935	TASK_RESPONSE	Right Button Pressed	Response Time: 11.0951
+63845846545844	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	146	
+--------------------
+
+63845846545847	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials147False
+63845846545849	TASK_START	Counter	LM_DummyCounter
+63845846545855	TASK_END	Counter	LM_DummyCounter	6
+63845846545856	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846545857	INFO    skip task    BlockInstruction
+63845846545865	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845846545867	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846545868	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(27.9, 0.1, 17.8)
+63845846545869	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846545876	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845846545878	TASK_START	ViewObjects	LM_ToggleObjects
+63845846558116	TASK_END	ViewObjects	LM_ToggleObjects	12237
+63845846558117	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846570754	TASK_RESPONSE	Right Button Pressed	Response Time: 12.63806
+63845846575120	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	147	
+--------------------
+
+63845846575122	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials148False
+63845846575124	TASK_START	Counter	LM_DummyCounter
+63845846575130	TASK_END	Counter	LM_DummyCounter	7
+63845846575133	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846575134	INFO    skip task    BlockInstruction
+63845846575141	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845846575142	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846575144	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(47.9, 0.1, 116.2)
+63845846575146	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846575155	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63845846575157	TASK_START	ViewObjects	LM_ToggleObjects
+63845846587471	TASK_END	ViewObjects	LM_ToggleObjects	12313
+63845846587472	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846595818	TASK_RESPONSE	Left Button Pressed	Response Time: 8.349042
+63845846604472	TASK_END	BlackoutWalking	LM_BlackoutPath	17000
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	148	
+--------------------
+
+63845846604476	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials149False
+63845846604478	TASK_START	Counter	LM_DummyCounter
+63845846604486	TASK_END	Counter	LM_DummyCounter	8
+63845846604487	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846604488	INFO    skip task    BlockInstruction
+63845846604495	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845846604496	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846604498	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(57.9, 0.1, 107.8)
+63845846604499	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846604506	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845846604507	TASK_START	ViewObjects	LM_ToggleObjects
+63845846617320	TASK_END	ViewObjects	LM_ToggleObjects	12814
+63845846617322	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846625838	TASK_RESPONSE	Left Button Pressed	Response Time: 8.518158
+63845846634323	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	149	
+--------------------
+
+63845846634326	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials150False
+63845846634328	TASK_START	Counter	LM_DummyCounter
+63845846634335	TASK_END	Counter	LM_DummyCounter	7
+63845846634337	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846634337	INFO    skip task    BlockInstruction
+63845846634348	TASK_END	BlockInstruction	InstructionsTaskViewpoint	12
+63845846634350	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846634351	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(89.2, 0.1, 39.1)
+63845846634353	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846634360	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845846634362	TASK_START	ViewObjects	LM_ToggleObjects
+63845846646007	TASK_END	ViewObjects	LM_ToggleObjects	11645
+63845846646008	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846655447	TASK_RESPONSE	Left Button Pressed	Response Time: 9.440634
+63845846663010	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	150	
+--------------------
+
+63845846663014	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials151False
+63845846663015	TASK_START	Counter	LM_DummyCounter
+63845846663022	TASK_END	Counter	LM_DummyCounter	6
+63845846663024	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846663026	INFO    skip task    BlockInstruction
+63845846663033	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845846663034	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846663036	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(99.2, 0.1, 74.9)
+63845846663037	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846663044	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845846663046	TASK_START	ViewObjects	LM_ToggleObjects
+63845846675072	TASK_END	ViewObjects	LM_ToggleObjects	12026
+63845846675074	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846684789	TASK_RESPONSE	Right Button Pressed	Response Time: 9.717423
+63845846692075	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	151	
+--------------------
+
+63845846692078	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials152False
+63845846692081	TASK_START	Counter	LM_DummyCounter
+63845846692089	TASK_END	Counter	LM_DummyCounter	8
+63845846692091	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846692092	INFO    skip task    BlockInstruction
+63845846692100	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845846692102	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846692103	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(80.4, 0.1, 94.8)
+63845846692104	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846692112	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845846692113	TASK_START	ViewObjects	LM_ToggleObjects
+63845846704402	TASK_END	ViewObjects	LM_ToggleObjects	12289
+63845846704403	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846712820	TASK_RESPONSE	Left Button Pressed	Response Time: 8.417439
+63845846721405	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	152	
+--------------------
+
+63845846721408	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials153False
+63845846721410	TASK_START	Counter	LM_DummyCounter
+63845846721418	TASK_END	Counter	LM_DummyCounter	8
+63845846721420	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846721421	INFO    skip task    BlockInstruction
+63845846721428	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845846721430	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846721431	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(77.9, 0.1, 67.8)
+63845846721432	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846721439	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845846721440	TASK_START	ViewObjects	LM_ToggleObjects
+63845846733566	TASK_END	ViewObjects	LM_ToggleObjects	12125
+63845846733567	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846741996	TASK_RESPONSE	Right Button Pressed	Response Time: 8.430172
+63845846750570	TASK_END	BlackoutWalking	LM_BlackoutPath	17003
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	153	
+--------------------
+
+63845846750573	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials154False
+63845846750575	TASK_START	Counter	LM_DummyCounter
+63845846750582	TASK_END	Counter	LM_DummyCounter	6
+63845846750583	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846750584	INFO    skip task    BlockInstruction
+63845846750592	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845846750594	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846750595	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(97.8, 0.1, 117.4)
+63845846750596	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846750603	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845846750604	TASK_START	ViewObjects	LM_ToggleObjects
+63845846762374	TASK_END	ViewObjects	LM_ToggleObjects	11769
+63845846762376	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846771270	TASK_RESPONSE	Right Button Pressed	Response Time: 8.896543
+63845846779378	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	154	
+--------------------
+
+63845846779381	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials155False
+63845846779382	TASK_START	Counter	LM_DummyCounter
+63845846779390	TASK_END	Counter	LM_DummyCounter	8
+63845846779391	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846779392	INFO    skip task    BlockInstruction
+63845846779399	TASK_END	BlockInstruction	InstructionsTaskViewpoint	7
+63845846779401	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846779403	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(110.4, 0.1, 89.2)
+63845846779404	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846779411	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845846779419	TASK_START	ViewObjects	LM_ToggleObjects
+63845846791306	TASK_END	ViewObjects	LM_ToggleObjects	11894
+63845846791308	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846800480	TASK_RESPONSE	Left Button Pressed	Response Time: 9.17402
+63845846808309	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	155	
+--------------------
+
+63845846808313	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials156False
+63845846808314	TASK_START	Counter	LM_DummyCounter
+63845846808322	TASK_END	Counter	LM_DummyCounter	7
+63845846808324	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846808324	INFO    skip task    BlockInstruction
+63845846808332	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845846808333	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846808335	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(69.2, 0.1, 49.1)
+63845846808335	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846808342	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845846808343	TASK_START	ViewObjects	LM_ToggleObjects
+63845846820149	TASK_END	ViewObjects	LM_ToggleObjects	11806
+63845846820150	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846828610	TASK_RESPONSE	Left Button Pressed	Response Time: 8.46264
+63845846837152	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	156	
+--------------------
+
+63845846837155	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials157False
+63845846837157	TASK_START	Counter	LM_DummyCounter
+63845846837164	TASK_END	Counter	LM_DummyCounter	7
+63845846837165	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846837166	INFO    skip task    BlockInstruction
+63845846837176	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63845846837177	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846837178	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(91.4, 0.1, 55.3)
+63845846837179	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846837188	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845846837189	TASK_START	ViewObjects	LM_ToggleObjects
+63845846849011	TASK_END	ViewObjects	LM_ToggleObjects	11823
+63845846849013	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846857585	TASK_RESPONSE	Left Button Pressed	Response Time: 8.574104
+63845846866015	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	157	
+--------------------
+
+63845846866018	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials158False
+63845846866020	TASK_START	Counter	LM_DummyCounter
+63845846866026	TASK_END	Counter	LM_DummyCounter	7
+63845846866028	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846866029	INFO    skip task    BlockInstruction
+63845846866036	TASK_END	BlockInstruction	InstructionsTaskViewpoint	7
+63845846866038	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846866039	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(90.4, 0.1, 29.2)
+63845846866040	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846866047	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845846866048	TASK_START	ViewObjects	LM_ToggleObjects
+63845846877243	TASK_END	ViewObjects	LM_ToggleObjects	11194
+63845846877245	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846885795	TASK_RESPONSE	Right Button Pressed	Response Time: 8.552116
+63845846894246	TASK_END	BlackoutWalking	LM_BlackoutPath	17002
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	158	
+--------------------
+
+63845846894250	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials159False
+63845846894251	TASK_START	Counter	LM_DummyCounter
+63845846894261	TASK_END	Counter	LM_DummyCounter	9
+63845846894262	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846894263	INFO    skip task    BlockInstruction
+63845846894271	TASK_END	BlockInstruction	InstructionsTaskViewpoint	9
+63845846894272	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846894274	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(78.1, 0.1, 108.1)
+63845846894275	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846894282	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63845846894283	TASK_START	ViewObjects	LM_ToggleObjects
+63845846905940	TASK_END	ViewObjects	LM_ToggleObjects	11657
+63845846905942	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846915924	TASK_RESPONSE	Left Button Pressed	Response Time: 9.984282
+63845846922943	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	159	
+--------------------
+
+63845846922946	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials160False
+63845846922948	TASK_START	Counter	LM_DummyCounter
+63845846922955	TASK_END	Counter	LM_DummyCounter	6
+63845846922957	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63845846922958	INFO    skip task    BlockInstruction
+63845846922965	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63845846922967	TASK_START	MovePlayerToSpawn	MoveSpawn
+63845846922968	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(38.9, 0.1, 118.9)
+63845846922969	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63845846922977	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63845846922978	TASK_START	ViewObjects	LM_ToggleObjects
+63845846935338	TASK_END	ViewObjects	LM_ToggleObjects	12359
+63845846935341	TASK_START	BlackoutWalking	LM_BlackoutPath
+63845846946000	TASK_RESPONSE	Right Button Pressed	Response Time: 10.66136
+63845846952342	TASK_END	BlackoutWalking	LM_BlackoutPath	17001
+LandmarksTrialData:
+--------------------
+id	condition	sceneName	sceneNumber	task	block	trial	
+NG_pilot	default	use for vr	1	TASK_ViewpointTask	1	160	
+--------------------
+
+63845846952346	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials160False
+63845846952347	TASK_END	ViewpointTrials	TaskList	5107591
+63845846952348	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+TASK_ViewpointTask1False
+63845846952349	TASK_END	TASK_ViewpointTask	TaskList	5107626
+63845846952349	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+Tasks1False
+63845846952351	TASK_END	Tasks	TaskList	5107630
+63845846952352	TASK_START	EndMessage	InstructionsTask
+63845846957361	TASK_END	EndMessage	InstructionsTask	5008
+63845846957362	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+LM_Timeline1False
+63845846957366	TASK_END	LM_Timeline	TaskList	5117367
