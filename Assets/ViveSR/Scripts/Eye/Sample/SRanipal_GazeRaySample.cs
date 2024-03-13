@@ -55,7 +55,7 @@ namespace ViveSR
                     //
                     // CHANGE PATH FOR THE FILE YOU WANT TO SAVE!
                     //
-                    string path = "C:\\Users\\psych-hscl-test\\Documents\\GitHub\\Viewpoint_task_VR\\Output\\" + Config.Instance.subject + "_eye_data.csv";
+                    string path = Directory.GetCurrentDirectory() + "\\Output\\" + Config.Instance.subject + "_eye_data.csv";
 
                     output = new StreamWriter(path, false);
                     output.WriteLine("Time, Distance, Subject Coord, Item Coord, Item, Pupil Size(left right)");
