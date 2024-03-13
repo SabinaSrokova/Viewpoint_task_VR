@@ -187,8 +187,13 @@ public class LM_ToggleObjects : ExperimentTask
             if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand) | vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
             {
                 hud.statusMessageScreen.SetActive(false);
-                hud.cameraScreen.SetActive(false);
+                //hud.cameraScreen.SetActive(false);
+                hud.fadeScreen.SetActive(true);
+
                 hud.showEverything();
+
+                hud.fadeScreen.GetComponent<PanelFader>().Fade();
+
                 participantReady = true;
                 DestroyImmediate(disc);
                 DestroyImmediate(blackFloor);
@@ -219,6 +224,14 @@ public class LM_ToggleObjects : ExperimentTask
         {
             Debug.Log("Now moving on to BlackoutPath");
             //seenObject.SetActive(false);
+
+            if (vrEnabled)
+            {
+                hud.fadeScreen.SetActive(false);
+                hud.fadeScreen.GetComponent<CanvasRenderer>().SetAlpha(1f);
+                hud.cameraScreen.SetActive(false);
+            }
+
             return true;
         }
         return false;

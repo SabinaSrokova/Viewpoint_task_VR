@@ -44,6 +44,7 @@ public class HUD : MonoBehaviour
     public GameObject leftVRMessageScreen; // Prompt which appears on the left side of the player's vision
     public GameObject rightVRMessageScreen; // Prompt which appears on the right side of the player's vision
 	public GameObject statusMessageScreen; // Prompt which appears on the top of the player's vision intended for hint text/potential arrow direction display
+	public GameObject fadeScreen; // Black panel which is designed to function as the mechanism for fading in the participant's view
 
     [HideInInspector] public bool actionButtonClicked = false;
     public GameObject debugButton; // button that can be used to force continue in debug mode;
