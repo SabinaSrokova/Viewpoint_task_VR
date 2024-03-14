@@ -9,6 +9,7 @@ public class TargetCollisionColor : MonoBehaviour
     public Material collidedColor;
     private List<string> condition = new List<string> { };
     private int taskCounter = new int();
+    public bool reached = false;
     
     // Did anything enter the collider?
     private void OnTriggerEnter(Collider other)
@@ -22,18 +23,21 @@ public class TargetCollisionColor : MonoBehaviour
             if (condition[taskCounter] == "walk")
             {
                 GetComponent<Renderer>().material = collidedColor;
+                reached = true;
             } 
             else if (condition[taskCounter] == "stay") 
             {
                 if (HalfwayCollisionColor.half_reached) // only if half point has been reached. This is turned back to false at the end of LM_BlackoutPath
                 {
                     GetComponent<Renderer>().material = collidedColor;
+                    reached = true;
                 }
             }
         }
         else
         {
             GetComponent<Renderer>().material = collidedColor; // turns green at the beginning of trial, assuming things went right and Pp is standing on it.
+            reached = true;
         }
     }
 
