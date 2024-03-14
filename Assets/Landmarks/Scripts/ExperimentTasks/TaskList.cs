@@ -331,7 +331,8 @@ public class TaskList : ExperimentTask
             taskLog.AddData("moveItem", access.moveItem[count]);
             taskLog.AddData("repeat", access.repeat[count]);
             taskLog.AddData("block", access.block[count]);
-            //taskLog.AddData("response", GameObject.Find("BlackoutWalking").GetComponent<LM_BlackoutPath>.) //Get the left or right response
+            taskLog.AddData("TargetReached", GameObject.Find("").GetComponent<TargetCollisionColor>.reached);
+            //taskLog.AddData("response", GameObject.Find("BlackoutWalking").GetComponent<LM_BlackoutPath>.); //Get the left or right response
         }
     }
 
