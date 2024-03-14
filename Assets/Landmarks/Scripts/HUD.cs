@@ -35,6 +35,17 @@ public class HUD : MonoBehaviour
 	public float hudPanelOFF = 0f; // set the opacity when off
 	private string canvasName;
     public GameObject actionButton; // button that subjects use to interact with the game (if necessary);
+	public GameObject leftButtonMessage; // icon that displays on the left side of the screen hinting what the left trigger does
+	public GameObject rightButtonMessage; // icon that displays on the right side of the screen hinting what the right trigger does
+	public GameObject leftVRMessage; // Currently vestigial
+	public GameObject rightVRMessage; // Currently vestigial
+    public GameObject statusMessage; // extra message box for the top of the screen that can be used for additional hints/potential arrow direction display
+    public GameObject cameraScreen; // UI Element that sticks to the player's vision during VR - the canvas (all variables with "screen" function this way)
+    public GameObject leftVRMessageScreen; // Prompt which appears on the left side of the player's vision
+    public GameObject rightVRMessageScreen; // Prompt which appears on the right side of the player's vision
+	public GameObject statusMessageScreen; // Prompt which appears on the top of the player's vision intended for hint text/potential arrow direction display
+	public GameObject fadeScreen; // Black panel which is designed to function as the mechanism for fading in the participant's view
+
     [HideInInspector] public bool actionButtonClicked = false;
     public GameObject debugButton; // button that can be used to force continue in debug mode;
     public GameObject confidenceSlider; // slider that can be used by any task for confidence judements
@@ -49,10 +60,16 @@ public class HUD : MonoBehaviour
 	public bool showTimestamp = false;
 	public bool showStatus;
 	public bool showScore;
+	public bool showLeftButton;
+	public bool showRightButton;
+	public bool showStatusMessage;
+	public bool showLeftButtonVR;
+	public bool showRightButtonVR;
 	private float intensity =  0.0f;
 
 	private string message = "";
 	private string compassmessage = "";
+	private string uiTargetMessage = "";
 
 	private string status = "";
 	private int score = 0;
@@ -145,7 +162,63 @@ public class HUD : MonoBehaviour
 		message = newMessage;
 	}
 
-	public void setMessageCompass(string newMessage)
+	public void setLeftMessage(string newMessage)
+	{
+		uiTargetMessage = newMessage;
+        var temp = leftButtonMessage.GetComponentInChildren<Text>();
+        temp.text = uiTargetMessage;
+    }
+
+	public void setRightMessage(string newMessage)
+	{
+		uiTargetMessage = newMessage;
+		var temp = rightButtonMessage.GetComponentInChildren<Text>();
+		temp.text = uiTargetMessage;
+	}
+
+	public void setStatusMessage(string newMessage)
+	{
+		uiTargetMessage = newMessage;
+		var temp = statusMessage.GetComponentInChildren<Text>();
+		temp.text = uiTargetMessage;
+	}
+
+	public void setLeftVRMessage (string newMessage)
+	{
+		uiTargetMessage = newMessage;
+		var temp = leftVRMessage.GetComponent<Text>();
+		temp.text = uiTargetMessage;
+	}
+
+    public void setRightVRMessage(string newMessage)
+    {
+        uiTargetMessage = newMessage;
+        var temp = rightVRMessage.GetComponent<Text>();
+        temp.text = uiTargetMessage;
+    }
+
+    public void setRightVRScreenMessage(string newMessage)
+    {
+        uiTargetMessage = newMessage;
+        var temp = rightVRMessageScreen.GetComponent<Text>();
+        temp.text = uiTargetMessage;
+    }
+
+    public void setLeftVRScreenMessage(string newMessage)
+    {
+        uiTargetMessage = newMessage;
+        var temp = leftVRMessageScreen.GetComponent<Text>();
+        temp.text = uiTargetMessage;
+    }
+
+    public void setStatusScreenMessage(string newMessage)
+    {
+        uiTargetMessage = newMessage;
+        var temp = statusMessageScreen.GetComponent<Text>();
+        temp.text = uiTargetMessage;
+    }
+
+    public void setMessageCompass(string newMessage)
 	{
 	print ("setMessageCompass called!!!!");
 		if (newMessage==""){
@@ -280,6 +353,12 @@ public class HUD : MonoBehaviour
 			DestroyImmediate (messageGuiBack.gameObject);
 		if (timeGui)
 			DestroyImmediate (timeGui.gameObject);
+		if (showLeftButton)
+			DestroyImmediate(leftButtonMessage.gameObject);
+		if (showRightButton)
+			DestroyImmediate(rightButtonMessage.gameObject);
+		if (showStatusMessage)
+			DestroyImmediate(statusMessage.gameObject);
 		setMessage("");
 	}
 

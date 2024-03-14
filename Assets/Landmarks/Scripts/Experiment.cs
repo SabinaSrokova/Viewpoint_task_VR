@@ -218,7 +218,8 @@ public class Experiment : MonoBehaviour
                     Directory.GetCurrentDirectory() + "/" +
                     "editor-data/";
                 logfile =
-                    "test.log";
+                   config.experiment + "_" +
+                   config.subject + ".log";
             }
 
         }
@@ -263,9 +264,9 @@ public class Experiment : MonoBehaviour
         else if (Directory.Exists(dataPath) & Application.isEditor & 
                 SceneManager.GetActiveScene().name == config.levelNames[0])
         {
-            Debug.Log("OVERWRITING EXISTING EDITOR DATA");
-            Directory.Delete(dataPath, recursive:true);
-            Directory.CreateDirectory(dataPath);
+            //Debug.Log("OVERWRITING EXISTING EDITOR DATA");
+            //Directory.Delete(dataPath, recursive:true);
+            //Directory.CreateDirectory(dataPath);
         }
 
         if (config.runMode == ConfigRunMode.NEW)

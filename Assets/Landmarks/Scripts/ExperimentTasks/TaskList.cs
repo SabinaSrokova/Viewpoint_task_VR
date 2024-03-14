@@ -314,23 +314,24 @@ public class TaskList : ExperimentTask
         }
     }
 
-
+    
     public void InitTaskLog()
     {
         if (taskLog != null)
         {
+            var count = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
+            var access = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>();
             Debug.Log(taskLog.gameObject.name);
             Debug.Log(manager.gameObject.name);
             Debug.Log(manager.config.name);
             // Really basic, redundant logging
-            taskLog.AddData("id", manager.config.subject);
-            taskLog.AddData("condition", manager.config.condition);
-            taskLog.AddData("sceneName", manager.config.levelNames[manager.config.levelNumber]);
-            taskLog.AddData("sceneNumber", (manager.config.levelNumber + 1).ToString());
-            taskLog.AddData("task", taskLog.gameObject.name);
-            taskLog.AddData("block", taskLog.gameObject.GetComponent<TaskList>().repeatCount.ToString());
-            taskLog.AddData("trial", repeatCount.ToString());
-            //trialLog.AddData("catchTrial", catchFlag.ToString());
+            taskLog.AddData("id", Config.Instance.subject);
+            taskLog.AddData("room", access.room[count]);
+            taskLog.AddData("condition", access.condition[count]);
+            taskLog.AddData("moveItem", access.moveItem[count]);
+            taskLog.AddData("repeat", access.repeat[count]);
+            taskLog.AddData("block", access.block[count]);
+            //taskLog.AddData("response", GameObject.Find("BlackoutWalking").GetComponent<LM_BlackoutPath>.) //Get the left or right response
         }
     }
 

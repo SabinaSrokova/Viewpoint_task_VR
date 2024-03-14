@@ -39,14 +39,24 @@ public class LM_ToggleObjects : ExperimentTask
     private List<string> repeat = new List<string> { };
     private List<GameObject> seenObjects = new List<GameObject> { };
     private List<GameObject> hiddenObjects = new List<GameObject> { };
+    private List<string> start = new List<string> { };
     public GameObject seenObject;
     private GameObject hiddenObject;
     private int taskCounter = new int();
+
     private float timer = 0;
     private bool timerSpawnReached = false;
     private bool timerDespawnItemsReached = false;
-    private bool participantReady = false;
-    private bool timerRoomDespawnReached = false; /////////////////////////// SS
+    public static bool participantReady = false;
+    private bool timerRoomDespawnReached = false; 
+
+    private GameObject spawnParent;
+    public GameObject targetDisc;
+    public GameObject blackoutFloor; // cylinder floor during blackout
+    private GameObject discLocation;
+    private GameObject disc;
+    private GameObject origFloor;
+    private GameObject blackFloor;
 
 
     public override void startTask()
@@ -68,12 +78,11 @@ public class LM_ToggleObjects : ExperimentTask
         }
         // WRITE TASK STARTUP CODE HERE
 
+
         moveItem = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().moveItem;
         repeat = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().repeat;
         taskCounter = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
-
-
-
+        start = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().start;
 
         try
         {
@@ -81,7 +90,11 @@ public class LM_ToggleObjects : ExperimentTask
         }
         catch { }
 
+
         GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
+
+        spawnParent = GetChildGameObject(currentRoom, "SpawnPoints");
+        GameObject destination = GetChildGameObject(spawnParent, "PlayerSpawn" + start[taskCounter]);
 
         
         Vector3 sumVector = new Vector3(0f,0f, 0f);
@@ -96,12 +109,23 @@ public class LM_ToggleObjects : ExperimentTask
         Vector3 groupCenter = sumVector / centerCalc.transform.childCount;
         Debug.Log(groupCenter);
 
-        // SS change 2/28/2024 - I don't think this part works ??
-        //avatar.GetComponentInChildren<CharacterController>().enabled = false;
-        //avatar.transform.LookAt(groupCenter);
-        //avatar.GetComponentInChildren<CharacterController>().enabled = true;
 
-        //hud.showEverything();
+        hud.showOnlyHUD();
+
+        if (vrEnabled)
+        {
+            hud.setStatusScreenMessage("Position youself on the marker, press a trigger to continue");
+            hud.cameraScreen.SetActive(true);
+            hud.statusMessageScreen.SetActive(true);
+        }
+        else
+        {
+            hud.setStatusMessage("Position youself on the marker, press the Enter key to continue");
+            hud.statusMessage.SetActive(true);
+        }
+
+
+
         timer = 0;
         timerSpawnReached = false;
         participantReady = false;
@@ -110,11 +134,15 @@ public class LM_ToggleObjects : ExperimentTask
         Debug.Log("Objects " + repeat[taskCounter]);
         Debug.Log(repeat[taskCounter]);
         seenObject.SetActive(false);
-
-        ////////////////////////////////////// SS change - enable current room
         currentRoom.SetActive(true); 
-   
 
+        // Draw a floor
+        origFloor = GetChildGameObject(currentRoom, "Floor 1");
+        blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
+
+        // Orientation marker
+        disc = Instantiate(targetDisc, destination.transform.position, Quaternion.identity);
+        disc.transform.rotation = destination.transform.rotation;
 
         if (repeat[taskCounter] == "A")
         {
@@ -144,18 +172,31 @@ public class LM_ToggleObjects : ExperimentTask
             return true;
         }
 
+
         if (Input.GetButtonDown("Return"))
         {
+            hud.statusMessage.SetActive(false);
             hud.showEverything();
             participantReady = true;
+            DestroyImmediate(disc);
+            DestroyImmediate(blackFloor);
         }
 
         if (vrEnabled)
         {
             if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand) | vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
             {
+                hud.statusMessageScreen.SetActive(false);
+                //hud.cameraScreen.SetActive(false);
+                hud.fadeScreen.SetActive(true);
+
                 hud.showEverything();
+
+                hud.fadeScreen.GetComponent<PanelFader>().Fade();
+
                 participantReady = true;
+                DestroyImmediate(disc);
+                DestroyImmediate(blackFloor);
             }
         }
 
@@ -183,6 +224,14 @@ public class LM_ToggleObjects : ExperimentTask
         {
             Debug.Log("Now moving on to BlackoutPath");
             //seenObject.SetActive(false);
+
+            if (vrEnabled)
+            {
+                hud.fadeScreen.SetActive(false);
+                hud.fadeScreen.GetComponent<CanvasRenderer>().SetAlpha(1f);
+                hud.cameraScreen.SetActive(false);
+            }
+
             return true;
         }
         return false;

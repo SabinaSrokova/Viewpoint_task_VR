@@ -31,6 +31,12 @@ public class LM_PrepareRooms : ExperimentTask
     public GameObject roomParent;
     public GameObject spawnPoints;
     public GameObject transferPoints;
+    public enum objectsMovedAssignment
+    {
+        left,
+        right
+    };
+    public objectsMovedAssignment objectsMovedIs;
 
 
     // These are public for easy accesibility in other scripts. The counter will be used in order to access the right data as the trials are advanced through.

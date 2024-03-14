@@ -19,6 +19,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using Valve.VR.InteractionSystem;
 
 public class LM_BlackoutPath : ExperimentTask
 {
@@ -28,8 +29,12 @@ public class LM_BlackoutPath : ExperimentTask
     public GameObject targetDisc; // To be used as the final destination target
     public GameObject halfwayDisc; // To be used during "stay" trials, halfway point with no plane
     public GameObject arrowPointer; // point left/right depending on the direction in which the participant should walk
+    public GameObject blackoutFloor; // cylinder floor during blackout
 
-    public bool teleport = false;
+    //public bool teleport = false;
+    public bool rotateRoom = false;
+    public bool reorientCamera = false;
+    public bool showArrow = false;
     public float blackoutWalk = 7;
     public float arrowTime = 0.5f;
     public float viewingObjects = 14;
@@ -41,6 +46,10 @@ public class LM_BlackoutPath : ExperimentTask
     private List<string> start = new List<string> { };
     private List<string> end = new List<string> { };
     private int taskCounter = new int();
+    private LM_PrepareRooms.objectsMovedAssignment objectsMovedIs;
+    private Vector3 tempHudPos;
+
+
     private GameObject seenObject;
     private GameObject spawnObject;
     private GameObject spawnParent;
@@ -48,16 +57,21 @@ public class LM_BlackoutPath : ExperimentTask
     private GameObject walkTarget;
     private GameObject startLocation;
     private GameObject otherLocation;
+    private GameObject endLocation;
 
     private GameObject discLocation;
     private GameObject disc;
     private GameObject disc_half;
     private GameObject arrow;
+    private GameObject origFloor;
+    private GameObject blackFloor;
+    
 
     private float timer = 0;
     private bool timerSpawnReached = false;
     private bool timerDelay = false;
     private bool timerComplete = false;
+    private bool responseMade = false;
 
     public override void startTask()
     {
@@ -85,6 +99,7 @@ public class LM_BlackoutPath : ExperimentTask
         end = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().end;
         taskCounter = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
         seenObject = GameObject.Find("ViewObjects").GetComponent<LM_ToggleObjects>().seenObject;
+        objectsMovedIs = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().objectsMovedIs;
 
         GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
 
@@ -94,6 +109,11 @@ public class LM_BlackoutPath : ExperimentTask
         timerSpawnReached = false;
         timerDelay = false;
         timerComplete = false;
+        responseMade = false;
+
+        // Summon a circular floor during blackout
+        origFloor = GetChildGameObject(currentRoom, "Floor 1");
+        blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
 
         // If the condition involves the item moving, this should teleport the item to it's new position after blacking out the screen (and technically before the spawning of the position marker for movement but this should be functionally instant for the participant)
         spawnParent = GetChildGameObject(currentRoom, "SpawnPoints");
@@ -108,14 +128,21 @@ public class LM_BlackoutPath : ExperimentTask
                 spawnObject = GetChildGameObject(spawnParent, "ObjectSpawnB");
             }
             GameObject movingObject = seenObject.transform.GetChild(0).gameObject;
-            movingObject.transform.position = spawnObject.transform.position;
+
+            // Move object, but keep Y coordinate of original position so that this silly thing doesn't spawn in the ground
+            Vector3 tempLoc = movingObject.transform.position;
+            tempLoc.x = spawnObject.transform.position.x;
+            tempLoc.z = spawnObject.transform.position.z;
+            movingObject.transform.position = tempLoc;
         }
 
         // Determine whether we need to teleport the participant in this trial
         if ((condition[taskCounter] == "walk" && start[taskCounter] == end[taskCounter]) || (condition[taskCounter] == "stay" && start[taskCounter] != end[taskCounter]))
         {
-            teleport = true;
-            Debug.Log("Participant will teleport to the second location");
+            //teleport = true;
+            //Debug.Log("Participant will teleport to the second location");
+            rotateRoom = true;
+            Debug.Log("The room will rotate");
         }
 
         // If walk trial, place the disc in the non-starting location
@@ -165,40 +192,51 @@ public class LM_BlackoutPath : ExperimentTask
             // Place the target disc to the location of start
             disc = Instantiate(targetDisc, startLocation.transform.position, Quaternion.identity); // startLocation = start
             disc.transform.rotation = startLocation.transform.rotation;
-
         }
+
+        // // In all cases, rotate the disc according to the end position, - NO LONGER RELEVANT SANS TELEPORTING
+        // if (reorientCamera)
+        // {
+        //     if (condition[taskCounter] == "walk")
+        //     {
+        //         disc.transform.rotation = walkTarget.transform.rotation;
+        //     } 
+        //     else if (condition[taskCounter] == "stay")
+        //     {
+        //         disc.transform.rotation = startLocation.transform.rotation;
+        //     }
+        // } 
+        // else
+        // {
+        //     endLocation = GetChildGameObject(spawnParent, "PlayerSpawn" + end[taskCounter]);
+        //     disc.transform.rotation = endLocation.transform.rotation;
+        // }
+
 
         // Summon an arrow in front of the player which points in the direction of which they should walk
-        GameObject player = avatar;
-        Vector3 playerPos = player.transform.position;
-        Vector3 playerDir = player.transform.forward;
-        Quaternion playerRot = player.transform.rotation;
-        float dist = 1; // for now
-        float height = 1;
-
-        Vector3 spawnPos = playerPos + playerDir * dist + Vector3.up * height;
-
-        arrow = Instantiate(arrowPointer, spawnPos, playerRot);
-
-        // If starting position is in A, point to the right
-        if (start[taskCounter] == "A")
+        if (showArrow)
         {
-            arrow.transform.rotation *= Quaternion.Euler(0, 180, 90); 
-        }
-        else if (start[taskCounter] == "B") // otherwise to the left
-        {
-            arrow.transform.rotation *= Quaternion.Euler(0, 0, 90); 
-        }
+            GameObject player = avatar;
+            Vector3 playerPos = player.transform.position;
+            Vector3 playerDir = player.transform.forward;
+            Quaternion playerRot = player.transform.rotation;
+            float dist = 1; // for now
+            float height = 0.5f;
 
-        // // Arrow attempt #2
-        // GameObject arrow = Instantiate(arrowPointer, hudpanel.transform);
-        // RectTransform hudPanelRect = hudpanel.GetComponent<RectTransform>();
+            Vector3 spawnPos = playerPos + playerDir * dist + Vector3.up * height;
 
-        // RectTransform arrowRect = arrow.GetComponent<RectTransform>();
-        // arrowRect.anchorMin = new Vector2(1, 0); // bottom center
-        // arrowRect.anchorMax = new Vector2(1, 0); // bottom center
-        // arrowRect.anchoredPosition = new Vector2(0, arrowRect.sizeDelta.y / 2);
-        // arrowRect.localRotation = Quaternion.Euler(0, 0, 90);
+            arrow = Instantiate(arrowPointer, spawnPos, playerRot);
+
+            // If starting position is in A, point to the right
+            if (start[taskCounter] == "A")
+            {
+                arrow.transform.rotation *= Quaternion.Euler(0, 180, 90); 
+            }
+            else if (start[taskCounter] == "B") // otherwise to the left
+            {
+               arrow.transform.rotation *= Quaternion.Euler(0, 0, 90); 
+            }
+        }
     }
 
 
@@ -222,44 +260,176 @@ public class LM_BlackoutPath : ExperimentTask
         }
 
         // Here the room is relit after the blackout walking stage is complete. If the participant is intended to teleport, they sill do so before the blackout ends.
+        // if (timerSpawnReached == false && timer >= blackoutWalk)
+        // {
+        //     Debug.Log("blackoutWalk time reached");
+
+        //     DestroyImmediate(disc);
+        //     DestroyImmediate(disc_half);
+        //     DestroyImmediate(blackFloor);
+        //     HalfwayCollisionColor.half_reached = false; /// For the halfway marker to turn back to false
+
+        //     if (teleport == true)
+        //     {
+        //         GameObject player = avatar;
+        //         GameObject destination = GetChildGameObject(spawnParent, "PlayerSpawn" + end[taskCounter]);
+
+        //         Debug.Log("Player identified: " + player.gameObject.name);
+
+        //         player.GetComponentInChildren<CharacterController>().enabled = false;
+
+        //         Vector3 tempPos = player.transform.position;
+        //         tempPos.x = destination.transform.position.x;
+        //         tempPos.z = destination.transform.position.z;
+
+        //         player.transform.position = tempPos;
+        //         log.log("TASK_POSITION\t" + player.name + "\t" + this.GetType().Name + "\t" + player.transform.transform.position.ToString("f1"), 1);
+        //         Debug.Log("Player now at: " + destination.name +
+        //                 " (" + player.transform.position.x + ", " +
+        //                 player.transform.position.z + ")");
+
+        //         // If teleported, make sure the room is centered
+        //         //if (reorientCamera)
+        //         //{
+        //          //   Vector3 tempRotate = player.transform.eulerAngles; ///////// taken out for immersive VR
+        //         //    tempRotate.y = destination.transform.eulerAngles.y;
+        //         //    player.transform.eulerAngles = tempRotate;
+        //         //    avatar.GetComponent<FirstPersonController>().ResetMouselook();
+        //        // }
+
+        //         player.GetComponentInChildren<CharacterController>().enabled = true;
+
+        //         teleport = false;
+        //     }
+
+        // Because teleport seems to not work in immersive VR -> rotate the room so that the participant shows up in "END"
         if (timerSpawnReached == false && timer >= blackoutWalk)
         {
             Debug.Log("blackoutWalk time reached");
-
             DestroyImmediate(disc);
             DestroyImmediate(disc_half);
-            HalfwayCollisionColor.half_reached = false; /// For the halfway marker to turn back to false
+            DestroyImmediate(blackFloor);
+            HalfwayCollisionColor.half_reached = false;
 
-            if (teleport == true)
+            if (rotateRoom)
             {
-                GameObject player = avatar;
-                GameObject destination = GetChildGameObject(spawnParent, "PlayerSpawn" + end[taskCounter]);
+                GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
+                origFloor = GetChildGameObject(currentRoom, "Floor 1");
+                Vector3 centerPoint = origFloor.transform.position; // The point around which the room rotates
+                Transform currentRoomTransform = currentRoom.transform;
 
-                Debug.Log("Player identified: " + player.gameObject.name);
+                // Find out the rotation axis (clockwise or counter-clockwise?)
 
-                player.GetComponentInChildren<CharacterController>().enabled = false;
-                Vector3 tempPos = player.transform.position;
-                tempPos.x = destination.transform.position.x;
-                tempPos.z = destination.transform.position.z;
+                // If participant is being "teleported" from A to B, the rotation is clockwise (shifts to the left, because B is on the right of A)
+                // If participants walked from A to B, and end is in A, they need "teleported" from B (walked position) to A. 
+                // In this case, turn counter-clockwise. A to B is clockwise, as before.
+                if (condition[taskCounter] == "stay")
+                {
+                     if (start[taskCounter] == "A" && end[taskCounter] == "B")
+                     {
+                        Vector3 rotationAxis = Vector3.up; // clockwise
+                        currentRoomTransform.RotateAround(centerPoint, rotationAxis, 50f);
+                     }
+                     else if (start[taskCounter] == "B" && end[taskCounter] == "A")
+                     {
+                        Vector3 rotationAxis = -Vector3.up; // counter-clockwise
+                        currentRoomTransform.RotateAround(centerPoint, rotationAxis, 50f);
+                     }
+                 }
+                 else if (condition[taskCounter] == "walk")
+                 {
+                    if (start[taskCounter] == "A" && end[taskCounter] == "A")
+                    {
+                        Vector3 rotationAxis = -Vector3.up; // counter-clockwise
+                        currentRoomTransform.RotateAround(centerPoint, rotationAxis, 50f);
+                    }
+                    else if (start[taskCounter] == "B" && end[taskCounter] == "B")
+                    {
+                        Vector3 rotationAxis = Vector3.up; // clockwise
+                        currentRoomTransform.RotateAround(centerPoint, rotationAxis, 50f);
+                    }
+                 }
 
-                player.transform.position = tempPos;
-                log.log("TASK_POSITION\t" + player.name + "\t" + this.GetType().Name + "\t" + player.transform.transform.position.ToString("f1"), 1);
-                Debug.Log("Player now at: " + destination.name +
-                        " (" + player.transform.position.x + ", " +
-                        player.transform.position.z + ")");
-
-                // If teleported, make sure the room is centered
-                Vector3 tempRotate = player.transform.eulerAngles; ///////// SS 3/5/2024
-                tempRotate.y = destination.transform.eulerAngles.y;
-                player.transform.eulerAngles = tempRotate;
-
-                avatar.GetComponent<FirstPersonController>().ResetMouselook();
-
-                player.GetComponentInChildren<CharacterController>().enabled = true;
-                teleport = false;
+                rotateRoom = false;
             }
-            hud.showEverything();
+
+
+            // Response options on the screen
+            if (objectsMovedIs == LM_PrepareRooms.objectsMovedAssignment.left)
+            {
+                hud.setLeftMessage("D");
+                hud.setRightMessage("S");
+
+                if (vrEnabled)
+                {
+                    hud.setLeftVRMessage("D");
+                    hud.setRightVRMessage("S");
+                    hud.setLeftVRScreenMessage("D");
+                    hud.setRightVRScreenMessage("S");
+                }
+            }
+            else if (objectsMovedIs == LM_PrepareRooms.objectsMovedAssignment.right)
+            {
+                hud.setLeftMessage("S");
+                hud.setRightMessage("D");
+            }
+            if (vrEnabled)
+            {
+                hud.setLeftVRMessage("S");
+                hud.setRightVRMessage("D");
+                hud.setLeftVRScreenMessage("S");
+                hud.setRightVRScreenMessage("D");
+            }
+
+
+            hud.leftButtonMessage.SetActive(true);
+            hud.rightButtonMessage.SetActive(true);
+
+            if (vrEnabled)
+            {
+                //hud.hudPanel.SetActive(true);
+                //tempHudPos = hud.hudPanel.transform.position;
+                //hud.hudPanel.transform.position = avatar.transform.position;
+                //hud.leftVRMessage.SetActive(true);
+                //hud.rightVRMessage.SetActive(true);
+                hud.cameraScreen.SetActive(true);
+                hud.leftVRMessageScreen.SetActive(true);
+                hud.rightVRMessageScreen.SetActive(true);
+            }
+
+
             timerSpawnReached = true;
+            hud.showEverything();
+        }
+
+        if (timerSpawnReached == true && responseMade == false)
+        {
+            if (vrEnabled)
+            {
+                if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand))
+                {
+                    log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" +"Response Time: " + timer, 1);
+                    responseMade = true;
+                }
+                else if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
+                {
+                    log.log("TASK_RESPONSE\t" + "Right Button Pressed\t" + "Response Time: " + timer, 1);
+                    responseMade = true;
+                }
+            }
+
+            if (Input.GetButtonDown("Respond Left"))
+            {
+                    log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" + "Response Time: " + timer, 1);
+                    responseMade = true;
+            }
+
+            if (Input.GetButtonDown("Respond Right"))
+            {
+                    log.log("TASK_RESPONSE\t" + "Right Button Pressed\t" + "Response Time: " + timer, 1);
+                    responseMade = true;
+            }
+
         }
 
         if (timerSpawnReached == true && timer >= viewingObjects && timerComplete == false)
@@ -268,7 +438,18 @@ public class LM_BlackoutPath : ExperimentTask
             seenObject.SetActive(false);
             timerDelay = true;
             timerComplete = true;
-            //return true;
+            hud.leftButtonMessage.SetActive(false);
+            hud.rightButtonMessage.SetActive(false);
+
+            if (vrEnabled)
+            {
+                //hud.hudPanel.SetActive(false);
+                //hud.leftVRMessage.SetActive(false);
+                //hud.rightVRMessage.SetActive(false);
+                hud.leftVRMessageScreen.SetActive(false);
+                hud.rightVRMessageScreen.SetActive(false);
+                hud.cameraScreen.SetActive(false);
+            }
         }
 
         if (timerDelay == true && timer >= delayBeforeContinuing)

@@ -105,11 +105,10 @@ public class MoveSpawn : ExperimentTask
                 start.transform.position.z + ")");
 
 
-        Vector3 tempRotate = start.transform.eulerAngles; ///////// SS
-        tempRotate.y = destination.transform.eulerAngles.y;
-        start.transform.eulerAngles = tempRotate;
-
-        avatar.GetComponent<FirstPersonController>().ResetMouselook();
+        // Vector3 tempRotate = start.transform.eulerAngles; ///////// SS - taken out for immersive VR
+        // tempRotate.y = destination.transform.eulerAngles.y;
+        // start.transform.eulerAngles = tempRotate;
+        // avatar.GetComponent<FirstPersonController>().ResetMouselook();
 
         start.GetComponentInChildren<CharacterController>().enabled = true;
 
@@ -155,7 +154,6 @@ public class MoveSpawn : ExperimentTask
     }
     public override void endTask()
     {
-
 
 
 

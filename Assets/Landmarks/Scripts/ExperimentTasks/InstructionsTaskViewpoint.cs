@@ -75,6 +75,10 @@ public class InstructionsTaskViewpoint : ExperimentTask {
         instructionsCounter += 1;
         if (!manager) Start();
         base.startTask();
+        if (vrEnabled)
+        {
+            hud.hudPanel.SetActive (true);
+        }
 
         taskCounter = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
         condition = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().condition;

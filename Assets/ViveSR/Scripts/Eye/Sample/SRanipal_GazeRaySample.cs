@@ -15,6 +15,9 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using ViveSR.anipal.Eye;
 using Valve.VR;
+using System.Drawing;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace ViveSR
 {
@@ -24,8 +27,7 @@ namespace ViveSR
         {
             public class SRanipal_GazeRaySample : ExperimentTask
             {
-                public int participant_num;
-                private static StreamWriter sw;
+                private static StreamWriter output;
                 private static FocusInfo focusInfo;
                 private Ray ray;
                 CultureInfo culture = new CultureInfo("en-us");
@@ -36,11 +38,14 @@ namespace ViveSR
                 GameObject prevObj;
                 Vector3 og_scale;
                 public bool debug = true;
+                //[SerializeField] private Material highlightMaterial;
+                //[SerializeField] private Material defaultMaterial;
+                List<String> ignore; // Objects to ignore during eye tracking debugging
                 //
 
                 private new void Start()
                 {
-
+                    Thread.Sleep(10000); // Don't record eye tracking immediately. Waits until the participant is finished listening and reading instructions
                     if (!SRanipal_Eye_Framework.Instance.EnableEye)
                     {
                         enabled = false;
@@ -50,20 +55,22 @@ namespace ViveSR
                     //
                     // CHANGE PATH FOR THE FILE YOU WANT TO SAVE!
                     //
-                    string path = "C:\\Users\\psych-hscl-test\\Documents\\GitHub\\Viewpoint_task_VR\\Assets\\Eye_Tracking_Output\\";
-                    string num = participant_num + "_eye_data.txt";
-                    string location = path + num;
+                    string path = Directory.GetCurrentDirectory() + "\\Output\\" + Config.Instance.subject + "_eye_data.csv";
 
-                    while (File.Exists(location))
+                    output = new StreamWriter(path, false);
+                    output.WriteLine("Time, Distance, Subject Coord, Item Coord, Item, Pupil Size(left right)");
+                    ;
+
+                    ignore = new List<String>
                     {
-                        participant_num++;
-                        location = path + participant_num + "_eye_data.txt";
-                    }
-                    sw = new StreamWriter(location, false);
-                    sw.WriteLine("Starting Experiment now at " + DateTime.Now.ToString(culture));
-                    sw.WriteLine();
-
-
+                        "Floor 1",
+                        "w1",
+                        "w2",
+                        "w3",
+                        "w4",
+                        "Ceiling 1",
+                        "Main_floor"
+                    };
                 }
 
 
@@ -88,24 +95,52 @@ namespace ViveSR
                     {
 
                         Vector3 user = Camera.main.transform.position + Camera.main.transform.rotation * ray.origin;
-                        sw.WriteLine($"Time: {DateTime.Now.ToString(culture)}   |     Distance: {focusInfo.distance}    |   Participant Coords: {user}   |   " +
-                            $"Item Coord: {focusInfo.point}   |  Item: {hitObject.name}  |   Pupil Size (Left, right): {verboseData.left.pupil_diameter_mm} {verboseData.right.pupil_diameter_mm}");
+                        output.WriteLine($"{DateTime.Now.ToString(culture)}," +
+                                        $"{focusInfo.distance}, " +
+                                        $"{user.ToString().Replace(",", " ")}, " +
+                                        $"{focusInfo.point.ToString().Replace(",", " ")}, " +
+                                        $"{hitObject.name}, " +
+                                        $"{verboseData.left.pupil_diameter_mm}  {verboseData.right.pupil_diameter_mm}"
+                                     );
 
                         // DEBUGGING SEGMENT TO SHOW WHERE THE PARTICIPANT IS LOOKING AT AND CHECKING THAT EYE TRACKING WORKS. OBJECTS WILL RESCALE/RESIZE WHEN YOU LOOK AT IT
                         if (debug)
                         {
-                            if (prevObj == null)
+                            // Commented code is for highlighting items but not all have renderers so it does not work on some. Saved for later
+                            //var see = hitObject.transform;
+                            //var seeRenderer = see.GetComponent<Renderer>();
+                            if (!ignore.Contains(hitObject.name))
                             {
-                                prevObj = hitObject;
-                                og_scale = hitObject.transform.localScale;
-                                hitObject.transform.localScale = og_scale * 8/9;
+                                if (prevObj == null)
+                                {
+                                    prevObj = hitObject;
+                                    og_scale = hitObject.transform.localScale;
+                                    hitObject.transform.localScale = og_scale * 8 / 7;
+                                    //defaultMaterial = seeRenderer.material;
+                                    //seeRenderer.material = highlightMaterial;
+                                }
+                                else if (prevObj != hitObject)
+                                {
+                                    prevObj.transform.localScale = og_scale;
+                                    prevObj = hitObject;
+                                    og_scale = hitObject.transform.localScale;
+                                    hitObject.transform.localScale = og_scale * 8 / 7;
+
+                                    //prevObj.transform.GetComponent<Renderer>().material = defaultMaterial;
+                                    //prevObj = hitObject;
+                                    //defaultMaterial = seeRenderer.material;
+                                    //seeRenderer.material = highlightMaterial;
+
+
+                                }
                             }
-                            else if (prevObj != hitObject)
+                            else
                             {
-                                prevObj.transform.localScale = og_scale;
-                                og_scale = hitObject.transform.localScale;
-                                hitObject.transform.localScale = og_scale * 8/9;
-                                prevObj = hitObject;
+                                if (prevObj != null)
+                                {
+                                    prevObj.transform.localScale = og_scale;
+                                    prevObj = null;
+                                }
                             }
                         }
                     }
@@ -113,9 +148,9 @@ namespace ViveSR
 
                 public void Release()
                 {
-                    sw.WriteLine();
-                    sw.WriteLine("Ending experiment at " + DateTime.Now.ToString(culture));
-                    sw.Close();
+                    output.WriteLine();
+                    output.WriteLine("Ending experiment at " + DateTime.Now.ToString(culture));
+                    output.Close();
                 }
 
             }

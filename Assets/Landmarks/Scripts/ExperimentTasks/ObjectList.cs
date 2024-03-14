@@ -130,7 +130,7 @@ public class ObjectList : ExperimentTask {
 	 
 		foreach (GameObject obj in objs) {	             
         	objects.Add(obj);
-			log.log("TASK_ADD	" + name  + "\t" + this.GetType().Name + "\t" + obj.name  + "\t" + "null",1 );
+			//log.log("TASK_ADD	" + name  + "\t" + this.GetType().Name + "\t" + obj.name  + "\t" + "null",1 );
 		}
 	}	
 	
