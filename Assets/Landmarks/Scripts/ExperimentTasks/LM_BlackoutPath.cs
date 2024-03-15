@@ -60,18 +60,24 @@ public class LM_BlackoutPath : ExperimentTask
     private GameObject endLocation;
 
     private GameObject discLocation;
-    private GameObject disc;
+    public GameObject disc;
     private GameObject disc_half;
     private GameObject arrow;
     private GameObject origFloor;
     private GameObject blackFloor;
     
 
-    private float timer = 0;
+    public float timer = 0;
     private bool timerSpawnReached = false;
     private bool timerDelay = false;
     private bool timerComplete = false;
     private bool responseMade = false;
+    public string response;
+    public Vector3 playerStartPos; // log the coordinate of player immediately at beginning of blackout and immediately before the blackout period ends.
+    public Vector3 playerEndPos;
+    public Quaternion playerStartRot;
+    public Quaternion playerEndRot;
+
 
     public override void startTask()
     {
@@ -145,6 +151,8 @@ public class LM_BlackoutPath : ExperimentTask
             Debug.Log("The room will rotate");
         }
 
+        playerStartPos = Camera.main.transform.position;
+        playerStartRot = Camera.main.transform.rotation;
         // If walk trial, place the disc in the non-starting location
         if (condition[taskCounter] == "walk")
         {
@@ -193,6 +201,7 @@ public class LM_BlackoutPath : ExperimentTask
             disc = Instantiate(targetDisc, startLocation.transform.position, Quaternion.identity); // startLocation = start
             disc.transform.rotation = startLocation.transform.rotation;
         }
+
 
         // // In all cases, rotate the disc according to the end position, - NO LONGER RELEVANT SANS TELEPORTING
         // if (reorientCamera)
@@ -399,6 +408,8 @@ public class LM_BlackoutPath : ExperimentTask
 
 
             timerSpawnReached = true;
+            playerEndPos = Camera.main.transform.position;
+            playerEndRot = Camera.main.transform.rotation;
             hud.showEverything();
         }
 
@@ -410,24 +421,26 @@ public class LM_BlackoutPath : ExperimentTask
                 {
                     log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" +"Response Time: " + timer, 1);
                     responseMade = true;
+                    response = "Left";
                 }
                 else if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
                 {
                     log.log("TASK_RESPONSE\t" + "Right Button Pressed\t" + "Response Time: " + timer, 1);
                     responseMade = true;
+                    response = "Right";
                 }
             }
 
             if (Input.GetButtonDown("Respond Left"))
             {
-                    log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" + "Response Time: " + timer, 1);
-                    responseMade = true;
+                log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" + "Response Time: " + timer, 1);
+                responseMade = true;
             }
 
             if (Input.GetButtonDown("Respond Right"))
             {
-                    log.log("TASK_RESPONSE\t" + "Right Button Pressed\t" + "Response Time: " + timer, 1);
-                    responseMade = true;
+                log.log("TASK_RESPONSE\t" + "Right Button Pressed\t" + "Response Time: " + timer, 1);
+                responseMade = true;
             }
 
         }

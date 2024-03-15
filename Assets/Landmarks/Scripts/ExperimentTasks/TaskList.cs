@@ -320,18 +320,18 @@ public class TaskList : ExperimentTask
         if (taskLog != null)
         {
             var count = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
-            var access = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>();
+            var roomAccess = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>();
             Debug.Log(taskLog.gameObject.name);
             Debug.Log(manager.gameObject.name);
             Debug.Log(manager.config.name);
             // Really basic, redundant logging
-            taskLog.AddData("id", Config.Instance.subject);
-            taskLog.AddData("room", access.room[count]);
-            taskLog.AddData("condition", access.condition[count]);
-            taskLog.AddData("moveItem", access.moveItem[count]);
-            taskLog.AddData("repeat", access.repeat[count]);
-            taskLog.AddData("block", access.block[count]);
-            //taskLog.AddData("response", GameObject.Find("BlackoutWalking").GetComponent<LM_BlackoutPath>.) //Get the left or right response
+            taskLog.AddData("ID", Config.Instance.subject);
+            taskLog.AddData("Room", roomAccess.room[count]);
+            taskLog.AddData("Condition", roomAccess.condition[count]);
+            taskLog.AddData("Move_Item", roomAccess.moveItem[count]);
+            taskLog.AddData("Repeat",roomAccess.repeat[count]);
+            taskLog.AddData("Block", roomAccess.block[count]);
+
         }
     }
 
