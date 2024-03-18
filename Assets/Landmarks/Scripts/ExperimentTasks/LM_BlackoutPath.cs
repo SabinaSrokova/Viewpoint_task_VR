@@ -72,7 +72,7 @@ public class LM_BlackoutPath : ExperimentTask
     private bool timerDelay = false;
     private bool timerComplete = false;
     private bool responseMade = false;
-    public string response;
+    // Below is for the extra logging portion
     public Vector3 playerStartPos; // log the coordinate of player immediately at beginning of blackout and immediately before the blackout period ends.
     public Vector3 playerEndPos;
     public Quaternion playerStartRot;
@@ -117,6 +117,10 @@ public class LM_BlackoutPath : ExperimentTask
         timerComplete = false;
         responseMade = false;
 
+
+        playerStartPos = Camera.main.transform.position;
+        playerStartRot = Camera.main.transform.rotation;
+
         // Summon a circular floor during blackout
         origFloor = GetChildGameObject(currentRoom, "Floor 1");
         blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
@@ -151,8 +155,7 @@ public class LM_BlackoutPath : ExperimentTask
             Debug.Log("The room will rotate");
         }
 
-        playerStartPos = Camera.main.transform.position;
-        playerStartRot = Camera.main.transform.rotation;
+
         // If walk trial, place the disc in the non-starting location
         if (condition[taskCounter] == "walk")
         {
@@ -201,6 +204,22 @@ public class LM_BlackoutPath : ExperimentTask
             disc = Instantiate(targetDisc, startLocation.transform.position, Quaternion.identity); // startLocation = start
             disc.transform.rotation = startLocation.transform.rotation;
         }
+
+
+        // FOR LOGGING
+        LM_TaskLog taskLog = GetComponent<ExperimentTask>().taskLog;
+        taskLog.AddData("start", start[taskCounter]);
+        taskLog.AddData("end", end[taskCounter]);
+        taskLog.AddData("TarPos_x", disc.transform.position.x.ToString());
+        taskLog.AddData("TarPos_z", disc.transform.position.z.ToString());
+        taskLog.AddData("TarRot_x", disc.transform.rotation.x.ToString());
+        taskLog.AddData("TarRot_z", disc.transform.rotation.z.ToString());
+        taskLog.AddData("Start_SubPos_x", playerStartPos.x.ToString());
+        taskLog.AddData("Start_SubPos_z", playerStartPos.z.ToString());
+        taskLog.AddData("Start_SubRot_x", playerStartRot.x.ToString());
+        taskLog.AddData("Start_SubRot_z", playerStartRot.z.ToString());
+
+
 
 
         // // In all cases, rotate the disc according to the end position, - NO LONGER RELEVANT SANS TELEPORTING
@@ -362,6 +381,8 @@ public class LM_BlackoutPath : ExperimentTask
                 rotateRoom = false;
             }
 
+            // FOR LOGGING
+            LM_TaskLog taskLog = GetComponent<ExperimentTask>().taskLog;
 
             // Response options on the screen
             if (objectsMovedIs == LM_PrepareRooms.objectsMovedAssignment.left)
@@ -410,9 +431,14 @@ public class LM_BlackoutPath : ExperimentTask
             timerSpawnReached = true;
             playerEndPos = Camera.main.transform.position;
             playerEndRot = Camera.main.transform.rotation;
+            taskLog.AddData("End_SubPos_x", playerEndPos.x.ToString());
+            taskLog.AddData("End_SubPos_z", playerEndPos.z.ToString());
+            taskLog.AddData("End_SubRot_x", playerEndRot.x.ToString());
+            taskLog.AddData("End_SubRot_z", playerEndRot.z.ToString());
+
             hud.showEverything();
         }
-
+        string response = "No response";
         if (timerSpawnReached == true && responseMade == false)
         {
             if (vrEnabled)
@@ -429,18 +455,28 @@ public class LM_BlackoutPath : ExperimentTask
                     responseMade = true;
                     response = "Right";
                 }
+                taskLog.AddData("response", response);
+                taskLog.AddData("RT", timer.ToString());
             }
 
             if (Input.GetButtonDown("Respond Left"))
             {
                 log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" + "Response Time: " + timer, 1);
                 responseMade = true;
+                response = "Left";
+
+                taskLog.AddData("response", response);
+                taskLog.AddData("RT", timer.ToString());
             }
 
             if (Input.GetButtonDown("Respond Right"))
             {
                 log.log("TASK_RESPONSE\t" + "Right Button Pressed\t" + "Response Time: " + timer, 1);
                 responseMade = true;
+                response = "Right";
+
+                taskLog.AddData("response", response);
+                taskLog.AddData("RT", timer.ToString());
             }
 
         }
@@ -461,7 +497,7 @@ public class LM_BlackoutPath : ExperimentTask
                 //hud.rightVRMessage.SetActive(false);
                 hud.leftVRMessageScreen.SetActive(false);
                 hud.rightVRMessageScreen.SetActive(false);
-                hud.cameraScreen.SetActive(false);
+                //hud.cameraScreen.SetActive(false);
             }
         }
 

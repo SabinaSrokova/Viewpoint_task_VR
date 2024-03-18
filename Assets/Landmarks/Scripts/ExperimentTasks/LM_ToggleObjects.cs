@@ -228,8 +228,8 @@ public class LM_ToggleObjects : ExperimentTask
             if (vrEnabled)
             {
                 hud.fadeScreen.SetActive(false);
-                hud.fadeScreen.GetComponent<CanvasRenderer>().SetAlpha(1f);
-                hud.cameraScreen.SetActive(false);
+                hud.fadeScreen.GetComponent<CanvasGroup>().alpha = 1.0f;
+                //hud.cameraScreen.SetActive(false);
             }
 
             return true;

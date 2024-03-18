@@ -325,12 +325,14 @@ public class TaskList : ExperimentTask
             Debug.Log(manager.gameObject.name);
             Debug.Log(manager.config.name);
             // Really basic, redundant logging
-            taskLog.AddData("ID", Config.Instance.subject);
+            taskLog.AddData("subID", Config.Instance.subject);
+            taskLog.AddData("trial", count.ToString());
             taskLog.AddData("Room", roomAccess.room[count]);
             taskLog.AddData("Condition", roomAccess.condition[count]);
-            taskLog.AddData("Move_Item", roomAccess.moveItem[count]);
+            taskLog.AddData("moveItem", roomAccess.moveItem[count]);
             taskLog.AddData("Repeat",roomAccess.repeat[count]);
             taskLog.AddData("Block", roomAccess.block[count]);
+            //taskLog.AddData("ObjectMovedIs", roomAccess.objectsMovedIs.ToString());
 
         }
     }

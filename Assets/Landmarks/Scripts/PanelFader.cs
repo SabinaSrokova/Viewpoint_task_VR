@@ -13,10 +13,10 @@ public class PanelFader : MonoBehaviour
     {
         var canvGroup = GetComponent<CanvasGroup>();
 
-        StartCoroutine(DoFade(canvGroup, canvGroup.alpha, mFaded ? 1 : 0));
+        StartCoroutine(DoFade(canvGroup, canvGroup.alpha, 0));
 
         //Toggling the faded state
-        mFaded = !mFaded;
+        //mFaded = !mFaded;
     }
 
     public IEnumerator DoFade (CanvasGroup canvGroup, float start, float end)
