@@ -332,7 +332,7 @@ public class TaskList : ExperimentTask
             taskLog.AddData("moveItem", roomAccess.moveItem[count]);
             taskLog.AddData("Repeat",roomAccess.repeat[count]);
             taskLog.AddData("Block", roomAccess.block[count]);
-            //taskLog.AddData("ObjectMovedIs", roomAccess.objectsMovedIs.ToString());
+            taskLog.AddData("ObjectMovedIs", roomAccess.objectsMovedIs.ToString());
 
         }
     }

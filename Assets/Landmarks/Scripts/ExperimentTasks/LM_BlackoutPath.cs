@@ -330,9 +330,11 @@ public class LM_BlackoutPath : ExperimentTask
         //         teleport = false;
         //     }
 
+        //
         // Because teleport seems to not work in immersive VR -> rotate the room so that the participant shows up in "END"
         if (timerSpawnReached == false && timer >= blackoutWalk)
         {
+            //taskLog.AddData("ReachedTarget", disc.GetComponent<Renderer>().material.color.ToString());
             Debug.Log("blackoutWalk time reached");
             DestroyImmediate(disc);
             DestroyImmediate(disc_half);
@@ -448,15 +450,19 @@ public class LM_BlackoutPath : ExperimentTask
                     log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" +"Response Time: " + timer, 1);
                     responseMade = true;
                     response = "Left";
+
+                    taskLog.AddData("response", response);
+                    taskLog.AddData("RT", timer.ToString());
                 }
                 else if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
                 {
                     log.log("TASK_RESPONSE\t" + "Right Button Pressed\t" + "Response Time: " + timer, 1);
                     responseMade = true;
                     response = "Right";
+
+                    taskLog.AddData("response", response);
+                    taskLog.AddData("RT", timer.ToString());
                 }
-                taskLog.AddData("response", response);
-                taskLog.AddData("RT", timer.ToString());
             }
 
             if (Input.GetButtonDown("Respond Left"))
@@ -506,8 +512,15 @@ public class LM_BlackoutPath : ExperimentTask
             Debug.Log("Delay over - teleporting to new room");
             GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
             currentRoom.SetActive(false); // deactivate the current room
-            return true;
+
+            if (!responseMade)
+            {
+                taskLog.AddData("response", response);
+                taskLog.AddData("RT", "N/A");
+            }
+                return true;
         }
+
 
         return false;
 
