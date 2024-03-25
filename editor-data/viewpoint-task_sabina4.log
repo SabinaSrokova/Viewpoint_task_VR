@@ -1,0 +1,10 @@
+63846978245985	EXPERIMENT:		SUBJECT:	sabina4	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63846978248236	TASK_START	LM_Timeline	TaskList
+63846978248238	TASK_START	InitializeExperiment	TaskList
+63846978248242	TASK_START	PrepareRooms	LM_PrepareRooms
+63846978248291	TASK_END	PrepareRooms	LM_PrepareRooms	50
+63846978248293	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63846978248293	TASK_END	InitializeExperiment	TaskList	56
+63846978248296	TASK_START	BeginMessage	InstructionsTask

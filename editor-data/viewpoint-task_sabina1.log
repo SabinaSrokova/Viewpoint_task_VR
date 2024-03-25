@@ -1,0 +1,39 @@
+63846976156971	EXPERIMENT:		SUBJECT:	sabina1	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63846976159288	TASK_START	LM_Timeline	TaskList
+63846976159290	TASK_START	InitializeExperiment	TaskList
+63846976159292	TASK_START	PrepareRooms	LM_PrepareRooms
+63846976159345	TASK_END	PrepareRooms	LM_PrepareRooms	53
+63846976159346	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63846976159348	TASK_END	InitializeExperiment	TaskList	58
+63846976159351	TASK_START	BeginMessage	InstructionsTask
+63846976678633	EXPERIMENT:		SUBJECT:	sabina1	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63846976690175	TASK_START	LM_Timeline	TaskList
+63846976690177	TASK_START	InitializeExperiment	TaskList
+63846976690180	TASK_START	PrepareRooms	LM_PrepareRooms
+63846976690231	TASK_END	PrepareRooms	LM_PrepareRooms	51
+63846976690233	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63846976690234	TASK_END	InitializeExperiment	TaskList	57
+63846976690236	TASK_START	BeginMessage	InstructionsTask
+63846976695072	INPUT_EVENT    PlayerPressedActionButton    1
+63846976695074	TASK_END	BeginMessage	InstructionsTask	4837
+63846976695076	TASK_START	Tasks	TaskList
+63846976695078	TASK_START	TASK_ViewpointTask	TaskList
+63846976695083	TASK_START	ListViewpointSpawns	ObjectList
+63846976695092	TASK_END	ListViewpointSpawns	ObjectList	9
+63846976695096	TASK_START	ListViewpointTransfers	ObjectList
+63846976695104	TASK_END	ListViewpointTransfers	ObjectList	8
+63846976695106	TASK_START	ViewpointTrials	TaskList
+63846976695109	TASK_START	Counter	LM_DummyCounter
+63846976695118	TASK_END	Counter	LM_DummyCounter	9
+63846976695121	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63846976695963	INPUT_EVENT    PlayerPressedActionButton    1
+63846976695964	TASK_END	BlockInstruction	InstructionsTaskViewpoint	844
+63846976695967	TASK_START	MovePlayerToSpawn	MoveSpawn
+63846976695969	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(32.3, 0.1, 133.1)
+63846976695970	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63846976695990	TASK_END	MovePlayerToSpawn	MoveSpawn	23
+63846976695993	TASK_START	ViewObjects	LM_ToggleObjects
