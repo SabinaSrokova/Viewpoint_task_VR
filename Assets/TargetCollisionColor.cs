@@ -15,25 +15,23 @@ public class TargetCollisionColor : MonoBehaviour
     {
         taskCounter = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
         condition = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().condition;
-        //LM_TaskLog taskLog = GetComponent<LM_TaskLog>();
+        
+
 
         if (LM_ToggleObjects.participantReady)
         {
             if (condition[taskCounter] == "walk")
             {
                 GetComponent<Renderer>().material = collidedColor;
-                //taskLog.AddData("TargetReached", "Yes");
             }
             else if (condition[taskCounter] == "stay")
             {
                 if (HalfwayCollisionColor.half_reached) // only if half point has been reached. This is turned back to false at the end of LM_BlackoutPath
                 {
                     GetComponent<Renderer>().material = collidedColor;
-                    //taskLog.AddData("TargetReached", "Yes");
 
                 }
             }
-            //else taskLog.AddData("TargetReached", "No");
         }
         else
         {

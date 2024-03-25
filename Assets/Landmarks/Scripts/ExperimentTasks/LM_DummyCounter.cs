@@ -42,13 +42,11 @@ public class LM_DummyCounter : ExperimentTask
             return;
         }
 
-       if (first == true) {
+       if (first) {
             first = false;
-        }
-       else
-        {
-            counter++;
-        }
+            return;
+       }
+       counter++;
     }
 
 

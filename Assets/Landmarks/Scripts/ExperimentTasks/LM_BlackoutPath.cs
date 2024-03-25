@@ -330,12 +330,17 @@ public class LM_BlackoutPath : ExperimentTask
         //         teleport = false;
         //     }
 
+        LM_TaskLog taskLog = GetComponent<ExperimentTask>().taskLog;
         //
         // Because teleport seems to not work in immersive VR -> rotate the room so that the participant shows up in "END"
         if (timerSpawnReached == false && timer >= blackoutWalk)
         {
-            //taskLog.AddData("ReachedTarget", disc.GetComponent<Renderer>().material.color.ToString());
+            
             Debug.Log("blackoutWalk time reached");
+            int color = (int)disc.GetComponent<Renderer>().material.color.r * 1000;
+            int red = (int)new Color(1.000f, 0, 0, 1.000f).r * 1000;
+            if ( color == red) taskLog.AddData("TargetReached", "False");
+            else taskLog.AddData("TargetReached", "True");
             DestroyImmediate(disc);
             DestroyImmediate(disc_half);
             DestroyImmediate(blackFloor);
@@ -382,9 +387,6 @@ public class LM_BlackoutPath : ExperimentTask
 
                 rotateRoom = false;
             }
-
-            // FOR LOGGING
-            LM_TaskLog taskLog = GetComponent<ExperimentTask>().taskLog;
 
             // Response options on the screen
             if (objectsMovedIs == LM_PrepareRooms.objectsMovedAssignment.left)
@@ -437,6 +439,7 @@ public class LM_BlackoutPath : ExperimentTask
             taskLog.AddData("End_SubPos_z", playerEndPos.z.ToString());
             taskLog.AddData("End_SubRot_x", playerEndRot.x.ToString());
             taskLog.AddData("End_SubRot_z", playerEndRot.z.ToString());
+            
 
             hud.showEverything();
         }

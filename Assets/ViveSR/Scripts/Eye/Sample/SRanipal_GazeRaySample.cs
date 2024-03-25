@@ -45,7 +45,7 @@ namespace ViveSR
 
                 private new void Start()
                 {
-                    Thread.Sleep(10000); // Don't record eye tracking immediately. Waits until the participant is finished listening and reading instructions
+                    //Thread.Sleep(10000); // Don't record eye tracking immediately. Waits until the participant is finished listening and reading instructions
                     if (!SRanipal_Eye_Framework.Instance.EnableEye)
                     {
                         enabled = false;
@@ -57,9 +57,10 @@ namespace ViveSR
                     //
                     string path = Directory.GetCurrentDirectory() + "\\Output\\" + Config.Instance.subject + "_eye_data.csv";
 
-                    output = new StreamWriter(path, false);
-                    output.WriteLine("Time, Distance, Subject Coord, Item Coord, Item, Pupil Size(left right)");
-                    ;
+                    output = new StreamWriter(path);
+                    Debug.Log("!!!!!!!!!!!!!!!!Before header");
+                    output.WriteLine("Time, Room, Distance, Subject Coord, Item Coord, Item, Pupil Size(left right)");
+                    Debug.Log("!!!!!!!!!!!!!!! AFter header");
 
                     ignore = new List<String>
                     {
@@ -76,75 +77,90 @@ namespace ViveSR
 
                 private void Update()
                 {
-
-                    // Use built-in focus method to get object ("focus point data is calculated using a variety of factors, including the user's eye position, head position, and the scene geometry")
-                    if (SRanipal_Eye.Focus(GazeIndex.COMBINE, out ray, out focusInfo, 100f)) { }
-                    else if (SRanipal_Eye.Focus(GazeIndex.LEFT, out ray, out focusInfo, 100f)) { }
-                    else if (SRanipal_Eye.Focus(GazeIndex.RIGHT, out ray, out focusInfo, 100f)) { }
-                    else
+                    
+                    if (GameObject.Find("BlockInstruction").GetComponent<InstructionsTaskViewpoint>().start_eye_recording)
                     {
-                        return;
-                    }
-
-                    SRanipal_Eye.GetVerboseData(out verboseData);
-
-                    // RECORD THE OBJECTS BEING LOOKED AT
-                    // If we want more info on the hit we could try this method: https://gamedevbeginner.com/raycasts-in-unity-made-easy/#:~:text=Or%2C%20you%20could%20even%20use%20Raycast%20Hit%20to,first%20object%20that%20is%20hit%20by%20the%20Ray.
-                    hitObject = focusInfo.collider.gameObject;
-                    if (hitObject != null)
-                    {
-
-                        Vector3 user = Camera.main.transform.position + Camera.main.transform.rotation * ray.origin;
-                        output.WriteLine($"{DateTime.Now.ToString(culture)}," +
-                                        $"{focusInfo.distance}, " +
-                                        $"{user.ToString().Replace(",", " ")}, " +
-                                        $"{focusInfo.point.ToString().Replace(",", " ")}, " +
-                                        $"{hitObject.name}, " +
-                                        $"{verboseData.left.pupil_diameter_mm}  {verboseData.right.pupil_diameter_mm}"
-                                     );
-
-                        // DEBUGGING SEGMENT TO SHOW WHERE THE PARTICIPANT IS LOOKING AT AND CHECKING THAT EYE TRACKING WORKS. OBJECTS WILL RESCALE/RESIZE WHEN YOU LOOK AT IT
-                        if (debug)
+                        // Use built-in focus method to get object ("focus point data is calculated using a variety of factors, including the user's eye position, head position, and the scene geometry")
+                        if (SRanipal_Eye.Focus(GazeIndex.COMBINE, out ray, out focusInfo, 100f)) { }
+                        else if (SRanipal_Eye.Focus(GazeIndex.LEFT, out ray, out focusInfo, 100f)) { }
+                        else if (SRanipal_Eye.Focus(GazeIndex.RIGHT, out ray, out focusInfo, 100f)) { }
+                        else
                         {
-                            // Commented code is for highlighting items but not all have renderers so it does not work on some. Saved for later
-                            //var see = hitObject.transform;
-                            //var seeRenderer = see.GetComponent<Renderer>();
-                            if (!ignore.Contains(hitObject.name))
-                            {
-                                if (prevObj == null)
-                                {
-                                    prevObj = hitObject;
-                                    og_scale = hitObject.transform.localScale;
-                                    hitObject.transform.localScale = og_scale * 8 / 7;
-                                    //defaultMaterial = seeRenderer.material;
-                                    //seeRenderer.material = highlightMaterial;
-                                }
-                                else if (prevObj != hitObject)
-                                {
-                                    prevObj.transform.localScale = og_scale;
-                                    prevObj = hitObject;
-                                    og_scale = hitObject.transform.localScale;
-                                    hitObject.transform.localScale = og_scale * 8 / 7;
+                            return;
+                        }
 
-                                    //prevObj.transform.GetComponent<Renderer>().material = defaultMaterial;
-                                    //prevObj = hitObject;
-                                    //defaultMaterial = seeRenderer.material;
-                                    //seeRenderer.material = highlightMaterial;
+                        SRanipal_Eye.GetVerboseData(out verboseData);
 
+                        // RECORD THE OBJECTS BEING LOOKED AT
+                        // If we want more info on the hit we could try this method: https://gamedevbeginner.com/raycasts-in-unity-made-easy/#:~:text=Or%2C%20you%20could%20even%20use%20Raycast%20Hit%20to,first%20object%20that%20is%20hit%20by%20the%20Ray.
+                        hitObject = focusInfo.collider.gameObject;
+                        if (hitObject != null)
+                        {
 
-                                }
-                            }
-                            else
-                            {
-                                if (prevObj != null)
-                                {
-                                    prevObj.transform.localScale = og_scale;
-                                    prevObj = null;
-                                }
-                            }
+                            Vector3 user = Camera.main.transform.position + Camera.main.transform.rotation * ray.origin;
+                            var room = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().room;
+                            var count = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
+                            Debug.Log("!!!!!!!!!!!!!! Wrote Data");
+
+                            output.WriteLine
+                                (
+                                $"{DateTime.Now.ToString(culture)}," +
+                                $"{room[count]}, " +
+                                $"{focusInfo.distance}, " +
+                                $"{user.ToString().Replace(",", " ")}, " +
+                                $"{focusInfo.point.ToString().Replace(",", " ")}, " +
+                                $"{hitObject.name}, " +
+                                $"{verboseData.left.pupil_diameter_mm}  {verboseData.right.pupil_diameter_mm}"
+                                );
+                            // DEBUGGING SEGMENT TO SHOW WHERE THE PARTICIPANT IS LOOKING AT AND CHECKING THAT EYE TRACKING WORKS. OBJECTS WILL RESCALE/RESIZE WHEN YOU LOOK AT IT
+                            if (debug) Debugging();
                         }
                     }
                 }
+
+
+                private void Debugging()
+                {
+                    Debug.Log("!!!!!!!In debug()");
+                    // Commented code is for highlighting items but not all have renderers so it does not work on some. Saved for later
+                    //var see = hitObject.transform;
+                    //var seeRenderer = see.GetComponent<Renderer>();
+                    if (!ignore.Contains(hitObject.name))
+                    {
+                        if (prevObj == null)
+                        {
+                            prevObj = hitObject;
+                            og_scale = hitObject.transform.localScale;
+                            hitObject.transform.localScale = og_scale * 8 / 7;
+                            //defaultMaterial = seeRenderer.material;
+                            //seeRenderer.material = highlightMaterial;
+                        }
+                        else if (prevObj != hitObject)
+                        {
+                            prevObj.transform.localScale = og_scale;
+                            prevObj = hitObject;
+                            og_scale = hitObject.transform.localScale;
+                            hitObject.transform.localScale = og_scale * 8 / 7;
+
+                            //prevObj.transform.GetComponent<Renderer>().material = defaultMaterial;
+                            //prevObj = hitObject;
+                            //defaultMaterial = seeRenderer.material;
+                            //seeRenderer.material = highlightMaterial;
+
+
+                        }
+                    }
+                    else
+                    {
+                        if (prevObj != null)
+                        {
+                            prevObj.transform.localScale = og_scale;
+                            prevObj = null;
+                        }
+                    }
+                
+                }
+
 
                 public void Release()
                 {

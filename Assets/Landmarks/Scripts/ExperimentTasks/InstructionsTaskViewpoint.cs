@@ -59,6 +59,8 @@ public class InstructionsTaskViewpoint : ExperimentTask {
     public bool restrictMovement = true; // MJS do we want to keep them still during this?
     public bool selfPaced = true; // can they press return to end the task?
 
+    public bool start_eye_recording = false;
+
     void OnDisable ()
     {
         if (gui)
@@ -161,6 +163,8 @@ public class InstructionsTaskViewpoint : ExperimentTask {
 
         if (blackout) hud.showOnlyHUD();
         else hud.showEverything();
+
+        start_eye_recording = true;
 
         /* if (masterText == "")
          {
