@@ -45,7 +45,7 @@ public class InstructionsTaskViewpoint : ExperimentTask {
     public bool blackout = true;
     public Color text_color = Color.white;
     public Font instructionFont;
-    public int instructionSize = 12;
+    public int instructionSize = 10;
 
     public bool actionButtonOn = true;
     public string customButtonText = "";

@@ -114,7 +114,7 @@ public class LM_ToggleObjects : ExperimentTask
 
         if (vrEnabled)
         {
-            hud.setStatusScreenMessage("Position youself on the marker, press a trigger to continue");
+            hud.setStatusScreenMessage("Position youself on the marker, press any trigger to continue");
             hud.cameraScreen.SetActive(true);
             hud.statusMessageScreen.SetActive(true);
         }

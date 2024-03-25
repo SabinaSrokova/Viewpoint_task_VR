@@ -102,3 +102,44 @@ ViewpointTrials3False
 63846708434468	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
 63846708434501	TASK_END	MovePlayerToSpawn	MoveSpawn	35
 63846708434502	TASK_START	ViewObjects	LM_ToggleObjects
+63846971325622	EXPERIMENT:		SUBJECT:	Mel7	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63846971325839	TASK_START	LM_Timeline	TaskList
+63846971325839	TASK_START	InitializeExperiment	TaskList
+63846971325843	TASK_START	PrepareRooms	LM_PrepareRooms
+63846971325883	TASK_END	PrepareRooms	LM_PrepareRooms	40
+63846971325883	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63846971325883	TASK_END	InitializeExperiment	TaskList	44
+63846971325883	TASK_START	BeginMessage	InstructionsTask
+63846971358417	EXPERIMENT:		SUBJECT:	Mel7	START_SCENE	use for vr	START_CONDITION:	default	UI:	KeyboardMouse
+63846971358513	TASK_START	LM_Timeline	TaskList
+63846971358513	TASK_START	InitializeExperiment	TaskList
+63846971358513	TASK_START	PrepareRooms	LM_PrepareRooms
+63846971358559	TASK_END	PrepareRooms	LM_PrepareRooms	46
+63846971358559	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63846971358559	TASK_END	InitializeExperiment	TaskList	46
+63846971358563	TASK_START	BeginMessage	InstructionsTask
+63846971360784	INPUT_EVENT    PlayerPressedActionButton    1
+63846971360785	TASK_END	BeginMessage	InstructionsTask	2222
+63846971360786	TASK_START	Tasks	TaskList
+63846971360788	TASK_START	TASK_ViewpointTask	TaskList
+63846971360792	TASK_START	ListViewpointSpawns	ObjectList
+63846971360802	TASK_END	ListViewpointSpawns	ObjectList	6
+63846971360804	TASK_START	ListViewpointTransfers	ObjectList
+63846971360809	TASK_END	ListViewpointTransfers	ObjectList	5
+63846971360810	TASK_START	ViewpointTrials	TaskList
+63846971360813	TASK_START	Counter	LM_DummyCounter
+63846971360817	TASK_END	Counter	LM_DummyCounter	5
+63846971360819	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63846971361509	INPUT_EVENT    PlayerPressedActionButton    1
+63846971361511	TASK_END	BlockInstruction	InstructionsTaskViewpoint	692
+63846971361513	TASK_START	MovePlayerToSpawn	MoveSpawn
+63846971361514	TASK_POSITION	KeyboardMouseController	MoveSpawn	(32.3, 0.1, 133.1)
+63846971361515	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 10.1, 0.0)
+63846971361520	TASK_END	MovePlayerToSpawn	MoveSpawn	7
+63846971361522	TASK_START	ViewObjects	LM_ToggleObjects
+63846971370818	TASK_END	ViewObjects	LM_ToggleObjects	9297
+63846971370821	TASK_START	BlackoutWalking	LM_BlackoutPath

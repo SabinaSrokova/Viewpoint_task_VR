@@ -241,7 +241,7 @@ public class LM_BlackoutPath : ExperimentTask
         // }
 
 
-        // Summon an arrow in front of the player which points in the direction of which they should walk
+        // Summon an arrow in front of the player which points in the direction of which they should walk. If disabled, shows <<< and >>> instead.
         if (showArrow)
         {
             GameObject player = avatar;
@@ -264,7 +264,42 @@ public class LM_BlackoutPath : ExperimentTask
             {
                arrow.transform.rotation *= Quaternion.Euler(0, 0, 90); 
             }
+        } else
+        {
+            if (vrEnabled)
+            {
+                
+                if (start[taskCounter] == "A")
+                {
+                    hud.setStatusScreenMessage(">>>");
+                    hud.cameraScreen.SetActive(true);
+                    hud.statusMessageScreen.SetActive(true);
+                }
+                else if (start[taskCounter] == "B")
+                {
+                    hud.setStatusScreenMessage("<<<");
+                    hud.cameraScreen.SetActive(true);
+                    hud.statusMessageScreen.SetActive(true);
+                }
+            }
+            else
+            {
+                if (start[taskCounter] == "A")
+                {
+                    hud.setStatusMessage(">>>");
+                    hud.statusMessage.SetActive(true);
+                }
+                else if (start[taskCounter] == "B")
+                {
+                    hud.setStatusMessage("<<<");
+                    hud.statusMessage.SetActive(true);
+                }
+
+            }
         }
+
+
+
     }
 
 
@@ -284,7 +319,22 @@ public class LM_BlackoutPath : ExperimentTask
         // Destroy arrow after its time is up
         if (timer >= arrowTime)
         {
-            DestroyImmediate(arrow);
+            if (showArrow)
+            {
+                DestroyImmediate(arrow);
+            }
+            else
+            {
+                if (vrEnabled)
+                {
+                    hud.statusMessageScreen.SetActive(false);
+                }
+                else
+                {
+                    hud.statusMessage.SetActive(false);
+                }
+
+            }
         }
 
         // Here the room is relit after the blackout walking stage is complete. If the participant is intended to teleport, they sill do so before the blackout ends.
