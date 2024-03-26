@@ -79,6 +79,7 @@ public class LM_BlackoutPath : ExperimentTask
     public Vector3 playerEndPos;
     public Quaternion playerStartRot;
     public Quaternion playerEndRot;
+	public bool blackout = false; // this var is for eye tracking log
 
 
     public override void startTask()
@@ -121,8 +122,9 @@ public class LM_BlackoutPath : ExperimentTask
         timerDelay = false;
         timerComplete = false;
         responseMade = false;
+		blackout = true; // eye tracking will record that blackout is happening
 
-
+  		// Record the subject's starting spot when blackout happens
         playerStartPos = Camera.main.transform.position;
         playerStartRot = Camera.main.transform.rotation;
 
@@ -437,7 +439,7 @@ public class LM_BlackoutPath : ExperimentTask
             taskLog.AddData("End_SubRot_x", playerEndRot.x.ToString());
             taskLog.AddData("End_SubRot_z", playerEndRot.z.ToString());
             
-
+			blackout = false; // blackout ends so eye recording will resume recording names
             hud.showEverything();
         }
         string response = "No response";
