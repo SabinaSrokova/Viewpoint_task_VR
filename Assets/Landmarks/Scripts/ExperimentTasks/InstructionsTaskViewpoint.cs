@@ -59,7 +59,7 @@ public class InstructionsTaskViewpoint : ExperimentTask {
     public bool restrictMovement = true; // MJS do we want to keep them still during this?
     public bool selfPaced = true; // can they press return to end the task?
 
-    public bool start_eye_recording = false;
+    public bool start_eye_recording = false; // This var will make eye tracking start when the room does
 
     void OnDisable ()
     {
@@ -161,10 +161,16 @@ public class InstructionsTaskViewpoint : ExperimentTask {
         Debug.Log(gui.text);*/
         
 
-        if (blackout) hud.showOnlyHUD();
-        else hud.showEverything();
-
-        start_eye_recording = true;
+        if (blackout) 
+        {
+            start_eye_recording = false;
+            hud.showOnlyHUD();
+        }
+        else 
+        {
+            start_eye_recording = true;
+            hud.showEverything();
+        }
 
         /* if (masterText == "")
          {
