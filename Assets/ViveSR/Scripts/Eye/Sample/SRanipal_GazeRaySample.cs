@@ -32,6 +32,7 @@ namespace ViveSR
                 private Ray ray;
                 CultureInfo culture = new CultureInfo("en-us");
                 private static VerboseData verboseData;
+                private string prev_room = "begin"; // this is to organize the logging
 
                 // Debug vars
                 GameObject hitObject;
@@ -92,13 +93,21 @@ namespace ViveSR
                         // RECORD THE OBJECTS BEING LOOKED AT
                         // If we want more info on the hit we could try this method: https://gamedevbeginner.com/raycasts-in-unity-made-easy/#:~:text=Or%2C%20you%20could%20even%20use%20Raycast%20Hit%20to,first%20object%20that%20is%20hit%20by%20the%20Ray.
                         hitObject = focusInfo.collider.gameObject;
-                        if (hitObject != null)
+                        bool blackoutPath = GameObject.Find("BlackoutWalking").GetComponent<LM_BlackoutPath>().blackout;
+                        if ( hitObject != null && !blackoutPath && !GameObject.Find("ViewObjects").GetComponent<LM_ToggleObjects>().blackout )
                         {
 
                             Vector3 user = Camera.main.transform.position + Camera.main.transform.rotation * ray.origin;
                             var room = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().room;
                             var count = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
-
+                            var current_room = room[count];
+                            if (prev_room != current_room)
+                            {
+                                prev_room = current_room;
+                                output.WriteLine();
+                                output.WriteLine();
+                            }
+                            
                             output.WriteLine
                                 (
                                 $"{DateTime.Now.ToString(culture)}," +
@@ -111,6 +120,19 @@ namespace ViveSR
                                 );
                             // DEBUGGING SEGMENT TO SHOW WHERE THE PARTICIPANT IS LOOKING AT AND CHECKING THAT EYE TRACKING WORKS. OBJECTS WILL RESCALE/RESIZE WHEN YOU LOOK AT IT
                             if (debug) Debugging();
+                        }
+                        else if (blackoutPath) // This is when the subject is in blackout path before they have to decide whether an object moved
+                        {
+                            output.WriteLine
+                                (
+                                $"{DateTime.Now.ToString(culture)}," +
+                                $"{room[count]}, " +
+                                $"BLACKOUT, " +
+                                $", " +
+                                $", " +
+                                $", " +
+                                $"{verboseData.left.pupil_diameter_mm}  {verboseData.right.pupil_diameter_mm}"
+                                );
                         }
                     }
                 }
