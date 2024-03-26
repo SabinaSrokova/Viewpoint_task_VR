@@ -57,6 +57,7 @@ public class LM_ToggleObjects : ExperimentTask
     private GameObject disc;
     private GameObject origFloor;
     private GameObject blackFloor;
+    public bool blackout false;
 
 
     public override void startTask()
@@ -111,7 +112,7 @@ public class LM_ToggleObjects : ExperimentTask
 
 
         hud.showOnlyHUD();
-
+        blackout = true;
         if (vrEnabled)
         {
             hud.setStatusScreenMessage("Position youself on the marker, press any trigger to continue");
@@ -199,7 +200,7 @@ public class LM_ToggleObjects : ExperimentTask
                 DestroyImmediate(blackFloor);
             }
         }
-
+        blackout = false;
 
         if (participantReady == true)
         {
