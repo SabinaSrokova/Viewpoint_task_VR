@@ -179,6 +179,10 @@ namespace ViveSR
                 
                 }
 
+                void OnApplicationQuit()
+                {
+                    Release();
+                }
 
                 public void Release()
                 {
