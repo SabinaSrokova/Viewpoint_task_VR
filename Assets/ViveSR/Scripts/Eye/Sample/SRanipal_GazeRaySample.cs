@@ -58,9 +58,7 @@ namespace ViveSR
                     string path = Directory.GetCurrentDirectory() + "\\Output\\" + Config.Instance.subject + "_eye_data.csv";
 
                     output = new StreamWriter(path);
-                    Debug.Log("!!!!!!!!!!!!!!!!Before header");
                     output.WriteLine("Time, Room, Distance, Subject Coord, Item Coord, Item, Pupil Size(left right)");
-                    Debug.Log("!!!!!!!!!!!!!!! AFter header");
 
                     ignore = new List<String>
                     {
@@ -100,7 +98,6 @@ namespace ViveSR
                             Vector3 user = Camera.main.transform.position + Camera.main.transform.rotation * ray.origin;
                             var room = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().room;
                             var count = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
-                            Debug.Log("!!!!!!!!!!!!!! Wrote Data");
 
                             output.WriteLine
                                 (
@@ -121,7 +118,6 @@ namespace ViveSR
 
                 private void Debugging()
                 {
-                    Debug.Log("!!!!!!!In debug()");
                     // Commented code is for highlighting items but not all have renderers so it does not work on some. Saved for later
                     //var see = hitObject.transform;
                     //var seeRenderer = see.GetComponent<Renderer>();

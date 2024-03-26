@@ -1,11 +1,11 @@
 Room,Start,End,Condition,MoveItem,Repeat,Block
 Room_121,A,A,stay,yes,A,1
-Room_122,A,B,stay,yes,A,1
+Room_122,A,B,stay,no,A,1
 Room_123,B,B,stay,yes,A,1
-Room_124,B,A,stay,yes,A,1
+Room_124,B,A,stay,no,A,1
 Room_125,A,B,stay,yes,A,1
 Room_126,A,B,walk,yes,A,2
-Room_127,B,A,walk,yes,A,2
-Room_128,A,A,walk,yes,A,2
+Room_127,B,A,walk,no,A,2
+Room_128,A,A,walk,no,A,2
 Room_129,B,B,walk,yes,A,2
 Room_130,A,B,walk,yes,A,2

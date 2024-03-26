@@ -1,0 +1,3 @@
+subID,trial,Room,Condition,moveItem,Repeat,Block,ObjectMovedIs,start,end,TarPos_x,TarPos_z,TarRot_x,TarRot_z,Start_SubPos_x,Start_SubPos_z,Start_SubRot_x,Start_SubRot_z,TargetReached,End_SubPos_x,End_SubPos_z,End_SubRot_x,End_SubRot_z,response,RT,
+ruin,0,Room_121,stay,yes,A,1,left,A,A,32.25,133.05,0,0,32.15843,133.03,-0.1104347,-0.2038361,True,32.08648,133.0602,0.2368266,0.2587219,No response,N/A,
+ruin,0,Room_121,stay,yes,A,1,left,A,B,61.94855,131.925,0,0,61.71657,132.0111,0.1477585,0.1290194,True,61.74609,132.0217,0.1762657,0.1366026,No response,N/A,
