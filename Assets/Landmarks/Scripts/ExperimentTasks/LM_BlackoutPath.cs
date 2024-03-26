@@ -68,6 +68,7 @@ public class LM_BlackoutPath : ExperimentTask
     
 
     public float timer = 0;
+    public float RT_timer = 0;
     private bool timerSpawnReached = false;
     private bool timerDelay = false;
     private bool timerComplete = false;
@@ -112,6 +113,7 @@ public class LM_BlackoutPath : ExperimentTask
         hud.showOnlyHUD();
 
         timer = 0;
+        RT_timer = 0;
         timerSpawnReached = false;
         timerDelay = false;
         timerComplete = false;
@@ -221,26 +223,6 @@ public class LM_BlackoutPath : ExperimentTask
 
 
 
-
-        // // In all cases, rotate the disc according to the end position, - NO LONGER RELEVANT SANS TELEPORTING
-        // if (reorientCamera)
-        // {
-        //     if (condition[taskCounter] == "walk")
-        //     {
-        //         disc.transform.rotation = walkTarget.transform.rotation;
-        //     } 
-        //     else if (condition[taskCounter] == "stay")
-        //     {
-        //         disc.transform.rotation = startLocation.transform.rotation;
-        //     }
-        // } 
-        // else
-        // {
-        //     endLocation = GetChildGameObject(spawnParent, "PlayerSpawn" + end[taskCounter]);
-        //     disc.transform.rotation = endLocation.transform.rotation;
-        // }
-
-
         // Summon an arrow in front of the player which points in the direction of which they should walk. If disabled, shows <<< and >>> instead.
         if (showArrow)
         {
@@ -337,48 +319,6 @@ public class LM_BlackoutPath : ExperimentTask
             }
         }
 
-        // Here the room is relit after the blackout walking stage is complete. If the participant is intended to teleport, they sill do so before the blackout ends.
-        // if (timerSpawnReached == false && timer >= blackoutWalk)
-        // {
-        //     Debug.Log("blackoutWalk time reached");
-
-        //     DestroyImmediate(disc);
-        //     DestroyImmediate(disc_half);
-        //     DestroyImmediate(blackFloor);
-        //     HalfwayCollisionColor.half_reached = false; /// For the halfway marker to turn back to false
-
-        //     if (teleport == true)
-        //     {
-        //         GameObject player = avatar;
-        //         GameObject destination = GetChildGameObject(spawnParent, "PlayerSpawn" + end[taskCounter]);
-
-        //         Debug.Log("Player identified: " + player.gameObject.name);
-
-        //         player.GetComponentInChildren<CharacterController>().enabled = false;
-
-        //         Vector3 tempPos = player.transform.position;
-        //         tempPos.x = destination.transform.position.x;
-        //         tempPos.z = destination.transform.position.z;
-
-        //         player.transform.position = tempPos;
-        //         log.log("TASK_POSITION\t" + player.name + "\t" + this.GetType().Name + "\t" + player.transform.transform.position.ToString("f1"), 1);
-        //         Debug.Log("Player now at: " + destination.name +
-        //                 " (" + player.transform.position.x + ", " +
-        //                 player.transform.position.z + ")");
-
-        //         // If teleported, make sure the room is centered
-        //         //if (reorientCamera)
-        //         //{
-        //          //   Vector3 tempRotate = player.transform.eulerAngles; ///////// taken out for immersive VR
-        //         //    tempRotate.y = destination.transform.eulerAngles.y;
-        //         //    player.transform.eulerAngles = tempRotate;
-        //         //    avatar.GetComponent<FirstPersonController>().ResetMouselook();
-        //        // }
-
-        //         player.GetComponentInChildren<CharacterController>().enabled = true;
-
-        //         teleport = false;
-        //     }
 
         LM_TaskLog taskLog = GetComponent<ExperimentTask>().taskLog;
         //
@@ -471,11 +411,7 @@ public class LM_BlackoutPath : ExperimentTask
 
             if (vrEnabled)
             {
-                //hud.hudPanel.SetActive(true);
-                //tempHudPos = hud.hudPanel.transform.position;
-                //hud.hudPanel.transform.position = avatar.transform.position;
-                //hud.leftVRMessage.SetActive(true);
-                //hud.rightVRMessage.SetActive(true);
+
                 hud.cameraScreen.SetActive(true);
                 hud.leftVRMessageScreen.SetActive(true);
                 hud.rightVRMessageScreen.SetActive(true);
@@ -496,46 +432,48 @@ public class LM_BlackoutPath : ExperimentTask
         string response = "No response";
         if (timerSpawnReached == true && responseMade == false)
         {
+            RT_timer += Time.deltaTime;
+
             if (vrEnabled)
             {
                 if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand))
                 {
-                    log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" +"Response Time: " + timer, 1);
+                    log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" +"Response Time: " + RT_timer, 1);
                     responseMade = true;
                     response = "Left";
 
                     taskLog.AddData("response", response);
-                    taskLog.AddData("RT", timer.ToString());
+                    taskLog.AddData("RT", RT_timer.ToString());
                 }
                 else if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
                 {
-                    log.log("TASK_RESPONSE\t" + "Right Button Pressed\t" + "Response Time: " + timer, 1);
+                    log.log("TASK_RESPONSE\t" + "Right Button Pressed\t" + "Response Time: " + RT_timer, 1);
                     responseMade = true;
                     response = "Right";
 
                     taskLog.AddData("response", response);
-                    taskLog.AddData("RT", timer.ToString());
+                    taskLog.AddData("RT", RT_timer.ToString());
                 }
             }
 
             if (Input.GetButtonDown("Respond Left"))
             {
-                log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" + "Response Time: " + timer, 1);
+                log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" + "Response Time: " + RT_timer, 1);
                 responseMade = true;
                 response = "Left";
 
                 taskLog.AddData("response", response);
-                taskLog.AddData("RT", timer.ToString());
+                taskLog.AddData("RT", RT_timer.ToString());
             }
 
             if (Input.GetButtonDown("Respond Right"))
             {
-                log.log("TASK_RESPONSE\t" + "Right Button Pressed\t" + "Response Time: " + timer, 1);
+                log.log("TASK_RESPONSE\t" + "Right Button Pressed\t" + "Response Time: " + RT_timer, 1);
                 responseMade = true;
                 response = "Right";
 
                 taskLog.AddData("response", response);
-                taskLog.AddData("RT", timer.ToString());
+                taskLog.AddData("RT", RT_timer.ToString());
             }
 
         }

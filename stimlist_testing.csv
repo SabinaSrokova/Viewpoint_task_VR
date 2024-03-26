@@ -1,0 +1,6 @@
+Room,Start,End,Condition,MoveItem,Repeat,Block
+Room_124,A,B,stay,yes,A,2
+Room_128,A,B,stay,yes,A,2
+Room_130,A,B,stay,yes,A,2
+Room_129,A,B,stay,yes,A,2
+Room_128,A,B,stay,yes,A,2
