@@ -163,15 +163,15 @@ public class InstructionsTaskViewpoint : ExperimentTask {
 
         if (blackout) 
         {
-            start_eye_recording = false;
+            //start_eye_recording = false;
             hud.showOnlyHUD();
         }
         else 
         {
-            start_eye_recording = true;
+            
             hud.showEverything();
         }
-
+        start_eye_recording = true;
         /* if (masterText == "")
          {
              if (message)

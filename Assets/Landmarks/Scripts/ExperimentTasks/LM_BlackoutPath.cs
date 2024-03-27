@@ -46,7 +46,6 @@ public class LM_BlackoutPath : ExperimentTask
     private List<string> start = new List<string> { };
     private List<string> end = new List<string> { };
     private int taskCounter = new int();
-    private List<string> block = new List<string> { };
     private LM_PrepareRooms.objectsMovedAssignment objectsMovedIs;
     private Vector3 tempHudPos;
 
@@ -107,12 +106,10 @@ public class LM_BlackoutPath : ExperimentTask
         start = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().start;
         end = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().end;
         taskCounter = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
-        block = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().block;
         seenObject = GameObject.Find("ViewObjects").GetComponent<LM_ToggleObjects>().seenObject;
         objectsMovedIs = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().objectsMovedIs;
 
         GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
-
 
         hud.showOnlyHUD();
 
@@ -215,14 +212,6 @@ public class LM_BlackoutPath : ExperimentTask
 
         // FOR LOGGING
         LM_TaskLog taskLog = GetComponent<ExperimentTask>().taskLog;
-        taskLog.AddData("subID", Config.Instance.subject);
-        taskLog.AddData("trial", taskCounter.ToString());
-        taskLog.AddData("Room", currentRoom.name);
-        taskLog.AddData("Condition", condition[taskCounter]);
-        taskLog.AddData("moveItem", moveItem[taskCounter]);
-        taskLog.AddData("Repeat", repeat[taskCounter]);
-        taskLog.AddData("Block", block[taskCounter]);
-        taskLog.AddData("ObjectMovedIs", objectsMovedIs.ToString());
         taskLog.AddData("start", start[taskCounter]);
         taskLog.AddData("end", end[taskCounter]);
         taskLog.AddData("TarPos_x", disc.transform.position.x.ToString());

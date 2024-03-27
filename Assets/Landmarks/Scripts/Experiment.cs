@@ -27,7 +27,6 @@ using Valve.VR;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using TMPro;
-using ViveSR.anipal.Eye;
 
 public enum EndListMode
 {
@@ -789,10 +788,6 @@ public class Experiment : MonoBehaviour
         // Otherwise, close down; we're done
         else
         {
-            //END EYE TRACKING
-            GameObject.Find("BlockInstruction").GetComponent<InstructionsTaskViewpoint>().start_eye_recording = false;
-            GameObject.Find("Eye_Tracking").GetComponent<SRanipal_GazeRaySample>().Release();
-
             // shut it down
             Application.Quit();
         }

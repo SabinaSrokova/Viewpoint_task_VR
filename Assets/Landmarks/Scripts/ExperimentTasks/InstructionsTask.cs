@@ -19,7 +19,6 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.ThirdPerson;
 using TMPro;
-using ViveSR.anipal.Eye;
 
 public class InstructionsTask : ExperimentTask {
 
@@ -141,7 +140,6 @@ public class InstructionsTask : ExperimentTask {
                 if (currentObject != null) msg = string.Format(msg, currentObject.name);
                 if (multiObjects.Length > 0) msg = string.Format(msg, currentMultiObjects);
                 hud.setMessage(msg);
-
             }
             else if (!message & texts)
             {
@@ -230,14 +228,12 @@ public class InstructionsTask : ExperimentTask {
     }
 
     public override void endTask() {
-
         // Debug.Log ("Ending an instructions task");
         TASK_END();
     }
 
     public override void TASK_END() {
         base.endTask ();
-
 
         hud.setMessage ("");
         hud.SecondsToShow = hud.GeneralDuration;

@@ -404,13 +404,3 @@ ViewpointTrials4False
 63846705688327	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
 63846705688347	TASK_END	MovePlayerToSpawn	MoveSpawn	22
 63846705688349	TASK_START	ViewObjects	LM_ToggleObjects
-63847050607392	EXPERIMENT:		SUBJECT:	mel	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
-63847050628075	TASK_START	LM_Timeline	TaskList
-63847050628078	TASK_START	InitializeExperiment	TaskList
-63847050628082	TASK_START	PrepareRooms	LM_PrepareRooms
-63847050628136	TASK_END	PrepareRooms	LM_PrepareRooms	56
-63847050628138	LM_Output	TaskList
-TaskListName	RepetitionNumber	CatchFlag
-InitializeExperiment1False
-63847050628139	TASK_END	InitializeExperiment	TaskList	61
-63847050628143	TASK_START	BeginMessage	InstructionsTask

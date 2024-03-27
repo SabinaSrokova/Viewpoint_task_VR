@@ -59,6 +59,7 @@ namespace ViveSR
                     string path = Directory.GetCurrentDirectory() + "\\Output\\" + Config.Instance.subject + "_eye_data.csv";
 
                     output = new StreamWriter(path);
+                    output.WriteLine("Ending experiment at " + DateTime.Now.ToString(culture));
                     output.WriteLine("Time, Room, Distance, Subject Coord, Item Coord, Item, Pupil Size(left right)");
 
                     ignore = new List<String>
@@ -69,7 +70,8 @@ namespace ViveSR
                         "w3",
                         "w4",
                         "Ceiling 1",
-                        "Main_floor"
+                        "Main_floor",
+                        "Blackout_floor"
                     };
                 }
 
@@ -94,20 +96,26 @@ namespace ViveSR
                         // If we want more info on the hit we could try this method: https://gamedevbeginner.com/raycasts-in-unity-made-easy/#:~:text=Or%2C%20you%20could%20even%20use%20Raycast%20Hit%20to,first%20object%20that%20is%20hit%20by%20the%20Ray.
                         hitObject = focusInfo.collider.gameObject;
                         bool blackoutPath = GameObject.Find("BlackoutWalking").GetComponent<LM_BlackoutPath>().blackout;
-                        if ( hitObject != null && !blackoutPath && !GameObject.Find("ViewObjects").GetComponent<LM_ToggleObjects>().blackout )
+                        var room = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().room;
+                        var count = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
+                        if (hitObject != null && hitObject.name == "Blackout_floor") // This is when the subject is in blackout path before they have to decide whether an object moved
+                        {
+                            output.WriteLine
+                                (
+                                $"{DateTime.Now.ToString(culture)}," +
+                                $"{room[count]}, " +
+                                $"BLACKOUT, " +
+                                $", " +
+                                $", " +
+                                $", " +
+                                $"{verboseData.left.pupil_diameter_mm}  {verboseData.right.pupil_diameter_mm}"
+                                );
+                        }
+                        else if (hitObject != null)
                         {
 
                             Vector3 user = Camera.main.transform.position + Camera.main.transform.rotation * ray.origin;
-                            var room = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().room;
-                            var count = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
-                            var current_room = room[count];
-                            if (prev_room != current_room)
-                            {
-                                prev_room = current_room;
-                                output.WriteLine();
-                                output.WriteLine();
-                            }
-                            
+
                             output.WriteLine
                                 (
                                 $"{DateTime.Now.ToString(culture)}," +
@@ -121,25 +129,13 @@ namespace ViveSR
                             // DEBUGGING SEGMENT TO SHOW WHERE THE PARTICIPANT IS LOOKING AT AND CHECKING THAT EYE TRACKING WORKS. OBJECTS WILL RESCALE/RESIZE WHEN YOU LOOK AT IT
                             if (debug) Debugging();
                         }
-                        else if (blackoutPath) // This is when the subject is in blackout path before they have to decide whether an object moved
-                        {
-                            output.WriteLine
-                                (
-                                $"{DateTime.Now.ToString(culture)}," +
-                                $"{room[count]}, " +
-                                $"BLACKOUT, " +
-                                $", " +
-                                $", " +
-                                $", " +
-                                $"{verboseData.left.pupil_diameter_mm}  {verboseData.right.pupil_diameter_mm}"
-                                );
-                        }
                     }
                 }
 
 
                 private void Debugging()
                 {
+                    Debug.Log("!!!!!!!In debug()");
                     // Commented code is for highlighting items but not all have renderers so it does not work on some. Saved for later
                     //var see = hitObject.transform;
                     //var seeRenderer = see.GetComponent<Renderer>();
