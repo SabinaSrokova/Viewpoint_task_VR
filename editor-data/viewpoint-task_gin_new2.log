@@ -1,0 +1,52 @@
+63847133874794	EXPERIMENT:		SUBJECT:	gin_new2	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63847133886976	TASK_START	LM_Timeline	TaskList
+63847133886977	TASK_START	InitializeExperiment	TaskList
+63847133886980	TASK_START	PrepareRooms	LM_PrepareRooms
+63847133887035	TASK_END	PrepareRooms	LM_PrepareRooms	57
+63847133887037	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63847133887038	TASK_END	InitializeExperiment	TaskList	60
+63847133887042	TASK_START	BeginMessage	InstructionsTask
+63847133892120	INPUT_EVENT    PlayerPressedActionButton    1
+63847133892122	TASK_END	BeginMessage	InstructionsTask	5080
+63847133892124	TASK_START	Tasks	TaskList
+63847133892126	TASK_START	TASK_ViewpointTask	TaskList
+63847133892131	TASK_START	ListViewpointSpawns	ObjectList
+63847133892148	TASK_END	ListViewpointSpawns	ObjectList	18
+63847133892151	TASK_START	ListViewpointTransfers	ObjectList
+63847133892173	TASK_END	ListViewpointTransfers	ObjectList	22
+63847133892174	TASK_START	ViewpointTrials	TaskList
+63847133892177	TASK_START	Counter	LM_DummyCounter
+63847133892199	TASK_END	Counter	LM_DummyCounter	22
+63847133892201	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63847133899303	INPUT_EVENT    PlayerPressedActionButton    1
+63847133899304	TASK_END	BlockInstruction	InstructionsTaskViewpoint	7104
+63847133899307	TASK_START	MovePlayerToSpawn	MoveSpawn
+63847133899310	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(32.3, 0.1, 133.1)
+63847133899311	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63847133899334	TASK_END	MovePlayerToSpawn	MoveSpawn	27
+63847133899336	TASK_START	ViewObjects	LM_ToggleObjects
+63847133910226	TASK_END	ViewObjects	LM_ToggleObjects	10889
+63847133910229	TASK_START	BlackoutWalking	LM_BlackoutPath
+63847133918881	TASK_RESPONSE	Right Button Pressed	Response Time: 1.167066
+63847133927261	TASK_END	BlackoutWalking	LM_BlackoutPath	17031
+LandmarksTrialData:
+--------------------
+subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TarPos_x	TarPos_z	TarRot_x	TarRot_z	Start_SubPos_x	Start_SubPos_z	Start_SubRot_x	Start_SubRot_z	TargetReached	End_SubPos_x	End_SubPos_z	End_SubRot_x	End_SubRot_z	response	RT	
+gin_new2	0	Room_121	stay	yes	A	1	left	A	A	32.25	133.05	0	0	32.19531	132.9882	-0.1012196	-0.2621855	True	32.16521	133.039	0.2217015	0.2145172	Right	1.167066	
+--------------------
+
+63847133927266	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials2False
+63847133927268	TASK_START	Counter	LM_DummyCounter
+63847133927286	TASK_END	Counter	LM_DummyCounter	18
+63847133927287	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63847133927288	INFO    skip task    BlockInstruction
+63847133927327	TASK_END	BlockInstruction	InstructionsTaskViewpoint	40
+63847133927328	TASK_START	MovePlayerToSpawn	MoveSpawn
+63847133927329	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(61.9, 0.1, 131.9)
+63847133927330	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63847133927351	TASK_END	MovePlayerToSpawn	MoveSpawn	23
+63847133927352	TASK_START	ViewObjects	LM_ToggleObjects

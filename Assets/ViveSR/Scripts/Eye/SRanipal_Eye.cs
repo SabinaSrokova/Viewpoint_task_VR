@@ -375,7 +375,7 @@ namespace ViveSR
                           Camera.main.transform.TransformDirection(ray.direction)
                           );
                         RaycastHit hit;
-                        LayerMask mask = LayerMask.GetMask("props", "HUD only");
+                        LayerMask mask = LayerMask.GetMask("props");
                         if (radius == 0) valid = Physics.Raycast(rayGlobal, out hit, maxDistance, mask);
                         else valid = Physics.SphereCast(rayGlobal, radius, out hit, maxDistance, mask);
                         focusInfo = new FocusInfo

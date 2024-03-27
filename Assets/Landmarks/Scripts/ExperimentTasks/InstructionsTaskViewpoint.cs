@@ -45,7 +45,7 @@ public class InstructionsTaskViewpoint : ExperimentTask {
     public bool blackout = true;
     public Color text_color = Color.white;
     public Font instructionFont;
-    public int instructionSize = 10;
+    public int instructionSize;
 
     public bool actionButtonOn = true;
     public string customButtonText = "";
@@ -161,17 +161,11 @@ public class InstructionsTaskViewpoint : ExperimentTask {
         Debug.Log(gui.text);*/
         
 
-        if (blackout) 
-        {
-            //start_eye_recording = false;
-            hud.showOnlyHUD();
-        }
-        else 
-        {
-            
-            hud.showEverything();
-        }
+        if (blackout)  hud.showOnlyHUD();
+        else hud.showEverything();
+
         start_eye_recording = true;
+
         /* if (masterText == "")
          {
              if (message)

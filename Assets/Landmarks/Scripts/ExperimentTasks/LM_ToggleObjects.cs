@@ -57,7 +57,7 @@ public class LM_ToggleObjects : ExperimentTask
     private GameObject disc;
     private GameObject origFloor;
     private GameObject blackFloor;
-    public bool blackout = false;
+    public bool blackout = true;
 
 
     public override void startTask()
@@ -112,7 +112,6 @@ public class LM_ToggleObjects : ExperimentTask
 
 
         hud.showOnlyHUD();
-        blackout = true;
         if (vrEnabled)
         {
             hud.setStatusScreenMessage("Position youself on the marker, press any trigger to continue");
@@ -190,7 +189,6 @@ public class LM_ToggleObjects : ExperimentTask
                 hud.statusMessageScreen.SetActive(false);
                 //hud.cameraScreen.SetActive(false);
                 hud.fadeScreen.SetActive(true);
-
                 hud.showEverything();
 
                 hud.fadeScreen.GetComponent<PanelFader>().Fade();
@@ -200,7 +198,7 @@ public class LM_ToggleObjects : ExperimentTask
                 DestroyImmediate(blackFloor);
             }
         }
-        blackout = false;
+        
 
         if (participantReady == true)
         {
@@ -217,6 +215,7 @@ public class LM_ToggleObjects : ExperimentTask
             Debug.Log(seenObject);
             seenObject.SetActive(true);
             timerSpawnReached = true;
+            blackout = false;
         }
 
 
