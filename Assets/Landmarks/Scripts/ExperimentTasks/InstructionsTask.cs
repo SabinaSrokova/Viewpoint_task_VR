@@ -70,7 +70,6 @@ public class InstructionsTask : ExperimentTask {
         instructionsCounter += 1;
         if (!manager) Start();
         base.startTask();
-
         if (skip) {
             log.log("INFO    skip task    " + name,1 );
             return;

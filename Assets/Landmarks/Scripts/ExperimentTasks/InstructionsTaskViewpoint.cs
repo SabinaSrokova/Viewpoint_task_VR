@@ -20,6 +20,7 @@ using UnityEngine.UI;
 using UnityStandardAssets.Characters.ThirdPerson;
 using TMPro;
 using System.Collections.Generic;
+using ViveSR.anipal.Eye;
 
 public class InstructionsTaskViewpoint : ExperimentTask {
 
@@ -59,7 +60,6 @@ public class InstructionsTaskViewpoint : ExperimentTask {
     public bool restrictMovement = true; // MJS do we want to keep them still during this?
     public bool selfPaced = true; // can they press return to end the task?
 
-    public bool start_eye_recording = false; // This var will make eye tracking start when the room does
 
     void OnDisable ()
     {
@@ -80,6 +80,8 @@ public class InstructionsTaskViewpoint : ExperimentTask {
         if (vrEnabled)
         {
             hud.hudPanel.SetActive (true);
+            GameObject.Find("Eye_Tracking").GetComponent<SRanipal_GazeRaySample>().blackout_eye_tracking = true;
+
         }
 
         taskCounter = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
@@ -164,7 +166,6 @@ public class InstructionsTaskViewpoint : ExperimentTask {
         if (blackout)  hud.showOnlyHUD();
         else hud.showEverything();
 
-        start_eye_recording = true;
 
         /* if (masterText == "")
          {

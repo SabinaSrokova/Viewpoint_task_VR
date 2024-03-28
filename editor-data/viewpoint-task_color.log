@@ -1,0 +1,44 @@
+63847155788945	EXPERIMENT:		SUBJECT:	color	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63847155801120	TASK_START	LM_Timeline	TaskList
+63847155801122	TASK_START	InitializeExperiment	TaskList
+63847155801124	TASK_START	PrepareRooms	LM_PrepareRooms
+63847155801182	TASK_END	PrepareRooms	LM_PrepareRooms	57
+63847155801183	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63847155801185	TASK_END	InitializeExperiment	TaskList	62
+63847155801187	TASK_START	BeginMessage	InstructionsTask
+63847155809782	INPUT_EVENT    PlayerPressedActionButton    1
+63847155809783	TASK_END	BeginMessage	InstructionsTask	8595
+63847155809785	TASK_START	Tasks	TaskList
+63847155809787	TASK_START	TASK_ViewpointTask	TaskList
+63847155809792	TASK_START	ListViewpointSpawns	ObjectList
+63847155809813	TASK_END	ListViewpointSpawns	ObjectList	21
+63847155809817	TASK_START	ListViewpointTransfers	ObjectList
+63847155809837	TASK_END	ListViewpointTransfers	ObjectList	20
+63847155809839	TASK_START	ViewpointTrials	TaskList
+63847155809841	TASK_START	Counter	LM_DummyCounter
+63847155809866	TASK_END	Counter	LM_DummyCounter	25
+63847155809868	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63847156244016	EXPERIMENT:		SUBJECT:	color	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63847156256165	TASK_START	LM_Timeline	TaskList
+63847156256167	TASK_START	InitializeExperiment	TaskList
+63847156256169	TASK_START	PrepareRooms	LM_PrepareRooms
+63847156256230	TASK_END	PrepareRooms	LM_PrepareRooms	61
+63847156256232	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63847156256233	TASK_END	InitializeExperiment	TaskList	66
+63847156256236	TASK_START	BeginMessage	InstructionsTask
+63847156272522	INPUT_EVENT    PlayerPressedActionButton    1
+63847156272523	TASK_END	BeginMessage	InstructionsTask	16287
+63847156272525	TASK_START	Tasks	TaskList
+63847156272527	TASK_START	TASK_ViewpointTask	TaskList
+63847156272532	TASK_START	ListViewpointSpawns	ObjectList
+63847156272551	TASK_END	ListViewpointSpawns	ObjectList	19
+63847156272554	TASK_START	ListViewpointTransfers	ObjectList
+63847156272570	TASK_END	ListViewpointTransfers	ObjectList	16
+63847156272571	TASK_START	ViewpointTrials	TaskList
+63847156272574	TASK_START	Counter	LM_DummyCounter
+63847156272609	TASK_END	Counter	LM_DummyCounter	35
+63847156272612	TASK_START	BlockInstruction	InstructionsTaskViewpoint

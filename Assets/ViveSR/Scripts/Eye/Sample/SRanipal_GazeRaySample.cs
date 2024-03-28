@@ -33,6 +33,7 @@ namespace ViveSR
                 CultureInfo culture = new CultureInfo("en-us");
                 private static VerboseData verboseData;
                 private int prev_room=0; // this is to organize the logging
+                public bool blackout_eye_tracking = true;
 
                 // Debug vars
                 GameObject hitObject;
@@ -107,9 +108,8 @@ namespace ViveSR
 
                     if ( blackoutPath ) // This is when the subject is in blackout path before they have to decide whether an object moved
                     {
-                        output.WriteLine
-                            (
-                            $"{DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")}," +
+                        output.Write(DateTime.Now.ToString("HH:mm:ss"));
+                        output.WriteLine(", " +
                             $"{room[count]}, " +
                             $"BLACKOUT, " +
                             $", " +
@@ -118,14 +118,13 @@ namespace ViveSR
                             $"{verboseData.left.pupil_diameter_mm}  {verboseData.right.pupil_diameter_mm}"
                             );
                     }
-                    else if (hitObject != null && !(GameObject.Find("ViewObjects").GetComponent<LM_ToggleObjects>().blackout) )
+                    else if (hitObject != null && !(blackout_eye_tracking) )
                     {
 
                         Vector3 user = Camera.main.transform.position + Camera.main.transform.rotation * ray.origin;
 
-                        output.WriteLine
-                            (
-                            $"{DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")}," +
+                        output.Write(DateTime.Now.ToString("HH:mm:ss"));
+                        output.WriteLine(", " + 
                             $"{room[count]}, " +
                             $"{focusInfo.distance}, " +
                             $"{user.ToString().Replace(",", " ")}, " +

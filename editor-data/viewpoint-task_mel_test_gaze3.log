@@ -1,0 +1,41 @@
+63847154169805	EXPERIMENT:		SUBJECT:	mel_test_gaze3	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63847154181987	TASK_START	LM_Timeline	TaskList
+63847154181989	TASK_START	InitializeExperiment	TaskList
+63847154181992	TASK_START	PrepareRooms	LM_PrepareRooms
+63847154182051	TASK_END	PrepareRooms	LM_PrepareRooms	59
+63847154182053	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63847154182055	TASK_END	InitializeExperiment	TaskList	66
+63847154182058	TASK_START	BeginMessage	InstructionsTask
+63847154184231	INPUT_EVENT    PlayerPressedActionButton    1
+63847154184232	TASK_END	BeginMessage	InstructionsTask	2175
+63847154184234	TASK_START	Tasks	TaskList
+63847154184237	TASK_START	TASK_ViewpointTask	TaskList
+63847154184241	TASK_START	ListViewpointSpawns	ObjectList
+63847154184258	TASK_END	ListViewpointSpawns	ObjectList	17
+63847154184261	TASK_START	ListViewpointTransfers	ObjectList
+63847154184281	TASK_END	ListViewpointTransfers	ObjectList	20
+63847154184282	TASK_START	ViewpointTrials	TaskList
+63847154184284	TASK_START	Counter	LM_DummyCounter
+63847154184309	TASK_END	Counter	LM_DummyCounter	24
+63847154184312	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63847154185389	INPUT_EVENT    PlayerPressedActionButton    1
+63847154185391	TASK_END	BlockInstruction	InstructionsTaskViewpoint	1079
+63847154185394	TASK_START	MovePlayerToSpawn	MoveSpawn
+63847154185396	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(32.3, 0.1, 133.1)
+63847154185397	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63847154185419	TASK_END	MovePlayerToSpawn	MoveSpawn	26
+63847154185422	TASK_START	ViewObjects	LM_ToggleObjects
+63847154194417	TASK_END	ViewObjects	LM_ToggleObjects	8994
+63847154194420	TASK_START	BlackoutWalking	LM_BlackoutPath
+63847154659414	EXPERIMENT:		SUBJECT:	mel_test_gaze3	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63847154671631	TASK_START	LM_Timeline	TaskList
+63847154671633	TASK_START	InitializeExperiment	TaskList
+63847154671635	TASK_START	PrepareRooms	LM_PrepareRooms
+63847154671692	TASK_END	PrepareRooms	LM_PrepareRooms	57
+63847154671693	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63847154671696	TASK_END	InitializeExperiment	TaskList	63
+63847154671698	TASK_START	BeginMessage	InstructionsTask

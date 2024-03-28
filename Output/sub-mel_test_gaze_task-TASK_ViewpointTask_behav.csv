@@ -1,0 +1,2 @@
+subID,trial,Room,Condition,moveItem,Repeat,Block,ObjectMovedIs,start,end,TarPos_x,TarPos_z,TarRot_x,TarRot_z,Start_SubPos_x,Start_SubPos_z,Start_SubRot_x,Start_SubRot_z,TargetReached,End_SubPos_x,End_SubPos_z,End_SubRot_x,End_SubRot_z,response,RT,
+mel_test_gaze,0,Room_121,stay,no,A,1,left,A,A,32.25,133.05,0,0,32.27765,133.0083,-0.08013036,-0.1605054,True,32.26277,133.0767,0.1760614,0.2062896,No response,N/A,

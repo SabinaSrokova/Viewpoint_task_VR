@@ -1,16 +1,16 @@
 ﻿/*
-    LM Dummy
-       
-    Attached object holds task components that need to be effectively ignored 
-    by Tasklist but are required for the script. Thus the object this is 
-    attached to can be detected by Tasklist (won't throw error), but does nothing 
-    except start and end.   
+   LM Dummy
 
-    Copyright (C) 2019 Michael J. Starrett
+   Attached object holds task components that need to be effectively ignored 
+   by Tasklist but are required for the script. Thus the object this is 
+   attached to can be detected by Tasklist (won't throw error), but does nothing 
+   except start and end.   
 
-    Navigate by StarrLite (Powered by LandMarks)
-    Human Spatial Cognition Laboratory
-    Department of Psychology - University of Arizona   
+   Copyright (C) 2019 Michael J. Starrett
+
+   Navigate by StarrLite (Powered by LandMarks)
+   Human Spatial Cognition Laboratory
+   Department of Psychology - University of Arizona   
 */
 
 using System;
@@ -46,6 +46,7 @@ public class LM_BlackoutPath : ExperimentTask
     private List<string> start = new List<string> { };
     private List<string> end = new List<string> { };
     private int taskCounter = new int();
+    private List<string> block = new List<string> { };
     private LM_PrepareRooms.objectsMovedAssignment objectsMovedIs;
     private Vector3 tempHudPos;
 
@@ -65,7 +66,7 @@ public class LM_BlackoutPath : ExperimentTask
     private GameObject arrow;
     private GameObject origFloor;
     private GameObject blackFloor;
-    
+
 
     public float timer = 0;
     public float RT_timer = 0;
@@ -78,7 +79,7 @@ public class LM_BlackoutPath : ExperimentTask
     public Vector3 playerEndPos;
     public Quaternion playerStartRot;
     public Quaternion playerEndRot;
-	public bool blackout = false; // this var is for eye tracking log
+    public bool blackout = false; // this var is for eye tracking log
 
 
     public override void startTask()
@@ -106,10 +107,12 @@ public class LM_BlackoutPath : ExperimentTask
         start = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().start;
         end = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().end;
         taskCounter = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
+        block = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().block;
         seenObject = GameObject.Find("ViewObjects").GetComponent<LM_ToggleObjects>().seenObject;
         objectsMovedIs = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().objectsMovedIs;
 
         GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
+
 
         hud.showOnlyHUD();
 
@@ -119,9 +122,9 @@ public class LM_BlackoutPath : ExperimentTask
         timerDelay = false;
         timerComplete = false;
         responseMade = false;
-		blackout = true; // eye tracking will record that blackout is happening
+        blackout = true; // eye tracking will record that blackout is happening
 
-  		// Record the subject's starting spot when blackout happens
+        // Record the subject's starting spot when blackout happens
         playerStartPos = Camera.main.transform.position;
         playerStartRot = Camera.main.transform.rotation;
 
@@ -178,7 +181,7 @@ public class LM_BlackoutPath : ExperimentTask
             disc.transform.rotation = walkTarget.transform.rotation;
 
         }
-        
+
         // If "stay", two discs should be placed (in between A and B and also in the "start" position) 
         else if (condition[taskCounter] == "stay")
         {
@@ -212,6 +215,14 @@ public class LM_BlackoutPath : ExperimentTask
 
         // FOR LOGGING
         LM_TaskLog taskLog = GetComponent<ExperimentTask>().taskLog;
+        taskLog.AddData("subID", Config.Instance.subject);
+        taskLog.AddData("trial", taskCounter.ToString());
+        taskLog.AddData("Room", currentRoom.name);
+        taskLog.AddData("Condition", condition[taskCounter]);
+        taskLog.AddData("moveItem", moveItem[taskCounter]);
+        taskLog.AddData("Repeat", repeat[taskCounter]);
+        taskLog.AddData("Block", block[taskCounter]);
+        taskLog.AddData("ObjectMovedIs", objectsMovedIs.ToString());
         taskLog.AddData("start", start[taskCounter]);
         taskLog.AddData("end", end[taskCounter]);
         taskLog.AddData("TarPos_x", disc.transform.position.x.ToString());
@@ -242,17 +253,18 @@ public class LM_BlackoutPath : ExperimentTask
             // If starting position is in A, point to the right
             if (start[taskCounter] == "A")
             {
-                arrow.transform.rotation *= Quaternion.Euler(0, 180, 90); 
+                arrow.transform.rotation *= Quaternion.Euler(0, 180, 90);
             }
             else if (start[taskCounter] == "B") // otherwise to the left
             {
-               arrow.transform.rotation *= Quaternion.Euler(0, 0, 90); 
+                arrow.transform.rotation *= Quaternion.Euler(0, 0, 90);
             }
-        } else
+        }
+        else
         {
             if (vrEnabled)
             {
-                
+
                 if (start[taskCounter] == "A")
                 {
                     hud.setStatusScreenMessage(">>>");
@@ -327,11 +339,11 @@ public class LM_BlackoutPath : ExperimentTask
         // Because teleport seems to not work in immersive VR -> rotate the room so that the participant shows up in "END"
         if (timerSpawnReached == false && timer >= blackoutWalk)
         {
-            
+
             Debug.Log("blackoutWalk time reached");
             int color = (int)disc.GetComponent<Renderer>().material.color.r * 1000;
             int red = (int)new Color(1.000f, 0, 0, 1.000f).r * 1000;
-            if ( color == red) taskLog.AddData("TargetReached", "False");
+            if (color == red) taskLog.AddData("TargetReached", "False");
             else taskLog.AddData("TargetReached", "True");
             DestroyImmediate(disc);
             DestroyImmediate(disc_half);
@@ -352,19 +364,19 @@ public class LM_BlackoutPath : ExperimentTask
                 // In this case, turn counter-clockwise. A to B is clockwise, as before.
                 if (condition[taskCounter] == "stay")
                 {
-                     if (start[taskCounter] == "A" && end[taskCounter] == "B")
-                     {
+                    if (start[taskCounter] == "A" && end[taskCounter] == "B")
+                    {
                         Vector3 rotationAxis = Vector3.up; // clockwise
                         currentRoomTransform.RotateAround(centerPoint, rotationAxis, 50f);
-                     }
-                     else if (start[taskCounter] == "B" && end[taskCounter] == "A")
-                     {
+                    }
+                    else if (start[taskCounter] == "B" && end[taskCounter] == "A")
+                    {
                         Vector3 rotationAxis = -Vector3.up; // counter-clockwise
                         currentRoomTransform.RotateAround(centerPoint, rotationAxis, 50f);
-                     }
-                 }
-                 else if (condition[taskCounter] == "walk")
-                 {
+                    }
+                }
+                else if (condition[taskCounter] == "walk")
+                {
                     if (start[taskCounter] == "A" && end[taskCounter] == "A")
                     {
                         Vector3 rotationAxis = -Vector3.up; // counter-clockwise
@@ -375,7 +387,7 @@ public class LM_BlackoutPath : ExperimentTask
                         Vector3 rotationAxis = Vector3.up; // clockwise
                         currentRoomTransform.RotateAround(centerPoint, rotationAxis, 50f);
                     }
-                 }
+                }
 
                 rotateRoom = false;
             }
@@ -427,8 +439,8 @@ public class LM_BlackoutPath : ExperimentTask
             taskLog.AddData("End_SubPos_z", playerEndPos.z.ToString());
             taskLog.AddData("End_SubRot_x", playerEndRot.x.ToString());
             taskLog.AddData("End_SubRot_z", playerEndRot.z.ToString());
-            
-			blackout = false; // blackout ends so eye recording will resume recording names
+
+            blackout = false; // blackout ends so eye recording will resume recording names
             hud.showEverything();
         }
         string response = "No response";
@@ -440,7 +452,7 @@ public class LM_BlackoutPath : ExperimentTask
             {
                 if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand))
                 {
-                    log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" +"Response Time: " + RT_timer, 1);
+                    log.log("TASK_RESPONSE\t" + "Left Button Pressed\t" + "Response Time: " + RT_timer, 1);
                     responseMade = true;
                     response = "Left";
 
@@ -511,7 +523,7 @@ public class LM_BlackoutPath : ExperimentTask
                 taskLog.AddData("response", response);
                 taskLog.AddData("RT", "N/A");
             }
-                return true;
+            return true;
         }
 
 

@@ -24,6 +24,7 @@ using UnityEngine;
 using Valve.VR.InteractionSystem;
 using Vector3 = UnityEngine.Vector3;
 using Quaternion = UnityEngine.Quaternion;
+using ViveSR.anipal.Eye;
 
 public class LM_ToggleObjects : ExperimentTask
 {
@@ -57,7 +58,6 @@ public class LM_ToggleObjects : ExperimentTask
     private GameObject disc;
     private GameObject origFloor;
     private GameObject blackFloor;
-    public bool blackout = true;
 
 
     public override void startTask()
@@ -196,6 +196,7 @@ public class LM_ToggleObjects : ExperimentTask
                 participantReady = true;
                 DestroyImmediate(disc);
                 DestroyImmediate(blackFloor);
+                GameObject.Find("Eye_Tracking").GetComponent<SRanipal_GazeRaySample>().blackout_eye_tracking = false;
             }
         }
         
@@ -215,7 +216,6 @@ public class LM_ToggleObjects : ExperimentTask
             Debug.Log(seenObject);
             seenObject.SetActive(true);
             timerSpawnReached = true;
-            blackout = false;
         }
 
 

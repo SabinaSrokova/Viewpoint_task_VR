@@ -1,0 +1,31 @@
+63847154007664	EXPERIMENT:		SUBJECT:	mel_test_gaze2	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63847154019875	TASK_START	LM_Timeline	TaskList
+63847154019876	TASK_START	InitializeExperiment	TaskList
+63847154019879	TASK_START	PrepareRooms	LM_PrepareRooms
+63847154019941	TASK_END	PrepareRooms	LM_PrepareRooms	62
+63847154019943	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63847154019944	TASK_END	InitializeExperiment	TaskList	67
+63847154019947	TASK_START	BeginMessage	InstructionsTask
+63847154022108	INPUT_EVENT    PlayerPressedActionButton    1
+63847154022110	TASK_END	BeginMessage	InstructionsTask	2163
+63847154022112	TASK_START	Tasks	TaskList
+63847154022114	TASK_START	TASK_ViewpointTask	TaskList
+63847154022119	TASK_START	ListViewpointSpawns	ObjectList
+63847154022142	TASK_END	ListViewpointSpawns	ObjectList	23
+63847154022146	TASK_START	ListViewpointTransfers	ObjectList
+63847154022166	TASK_END	ListViewpointTransfers	ObjectList	20
+63847154022167	TASK_START	ViewpointTrials	TaskList
+63847154022169	TASK_START	Counter	LM_DummyCounter
+63847154022189	TASK_END	Counter	LM_DummyCounter	20
+63847154022191	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63847154022677	INPUT_EVENT    PlayerPressedActionButton    1
+63847154022678	TASK_END	BlockInstruction	InstructionsTaskViewpoint	488
+63847154022681	TASK_START	MovePlayerToSpawn	MoveSpawn
+63847154022683	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(32.3, 0.1, 133.1)
+63847154022684	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63847154022710	TASK_END	MovePlayerToSpawn	MoveSpawn	29
+63847154022713	TASK_START	ViewObjects	LM_ToggleObjects
+63847154032317	TASK_END	ViewObjects	LM_ToggleObjects	9604
+63847154032321	TASK_START	BlackoutWalking	LM_BlackoutPath
