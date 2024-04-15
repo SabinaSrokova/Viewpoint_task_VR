@@ -58,7 +58,9 @@ public class LM_ToggleObjects : ExperimentTask
     private GameObject disc;
     private GameObject origFloor;
     private GameObject blackFloor;
-
+    //public GameObject table;
+    //private GameObject tbl;
+    
 
     public override void startTask()
     {
@@ -139,6 +141,9 @@ public class LM_ToggleObjects : ExperimentTask
         // Draw a floor
         origFloor = GetChildGameObject(currentRoom, "Floor 1");
         blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
+
+        // Place table in the room
+        //tbl = Instantiate(table,origFloor.transform.position, Quaternion.identity);
 
         // Orientation marker
         disc = Instantiate(targetDisc, destination.transform.position, Quaternion.identity);

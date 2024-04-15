@@ -1,0 +1,4 @@
+subID,trial,Room,Condition,moveItem,Repeat,Block,ObjectMovedIs,start,end,TargetObject,TarPos_x,TarPos_z,Start_SubPos_x,Start_SubPos_z,TargetReached,End_SubPos_x,End_SubPos_z,End_SubRot_x,End_SubRot_z,response,RT,
+sabtest,0,Room_1,stay,yes,A,1,left,A,B,SMGP_pre_Soda_bottle_01_1024,18.875,8.948557,19.86448,4.455309,False,19.86448,4.455309,0,0,No response,N/A,
+sabtest,0,Room_1,stay,yes,A,1,left,A,B,SMGP_pre_Soda_bottle_01_1024,18.875,8.948557,19.08815,3.986978,False,20.20325,3.785322,0,0,No response,N/A,
+sabtest,0,Room_1,stay,yes,A,1,left,A,B,SMGP_pre_Soda_bottle_01_1024,18.875,8.948557,18.87638,8.930561,True,18.76217,9.020872,0.0869239,-0.2765285,No response,N/A,

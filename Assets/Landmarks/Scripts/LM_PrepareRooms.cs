@@ -48,6 +48,7 @@ public class LM_PrepareRooms : ExperimentTask
     public List<string> moveItem = new List<string> { };
     public List<string> repeat = new List<string> { };
     public List<string> block = new List<string> { };
+    public List<string> hideRoom = new List<string> { };
 
     public int blockValue = 20;
 
@@ -102,6 +103,7 @@ public class LM_PrepareRooms : ExperimentTask
                         moveItem.Add(values[4]);
                         repeat.Add(values[5]);
                         block.Add(values[6]);
+                        hideRoom.Add(values[7]);
                     }
 
                 }
