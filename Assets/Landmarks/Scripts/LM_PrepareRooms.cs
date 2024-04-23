@@ -31,12 +31,36 @@ public class LM_PrepareRooms : ExperimentTask
     public GameObject roomParent;
     public GameObject spawnPoints;
     public GameObject transferPoints;
+
+    [Header("Task Condition Settings")]
+    public int blockValue = 20;
     public enum objectsMovedAssignment
     {
         left,
         right
     };
     public objectsMovedAssignment objectsMovedIs;
+
+    public enum RoomShapeAssignment
+    {
+        CircularRooms,
+        SquaredRooms
+    };
+    public RoomShapeAssignment roomShape;
+
+    public enum RotationSettingAssignment
+    {
+        RotateTables,
+        RotateRooms
+    };
+    public RotationSettingAssignment rotationSetting;
+
+    public enum BlackoutAssignment
+    {
+        Yes,
+        No
+    };
+    public BlackoutAssignment blackoutDuringDelay;
 
 
     // These are public for easy accesibility in other scripts. The counter will be used in order to access the right data as the trials are advanced through.
@@ -48,9 +72,8 @@ public class LM_PrepareRooms : ExperimentTask
     public List<string> moveItem = new List<string> { };
     public List<string> repeat = new List<string> { };
     public List<string> block = new List<string> { };
-    public List<string> hideRoom = new List<string> { };
+   // public List<string> hideRoom = new List<string> { };
 
-    public int blockValue = 20;
 
     public override void startTask()
     {
@@ -103,7 +126,7 @@ public class LM_PrepareRooms : ExperimentTask
                         moveItem.Add(values[4]);
                         repeat.Add(values[5]);
                         block.Add(values[6]);
-                        hideRoom.Add(values[7]);
+                       // hideRoom.Add(values[7]);
                     }
 
                 }

@@ -58,9 +58,11 @@ public class LM_ToggleObjects : ExperimentTask
     private GameObject disc;
     private GameObject origFloor;
     private GameObject blackFloor;
-    //public GameObject table;
-    //private GameObject tbl;
-    
+
+    private LM_PrepareRooms.objectsMovedAssignment objectsMovedIs;
+    private LM_PrepareRooms.RoomShapeAssignment roomShape;  
+    private LM_PrepareRooms.RotationSettingAssignment rotationSetting;
+    private LM_PrepareRooms.BlackoutAssignment blackoutDuringDelay; 
 
     public override void startTask()
     {
@@ -87,6 +89,8 @@ public class LM_ToggleObjects : ExperimentTask
         taskCounter = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
         start = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().start;
 
+        roomShape = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().roomShape;
+
         try
         {
             GameObject.Find("ALL_ROOMS").SetActive(false);
@@ -95,13 +99,10 @@ public class LM_ToggleObjects : ExperimentTask
 
 
         GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
-
         spawnParent = GetChildGameObject(currentRoom, "SpawnPoints");
         GameObject destination = GetChildGameObject(spawnParent, "PlayerSpawn" + start[taskCounter]);
 
-        
         Vector3 sumVector = new Vector3(0f,0f, 0f);
-
         GameObject centerCalc = GetChildGameObject(currentRoom, "Objects " + repeat[taskCounter]);
 
         foreach (Transform child in centerCalc.transform)
@@ -127,7 +128,6 @@ public class LM_ToggleObjects : ExperimentTask
         }
 
 
-
         timer = 0;
         timerSpawnReached = false;
         participantReady = false;
@@ -136,14 +136,29 @@ public class LM_ToggleObjects : ExperimentTask
         Debug.Log("Objects " + repeat[taskCounter]);
         Debug.Log(repeat[taskCounter]);
         seenObject.SetActive(false);
+
+        // Activate the room
         currentRoom.SetActive(true); 
 
-        // Draw a floor
-        origFloor = GetChildGameObject(currentRoom, "Floor 1");
-        blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
+        GameObject circ_walls = GetChildGameObject(currentRoom, "Circle_wall");
+        GameObject sqr_walls = GetChildGameObject(currentRoom, "Square_wall");
+        GameObject table = GetChildGameObject(currentRoom, "Table");
 
-        // Place table in the room
-        //tbl = Instantiate(table,origFloor.transform.position, Quaternion.identity);
+        table.SetActive(true);
+
+        // Disable the walls we dont want
+        if (roomShape == LM_PrepareRooms.RoomShapeAssignment.CircularRooms)
+        {
+            sqr_walls.SetActive(false);
+        } 
+        else if (roomShape == LM_PrepareRooms.RoomShapeAssignment.SquaredRooms)
+        {
+            circ_walls.SetActive(false);
+        }
+
+        // Draw a floor
+        origFloor = GetChildGameObject(sqr_walls, "Floor 1");
+        blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
 
         // Orientation marker
         disc = Instantiate(targetDisc, destination.transform.position, Quaternion.identity);

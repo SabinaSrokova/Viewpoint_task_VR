@@ -31,13 +31,6 @@ public class LM_BlackoutPath : ExperimentTask
     public GameObject arrowPointer; // point left/right depending on the direction in which the participant should walk
     public GameObject blackoutFloor; // cylinder floor during blackout
 
-    public enum RotationSettingAssignment
-    {
-        RotateRooms,
-        RotateTables
-    };
-    public RotationSettingAssignment rotationSetting;
-
     public bool rotateRoom = false;
     public bool rotateTable = false;
     public bool reorientCamera = false;
@@ -51,10 +44,10 @@ public class LM_BlackoutPath : ExperimentTask
     private List<string> condition = new List<string> { };
     private List<string> start = new List<string> { };
     private List<string> end = new List<string> { };
-    private List<string> hideRoom = new List<string> { };
+    //private List<string> hideRoom = new List<string> { };
     private int taskCounter = new int();
     private List<string> block = new List<string> { };
-    private LM_PrepareRooms.objectsMovedAssignment objectsMovedIs;
+    
     private Vector3 tempHudPos;
 
 
@@ -88,6 +81,11 @@ public class LM_BlackoutPath : ExperimentTask
     public Quaternion playerEndRot;
     public bool blackout = false; // this var is for eye tracking log
 
+    private LM_PrepareRooms.objectsMovedAssignment objectsMovedIs;
+    private LM_PrepareRooms.RoomShapeAssignment roomShape;  
+    private LM_PrepareRooms.RotationSettingAssignment rotationSetting;
+    private LM_PrepareRooms.BlackoutAssignment blackoutDuringDelay;
+
 
     public override void startTask()
     {
@@ -116,8 +114,10 @@ public class LM_BlackoutPath : ExperimentTask
         taskCounter = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
         block = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().block;
         seenObject = GameObject.Find("ViewObjects").GetComponent<LM_ToggleObjects>().seenObject;
+
         objectsMovedIs = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().objectsMovedIs;
-        hideRoom = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().hideRoom;
+        blackoutDuringDelay = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().blackoutDuringDelay;
+        //hideRoom = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().hideRoom;
 
         GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
         GameObject movingObject = seenObject.transform.GetChild(0).gameObject;
@@ -135,15 +135,15 @@ public class LM_BlackoutPath : ExperimentTask
         playerStartRot = Camera.main.transform.rotation;
 
         // If the condition is blackout, then show only HUD & any relevant components. Otherwise, deactivate objects
-        if (hideRoom[taskCounter] == "yes")
+        if (blackoutDuringDelay == LM_PrepareRooms.BlackoutAssignment.Yes)
         {
             hud.showOnlyHUD(); 
             
             // Summon a circular floor during blackout
-            origFloor = GetChildGameObject(currentRoom, "Floor 1");
+            origFloor = GetChildGameObject(currentRoom, "Floor 1"); /////////////////////////////////////////////////////////////////
             blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
         }
-        else if (hideRoom[taskCounter] == "no")
+        else if (blackoutDuringDelay == LM_PrepareRooms.BlackoutAssignment.No)
         {
             hud.showEverything();
 
@@ -176,12 +176,12 @@ public class LM_BlackoutPath : ExperimentTask
         // Determine whether the table or the room needs to rotate
         if ((condition[taskCounter] == "walk" && start[taskCounter] == end[taskCounter]) || (condition[taskCounter] == "stay" && start[taskCounter] != end[taskCounter]))
         {
-            if (rotationSetting == RotationSettingAssignment.RotateRooms)
+            if (rotationSetting == LM_PrepareRooms.RotationSettingAssignment.RotateRooms)
             {
                 rotateRoom = true;
                 Debug.Log("The room will rotate");
             }
-            else if (rotationSetting == RotationSettingAssignment.RotateTables)
+            else if (rotationSetting == LM_PrepareRooms.RotationSettingAssignment.RotateTables)
             {
                 rotateTable = true;
                 Debug.Log("The table will rotate");
@@ -273,11 +273,6 @@ public class LM_BlackoutPath : ExperimentTask
 
       //  taskLog.AddData("Start_RotOffset_x", playerStartPos.x.ToString());
        // taskLog.AddData("Start_RotOffset_z", playerStartPos.z.ToString());
-
-
-
-
-
 
 
         if (vrEnabled)
@@ -560,7 +555,21 @@ public class LM_BlackoutPath : ExperimentTask
         {
             Debug.Log("Delay over - teleporting to new room");
             GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
-            currentRoom.SetActive(false); // deactivate the current room
+            
+            // Deactivate the room
+            currentRoom.SetActive(false); 
+            // GameObject circ_walls = GetChildGameObject(currentRoom, "Circle_wall");
+            // GameObject sqr_walls = GetChildGameObject(currentRoom, "Square_wall");
+            // GameObject table = GetChildGameObject(currentRoom, "Table");
+            // table.SetActive(false);
+            // if (RoomShape == LM_PrepareRooms.RoomShapeAssignment.CircularRooms)
+            // {
+            //     circ_walls.SetActive(false);
+            // } 
+            // else if (RoomShape == LM_PrepareRooms.RoomShapeAssignment.SquaredRooms)
+            // {
+            //     sqr_walls.SetActive(false);
+            // }
 
             if (!responseMade)
             {
