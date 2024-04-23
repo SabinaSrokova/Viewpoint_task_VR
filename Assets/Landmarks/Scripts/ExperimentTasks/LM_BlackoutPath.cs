@@ -85,6 +85,7 @@ public class LM_BlackoutPath : ExperimentTask
     private LM_PrepareRooms.RoomShapeAssignment roomShape;  
     private LM_PrepareRooms.RotationSettingAssignment rotationSetting;
     private LM_PrepareRooms.BlackoutAssignment blackoutDuringDelay;
+    private LM_PrepareRooms.HideRoomAssignment hideRoom; 
 
 
     public override void startTask()
@@ -117,7 +118,7 @@ public class LM_BlackoutPath : ExperimentTask
 
         objectsMovedIs = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().objectsMovedIs;
         blackoutDuringDelay = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().blackoutDuringDelay;
-        //hideRoom = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().hideRoom;
+        hideRoom = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().hideRoom;
 
         GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
         GameObject movingObject = seenObject.transform.GetChild(0).gameObject;
@@ -134,22 +135,32 @@ public class LM_BlackoutPath : ExperimentTask
         playerStartPos = Camera.main.transform.position;
         playerStartRot = Camera.main.transform.rotation;
 
-        // If the condition is blackout, then show only HUD & any relevant components. Otherwise, deactivate objects
-        if (blackoutDuringDelay == LM_PrepareRooms.BlackoutAssignment.Yes)
+    
+
+        if (hideRoom == LM_PrepareRooms.HideRoomAssignment.Yes)
         {
             hud.showOnlyHUD(); 
-            
-            // Summon a circular floor during blackout
-            origFloor = GetChildGameObject(currentRoom, "Floor 1"); /////////////////////////////////////////////////////////////////
-            blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
-        }
-        else if (blackoutDuringDelay == LM_PrepareRooms.BlackoutAssignment.No)
-        {
-            hud.showEverything();
-
             // Deactivate all objects
             seenObject.SetActive(false);
+        } 
+        else
+        {
+            // If the condition is blackout, then show only HUD & any relevant components. Otherwise, deactivate objects
+            if (blackoutDuringDelay == LM_PrepareRooms.BlackoutAssignment.Yes)
+            {
+                hud.showOnlyHUD(); 
+            
+                // Summon a circular floor during blackout
+                origFloor = GetChildGameObject(currentRoom, "Floor 1"); /////////////////////////////////////////////////////////////////
+                blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
+            }
+            else if (blackoutDuringDelay == LM_PrepareRooms.BlackoutAssignment.No)
+            {
+                hud.showEverything();
 
+                // Deactivate all objects
+                seenObject.SetActive(false);
+            }
         }
 
         // If the condition involves the item moving, this should teleport the item to it's new position after blacking out the screen (and technically before the spawning of the position marker for movement but this should be functionally instant for the participant)
@@ -483,7 +494,15 @@ public class LM_BlackoutPath : ExperimentTask
             taskLog.AddData("End_SubRot_z", playerEndRot.z.ToString());
 
             blackout = false; // blackout ends so eye recording will resume recording names
-            hud.showEverything();
+
+            if (hideRoom == LM_PrepareRooms.HideRoomAssignment.Yes)
+            {
+                hud.showOnlyHUD(); 
+            } else
+            {
+               hud.showEverything(); 
+            }
+
         }
         string response = "No response";
         if (timerSpawnReached == true && responseMade == false)

@@ -105,6 +105,13 @@ public class InstructionsTask : ExperimentTask {
         }
         if (instruction) canvas.text = instruction.text;
 
+
+        try
+        {
+            GameObject.Find("ALL_ROOMS").SetActive(false);
+        }
+        catch { }
+
       /*  // Determine where we're getting the text from (default is masterText) <-- MJS FIXME refactor this code
         if (masterText == "")
         {

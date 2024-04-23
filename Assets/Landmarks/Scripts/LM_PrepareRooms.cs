@@ -62,6 +62,20 @@ public class LM_PrepareRooms : ExperimentTask
     };
     public BlackoutAssignment blackoutDuringDelay;
 
+    public enum HideRoomAssignment
+    {
+        Yes,
+        No
+    };
+    public HideRoomAssignment hideRoom;
+
+    public enum DirectionHintAssignment
+    {
+        Yes,
+        No
+    };
+    public DirectionHintAssignment dirHint;
+
 
     // These are public for easy accesibility in other scripts. The counter will be used in order to access the right data as the trials are advanced through.
     public static List<string> trialDataList;

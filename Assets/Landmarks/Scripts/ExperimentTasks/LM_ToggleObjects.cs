@@ -41,6 +41,8 @@ public class LM_ToggleObjects : ExperimentTask
     private List<GameObject> seenObjects = new List<GameObject> { };
     private List<GameObject> hiddenObjects = new List<GameObject> { };
     private List<string> start = new List<string> { };
+    private List<string> end = new List<string> { };
+    private List<string> condition = new List<string> { };
     public GameObject seenObject;
     private GameObject hiddenObject;
     private int taskCounter = new int();
@@ -63,6 +65,8 @@ public class LM_ToggleObjects : ExperimentTask
     private LM_PrepareRooms.RoomShapeAssignment roomShape;  
     private LM_PrepareRooms.RotationSettingAssignment rotationSetting;
     private LM_PrepareRooms.BlackoutAssignment blackoutDuringDelay; 
+    private LM_PrepareRooms.HideRoomAssignment hideRoom; 
+    private LM_PrepareRooms.DirectionHintAssignment dirHint; 
 
     public override void startTask()
     {
@@ -88,14 +92,23 @@ public class LM_ToggleObjects : ExperimentTask
         repeat = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().repeat;
         taskCounter = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
         start = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().start;
+        end = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().end;
+        condition = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().condition;
 
         roomShape = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().roomShape;
+        hideRoom = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().hideRoom;
+        dirHint = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().dirHint;
 
         try
         {
             GameObject.Find("ALL_ROOMS").SetActive(false);
         }
         catch { }
+
+        if (hideRoom == LM_PrepareRooms.HideRoomAssignment.Yes)
+        {
+            hud.showOnlyHUD(); 
+        }
 
 
         GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
@@ -143,9 +156,7 @@ public class LM_ToggleObjects : ExperimentTask
         GameObject circ_walls = GetChildGameObject(currentRoom, "Circle_wall");
         GameObject sqr_walls = GetChildGameObject(currentRoom, "Square_wall");
         GameObject table = GetChildGameObject(currentRoom, "Table");
-
-        table.SetActive(true);
-
+        
         // Disable the walls we dont want
         if (roomShape == LM_PrepareRooms.RoomShapeAssignment.CircularRooms)
         {
@@ -156,9 +167,14 @@ public class LM_ToggleObjects : ExperimentTask
             circ_walls.SetActive(false);
         }
 
+        //if (hideRoom == LM_PrepareRooms.HideRoomAssignment.Yes)
+       // {
+        //    table.SetActive(false);
+       // }
+
         // Draw a floor
-        origFloor = GetChildGameObject(sqr_walls, "Floor 1");
-        blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
+       // origFloor = GetChildGameObject(sqr_walls, "Floor 1");
+       // blackFloor = Instantiate(blackoutFloor, origFloor.transform.position, Quaternion.identity);
 
         // Orientation marker
         disc = Instantiate(targetDisc, destination.transform.position, Quaternion.identity);
@@ -195,12 +211,23 @@ public class LM_ToggleObjects : ExperimentTask
 
         if (Input.GetButtonDown("Return"))
         {
+            
             hud.statusMessage.SetActive(false);
-            hud.showEverything();
+
+            if (hideRoom == LM_PrepareRooms.HideRoomAssignment.Yes)
+            {
+                hud.showOnlyHUD(); 
+            } else
+            {
+               hud.showEverything(); 
+            }
             participantReady = true;
             DestroyImmediate(disc);
             DestroyImmediate(blackFloor);
+
         }
+
+
 
         if (vrEnabled)
         {
@@ -209,7 +236,13 @@ public class LM_ToggleObjects : ExperimentTask
                 hud.statusMessageScreen.SetActive(false);
                 //hud.cameraScreen.SetActive(false);
                 hud.fadeScreen.SetActive(true);
-                hud.showEverything();
+                if (hideRoom == LM_PrepareRooms.HideRoomAssignment.Yes)
+                {
+                    hud.showOnlyHUD(); 
+                } else
+                {
+                    hud.showEverything(); 
+                }
 
                 hud.fadeScreen.GetComponent<PanelFader>().Fade();
 
@@ -228,6 +261,96 @@ public class LM_ToggleObjects : ExperimentTask
 
 
         //Debug.Log(timer);
+        if (timerSpawnReached == false && participantReady == true && dirHint == LM_PrepareRooms.DirectionHintAssignment.Yes)
+        {
+
+            if (vrEnabled)
+            {
+                if (condition[taskCounter] == "stay" && start[taskCounter] != end[taskCounter]) 
+                {
+                    if (start[taskCounter] == "A")
+                    {
+                        hud.setStatusScreenMessage("Table rotates <<<");
+                        hud.cameraScreen.SetActive(true);
+                        hud.statusMessageScreen.SetActive(true);
+                    }
+                    else if (start[taskCounter] == "B")
+                    {
+                        hud.setStatusScreenMessage("Table rotates >>>");
+                        hud.cameraScreen.SetActive(true);
+                        hud.statusMessageScreen.SetActive(true);
+                    }
+                } 
+                else if (condition[taskCounter] == "walk" && start[taskCounter] == end[taskCounter])
+                {
+                    if (start[taskCounter] == "A")
+                    {
+                        hud.setStatusScreenMessage("Table rotates >>>");
+                        hud.cameraScreen.SetActive(true);
+                        hud.statusMessageScreen.SetActive(true);
+                    }
+                    else if (start[taskCounter] == "B")
+                    {
+                        hud.setStatusScreenMessage("Table rotates <<<");
+                        hud.cameraScreen.SetActive(true);
+                        hud.statusMessageScreen.SetActive(true);
+                    }
+
+                }
+                else
+                {
+                    hud.setStatusScreenMessage("Table will not rotate");
+                    hud.cameraScreen.SetActive(true);
+                    hud.statusMessageScreen.SetActive(true);
+                }
+                
+            }
+ 
+            else
+            {
+                if (condition[taskCounter] == "stay" && start[taskCounter] != end[taskCounter])
+                {
+                    if (start[taskCounter] == "A")
+                    {
+                        hud.setStatusMessage("Table rotates <<<"); // "as if they viewed it from B, so table needs to rotate clockwise A<B
+                        hud.statusMessage.SetActive(true);
+                    }
+                    else if (start[taskCounter] == "B")
+                    {
+                        hud.setStatusMessage("Table rotates >>>"); // A>B
+                        hud.statusMessage.SetActive(true);
+                    }
+                }
+                else if (condition[taskCounter] == "walk" && start[taskCounter] == end[taskCounter])
+                {
+                    if (start[taskCounter] == "A")
+                    {
+                        hud.setStatusMessage("Table rotates >>>"); // A to A means the table has to follow the PP as they walk counter-clockwise A>>>B
+                        hud.statusMessage.SetActive(true);
+                    }
+                    else if (start[taskCounter] == "B")
+                    {
+                        hud.setStatusMessage("Table rotates <<<"); 
+                        hud.statusMessage.SetActive(true);
+                    }
+                }
+                else
+                {
+                    hud.setStatusMessage("Table will not rotate");
+                    hud.statusMessage.SetActive(true);
+                }
+            }
+
+
+            if (timerSpawnReached == false && timer >= 1f)
+            {
+                hud.statusMessage.SetActive(false);
+            }
+        }
+
+        
+
+
 
         // Objects to be viewed by the participant appear after 2 seconds pass of the participant standing in the empty room
         if (timerSpawnReached == false && timer >= objectsAppear)
