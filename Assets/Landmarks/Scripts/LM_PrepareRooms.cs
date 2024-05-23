@@ -41,12 +41,19 @@ public class LM_PrepareRooms : ExperimentTask
     };
     public objectsMovedAssignment objectsMovedIs;
 
-    public enum RoomShapeAssignment
+    public enum SelfPacedSettingAssignment
     {
-        CircularRooms,
-        SquaredRooms
+        Yes,
+        No
     };
-    public RoomShapeAssignment roomShape;
+    public SelfPacedSettingAssignment selfPacedSetting;
+
+   // public enum RoomShapeAssignment
+   // {
+   //     CircularRooms,
+   //     SquaredRooms
+   // };
+   // public RoomShapeAssignment roomShape;
 
     public enum RotationSettingAssignment
     {

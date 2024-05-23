@@ -9,7 +9,7 @@
     
 
     Copyright (C) 2019 Michael J. Starrett
-    Modified by Matthew Watson
+    Modified by Matthew Watson & Sabina Srokova
 
     Navigate by StarrLite (Powered by LandMarks)
     Human Spatial Cognition Laboratory
@@ -60,13 +60,15 @@ public class LM_ToggleObjects : ExperimentTask
     private GameObject disc;
     private GameObject origFloor;
     private GameObject blackFloor;
+    private GameObject currentRoom;
+    private GameObject table;
 
     private LM_PrepareRooms.objectsMovedAssignment objectsMovedIs;
-    private LM_PrepareRooms.RoomShapeAssignment roomShape;  
     private LM_PrepareRooms.RotationSettingAssignment rotationSetting;
     private LM_PrepareRooms.BlackoutAssignment blackoutDuringDelay; 
     private LM_PrepareRooms.HideRoomAssignment hideRoom; 
     private LM_PrepareRooms.DirectionHintAssignment dirHint; 
+    private LM_PrepareRooms.SelfPacedSettingAssignment selfPacedSetting; 
 
     public override void startTask()
     {
@@ -85,9 +87,8 @@ public class LM_ToggleObjects : ExperimentTask
         {
             return;
         }
+
         // WRITE TASK STARTUP CODE HERE
-
-
         moveItem = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().moveItem;
         repeat = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().repeat;
         taskCounter = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
@@ -95,7 +96,6 @@ public class LM_ToggleObjects : ExperimentTask
         end = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().end;
         condition = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().condition;
 
-        roomShape = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().roomShape;
         hideRoom = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().hideRoom;
         dirHint = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().dirHint;
 
@@ -111,10 +111,10 @@ public class LM_ToggleObjects : ExperimentTask
         }
 
 
-        GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
+        currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
         spawnParent = GetChildGameObject(currentRoom, "SpawnPoints");
-        GameObject destination = GetChildGameObject(spawnParent, "PlayerSpawn" + start[taskCounter]);
 
+        GameObject destination = GetChildGameObject(spawnParent, "PlayerSpawn" + start[taskCounter]);
         Vector3 sumVector = new Vector3(0f,0f, 0f);
         GameObject centerCalc = GetChildGameObject(currentRoom, "Objects " + repeat[taskCounter]);
 
@@ -130,13 +130,13 @@ public class LM_ToggleObjects : ExperimentTask
         hud.showOnlyHUD();
         if (vrEnabled)
         {
-            hud.setStatusScreenMessage("Position youself on the marker, press any trigger to continue");
+            hud.setStatusScreenMessage("Position youself on the marker, press any trigger to start the next trial");
             hud.cameraScreen.SetActive(true);
             hud.statusMessageScreen.SetActive(true);
         }
         else
         {
-            hud.setStatusMessage("Position youself on the marker, press the Enter key to continue");
+            hud.setStatusMessage("Position youself on the marker, press the Enter key to start the next trial");
             hud.statusMessage.SetActive(true);
         }
 
@@ -150,27 +150,12 @@ public class LM_ToggleObjects : ExperimentTask
         Debug.Log(repeat[taskCounter]);
         seenObject.SetActive(false);
 
-        // Activate the room
+        // Activate the room but hide the table at the beginning (because table is set to HUD layer)
         currentRoom.SetActive(true); 
 
-        GameObject circ_walls = GetChildGameObject(currentRoom, "Circle_wall");
-        GameObject sqr_walls = GetChildGameObject(currentRoom, "Square_wall");
-        GameObject table = GetChildGameObject(currentRoom, "Table");
-        
-        // Disable the walls we dont want
-        if (roomShape == LM_PrepareRooms.RoomShapeAssignment.CircularRooms)
-        {
-            sqr_walls.SetActive(false);
-        } 
-        else if (roomShape == LM_PrepareRooms.RoomShapeAssignment.SquaredRooms)
-        {
-            circ_walls.SetActive(false);
-        }
+        table = GetChildGameObject(currentRoom, "Table");
+        table.SetActive(false);
 
-        //if (hideRoom == LM_PrepareRooms.HideRoomAssignment.Yes)
-       // {
-        //    table.SetActive(false);
-       // }
 
         // Draw a floor
        // origFloor = GetChildGameObject(sqr_walls, "Floor 1");
@@ -225,6 +210,9 @@ public class LM_ToggleObjects : ExperimentTask
             DestroyImmediate(disc);
             DestroyImmediate(blackFloor);
 
+            // Show table
+            table.SetActive(true);
+
         }
 
 
@@ -234,8 +222,9 @@ public class LM_ToggleObjects : ExperimentTask
             if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand) | vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
             {
                 hud.statusMessageScreen.SetActive(false);
-                //hud.cameraScreen.SetActive(false);
+                
                 hud.fadeScreen.SetActive(true);
+
                 if (hideRoom == LM_PrepareRooms.HideRoomAssignment.Yes)
                 {
                     hud.showOnlyHUD(); 
@@ -249,6 +238,11 @@ public class LM_ToggleObjects : ExperimentTask
                 participantReady = true;
                 DestroyImmediate(disc);
                 DestroyImmediate(blackFloor);
+
+                // Show table
+                table.SetActive(true);
+
+
                 GameObject.Find("Eye_Tracking").GetComponent<SRanipal_GazeRaySample>().blackout_eye_tracking = false;
             }
         }
@@ -341,17 +335,14 @@ public class LM_ToggleObjects : ExperimentTask
                 }
             }
 
-
-            if (timerSpawnReached == false && timer >= 1f)
+            // Remove message after 2 sec
+            if (timerSpawnReached == false && timer >= 2f)
             {
                 hud.statusMessage.SetActive(false);
             }
         }
 
-        
-
-
-
+    
         // Objects to be viewed by the participant appear after 2 seconds pass of the participant standing in the empty room
         if (timerSpawnReached == false && timer >= objectsAppear)
         {

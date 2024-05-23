@@ -33,11 +33,13 @@ public class LM_BlackoutPath : ExperimentTask
 
     public bool rotateRoom = false;
     public bool rotateTable = false;
+    public bool rotateNothing = false;
     public bool reorientCamera = false;
+    public bool proceedTrial = false;
     public float blackoutWalk = 7;
     public float arrowTime = 0.5f;
-    public float viewingObjects = 14;
-    public float delayBeforeContinuing = 17;
+    public float viewingObjects = 5;
+    public float delayBeforeContinuing = 3;
 
     private List<string> moveItem = new List<string> { };
     private List<string> repeat = new List<string> { };
@@ -68,8 +70,9 @@ public class LM_BlackoutPath : ExperimentTask
     private GameObject blackFloor;
 
     public float timer = 0;
+    public float timer2 = 0;
     public float RT_timer = 0;
-    private bool timerSpawnReached = false;
+    private bool delayReached = false;
     private bool timerDelay = false;
     private bool timerComplete = false;
     private bool responseMade = false;
@@ -81,11 +84,11 @@ public class LM_BlackoutPath : ExperimentTask
     public Quaternion playerEndRot;
     public bool blackout = false; // this var is for eye tracking log
 
-    private LM_PrepareRooms.objectsMovedAssignment objectsMovedIs;
-    private LM_PrepareRooms.RoomShapeAssignment roomShape;  
+    private LM_PrepareRooms.objectsMovedAssignment objectsMovedIs; 
     private LM_PrepareRooms.RotationSettingAssignment rotationSetting;
     private LM_PrepareRooms.BlackoutAssignment blackoutDuringDelay;
     private LM_PrepareRooms.HideRoomAssignment hideRoom; 
+    private LM_PrepareRooms.SelfPacedSettingAssignment selfPacedSetting; 
 
 
     public override void startTask()
@@ -119,23 +122,25 @@ public class LM_BlackoutPath : ExperimentTask
         objectsMovedIs = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().objectsMovedIs;
         blackoutDuringDelay = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().blackoutDuringDelay;
         hideRoom = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().hideRoom;
+        selfPacedSetting = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().selfPacedSetting;
 
         GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
         GameObject movingObject = seenObject.transform.GetChild(0).gameObject;
 
         timer = 0;
+        timer2 = 0;
         RT_timer = 0;
-        timerSpawnReached = false;
+        delayReached = false;
+        proceedTrial = false;
         timerDelay = false;
         timerComplete = false;
         responseMade = false;
         blackout = true; // eye tracking will record that blackout is happening
 
-        // Record the subject's starting spot when blackout happens
+        // Record the subject's starting spot when delay
         playerStartPos = Camera.main.transform.position;
         playerStartRot = Camera.main.transform.rotation;
 
-    
 
         if (hideRoom == LM_PrepareRooms.HideRoomAssignment.Yes)
         {
@@ -197,8 +202,13 @@ public class LM_BlackoutPath : ExperimentTask
                 rotateTable = true;
                 Debug.Log("The table will rotate");
             }
+            
         }
-
+        else
+        {
+            Debug.Log("AAA");
+            rotateNothing = true;
+        }
 
         // If walk trial, place the disc in the non-starting location
         if (condition[taskCounter] == "walk")
@@ -254,6 +264,7 @@ public class LM_BlackoutPath : ExperimentTask
         LM_TaskLog taskLog = GetComponent<ExperimentTask>().taskLog;
 
         // Stimulus specific information
+        taskLog.AddData("Timestamp", DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt"));
         taskLog.AddData("subID", Config.Instance.subject);
         taskLog.AddData("trial", taskCounter.ToString());
         taskLog.AddData("Room", currentRoom.name);
@@ -274,18 +285,9 @@ public class LM_BlackoutPath : ExperimentTask
         taskLog.AddData("TarPos_z", disc.transform.position.z.ToString());
         taskLog.AddData("Start_SubPos_x", playerStartPos.x.ToString());
         taskLog.AddData("Start_SubPos_z", playerStartPos.z.ToString());
-       // taskLog.AddData("Start_SubRot_x", playerStartRot.x.ToString());
-      //  taskLog.AddData("Start_SubRot_z", playerStartRot.z.ToString());
-             //taskLog.AddData("TarRot_x", disc.transform.rotation.x.ToString());
-       // taskLog.AddData("TarRot_z", disc.transform.rotation.z.ToString());
-
-      // int start_xRot = Math.Ans(playerStartRot.x - disc.transform.rotation.x);
-      // int start_zRot = Math.Ans(playerStartRot.z - disc.transform.rotation.z);
-
-      //  taskLog.AddData("Start_RotOffset_x", playerStartPos.x.ToString());
-       // taskLog.AddData("Start_RotOffset_z", playerStartPos.z.ToString());
 
 
+       // --------------------- Walking direction text at the beginning of delay ---------------------
         if (vrEnabled)
         {
 
@@ -329,8 +331,10 @@ public class LM_BlackoutPath : ExperimentTask
 
 
         timer += Time.deltaTime;
+        LM_TaskLog taskLog = GetComponent<ExperimentTask>().taskLog;
 
-        // Destroy arrow after its time is up
+
+        // --------------------- Walking direction arrow - destroy after arrowTime is up ---------------------
         if (timer >= arrowTime)
         {
             if (vrEnabled)
@@ -344,22 +348,68 @@ public class LM_BlackoutPath : ExperimentTask
         }
 
 
-        LM_TaskLog taskLog = GetComponent<ExperimentTask>().taskLog;
-        //
-        // Because teleport seems to not work in immersive VR -> rotate the room so that the participant shows up in "END"
-        if (timerSpawnReached == false && timer >= blackoutWalk)
+        // --------------------- Handle self-paced condition ---------------------
+        // Here, the participant won't be able to continue until the targets are green
+        if (proceedTrial == false && selfPacedSetting == LM_PrepareRooms.SelfPacedSettingAssignment.Yes)
         {
+
+            // Allow the participant to proceed only if target disc is no longer red
+            int color = (int)disc.GetComponent<Renderer>().material.color.r * 1000;
+            int red = (int)new Color(1.000f, 0, 0, 1.000f).r * 1000;
+            
+            if (color != red) 
+            {
+                if (vrEnabled)
+                {
+                    if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand) | vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
+                    {
+                        proceedTrial = true;
+                        Debug.Log("Participant reached the marker and pressed trigger to continue");
+                    }
+                } else 
+                {
+                    if (Input.GetButtonDown("Return"))
+                    {
+                        proceedTrial = true;
+                        Debug.Log("Participant reached the marker and pressed enter to continue");
+                    }
+                }
+            }
+        }
+        else if (proceedTrial == false && selfPacedSetting == LM_PrepareRooms.SelfPacedSettingAssignment.No)
+        {
+            // Set proceed trial only after the timer is reached
+            if (timer >= blackoutWalk) 
+            {
+                proceedTrial = true;
+            }
+        }
+
+
+        // --------------------- Delay ended, respawn objects and response cues ---------------------
+
+        if (proceedTrial && (rotateRoom || rotateTable || rotateNothing))
+        {
+            taskLog.AddData("Delay_time", timer.ToString());
+            Debug.Log("End of delay.");
+
             seenObject.SetActive(true);
 
-            Debug.Log("blackoutWalk time reached");
+            // Find out if the marker was reached
             int color = (int)disc.GetComponent<Renderer>().material.color.r * 1000;
             int red = (int)new Color(1.000f, 0, 0, 1.000f).r * 1000;
             if (color == red) taskLog.AddData("TargetReached", "False");
             else taskLog.AddData("TargetReached", "True");
+
             DestroyImmediate(disc);
             DestroyImmediate(disc_half);
             DestroyImmediate(blackFloor);
             HalfwayCollisionColor.half_reached = false;
+
+
+            // --------------------- Handle Room/table rotation  ---------------------
+            // Because teleport seems to not work in immersive VR -> rotate the room so that the participant shows up in "END"
+            // Code-wise it's after the objects are re-activated, but from participants POV they see the objects after they've rotated
 
             if (rotateRoom)
             {
@@ -443,9 +493,15 @@ public class LM_BlackoutPath : ExperimentTask
                     spawnATransform.RotateAround(centerPoint, rotationAxis, 50f);
                     spawnBTransform.RotateAround(centerPoint, rotationAxis, 50f);
                 }
+
+                rotateTable = false;
+            }
+            else
+            {
+                rotateNothing = false;
             }
 
-            // Response options on the screen
+            // --------------------- Response cues  ---------------------
             if (objectsMovedIs == LM_PrepareRooms.objectsMovedAssignment.left)
             {
                 hud.setLeftMessage("D");
@@ -485,13 +541,10 @@ public class LM_BlackoutPath : ExperimentTask
             }
 
 
-            timerSpawnReached = true;
             playerEndPos = Camera.main.transform.position;
             playerEndRot = Camera.main.transform.rotation;
             taskLog.AddData("End_SubPos_x", playerEndPos.x.ToString());
             taskLog.AddData("End_SubPos_z", playerEndPos.z.ToString());
-            taskLog.AddData("End_SubRot_x", playerEndRot.x.ToString());
-            taskLog.AddData("End_SubRot_z", playerEndRot.z.ToString());
 
             blackout = false; // blackout ends so eye recording will resume recording names
 
@@ -503,9 +556,20 @@ public class LM_BlackoutPath : ExperimentTask
                hud.showEverything(); 
             }
 
+            delayReached = true;
+            
         }
+
+        // --------------------- 2nd phase timer ---------------------
+        if (delayReached == true) 
+        {
+            timer2 += Time.deltaTime;
+        }
+
+
+        // --------------------- Handle responses ---------------------
         string response = "No response";
-        if (timerSpawnReached == true && responseMade == false)
+        if (delayReached == true && responseMade == false)
         {
             RT_timer += Time.deltaTime;
 
@@ -553,9 +617,10 @@ public class LM_BlackoutPath : ExperimentTask
 
         }
 
-        if (timerSpawnReached == true && timer >= viewingObjects && timerComplete == false)
+        // --------------------- Finish-up this trial ---------------------
+        if (delayReached == true && timer2 >= viewingObjects && timerComplete == false)
         {
-            Debug.Log("14 seconds elapsed: trial complete");
+            Debug.Log("Trial complete");
             seenObject.SetActive(false);
             timerDelay = true;
             timerComplete = true;
@@ -570,25 +635,13 @@ public class LM_BlackoutPath : ExperimentTask
             }
         }
 
-        if (timerDelay == true && timer >= delayBeforeContinuing)
+        if (timerDelay == true && timer2 >= viewingObjects + delayBeforeContinuing)
         {
             Debug.Log("Delay over - teleporting to new room");
             GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
             
             // Deactivate the room
             currentRoom.SetActive(false); 
-            // GameObject circ_walls = GetChildGameObject(currentRoom, "Circle_wall");
-            // GameObject sqr_walls = GetChildGameObject(currentRoom, "Square_wall");
-            // GameObject table = GetChildGameObject(currentRoom, "Table");
-            // table.SetActive(false);
-            // if (RoomShape == LM_PrepareRooms.RoomShapeAssignment.CircularRooms)
-            // {
-            //     circ_walls.SetActive(false);
-            // } 
-            // else if (RoomShape == LM_PrepareRooms.RoomShapeAssignment.SquaredRooms)
-            // {
-            //     sqr_walls.SetActive(false);
-            // }
 
             if (!responseMade)
             {
