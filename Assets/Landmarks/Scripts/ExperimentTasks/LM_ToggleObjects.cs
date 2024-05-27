@@ -338,7 +338,15 @@ public class LM_ToggleObjects : ExperimentTask
             // Remove message after 2 sec
             if (timerSpawnReached == false && timer >= 2f)
             {
-                hud.statusMessage.SetActive(false);
+
+                if (vrEnabled)
+                {
+                    hud.statusMessageScreen.SetActive(false);
+                }
+                else 
+                {
+                    hud.statusMessage.SetActive(false);
+                }
             }
         }
 

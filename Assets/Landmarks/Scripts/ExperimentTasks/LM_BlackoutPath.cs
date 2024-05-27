@@ -504,9 +504,7 @@ public class LM_BlackoutPath : ExperimentTask
             // --------------------- Response cues  ---------------------
             if (objectsMovedIs == LM_PrepareRooms.objectsMovedAssignment.left)
             {
-                hud.setLeftMessage("D");
-                hud.setRightMessage("S");
-
+               
                 if (vrEnabled)
                 {
                     hud.setLeftVRMessage("D");
@@ -514,18 +512,27 @@ public class LM_BlackoutPath : ExperimentTask
                     hud.setLeftVRScreenMessage("D");
                     hud.setRightVRScreenMessage("S");
                 }
+                else
+                { 
+                    hud.setLeftMessage("D");
+                    hud.setRightMessage("S");
+                }
             }
             else if (objectsMovedIs == LM_PrepareRooms.objectsMovedAssignment.right)
             {
-                hud.setLeftMessage("S");
-                hud.setRightMessage("D");
-            }
-            if (vrEnabled)
-            {
-                hud.setLeftVRMessage("S");
-                hud.setRightVRMessage("D");
-                hud.setLeftVRScreenMessage("S");
-                hud.setRightVRScreenMessage("D");
+                
+                if (vrEnabled)
+                {
+                    hud.setLeftVRMessage("S");
+                    hud.setRightVRMessage("D");
+                    hud.setLeftVRScreenMessage("S");
+                    hud.setRightVRScreenMessage("D");
+                }
+                else
+                {
+                    hud.setLeftMessage("S");
+                    hud.setRightMessage("D");
+                }
             }
 
 
