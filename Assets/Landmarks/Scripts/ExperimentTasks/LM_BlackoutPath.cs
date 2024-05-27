@@ -579,6 +579,10 @@ public class LM_BlackoutPath : ExperimentTask
         if (delayReached == true && responseMade == false)
         {
             RT_timer += Time.deltaTime;
+        }
+
+        if (delayReached == true && responseMade == false && timer2 >= 0.5f) // Allows responses only after 500ms (too fast otherwise) and accounts for getStateDown issues if self-paced.
+        {
 
             if (vrEnabled)
             {
