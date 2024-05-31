@@ -1,0 +1,258 @@
+63852487743122	EXPERIMENT:		SUBJECT:	pilot03_2a_practice	START_SCENE	use for vr	START_CONDITION:	default	UI:	ViveRoomspace
+63852487790675	TASK_START	LM_Timeline	TaskList
+63852487790676	TASK_START	InitializeExperiment	TaskList
+63852487790679	TASK_START	PrepareRooms	LM_PrepareRooms
+63852487790732	TASK_END	PrepareRooms	LM_PrepareRooms	53
+63852487790733	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63852487790734	TASK_END	InitializeExperiment	TaskList	58
+63852487790736	TASK_START	BeginMessage	InstructionsTask
+63852487798187	INPUT_EVENT    PlayerPressedActionButton    1
+63852487798188	TASK_END	BeginMessage	InstructionsTask	7452
+63852487798190	TASK_START	Tasks	TaskList
+63852487798193	TASK_START	TASK_ViewpointTask	TaskList
+63852487798196	TASK_START	ListViewpointSpawns	ObjectList
+63852487798208	TASK_END	ListViewpointSpawns	ObjectList	13
+63852487798210	TASK_START	ListViewpointTransfers	ObjectList
+63852487798219	TASK_END	ListViewpointTransfers	ObjectList	9
+63852487798221	TASK_START	ViewpointTrials	TaskList
+63852487798224	TASK_START	Counter	LM_DummyCounter
+63852487798233	TASK_END	Counter	LM_DummyCounter	9
+63852487798236	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63852487806526	INPUT_EVENT    PlayerPressedActionButton    1
+63852487806529	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8293
+63852487806532	TASK_START	MovePlayerToSpawn	MoveSpawn
+63852487806535	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(29.2, 0.1, 130.9)
+63852487806536	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63852487806544	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63852487806547	TASK_START	ViewObjects	LM_ToggleObjects
+63852487827828	TASK_END	ViewObjects	LM_ToggleObjects	21280
+63852487827831	TASK_START	BlackoutWalking	LM_BlackoutPath
+63852487852605	TASK_END	BlackoutWalking	LM_BlackoutPath	24773
+LandmarksTrialData:
+--------------------
+Timestamp	subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TargetObject	TarPos_x	TarPos_z	Start_SubPos_x	Start_SubPos_z	Delay_time	TargetReached	End_SubPos_x	End_SubPos_z	response	RT	
+05/28/2024 10:10 AM	pilot03_2a_practice	0	Room_121	stay	no	A	1	left	A	A	None	29.23046	130.9357	29.36561	131.2046	17.78098	True	29.20857	131.1094	No response	N/A	
+--------------------
+
+63852487852610	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials2False
+63852487852612	TASK_START	Counter	LM_DummyCounter
+63852487852621	TASK_END	Counter	LM_DummyCounter	9
+63852487852623	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63852487852624	INFO    skip task    BlockInstruction
+63852487852639	TASK_END	BlockInstruction	InstructionsTaskViewpoint	11
+63852487852640	TASK_START	MovePlayerToSpawn	MoveSpawn
+63852487852642	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(59.2, 0.1, 130.9)
+63852487852643	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63852487852653	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63852487852654	TASK_START	ViewObjects	LM_ToggleObjects
+63852487864234	TASK_END	ViewObjects	LM_ToggleObjects	11579
+63852487864235	TASK_START	BlackoutWalking	LM_BlackoutPath
+63852487872872	TASK_RESPONSE	Left Button Pressed	Response Time: 1.498873
+63852487878382	TASK_END	BlackoutWalking	LM_BlackoutPath	14146
+LandmarksTrialData:
+--------------------
+Timestamp	subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TargetObject	TarPos_x	TarPos_z	Start_SubPos_x	Start_SubPos_z	Delay_time	TargetReached	End_SubPos_x	End_SubPos_z	response	RT	
+05/28/2024 10:11 AM	pilot03_2a_practice	1	Room_122	stay	yes	A	1	left	A	A	Boat_01	59.23045	130.9357	59.30616	131.0505	7.152379	True	59.215	131.062	Left	1.498873	
+--------------------
+
+63852487878386	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials3False
+63852487878389	TASK_START	Counter	LM_DummyCounter
+63852487878396	TASK_END	Counter	LM_DummyCounter	7
+63852487878398	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63852487878399	INFO    skip task    BlockInstruction
+63852487878409	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63852487878411	TASK_START	MovePlayerToSpawn	MoveSpawn
+63852487878412	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(99.2, 0.1, 130.9)
+63852487878414	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63852487878420	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63852487878422	TASK_START	ViewObjects	LM_ToggleObjects
+63852487889911	TASK_END	ViewObjects	LM_ToggleObjects	11489
+63852487889912	TASK_START	BlackoutWalking	LM_BlackoutPath
+63852487897763	TASK_RESPONSE	Right Button Pressed	Response Time: 2.932969
+63852487901840	TASK_END	BlackoutWalking	LM_BlackoutPath	11928
+LandmarksTrialData:
+--------------------
+Timestamp	subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TargetObject	TarPos_x	TarPos_z	Start_SubPos_x	Start_SubPos_z	Delay_time	TargetReached	End_SubPos_x	End_SubPos_z	response	RT	
+05/28/2024 10:11 AM	pilot03_2a_practice	2	Room_123	stay	yes	A	1	left	A	B	Counter_01	99.23045	130.9357	99.20763	131.0243	4.930848	True	99.26242	131.063	Right	2.932969	
+--------------------
+
+63852487901843	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials4False
+63852487901845	TASK_START	Counter	LM_DummyCounter
+63852487901853	TASK_END	Counter	LM_DummyCounter	8
+63852487901856	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63852487901857	INFO    skip task    BlockInstruction
+63852487901868	TASK_END	BlockInstruction	InstructionsTaskViewpoint	12
+63852487901870	TASK_START	MovePlayerToSpawn	MoveSpawn
+63852487901871	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(111.1, 0.1, 131.1)
+63852487901873	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63852487901883	TASK_END	MovePlayerToSpawn	MoveSpawn	13
+63852487901885	TASK_START	ViewObjects	LM_ToggleObjects
+63852487913466	TASK_END	ViewObjects	LM_ToggleObjects	11582
+63852487913467	TASK_START	BlackoutWalking	LM_BlackoutPath
+63852487921884	TASK_RESPONSE	Right Button Pressed	Response Time: 2.0874
+63852487926805	TASK_END	BlackoutWalking	LM_BlackoutPath	13338
+LandmarksTrialData:
+--------------------
+Timestamp	subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TargetObject	TarPos_x	TarPos_z	Start_SubPos_x	Start_SubPos_z	Delay_time	TargetReached	End_SubPos_x	End_SubPos_z	response	RT	
+05/28/2024 10:11 AM	pilot03_2a_practice	3	Room_124	stay	no	A	1	left	B	A	None	111.1209	131.0905	111.068	131.1617	6.34235	True	111.0486	131.2044	Right	2.0874	
+--------------------
+
+63852487926808	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials5False
+63852487926810	TASK_START	Counter	LM_DummyCounter
+63852487926818	TASK_END	Counter	LM_DummyCounter	8
+63852487926820	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63852487926821	INFO    skip task    BlockInstruction
+63852487926833	TASK_END	BlockInstruction	InstructionsTaskViewpoint	13
+63852487926835	TASK_START	MovePlayerToSpawn	MoveSpawn
+63852487926836	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(69.2, 0.1, 130.9)
+63852487926837	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63852487926847	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63852487926848	TASK_START	ViewObjects	LM_ToggleObjects
+63852487937610	TASK_END	ViewObjects	LM_ToggleObjects	10761
+63852487937611	TASK_START	BlackoutWalking	LM_BlackoutPath
+63852487945562	TASK_RESPONSE	Left Button Pressed	Response Time: 2.542681
+63852487950028	TASK_END	BlackoutWalking	LM_BlackoutPath	12417
+LandmarksTrialData:
+--------------------
+Timestamp	subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TargetObject	TarPos_x	TarPos_z	Start_SubPos_x	Start_SubPos_z	Delay_time	TargetReached	End_SubPos_x	End_SubPos_z	response	RT	
+05/28/2024 10:12 AM	pilot03_2a_practice	4	Room_125	stay	yes	A	1	left	A	B	Dinosaur_01	69.23045	130.9357	69.24619	131.0051	5.420922	True	69.21027	131.1081	Left	2.542681	
+--------------------
+
+63852487950031	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials6False
+63852487950033	TASK_START	Counter	LM_DummyCounter
+63852487950040	TASK_END	Counter	LM_DummyCounter	7
+63852487950041	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63852487962988	INPUT_EVENT    PlayerPressedActionButton    1
+63852487962989	TASK_END	BlockInstruction	InstructionsTaskViewpoint	12947
+63852487962991	TASK_START	MovePlayerToSpawn	MoveSpawn
+63852487962993	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(19.2, 0.1, 130.9)
+63852487962994	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63852487963001	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63852487963003	TASK_START	ViewObjects	LM_ToggleObjects
+63852487974638	TASK_END	ViewObjects	LM_ToggleObjects	11636
+63852487974639	TASK_START	BlackoutWalking	LM_BlackoutPath
+63852487984855	TASK_RESPONSE	Right Button Pressed	Response Time: 2.398179
+63852487989466	TASK_END	BlackoutWalking	LM_BlackoutPath	14826
+LandmarksTrialData:
+--------------------
+Timestamp	subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TargetObject	TarPos_x	TarPos_z	Start_SubPos_x	Start_SubPos_z	Delay_time	TargetReached	End_SubPos_x	End_SubPos_z	response	RT	
+05/28/2024 10:12 AM	pilot03_2a_practice	5	Room_126	walk	yes	A	2	left	A	B	Seat_01	21.1209	131.0905	19.34071	131.0565	7.829618	True	21.07637	131.2402	Right	2.398179	
+--------------------
+
+63852487989470	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials7False
+63852487989472	TASK_START	Counter	LM_DummyCounter
+63852487989479	TASK_END	Counter	LM_DummyCounter	7
+63852487989481	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63852487989482	INFO    skip task    BlockInstruction
+63852487989489	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63852487989490	TASK_START	MovePlayerToSpawn	MoveSpawn
+63852487989492	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(41.1, 0.1, 131.1)
+63852487989492	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63852487989501	TASK_END	MovePlayerToSpawn	MoveSpawn	11
+63852487989502	TASK_START	ViewObjects	LM_ToggleObjects
+63852488002116	TASK_END	ViewObjects	LM_ToggleObjects	12614
+63852488002117	TASK_START	BlackoutWalking	LM_BlackoutPath
+63852488010500	TASK_RESPONSE	Right Button Pressed	Response Time: 3.743134
+63852488013766	TASK_END	BlackoutWalking	LM_BlackoutPath	11648
+LandmarksTrialData:
+--------------------
+Timestamp	subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TargetObject	TarPos_x	TarPos_z	Start_SubPos_x	Start_SubPos_z	Delay_time	TargetReached	End_SubPos_x	End_SubPos_z	response	RT	
+05/28/2024 10:13 AM	pilot03_2a_practice	6	Room_127	walk	no	A	2	left	B	A	None	39.23045	130.9357	41.08959	131.0879	4.652607	True	39.30813	130.9674	Right	3.743134	
+--------------------
+
+63852488013769	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials8False
+63852488013770	TASK_START	Counter	LM_DummyCounter
+63852488013779	TASK_END	Counter	LM_DummyCounter	8
+63852488013780	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63852488013781	INFO    skip task    BlockInstruction
+63852488013790	TASK_END	BlockInstruction	InstructionsTaskViewpoint	11
+63852488013793	TASK_START	MovePlayerToSpawn	MoveSpawn
+63852488013795	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(49.2, 0.1, 130.9)
+63852488013796	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63852488013805	TASK_END	MovePlayerToSpawn	MoveSpawn	13
+63852488013806	TASK_START	ViewObjects	LM_ToggleObjects
+63852488024571	TASK_END	ViewObjects	LM_ToggleObjects	10765
+63852488024573	TASK_START	BlackoutWalking	LM_BlackoutPath
+63852488033545	TASK_RESPONSE	Left Button Pressed	Response Time: 4.552753
+63852488035999	TASK_END	BlackoutWalking	LM_BlackoutPath	11426
+LandmarksTrialData:
+--------------------
+Timestamp	subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TargetObject	TarPos_x	TarPos_z	Start_SubPos_x	Start_SubPos_z	Delay_time	TargetReached	End_SubPos_x	End_SubPos_z	response	RT	
+05/28/2024 10:13 AM	pilot03_2a_practice	7	Room_128	walk	yes	A	2	left	A	A	RollerSkate_01	51.1209	131.0905	49.3049	130.9355	4.431882	True	50.94888	131.2112	Left	4.552753	
+--------------------
+
+63852488036002	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials9False
+63852488036004	TASK_START	Counter	LM_DummyCounter
+63852488036012	TASK_END	Counter	LM_DummyCounter	8
+63852488036013	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63852488036014	INFO    skip task    BlockInstruction
+63852488036022	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63852488036024	TASK_START	MovePlayerToSpawn	MoveSpawn
+63852488036025	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(91.1, 0.1, 131.1)
+63852488036027	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63852488036036	TASK_END	MovePlayerToSpawn	MoveSpawn	12
+63852488036037	TASK_START	ViewObjects	LM_ToggleObjects
+63852488051981	TASK_END	ViewObjects	LM_ToggleObjects	15944
+63852488051983	TASK_START	BlackoutWalking	LM_BlackoutPath
+63852488057675	TASK_RESPONSE	Right Button Pressed	Response Time: 1.50721
+63852488063175	TASK_END	BlackoutWalking	LM_BlackoutPath	11192
+LandmarksTrialData:
+--------------------
+Timestamp	subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TargetObject	TarPos_x	TarPos_z	Start_SubPos_x	Start_SubPos_z	Delay_time	TargetReached	End_SubPos_x	End_SubPos_z	response	RT	
+05/28/2024 10:14 AM	pilot03_2a_practice	8	Room_129	walk	no	A	2	left	B	B	None	89.23045	130.9357	91.06842	131.1655	4.198774	True	89.39639	131.0682	Right	1.50721	
+--------------------
+
+63852488063179	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials10False
+63852488063181	TASK_START	Counter	LM_DummyCounter
+63852488063189	TASK_END	Counter	LM_DummyCounter	8
+63852488063190	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63852488063191	INFO    skip task    BlockInstruction
+63852488063199	TASK_END	BlockInstruction	InstructionsTaskViewpoint	8
+63852488063202	TASK_START	MovePlayerToSpawn	MoveSpawn
+63852488063203	TASK_POSITION	ViveRoomspaceController	MoveSpawn	(79.2, 0.1, 130.9)
+63852488063204	TASK_ROTATE	ViveRoomspaceController	MoveSpawn	(0.0, 0.0, 0.0)
+63852488063210	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63852488063213	TASK_START	ViewObjects	LM_ToggleObjects
+63852488074693	TASK_END	ViewObjects	LM_ToggleObjects	11479
+63852488074695	TASK_START	BlackoutWalking	LM_BlackoutPath
+63852488079462	TASK_RESPONSE	Right Button Pressed	Response Time: 1.232259
+63852488085232	TASK_END	BlackoutWalking	LM_BlackoutPath	10537
+LandmarksTrialData:
+--------------------
+Timestamp	subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TargetObject	TarPos_x	TarPos_z	Start_SubPos_x	Start_SubPos_z	Delay_time	TargetReached	End_SubPos_x	End_SubPos_z	response	RT	
+05/28/2024 10:14 AM	pilot03_2a_practice	9	Room_130	walk	no	A	2	left	A	A	None	81.1209	131.0905	79.19324	131.0246	3.543775	True	80.83501	131.1199	Right	1.232259	
+--------------------
+
+63852488085235	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials10False
+63852488085236	TASK_END	ViewpointTrials	TaskList	287016
+63852488085237	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+TASK_ViewpointTask1False
+63852488085238	TASK_END	TASK_ViewpointTask	TaskList	287045
+63852488085239	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+Tasks1False
+63852488085240	TASK_END	Tasks	TaskList	287049
+63852488085242	TASK_START	EndMessage	InstructionsTask

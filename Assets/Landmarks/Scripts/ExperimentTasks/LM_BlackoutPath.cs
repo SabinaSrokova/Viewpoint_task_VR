@@ -83,6 +83,8 @@ public class LM_BlackoutPath : ExperimentTask
     public Quaternion playerStartRot;
     public Quaternion playerEndRot;
     public bool blackout = false; // this var is for eye tracking log
+    public bool endETKDelay = false; // for eyetracking
+
 
     private LM_PrepareRooms.objectsMovedAssignment objectsMovedIs; 
     private LM_PrepareRooms.RotationSettingAssignment rotationSetting;
@@ -629,12 +631,14 @@ public class LM_BlackoutPath : ExperimentTask
         }
 
         // --------------------- Finish-up this trial ---------------------
+        // leave the room on "delaybeforecontinuing" where no objects are visible. Then move to the next trial.
         if (delayReached == true && timer2 >= viewingObjects && timerComplete == false)
         {
             Debug.Log("Trial complete");
             seenObject.SetActive(false);
-            timerDelay = true;
-            timerComplete = true;
+            timerDelay = true; // Delay timer for expt handling
+            timerComplete = true; 
+            endETKDelay = true; // this one is eyetracking specific
             hud.leftButtonMessage.SetActive(false);
             hud.rightButtonMessage.SetActive(false);
 
@@ -652,7 +656,9 @@ public class LM_BlackoutPath : ExperimentTask
             GameObject currentRoom = preparedRooms.transform.GetChild(taskCounter).gameObject;
             
             // Deactivate the room
-            currentRoom.SetActive(false); 
+            currentRoom.SetActive(false);
+
+            endETKDelay = false;
 
             if (!responseMade)
             {

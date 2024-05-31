@@ -61,7 +61,7 @@ namespace ViveSR
 
                     output = new StreamWriter(path);
                     output.WriteLine("Starting experiment at " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"));
-                    output.WriteLine("Time, Room, Distance, Subject Coord, Item Coord, Item, Pupil Size(left right)");
+                    output.WriteLine("Time, Room, Distance, Subject Coord, Item Coord, Item, Pupil Size left, Pupil Size right");
 
                     ignore = new List<String>
                     {
@@ -96,7 +96,11 @@ namespace ViveSR
                     // RECORD THE OBJECTS BEING LOOKED AT
                     // If we want more info on the hit we could try this method: https://gamedevbeginner.com/raycasts-in-unity-made-easy/#:~:text=Or%2C%20you%20could%20even%20use%20Raycast%20Hit%20to,first%20object%20that%20is%20hit%20by%20the%20Ray.
                     hitObject = focusInfo.collider.gameObject;
+
                     bool blackoutPath = GameObject.Find("BlackoutWalking").GetComponent<LM_BlackoutPath>().blackout;
+                    bool initDelay = GameObject.Find("ViewObjects").GetComponent<LM_ToggleObjects>().initETKDelay;
+                    bool endDelay = GameObject.Find("BlackoutWalking").GetComponent<LM_BlackoutPath>().endETKDelay;
+
                     var room = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().room;
                     var count = GameObject.Find("Counter").GetComponent<LM_DummyCounter>().counter;
                     if (prev_room != count)
@@ -111,13 +115,27 @@ namespace ViveSR
                         output.Write(DateTime.Now.ToString("HH:mm:ss"));
                         output.WriteLine(", " +
                             $"{room[count]}, " +
-                            $"BLACKOUT, " +
+                            $"TEST_DELAY, " +
                             $", " +
                             $", " +
                             $", " +
                             $"{verboseData.left.pupil_diameter_mm}  {verboseData.right.pupil_diameter_mm}"
                             );
                     }
+                    else if (initDelay | endDelay)
+                    {
+                        output.Write(DateTime.Now.ToString("HH:mm:ss"));
+                        output.WriteLine(", " +
+                            $"{room[count]}, " +
+                            $"NO_ITEMS, " +
+                            $", " +
+                            $", " +
+                            $", " +
+                            $"{verboseData.left.pupil_diameter_mm}  {verboseData.right.pupil_diameter_mm}"
+                            );
+                    }
+
+
                     else if (hitObject != null && !(blackout_eye_tracking) )
                     {
 
@@ -130,7 +148,7 @@ namespace ViveSR
                             $"{user.ToString().Replace(",", " ")}, " +
                             $"{focusInfo.point.ToString().Replace(",", " ")}, " +
                             $"{hitObject.name}, " +
-                            $"{verboseData.left.pupil_diameter_mm}  {verboseData.right.pupil_diameter_mm}"
+                            $"{verboseData.left.pupil_diameter_mm}," +  $"{verboseData.right.pupil_diameter_mm}"
                             );
                         // DEBUGGING SEGMENT TO SHOW WHERE THE PARTICIPANT IS LOOKING AT AND CHECKING THAT EYE TRACKING WORKS. OBJECTS WILL RESCALE/RESIZE WHEN YOU LOOK AT IT
                         if (debug) Debugging();

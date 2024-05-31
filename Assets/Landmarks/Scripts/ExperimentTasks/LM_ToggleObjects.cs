@@ -51,7 +51,8 @@ public class LM_ToggleObjects : ExperimentTask
     private bool timerSpawnReached = false;
     private bool timerDespawnItemsReached = false;
     public static bool participantReady = false;
-    private bool timerRoomDespawnReached = false; 
+    private bool timerRoomDespawnReached = false;
+    public bool initETKDelay = false;
 
     private GameObject spawnParent;
     public GameObject targetDisc;
@@ -80,6 +81,7 @@ public class LM_ToggleObjects : ExperimentTask
 
     public override void TASK_START()
     {
+
         if (!manager) Start();
         base.startTask();
 
@@ -87,6 +89,8 @@ public class LM_ToggleObjects : ExperimentTask
         {
             return;
         }
+
+        initETKDelay = true;
 
         // WRITE TASK STARTUP CODE HERE
         moveItem = GameObject.Find("PrepareRooms").GetComponent<LM_PrepareRooms>().moveItem;
@@ -265,39 +269,47 @@ public class LM_ToggleObjects : ExperimentTask
                     if (start[taskCounter] == "A")
                     {
                         hud.setStatusScreenMessage("Table rotates <<<");
-                        hud.cameraScreen.SetActive(true);
-                        hud.statusMessageScreen.SetActive(true);
                     }
                     else if (start[taskCounter] == "B")
                     {
                         hud.setStatusScreenMessage("Table rotates >>>");
-                        hud.cameraScreen.SetActive(true);
-                        hud.statusMessageScreen.SetActive(true);
                     }
                 } 
                 else if (condition[taskCounter] == "walk" && start[taskCounter] == end[taskCounter])
                 {
                     if (start[taskCounter] == "A")
                     {
-                        hud.setStatusScreenMessage("Table rotates >>>");
-                        hud.cameraScreen.SetActive(true);
-                        hud.statusMessageScreen.SetActive(true);
+                        hud.setStatusScreenMessage("Walking >>> \n\n Table rotates");
                     }
                     else if (start[taskCounter] == "B")
                     {
-                        hud.setStatusScreenMessage("Table rotates <<<");
-                        hud.cameraScreen.SetActive(true);
-                        hud.statusMessageScreen.SetActive(true);
+                        hud.setStatusScreenMessage("Walking <<< \n\n Table rotates");
                     }
-
                 }
                 else
                 {
-                    hud.setStatusScreenMessage("Table will not rotate");
-                    hud.cameraScreen.SetActive(true);
-                    hud.statusMessageScreen.SetActive(true);
+                    if (condition[taskCounter] == "stay")
+                    {
+
+                        hud.setStatusScreenMessage("Table will NOT rotate");
+  
+                    }
+                    else if (condition[taskCounter] == "walk")
+                    {
+                        if (start[taskCounter] == "A")
+                        {
+                            hud.setStatusScreenMessage("Walking >>> \n\n Table will NOT rotate");
+                        }
+                        else if (start[taskCounter] == "B")
+                        {
+                            hud.setStatusScreenMessage("Walking <<< \n\n Table will NOT rotate");
+                        }
+                    }
                 }
-                
+
+                hud.cameraScreen.SetActive(true);
+                hud.statusMessageScreen.SetActive(true);
+
             }
  
             else
@@ -336,7 +348,7 @@ public class LM_ToggleObjects : ExperimentTask
             }
 
             // Remove message after 2 sec
-            if (timerSpawnReached == false && timer >= 2f)
+            if (timerSpawnReached == false && timer >= 4f)
             {
 
                 if (vrEnabled)
@@ -355,6 +367,7 @@ public class LM_ToggleObjects : ExperimentTask
         if (timerSpawnReached == false && timer >= objectsAppear)
         {
             Debug.Log("Objects now Appearing");
+            initETKDelay = false;
             Debug.Log(seenObject);
             seenObject.SetActive(true);
             timerSpawnReached = true;
