@@ -1,0 +1,4 @@
+Timestamp,subID,trial,Room,Condition,moveItem,Repeat,Block,ObjectMovedIs,start,end,TargetObject,TarPos_x,TarPos_z,Start_SubPos_x,Start_SubPos_z,Delay_time,TargetReached,End_SubPos_x,End_SubPos_z,response,RT,
+06/05/2024 1:28 PM,testinggg,0,Room_108,stay,yes,B,1,left,A,B,PoolTable_01,89.23045,104.8857,89.23045,104.8857,6.074145,True,89.12854,104.717,No response,N/A,
+06/05/2024 1:28 PM,testinggg,1,Room_4,stay,yes,B,1,left,B,A,popkorn,51.1209,5.040456,51.12228,5.022461,6.175678,True,51.30208,5.033462,No response,N/A,
+06/05/2024 1:28 PM,testinggg,2,Room_85,stay,yes,B,1,left,A,B,Pita,59.23045,84.88569,59.23045,84.88569,10.0627,True,59.52779,85.01147,No response,N/A,

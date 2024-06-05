@@ -1,0 +1,154 @@
+63853190567718	EXPERIMENT:		SUBJECT:	testinggg	START_SCENE	use for vr	START_CONDITION:	default	UI:	KeyboardMouse
+63853190578046	TASK_START	LM_Timeline	TaskList
+63853190578047	TASK_START	InitializeExperiment	TaskList
+63853190578048	TASK_START	PrepareRooms	LM_PrepareRooms
+63853190578078	TASK_END	PrepareRooms	LM_PrepareRooms	31
+63853190578080	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63853190578080	TASK_END	InitializeExperiment	TaskList	34
+63853190578082	TASK_START	BeginMessageDummy	InstructionsTask
+63853190578145	TASK_END	BeginMessageDummy	InstructionsTask	63
+63853190578146	TASK_START	BeginMessage	InstructionsTask
+63853190585934	INPUT_EVENT    PlayerPressedActionButton    1
+63853190585935	TASK_END	BeginMessage	InstructionsTask	7788
+63853190585936	TASK_START	Tasks	TaskList
+63853190585937	TASK_START	TASK_ViewpointTask	TaskList
+63853190585939	TASK_START	ListViewpointSpawns	ObjectList
+63853190585947	TASK_END	ListViewpointSpawns	ObjectList	8
+63853190585948	TASK_START	ListViewpointTransfers	ObjectList
+63853190585958	TASK_END	ListViewpointTransfers	ObjectList	9
+63853190585959	TASK_START	ViewpointTrials	TaskList
+63853190585960	TASK_START	Counter	LM_DummyCounter
+63853190585968	TASK_END	Counter	LM_DummyCounter	7
+63853190585970	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63853190595044	EXPERIMENT:		SUBJECT:	testinggg	START_SCENE	use for vr	START_CONDITION:	default	UI:	KeyboardMouse
+63853190605138	TASK_START	LM_Timeline	TaskList
+63853190605139	TASK_START	InitializeExperiment	TaskList
+63853190605141	TASK_START	PrepareRooms	LM_PrepareRooms
+63853190605217	TASK_END	PrepareRooms	LM_PrepareRooms	77
+63853190605218	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63853190605219	TASK_END	InitializeExperiment	TaskList	80
+63853190605220	TASK_START	BeginMessageDummy	InstructionsTask
+63853190605278	TASK_END	BeginMessageDummy	InstructionsTask	57
+63853190605280	TASK_START	BeginMessage	InstructionsTask
+63853190607046	INPUT_EVENT    PlayerPressedActionButton    1
+63853190607047	TASK_END	BeginMessage	InstructionsTask	1767
+63853190607048	TASK_START	Tasks	TaskList
+63853190607049	TASK_START	TASK_ViewpointTask	TaskList
+63853190607051	TASK_START	ListViewpointSpawns	ObjectList
+63853190607059	TASK_END	ListViewpointSpawns	ObjectList	7
+63853190607060	TASK_START	ListViewpointTransfers	ObjectList
+63853190607071	TASK_END	ListViewpointTransfers	ObjectList	10
+63853190607072	TASK_START	ViewpointTrials	TaskList
+63853190607074	TASK_START	Counter	LM_DummyCounter
+63853190607082	TASK_END	Counter	LM_DummyCounter	8
+63853190607084	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63853190608122	INPUT_EVENT    PlayerPressedActionButton    1
+63853190608123	TASK_END	BlockInstruction	InstructionsTaskViewpoint	1039
+63853190608124	TASK_START	MovePlayerToSpawn	MoveSpawn
+63853190608126	TASK_POSITION	KeyboardMouseController	MoveSpawn	(89.2, 0.1, 104.9)
+63853190608127	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 16.1, 0.0)
+63853190608135	TASK_END	MovePlayerToSpawn	MoveSpawn	10
+63853190608137	TASK_START	ViewObjects	LM_ToggleObjects
+63853190626639	TASK_END	ViewObjects	LM_ToggleObjects	18501
+63853190626641	TASK_START	BlackoutWalking	LM_BlackoutPath
+63853190857465	EXPERIMENT:		SUBJECT:	testinggg	START_SCENE	use for vr	START_CONDITION:	default	UI:	KeyboardMouse
+63853190867555	TASK_START	LM_Timeline	TaskList
+63853190867556	TASK_START	InitializeExperiment	TaskList
+63853190867557	TASK_START	PrepareRooms	LM_PrepareRooms
+63853190867581	TASK_END	PrepareRooms	LM_PrepareRooms	24
+63853190867582	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+InitializeExperiment1False
+63853190867582	TASK_END	InitializeExperiment	TaskList	27
+63853190867584	TASK_START	BeginMessageDummy	InstructionsTask
+63853190867645	TASK_END	BeginMessageDummy	InstructionsTask	61
+63853190867646	TASK_START	BeginMessage	InstructionsTask
+63853190870244	INPUT_EVENT    PlayerPressedActionButton    1
+63853190870245	TASK_END	BeginMessage	InstructionsTask	2599
+63853190870246	TASK_START	Tasks	TaskList
+63853190870248	TASK_START	TASK_ViewpointTask	TaskList
+63853190870250	TASK_START	ListViewpointSpawns	ObjectList
+63853190870258	TASK_END	ListViewpointSpawns	ObjectList	7
+63853190870259	TASK_START	ListViewpointTransfers	ObjectList
+63853190870269	TASK_END	ListViewpointTransfers	ObjectList	10
+63853190870271	TASK_START	ViewpointTrials	TaskList
+63853190870272	TASK_START	Counter	LM_DummyCounter
+63853190870279	TASK_END	Counter	LM_DummyCounter	6
+63853190870281	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63853190870781	INPUT_EVENT    PlayerPressedActionButton    1
+63853190870782	TASK_END	BlockInstruction	InstructionsTaskViewpoint	501
+63853190870783	TASK_START	MovePlayerToSpawn	MoveSpawn
+63853190870785	TASK_POSITION	KeyboardMouseController	MoveSpawn	(89.2, 0.1, 104.9)
+63853190870786	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 45.4, 0.0)
+63853190870793	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63853190870795	TASK_START	ViewObjects	LM_ToggleObjects
+63853190881864	TASK_END	ViewObjects	LM_ToggleObjects	11069
+63853190881886	TASK_START	BlackoutWalking	LM_BlackoutPath
+63853190894931	TASK_END	BlackoutWalking	LM_BlackoutPath	13045
+LandmarksTrialData:
+--------------------
+Timestamp	subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TargetObject	TarPos_x	TarPos_z	Start_SubPos_x	Start_SubPos_z	Delay_time	TargetReached	End_SubPos_x	End_SubPos_z	response	RT	
+06/05/2024 1:28 PM	testinggg	0	Room_108	stay	yes	B	1	left	A	B	PoolTable_01	89.23045	104.8857	89.23045	104.8857	6.074145	True	89.12854	104.717	No response	N/A	
+--------------------
+
+63853190894935	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials2False
+63853190894937	TASK_START	Counter	LM_DummyCounter
+63853190894944	TASK_END	Counter	LM_DummyCounter	7
+63853190894945	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63853190894945	INFO    skip task    BlockInstruction
+63853190894955	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63853190894956	TASK_START	MovePlayerToSpawn	MoveSpawn
+63853190894957	TASK_POSITION	KeyboardMouseController	MoveSpawn	(51.1, 0.1, 5.0)
+63853190894958	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 20.1, 0.0)
+63853190894965	TASK_END	MovePlayerToSpawn	MoveSpawn	8
+63853190894966	TASK_START	ViewObjects	LM_ToggleObjects
+63853190910152	TASK_END	ViewObjects	LM_ToggleObjects	15186
+63853190910154	TASK_START	BlackoutWalking	LM_BlackoutPath
+63853190923322	TASK_END	BlackoutWalking	LM_BlackoutPath	13168
+LandmarksTrialData:
+--------------------
+Timestamp	subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TargetObject	TarPos_x	TarPos_z	Start_SubPos_x	Start_SubPos_z	Delay_time	TargetReached	End_SubPos_x	End_SubPos_z	response	RT	
+06/05/2024 1:28 PM	testinggg	1	Room_4	stay	yes	B	1	left	B	A	popkorn	51.1209	5.040456	51.12228	5.022461	6.175678	True	51.30208	5.033462	No response	N/A	
+--------------------
+
+63853190923324	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials3False
+63853190923325	TASK_START	Counter	LM_DummyCounter
+63853190923332	TASK_END	Counter	LM_DummyCounter	7
+63853190923333	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63853190923334	INFO    skip task    BlockInstruction
+63853190923344	TASK_END	BlockInstruction	InstructionsTaskViewpoint	11
+63853190923345	TASK_START	MovePlayerToSpawn	MoveSpawn
+63853190923347	TASK_POSITION	KeyboardMouseController	MoveSpawn	(59.2, 0.1, 84.9)
+63853190923348	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 344.1, 0.0)
+63853190923355	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63853190923356	TASK_START	ViewObjects	LM_ToggleObjects
+63853190936954	TASK_END	ViewObjects	LM_ToggleObjects	13597
+63853190936955	TASK_START	BlackoutWalking	LM_BlackoutPath
+63853190954121	TASK_END	BlackoutWalking	LM_BlackoutPath	17166
+LandmarksTrialData:
+--------------------
+Timestamp	subID	trial	Room	Condition	moveItem	Repeat	Block	ObjectMovedIs	start	end	TargetObject	TarPos_x	TarPos_z	Start_SubPos_x	Start_SubPos_z	Delay_time	TargetReached	End_SubPos_x	End_SubPos_z	response	RT	
+06/05/2024 1:28 PM	testinggg	2	Room_85	stay	yes	B	1	left	A	B	Pita	59.23045	84.88569	59.23045	84.88569	10.0627	True	59.52779	85.01147	No response	N/A	
+--------------------
+
+63853190954124	LM_Output	TaskList
+TaskListName	RepetitionNumber	CatchFlag
+ViewpointTrials4False
+63853190954125	TASK_START	Counter	LM_DummyCounter
+63853190954132	TASK_END	Counter	LM_DummyCounter	6
+63853190954133	TASK_START	BlockInstruction	InstructionsTaskViewpoint
+63853190954134	INFO    skip task    BlockInstruction
+63853190954144	TASK_END	BlockInstruction	InstructionsTaskViewpoint	10
+63853190954145	TASK_START	MovePlayerToSpawn	MoveSpawn
+63853190954146	TASK_POSITION	KeyboardMouseController	MoveSpawn	(91.1, 0.1, 65.0)
+63853190954146	TASK_ROTATE	KeyboardMouseController	MoveSpawn	(0.0, 25.6, 0.0)
+63853190954154	TASK_END	MovePlayerToSpawn	MoveSpawn	9
+63853190954155	TASK_START	ViewObjects	LM_ToggleObjects
