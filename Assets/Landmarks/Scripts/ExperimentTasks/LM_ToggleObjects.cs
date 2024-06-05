@@ -319,32 +319,47 @@ public class LM_ToggleObjects : ExperimentTask
                     if (start[taskCounter] == "A")
                     {
                         hud.setStatusMessage("Table rotates <<<"); // "as if they viewed it from B, so table needs to rotate clockwise A<B
-                        hud.statusMessage.SetActive(true);
+                    
                     }
                     else if (start[taskCounter] == "B")
                     {
                         hud.setStatusMessage("Table rotates >>>"); // A>B
-                        hud.statusMessage.SetActive(true);
                     }
                 }
                 else if (condition[taskCounter] == "walk" && start[taskCounter] == end[taskCounter])
                 {
                     if (start[taskCounter] == "A")
                     {
-                        hud.setStatusMessage("Table rotates >>>"); // A to A means the table has to follow the PP as they walk counter-clockwise A>>>B
-                        hud.statusMessage.SetActive(true);
+                        hud.setStatusMessage("Walking >>> \n\n Table rotates"); // A to A means the table has to follow the PP as they walk counter-clockwise A>>>B
+
                     }
                     else if (start[taskCounter] == "B")
                     {
-                        hud.setStatusMessage("Table rotates <<<"); 
-                        hud.statusMessage.SetActive(true);
+                        hud.setStatusMessage("Walking <<< \n\n Table rotates"); 
+  
                     }
                 }
                 else
                 {
-                    hud.setStatusMessage("Table will not rotate");
-                    hud.statusMessage.SetActive(true);
+                    if (condition[taskCounter] == "stay")
+                    {
+
+                        hud.setStatusMessage("Table will NOT rotate");
+
+                    }
+                    else if (condition[taskCounter] == "walk")
+                    {
+                        if (start[taskCounter] == "A")
+                        {
+                            hud.setStatusMessage("Walking >>> \n\n Table will NOT rotate");
+                        }
+                        else if (start[taskCounter] == "B")
+                        {
+                            hud.setStatusMessage("Walking <<< \n\n Table will NOT rotate");
+                        }
+                    }
                 }
+                hud.statusMessage.SetActive(true);
             }
 
             // Remove message after 2 sec
