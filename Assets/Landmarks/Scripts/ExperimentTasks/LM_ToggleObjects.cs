@@ -238,7 +238,7 @@ public class LM_ToggleObjects : ExperimentTask
             {
                 if (vrEnabled)
                 {
-                    if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand) | vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
+                    if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand)) // 6/20/2024 - changed to right hand only
                     {
                         hud.statusMessageScreen.SetActive(false);
 

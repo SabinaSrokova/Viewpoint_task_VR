@@ -368,7 +368,7 @@ public class LM_BlackoutPath : ExperimentTask
             {
                 if (vrEnabled)
                 {
-                    if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand) | vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
+                    if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand)) // 6/20/2024 - changed to right hand only
                     {
                         triggerPressed = true;
                         Debug.Log("Participant reached the marker and pressed trigger to continue");
