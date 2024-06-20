@@ -18,6 +18,8 @@ using Valve.VR;
 using System.Drawing;
 using System.Collections.Generic;
 using System.Threading;
+using System.Diagnostics;
+using Valve.VR.InteractionSystem;
 
 namespace ViveSR
 {
@@ -66,6 +68,7 @@ namespace ViveSR
                     ignore = new List<String>
                     {
                         "Floor 1",
+                        "Table",
                         "w1",
                         "w2",
                         "w3",
@@ -81,13 +84,20 @@ namespace ViveSR
 
                 private void Update()
                 {
-                    
+                    if (SRanipal_Eye_Framework.Status != SRanipal_Eye_Framework.FrameworkStatus.WORKING)
+                    {
+                        Console.WriteLine("!!!!!!?????!!!!? SRanipal framework status not on working!!!! ");
+                        //var runTime = Process.GetProcessesByName("sr_runtime");
+                        //https://github.com/benaclejames/VRCFaceTracking/blob/ffce87939014b92ae9cd6cc6e0512974ac4d677f/VRCFaceTracking/UnifiedLibManager.cs#L44
+
+                    }
                     // Use built-in focus method to get object ("focus point data is calculated using a variety of factors, including the user's eye position, head position, and the scene geometry")
                     if (SRanipal_Eye.Focus(GazeIndex.COMBINE, out ray, out focusInfo, 100f)) { }
                     else if (SRanipal_Eye.Focus(GazeIndex.LEFT, out ray, out focusInfo, 100f)) { }
                     else if (SRanipal_Eye.Focus(GazeIndex.RIGHT, out ray, out focusInfo, 100f)) { }
                     else
                     {
+                        Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!! GAZERAY NOT VALID! MAY MESS WITH DATA");
                         return;
                     }
 
@@ -119,7 +129,8 @@ namespace ViveSR
                             $", " +
                             $", " +
                             $", " +
-                            $"{verboseData.left.pupil_diameter_mm}  {verboseData.right.pupil_diameter_mm}"
+                            $"{verboseData.left.pupil_diameter_mm}," +
+                            $"{verboseData.right.pupil_diameter_mm}"
                             );
                     }
                     else if (initDelay | endDelay)
@@ -131,7 +142,8 @@ namespace ViveSR
                             $", " +
                             $", " +
                             $", " +
-                            $"{verboseData.left.pupil_diameter_mm}  {verboseData.right.pupil_diameter_mm}"
+                            $"{verboseData.left.pupil_diameter_mm}," +
+                            $"{verboseData.right.pupil_diameter_mm}"
                             );
                     }
 
@@ -158,7 +170,7 @@ namespace ViveSR
 
                 private void Debugging()
                 {
-                    Debug.Log("!!!!!!!In debug()");
+                    //Debug.Log("!!!!!!!In debug()");
                     // Commented code is for highlighting items but not all have renderers so it does not work on some. Saved for later
                     //var see = hitObject.transform;
                     //var seeRenderer = see.GetComponent<Renderer>();
@@ -195,7 +207,8 @@ namespace ViveSR
                             prevObj = null;
                         }
                     }
-                
+
+                        
                 }
 
                 void OnApplicationQuit()

@@ -1,7 +1,0 @@
-Timestamp,subID,trial,Room,Condition,moveItem,Repeat,Block,ObjectMovedIs,start,end,TargetObject,TarPos_x,TarPos_z,Start_SubPos_x,Start_SubPos_z,Delay_time,TargetReached,End_SubPos_x,End_SubPos_z,response,RT,
-06/05/2024 3:00 PM,sabtestagain2,0,Room_1,stay,yes,A,1,left,A,B,SMGP_pre_Soda_bottle_01_1024,19.23046,4.885692,19.23974,5.011368,2.896631,True,19.28817,4.992362,No response,N/A,
-06/05/2024 3:00 PM,sabtestagain2,1,Room_2,stay,yes,A,1,left,A,B,pineapple,29.23046,4.885692,29.29694,4.90748,3.111194,True,29.32797,4.9937,No response,N/A,
-06/05/2024 3:00 PM,sabtestagain2,2,Room_3,stay,yes,A,1,left,A,B,bomb,39.23045,4.88569,39.37732,4.94137,2.989318,True,39.36938,4.98221,No response,N/A,
-06/05/2024 3:01 PM,sabtestagain2,3,Room_4,stay,yes,A,1,left,A,B,сherry,49.23045,4.885691,49.32695,5.045648,3.01691,True,49.35089,4.935113,No response,N/A,
-06/05/2024 3:01 PM,sabtestagain2,4,Room_5,stay,yes,A,1,left,A,B,donut,59.23045,4.885691,59.32255,4.907244,3.714809,True,59.27329,4.88675,No response,N/A,
-06/05/2024 3:01 PM,sabtestagain2,5,Room_6,stay,yes,A,1,left,A,B,frenchFries,69.23045,4.885692,69.19788,4.860615,3.42036,True,69.23763,4.883282,No response,N/A,

@@ -1,2 +1,0 @@
-Timestamp,subID,trial,Room,Condition,moveItem,Repeat,Block,ObjectMovedIs,start,end,TargetObject,TarPos_x,TarPos_z,Start_SubPos_x,Start_SubPos_z,Delay_time,TargetReached,End_SubPos_x,End_SubPos_z,response,RT,
-05/23/2024 3:14 PM,repilot,0,Room_1,stay,yes,A,1,left,A,A,SMGP_pre_Soda_bottle_01_1024,19.23046,4.885692,19.23046,4.529998,3.67627,True,19.23046,5.009998,No response,N/A,

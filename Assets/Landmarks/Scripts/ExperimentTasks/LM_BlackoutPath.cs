@@ -35,6 +35,7 @@ public class LM_BlackoutPath : ExperimentTask
     public bool rotateTable = false;
     public bool rotateNothing = false;
     public bool reorientCamera = false;
+    public bool triggerPressed = false;
     public bool proceedTrial = false;
     public float blackoutWalk = 7;
     public float arrowTime = 0.5f;
@@ -137,6 +138,7 @@ public class LM_BlackoutPath : ExperimentTask
         timerDelay = false;
         timerComplete = false;
         responseMade = false;
+        triggerPressed = false;
         blackout = true; // eye tracking will record that blackout is happening
 
         // Record the subject's starting spot when delay
@@ -352,6 +354,9 @@ public class LM_BlackoutPath : ExperimentTask
 
         // --------------------- Handle self-paced condition ---------------------
         // Here, the participant won't be able to continue until the targets are green
+        // 6/12/2024 changelog - even if the participant indicates that they're ready, the objects will
+        // not show up until blackoutWalk time has passed. If blackoutWalk had passed and they press trigger, objects will show up immediately.
+
         if (proceedTrial == false && selfPacedSetting == LM_PrepareRooms.SelfPacedSettingAssignment.Yes)
         {
 
@@ -365,19 +370,28 @@ public class LM_BlackoutPath : ExperimentTask
                 {
                     if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand) | vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
                     {
-                        proceedTrial = true;
+                        triggerPressed = true;
                         Debug.Log("Participant reached the marker and pressed trigger to continue");
                     }
-                } else 
+                } 
+                else 
                 {
                     if (Input.GetButtonDown("Return"))
                     {
-                        proceedTrial = true;
+                        triggerPressed = true;
                         Debug.Log("Participant reached the marker and pressed enter to continue");
                     }
                 }
             }
+
+            if (triggerPressed == true && timer >= blackoutWalk)
+            {
+                proceedTrial = true;
+            }
+
         }
+
+        // When self-paced option is disabled
         else if (proceedTrial == false && selfPacedSetting == LM_PrepareRooms.SelfPacedSettingAssignment.No)
         {
             // Set proceed trial only after the timer is reached

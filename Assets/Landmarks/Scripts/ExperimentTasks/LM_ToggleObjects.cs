@@ -25,6 +25,8 @@ using Valve.VR.InteractionSystem;
 using Vector3 = UnityEngine.Vector3;
 using Quaternion = UnityEngine.Quaternion;
 using ViveSR.anipal.Eye;
+using System.Drawing;
+using Color = UnityEngine.Color;
 
 public class LM_ToggleObjects : ExperimentTask
 {
@@ -144,7 +146,6 @@ public class LM_ToggleObjects : ExperimentTask
             hud.statusMessage.SetActive(true);
         }
 
-
         timer = 0;
         timerSpawnReached = false;
         participantReady = false;
@@ -197,57 +198,74 @@ public class LM_ToggleObjects : ExperimentTask
             return true;
         }
 
-
-        if (Input.GetButtonDown("Return"))
+        if (participantReady == false)
         {
-            
-            hud.statusMessage.SetActive(false);
 
-            if (hideRoom == LM_PrepareRooms.HideRoomAssignment.Yes)
+
+            // Allow the participant to proceed only if target disc is no longer red
+            int color = (int)disc.GetComponent<Renderer>().material.color.r * 1000;
+            int red = (int)new Color(1.000f, 0, 0, 1.000f).r * 1000;
+
+
+            if (color != red)
             {
-                hud.showOnlyHUD(); 
-            } else
-            {
-               hud.showEverything(); 
-            }
-            participantReady = true;
-            DestroyImmediate(disc);
-            DestroyImmediate(blackFloor);
-
-            // Show table
-            table.SetActive(true);
-
-        }
-
-
-
-        if (vrEnabled)
-        {
-            if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand) | vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
-            {
-                hud.statusMessageScreen.SetActive(false);
-                
-                hud.fadeScreen.SetActive(true);
-
-                if (hideRoom == LM_PrepareRooms.HideRoomAssignment.Yes)
+                if (Input.GetButtonDown("Return"))
                 {
-                    hud.showOnlyHUD(); 
-                } else
-                {
-                    hud.showEverything(); 
+
+                    hud.statusMessage.SetActive(false);
+
+                    if (hideRoom == LM_PrepareRooms.HideRoomAssignment.Yes)
+                    {
+                        hud.showOnlyHUD();
+                    }
+                    else
+                    {
+                        hud.showEverything();
+                    }
+                    participantReady = true;
+                    DestroyImmediate(disc);
+                    DestroyImmediate(blackFloor);
+
+                    // Show table
+                    table.SetActive(true);
+
                 }
-
-                hud.fadeScreen.GetComponent<PanelFader>().Fade();
-
-                participantReady = true;
-                DestroyImmediate(disc);
-                DestroyImmediate(blackFloor);
-
-                // Show table
-                table.SetActive(true);
+            }
 
 
-                GameObject.Find("Eye_Tracking").GetComponent<SRanipal_GazeRaySample>().blackout_eye_tracking = false;
+
+            if (color != red)
+            {
+                if (vrEnabled)
+                {
+                    if (vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.LeftHand) | vrInput.TriggerButton.GetStateDown(Valve.VR.SteamVR_Input_Sources.RightHand))
+                    {
+                        hud.statusMessageScreen.SetActive(false);
+
+                        hud.fadeScreen.SetActive(true);
+
+                        if (hideRoom == LM_PrepareRooms.HideRoomAssignment.Yes)
+                        {
+                            hud.showOnlyHUD();
+                        }
+                        else
+                        {
+                            hud.showEverything();
+                        }
+
+                        hud.fadeScreen.GetComponent<PanelFader>().Fade();
+
+                        participantReady = true;
+                        DestroyImmediate(disc);
+                        DestroyImmediate(blackFloor);
+
+                        // Show table
+                        table.SetActive(true);
+
+
+                        GameObject.Find("Eye_Tracking").GetComponent<SRanipal_GazeRaySample>().blackout_eye_tracking = false;
+                    }
+                }
             }
         }
         

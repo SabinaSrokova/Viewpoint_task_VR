@@ -1,0 +1,11 @@
+﻿Room,Start,End,Condition,MoveItem,Repeat,Block
+Room_8,A,B,teleport,no,A,1
+Room_2,A,A,stay,yes,B,1
+Room_3,B,A,walk,no,A,1
+Room_5,B,A,teleport,no,B,1
+Room_10,B,A,teleport,yes,B,1
+Room_9,B,B,stay,no,A,2
+Room_1,A,B,teleport,yes,A,2
+Room_6,A,B,walk,yes,B,2
+Room_7,B,A,walk,no,B,2
+Room_4,A,A,stay,yes,A,2
